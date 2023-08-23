@@ -1,0 +1,2013 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files (x86)\Koinonia Software\Habil Empresarial\Relat' +
+    'orios\1210-IK51J.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Caixa_Gaveta_Novo'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer13: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 6615
+    mmPrintPosition = 0
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 13229
+    mmPrintPosition = 0
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      Border.Color = clGray
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 9868950
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 91546
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppGroup2: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    StartOnOddPage = False
+    UserName = 'Group2'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Caixa_Gaveta_Novo'
+    NewFile = False
+    object ppGroupHeaderBand2: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 15875
+      mmPrintPosition = 0
+      object ppLabel53: TppLabel
+        UserName = 'Label53'
+        Caption = 'Funcion'#225'rio:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 12171
+        mmTop = 5556
+        mmWidth = 18256
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel54: TppLabel
+        UserName = 'Label54'
+        Caption = 'Pdv N'#186':'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 20108
+        mmTop = 10848
+        mmWidth = 10319
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel55: TppLabel
+        UserName = 'Label55'
+        Caption = 'Hora Abertura:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3968
+        mmLeft = 113771
+        mmTop = 265
+        mmWidth = 21961
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel56: TppLabel
+        UserName = 'Label56'
+        Caption = 'Data Abertura:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3968
+        mmLeft = 8731
+        mmTop = 265
+        mmWidth = 21696
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel57: TppLabel
+        UserName = 'Label57'
+        Caption = 'Identifica'#231#227'o Caixa:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 106363
+        mmTop = 5556
+        mmWidth = 29369
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppDBText11: TppDBText
+        UserName = 'DBText11'
+        DataField = 'Select_U_Usu'#225'rio_from_Us'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 4498
+        mmLeft = 31750
+        mmTop = 5821
+        mmWidth = 65352
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppDBText22: TppDBText
+        UserName = 'DBText22'
+        DataField = 'Nro_PDV'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 4498
+        mmLeft = 31750
+        mmTop = 10848
+        mmWidth = 30692
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppDBText23: TppDBText
+        UserName = 'DBText23'
+        DataField = 'Abertura'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        DisplayFormat = 'hh:nn:ss'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 4498
+        mmLeft = 137054
+        mmTop = 529
+        mmWidth = 30692
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppDBText24: TppDBText
+        UserName = 'DBText24'
+        DataField = 'Identificacao_Caixa'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 4498
+        mmLeft = 137054
+        mmTop = 5821
+        mmWidth = 59267
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel58: TppLabel
+        UserName = 'Label58'
+        Caption = 'Caixa:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 126471
+        mmTop = 10848
+        mmWidth = 9261
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppDBText13: TppDBText
+        UserName = 'DBText8'
+        DataField = 'Codigo_Caixa'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 4498
+        mmLeft = 137054
+        mmTop = 10848
+        mmWidth = 15875
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'Abertura'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        DisplayFormat = 'dd/mm/yyyyy'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 4233
+        mmLeft = 31750
+        mmTop = 0
+        mmWidth = 30692
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand2: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 38100
+      mmPrintPosition = 0
+      object ppLabel25: TppLabel
+        UserName = 'Label25'
+        AutoSize = False
+        Caption = 'Total em Dinheiro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2910
+        mmTop = 5027
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel26: TppLabel
+        UserName = 'Label26'
+        AutoSize = False
+        Caption = 'Total em Cheque Bom'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2910
+        mmTop = 9260
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel27: TppLabel
+        UserName = 'Label202'
+        AutoSize = False
+        Caption = 'Total em Cheque Pr'#233'-Datado'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2910
+        mmTop = 13494
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel28: TppLabel
+        UserName = 'Label28'
+        AutoSize = False
+        Caption = 'Totais na Gaveta'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 2910
+        mmTop = 794
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel29: TppLabel
+        UserName = 'Label29'
+        AutoSize = False
+        Caption = 'Total em Cart'#245'es'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2910
+        mmTop = 17727
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel31: TppLabel
+        UserName = 'Label31'
+        AutoSize = False
+        Caption = 'Total em Dep'#243'sito Banc'#225'rio'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2910
+        mmTop = 26194
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel30: TppLabel
+        UserName = 'Label30'
+        AutoSize = False
+        Caption = 'Fechamento do Caixa Gaveta'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2910
+        mmTop = 30427
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel2: TppLabel
+        UserName = 'lblDinheiro'
+        AutoSize = False
+        Caption = 'lblDinheiro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3641
+        mmLeft = 62442
+        mmTop = 5027
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel3: TppLabel
+        UserName = 'lblChequeBom'
+        AutoSize = False
+        Caption = 'lblChequeBom'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3641
+        mmLeft = 62442
+        mmTop = 9260
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel4: TppLabel
+        UserName = 'lblChequePre'
+        AutoSize = False
+        Caption = 'lblChequePre'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3641
+        mmLeft = 62442
+        mmTop = 13494
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel5: TppLabel
+        UserName = 'lblCartao'
+        AutoSize = False
+        Caption = 'lblCartao'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3641
+        mmLeft = 62442
+        mmTop = 17727
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel6: TppLabel
+        UserName = 'lblDeposito'
+        AutoSize = False
+        Caption = 'lblDeposito'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3641
+        mmLeft = 62442
+        mmTop = 26194
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel8: TppLabel
+        UserName = 'lblTotal'
+        AutoSize = False
+        Caption = 'lblTotal'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3641
+        mmLeft = 62442
+        mmTop = 30427
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label9'
+        AutoSize = False
+        Caption = 'Total em Conv'#234'nios'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2910
+        mmTop = 21960
+        mmWidth = 57415
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel10: TppLabel
+        UserName = 'lblConvenio'
+        AutoSize = False
+        Caption = 'lblCartao'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'ARIAL'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3641
+        mmLeft = 62442
+        mmTop = 21960
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object ppGroup3: TppGroup
+    BreakName = 'Tipo'
+    DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group3'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Caixa_Gaveta_Novo'
+    NewFile = False
+    object ppGroupHeaderBand3: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 5556
+      mmPrintPosition = 0
+      object ppDBText42: TppDBText
+        UserName = 'DBText13'
+        DataField = 'Tipo'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 3704
+        mmLeft = 2117
+        mmTop = 1852
+        mmWidth = 51858
+        BandType = 3
+        GroupNo = 2
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand3: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 4498
+      mmPrintPosition = 0
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        AutoSize = False
+        Caption = 'Total:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3683
+        mmLeft = 2646
+        mmTop = 794
+        mmWidth = 57679
+        BandType = 5
+        GroupNo = 2
+        LayerName = Foreground1
+      end
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        DataField = 'SUM_Caixa_Gaveta_Lctos_Va'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        ResetGroup = ppGroup3
+        Transparent = True
+        Visible = False
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 3704
+        mmLeft = 111919
+        mmTop = 794
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 2
+        LayerName = Foreground1
+      end
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'SUM_Caixa_Gaveta_Lctos_Va'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 3703
+        mmLeft = 62442
+        mmTop = 794
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+    end
+  end
+  object ppGroup4: TppGroup
+    BreakName = 'Forma_Pgto'
+    DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group4'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Caixa_Gaveta_Novo'
+    NewFile = False
+    object ppGroupHeaderBand4: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 4498
+      mmPrintPosition = 0
+      object ppDBText43: TppDBText
+        UserName = 'DBText20'
+        DataField = 'Forma_Pgto'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 3704
+        mmLeft = 2117
+        mmTop = 794
+        mmWidth = 58208
+        BandType = 3
+        GroupNo = 3
+        LayerName = Foreground1
+      end
+      object ppDBText44: TppDBText
+        UserName = 'DBText26'
+        DataField = 'SUM_Caixa_Gaveta_Lctos_Va'
+        DataPipeline = daADOQueryDataView1.Caixa_Gaveta_Novo
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        mmHeight = 3704
+        mmLeft = 62442
+        mmTop = 794
+        mmWidth = 30692
+        BandType = 3
+        GroupNo = 3
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand4: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Caixa_Gaveta_Novo'
+      Height = 330
+      Left = 10
+      NameColumnWidth = 263
+      SizeColumnWidth = 35
+      SortMode = 1
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 777
+      AutoSearchTabOrder = 0
+      object Caixa_Gaveta_Novo: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Caixa_Gaveta_Novo'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Abertura'
+          FieldName = 'Abertura'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 1
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Identificacao_Caixa'
+          FieldName = 'Identificacao_Caixa'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 2
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Nro_PDV'
+          FieldName = 'Nro_PDV'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Codigo_Caixa'
+          FieldName = 'Codigo_Caixa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 100
+          IsDetail = True
+          DisplayWidth = 100
+          Position = 5
+          TableName = 'Caixa_Gaveta_Lctos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Forma_Pgto'
+          FieldName = 'Forma_Pgto'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 25
+          Position = 6
+          TableName = 'Caixa_Gaveta_Lctos'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Valor_Calculado'
+          FieldName = 'SUM_Caixa_Gaveta_Lctos_Va'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Caixa_Gaveta_Lctos'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Funcionario'
+          FieldName = 'Select_U_Usu'#225'rio_from_Us'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Caixa_Gaveta_Novo'
+        IsCaseSensitive = True
+        GroupByFieldsSynced = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Caixa_Gaveta_Novo.Codigo, '
+          '       Caixa_Gaveta_Novo.Abertura, '
+          '       Caixa_Gaveta_Novo.Identificacao_Caixa, '
+          '       Caixa_Gaveta_Novo.Nro_PDV, '
+          '       Caixa_Gaveta_Novo.Codigo_Caixa, '
+          '       Caixa_Gaveta_Lctos.Tipo, '
+          '       Caixa_Gaveta_Lctos.Forma_Pgto, '
+          '       Caixa_Gaveta_Novo.Empresa, '
+          
+            '       SUM(Caixa_Gaveta_Lctos.Valor) AS SUM_Caixa_Gaveta_Lctos_V' +
+            'a, '
+          
+            '       ( Select U.[Usu'#225'rio] from Usuarios U where U.codigo = Cai' +
+            'xa_Gaveta_Novo.Codigo_Funcionario  )  AS Select_U_Usu'#225'rio_from_U' +
+            's'
+          'FROM (Caixa_Gaveta_Novo Caixa_Gaveta_Novo'
+          '      LEFT OUTER JOIN Caixa_Gaveta_Lctos Caixa_Gaveta_Lctos ON '
+          '     (Caixa_Gaveta_Lctos.Empresa = Caixa_Gaveta_Novo.Empresa)'
+          
+            '      AND (Caixa_Gaveta_Lctos.Codigo_Caixa_Gaveta = Caixa_Gaveta' +
+            '_Novo.Codigo) )'
+          'WHERE ( Caixa_Gaveta_Novo.Codigo = 0 )'
+          '       AND ( Caixa_Gaveta_Novo.Fechamento IS NOT NULL  )'
+          '       AND ( Caixa_Gaveta_Lctos.Cancelado <> TRUE )'
+          'GROUP BY Caixa_Gaveta_Novo.Codigo, '
+          '         Caixa_Gaveta_Novo.Abertura, '
+          '         Caixa_Gaveta_Novo.Identificacao_Caixa, '
+          '         Caixa_Gaveta_Novo.Nro_PDV, '
+          '         Caixa_Gaveta_Novo.Codigo_Caixa, '
+          '         Caixa_Gaveta_Lctos.Tipo, '
+          '         Caixa_Gaveta_Lctos.Forma_Pgto, '
+          '         Caixa_Gaveta_Novo.Empresa, '
+          '         Caixa_Gaveta_Novo.Codigo_Funcionario'
+          'ORDER BY Caixa_Gaveta_Novo.Abertura, '
+          '         Caixa_Gaveta_Lctos.Tipo, '
+          '         Caixa_Gaveta_Lctos.Forma_Pgto')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Valor_Calculado'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          Linkable = False
+          SQLFieldName = 'SUM_Caixa_Gaveta_Lctos_Va'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+          CalcType = dacaSum
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Funcionario'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Funcionario'
+          FieldLength = 0
+          FieldName = 'Codigo_Funcionario'
+          SQLFieldName = 'Select_U_Usu'#225'rio_from_Us'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+          CalcType = dacaExpression
+          Expression = 
+            '( Select U.[Usu'#225'rio] from Usuarios U where U.codigo = Caixa_Gave' +
+            'ta_Novo.Codigo_Funcionario  ) '
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          ParamName = 'Codigo'
+          Value = '1'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Caixa_Gaveta_Novo'
+            TableName = 'Caixa_Gaveta_Novo'
+            TableSQLAlias = 'Caixa_Gaveta_Novo'
+          end
+          object TdaNumericValue
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotBlank
+          object TdaField
+            Alias = 'Fechamento'
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Fechamento'
+            FieldLength = 0
+            FieldName = 'Fechamento'
+            SQLFieldName = 'Fechamento'
+            TableAlias = 'Caixa_Gaveta_Novo'
+            TableName = 'Caixa_Gaveta_Novo'
+            TableSQLAlias = 'Caixa_Gaveta_Novo'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Caixa_Gaveta_Lctos'
+            TableName = 'Caixa_Gaveta_Lctos'
+            TableSQLAlias = 'Caixa_Gaveta_Lctos'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField2: TdaField
+          Alias = 'Abertura'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Abertura'
+          FieldLength = 0
+          FieldName = 'Abertura'
+          SQLFieldName = 'Abertura'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField3: TdaField
+          Alias = 'Identificacao_Caixa'
+          DisplayWidth = 100
+          FieldAlias = 'Identificacao_Caixa'
+          FieldLength = 100
+          FieldName = 'Identificacao_Caixa'
+          SQLFieldName = 'Identificacao_Caixa'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField4: TdaField
+          Alias = 'Nro_PDV'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Nro_PDV'
+          FieldLength = 0
+          FieldName = 'Nro_PDV'
+          SQLFieldName = 'Nro_PDV'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField5: TdaField
+          Alias = 'Codigo_Caixa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Caixa'
+          FieldLength = 0
+          FieldName = 'Codigo_Caixa'
+          SQLFieldName = 'Codigo_Caixa'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField6: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 100
+          FieldAlias = 'Tipo'
+          FieldLength = 100
+          FieldName = 'Tipo'
+          IsDetail = True
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daField7: TdaField
+          Alias = 'Forma_Pgto'
+          DisplayWidth = 25
+          FieldAlias = 'Forma_Pgto'
+          FieldLength = 25
+          FieldName = 'Forma_Pgto'
+          IsDetail = True
+          SQLFieldName = 'Forma_Pgto'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daField8: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField9: TdaField
+          ChildType = 1
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField10: TdaField
+          ChildType = 1
+          Alias = 'Abertura'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Abertura'
+          FieldLength = 0
+          FieldName = 'Abertura'
+          SQLFieldName = 'Abertura'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField11: TdaField
+          ChildType = 1
+          Alias = 'Identificacao_Caixa'
+          DisplayWidth = 100
+          FieldAlias = 'Identificacao_Caixa'
+          FieldLength = 100
+          FieldName = 'Identificacao_Caixa'
+          SQLFieldName = 'Identificacao_Caixa'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField12: TdaField
+          ChildType = 1
+          Alias = 'Nro_PDV'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Nro_PDV'
+          FieldLength = 0
+          FieldName = 'Nro_PDV'
+          SQLFieldName = 'Nro_PDV'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField13: TdaField
+          ChildType = 1
+          Alias = 'Codigo_Caixa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Caixa'
+          FieldLength = 0
+          FieldName = 'Codigo_Caixa'
+          SQLFieldName = 'Codigo_Caixa'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField14: TdaField
+          ChildType = 1
+          Alias = 'Tipo'
+          DisplayWidth = 100
+          FieldAlias = 'Tipo'
+          FieldLength = 100
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daField15: TdaField
+          ChildType = 1
+          Alias = 'Forma_Pgto'
+          DisplayWidth = 25
+          FieldAlias = 'Forma_Pgto'
+          FieldLength = 25
+          FieldName = 'Forma_Pgto'
+          SQLFieldName = 'Forma_Pgto'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daField16: TdaField
+          ChildType = 1
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField17: TdaField
+          ChildType = 1
+          Alias = 'Codigo_Funcionario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Funcionario'
+          FieldLength = 0
+          FieldName = 'Codigo_Funcionario'
+          SQLFieldName = 'Codigo_Funcionario'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField18: TdaField
+          ChildType = 2
+          Alias = 'Abertura'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Abertura'
+          FieldLength = 0
+          FieldName = 'Abertura'
+          SQLFieldName = 'Abertura'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+          TableSQLAlias = 'Caixa_Gaveta_Novo'
+        end
+        object daField19: TdaField
+          ChildType = 2
+          Alias = 'Tipo'
+          DisplayWidth = 100
+          FieldAlias = 'Tipo'
+          FieldLength = 100
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daField20: TdaField
+          ChildType = 2
+          Alias = 'Forma_Pgto'
+          DisplayWidth = 25
+          FieldAlias = 'Forma_Pgto'
+          FieldLength = 25
+          FieldName = 'Forma_Pgto'
+          SQLFieldName = 'Forma_Pgto'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Gaveta_Novo'
+          JoinType = dajtNone
+          SQLAlias = 'Caixa_Gaveta_Novo'
+          TableAlias = 'Caixa_Gaveta_Novo'
+          TableName = 'Caixa_Gaveta_Novo'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Gaveta_Lctos'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Caixa_Gaveta_Lctos'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField22: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Caixa_Gaveta_Lctos'
+              TableName = 'Caixa_Gaveta_Lctos'
+              TableSQLAlias = 'Caixa_Gaveta_Lctos'
+            end
+            object daField21: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Caixa_Gaveta_Novo'
+              TableName = 'Caixa_Gaveta_Novo'
+              TableSQLAlias = 'Caixa_Gaveta_Novo'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField24: TdaField
+              ChildType = 3
+              Alias = 'Codigo_Caixa_Gaveta'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Caixa_Gaveta'
+              FieldLength = 0
+              FieldName = 'Codigo_Caixa_Gaveta'
+              SQLFieldName = 'Codigo_Caixa_Gaveta'
+              TableAlias = 'Caixa_Gaveta_Lctos'
+              TableName = 'Caixa_Gaveta_Lctos'
+              TableSQLAlias = 'Caixa_Gaveta_Lctos'
+            end
+            object daField23: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Caixa_Gaveta_Novo'
+              TableName = 'Caixa_Gaveta_Novo'
+              TableSQLAlias = 'Caixa_Gaveta_Novo'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Caixa_Gaveta_Lctos'
+      Height = 131
+      Left = 837
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Caixa_Gaveta_Novo'
+      object Caixa_Gaveta_Lctos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Caixa_Gaveta_Lctos'
+        MasterDataPipelineName = 'Caixa_Gaveta_Novo'
+        object ppField1: TppField
+          FieldAlias = 'Codigo_Caixa_Gaveta'
+          FieldName = 'Codigo_Caixa_Gaveta'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Caixa_Gaveta_Lctos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Caixa_Gaveta_Lctos'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Abertura'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Abertura'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Tipo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Tipo'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Forma_Pgto'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Forma_Pgto'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Codigo_Caixa_Gaveta'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Caixa_Gaveta_Lctos'
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Caixa_Gaveta_Lctos.Codigo_Caixa_Gaveta, '
+          '       Caixa_Gaveta_Lctos.Empresa'
+          'FROM Caixa_Gaveta_Lctos Caixa_Gaveta_Lctos'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Caixa_Gaveta_Lctos.Cancelado <> TRUE ))')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Caixa_Gaveta_Lctos'
+            TableName = 'Caixa_Gaveta_Lctos'
+            TableSQLAlias = 'Caixa_Gaveta_Lctos'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo_Caixa_Gaveta'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Caixa_Gaveta'
+          FieldLength = 0
+          FieldName = 'Codigo_Caixa_Gaveta'
+          SQLFieldName = 'Codigo_Caixa_Gaveta'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+          TableSQLAlias = 'Caixa_Gaveta_Lctos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Gaveta_Lctos'
+          JoinType = dajtNone
+          SQLAlias = 'Caixa_Gaveta_Lctos'
+          TableAlias = 'Caixa_Gaveta_Lctos'
+          TableName = 'Caixa_Gaveta_Lctos'
+        end
+        object daSQLLink1: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Caixa_Gaveta_Novo'
+            TableName = 'Caixa_Gaveta_Novo'
+            TableSQLAlias = 'Caixa_Gaveta_Novo'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Caixa_Gaveta_Lctos'
+            TableName = 'Caixa_Gaveta_Lctos'
+            TableSQLAlias = 'Caixa_Gaveta_Lctos'
+          end
+        end
+        object daSQLLink2: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Caixa_Gaveta_Novo'
+            TableName = 'Caixa_Gaveta_Novo'
+            TableSQLAlias = 'Caixa_Gaveta_Novo'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Codigo_Caixa_Gaveta'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo_Caixa_Gaveta'
+            FieldLength = 0
+            FieldName = 'Codigo_Caixa_Gaveta'
+            SQLFieldName = 'Codigo_Caixa_Gaveta'
+            TableAlias = 'Caixa_Gaveta_Lctos'
+            TableName = 'Caixa_Gaveta_Lctos'
+            TableSQLAlias = 'Caixa_Gaveta_Lctos'
+          end
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365067370726F6365647572652056
+      61726961626C65733B0D0A7661720D0A44696E686569726F2C20436865717565
+      426F6D2C2043617274616F2C20204368657175655072652C20436F6E76656E69
+      6F2C204465706F7369746F203A20446F75626C653B0D0A0D0A626567696E0D0A
+      0D0A656E643B0D0A084361726574506F7301023C0202000001060A5472615072
+      6F6772616D094368696C645479706502130B50726F6772616D4E616D65060E47
+      6C6F62616C4F6E4372656174650B50726F6772616D54797065070B747450726F
+      63656475726506536F75726365069670726F63656475726520476C6F62616C4F
+      6E4372656174653B0D0A626567696E0D0A202044696E686569726F203A3D2030
+      3B200D0A2020436865717565426F6D203A3D20303B0D0A202043617274616F20
+      3A3D20303B200D0A2020436865717565507265203A3D20303B0D0A2020436F6E
+      76656E696F203A3D20303B0D0A20204465706F7369746F203A3D20303B0D0A65
+      6E643B0D0A084361726574506F730102010203000001060F5472614576656E74
+      48616E646C65720B50726F6772616D4E616D65061144425465787431314F6E47
+      6574546578740B50726F6772616D54797065070B747450726F63656475726506
+      536F75726365149A00000070726F6365647572652044425465787431314F6E47
+      6574546578742876617220546578743A20537472696E67293B0D0A626567696E
+      0D0A202069662074657874203C3E202727207468656E0D0A2020202054657874
+      203A3D20546578740D0A2020656C73650D0A2020202054657874203A3D202753
+      656D2046756E63696F6EC3A172696F2028204C697672652029273B0D0A0D0A65
+      6E643B0D0A0D436F6D706F6E656E744E616D6506084442546578743131094576
+      656E744E616D6506094F6E47657454657874074576656E744944023508436172
+      6574506F730102010202000001060F5472614576656E7448616E646C65720B50
+      726F6772616D4E616D65061144425465787431334F6E476574546578740B5072
+      6F6772616D54797065070B747450726F63656475726506536F757263650C2501
+      000070726F6365647572652044425465787431334F6E47657454657874287661
+      7220546578743A20537472696E67293B0D0A626567696E0D0A20206966202820
+      54657874203D202753616E677269612064652056616C6F726573272029206F72
+      20282054657874203D202754726F636F272029207468656E20626567696E0D0A
+      2020202054657874203A3D2027282D292027202B20546578743B0D0A20202020
+      44425465787431332E666F6E742E636F6C6F72203A3D20636C5265643B0D0A20
+      20656E640D0A2020656C736520626567696E0D0A2020202054657874203A3D20
+      27282B292027202B20546578743B0D0A2020202044425465787431332E666F6E
+      742E636F6C6F72203A3D20636C426C75653B0D0A2020656E643B0D0A2020200D
+      0A656E643B0D0A0D436F6D706F6E656E744E616D650608444254657874313309
+      4576656E744E616D6506094F6E47657454657874074576656E74494402350843
+      61726574506F730102000200000001060F5472614576656E7448616E646C6572
+      0B50726F6772616D4E616D65061B47726F757048656164657242616E64324265
+      666F72655072696E740B50726F6772616D54797065070B747450726F63656475
+      726506536F7572636506A170726F6365647572652047726F7570486561646572
+      42616E64324265666F72655072696E743B0D0A626567696E0D0A202044696E68
+      6569726F203A3D20303B0D0A2020436865717565426F6D203A3D20303B0D0A20
+      2043617274616F203A3D20303B0D0A2020436865717565507265203A3D20303B
+      0D0A2020436F6E76656E696F203A3D20303B0D0A20204465706F7369746F203A
+      3D20303B0D0A656E643B0D0A0D436F6D706F6E656E744E616D65061047726F75
+      7048656164657242616E6432094576656E744E616D65060B4265666F72655072
+      696E74074576656E7449440218084361726574506F730102000200000001060F
+      5472614576656E7448616E646C65720B50726F6772616D4E616D65060F444254
+      65787432364F6E5072696E740B50726F6772616D54797065070B747450726F63
+      656475726506536F7572636514C004000070726F636564757265204442546578
+      7432364F6E5072696E743B0D0A626567696E0D0A202069662043616978615F47
+      61766574615F4E6F766F5B27466F726D615F5067746F275D203D202744696E68
+      6569726F27207468656E20626567696E0D0A2020202069662028204361697861
+      5F4761766574615F4E6F766F5B275469706F275D203D202753616E6772696120
+      64652056616C6F726573272029206F7220282043616978615F4761766574615F
+      4E6F766F5B275469706F275D203D202754726F636F272029207468656E0D0A20
+      202020202044696E686569726F203A3D2044696E686569726F202D2043616978
+      615F4761766574615F4E6F766F5B2756616C6F725F43616C63756C61646F275D
+      0D0A20202020656C73650D0A20202020202044696E686569726F203A3D204469
+      6E686569726F202B2043616978615F4761766574615F4E6F766F5B2756616C6F
+      725F43616C63756C61646F275D3B0D0A2020656E640D0A2020656C7365206966
+      2043616978615F4761766574615F4E6F766F5B27466F726D615F5067746F275D
+      203D202743686571756520426F6D27207468656E20626567696E0D0A20202020
+      69662043616978615F4761766574615F4E6F766F5B275469706F275D203C3E20
+      2753616E677269612064652056616C6F72657327207468656E200D0A20202020
+      2020436865717565426F6D203A3D20436865717565426F6D202B204361697861
+      5F4761766574615F4E6F766F5B2756616C6F725F43616C63756C61646F275D0D
+      0A20202020656C73650D0A202020202020436865717565426F6D203A3D204368
+      65717565426F6D202D2043616978615F4761766574615F4E6F766F5B2756616C
+      6F725F43616C63756C61646F275D3B0D0A2020656E640D0A2020656C73652069
+      662043616978615F4761766574615F4E6F766F5B27466F726D615F5067746F27
+      5D203D202743617274C3A36F206465204372C3A96469746F27207468656E0D0A
+      2020202043617274616F203A3D2043617274616F202B2043616978615F476176
+      6574615F4E6F766F5B2756616C6F725F43616C63756C61646F275D200D0A2020
+      656C73652069662043616978615F4761766574615F4E6F766F5B27466F726D61
+      5F5067746F275D203D2027436F6E76C3AA6E696F27207468656E0D0A20202020
+      436F6E76656E696F203A3D20436F6E76656E696F202B2043616978615F476176
+      6574615F4E6F766F5B2756616C6F725F43616C63756C61646F275D0D0A202065
+      6C73652069662043616978615F4761766574615F4E6F766F5B27466F726D615F
+      5067746F275D203D2027436865717565205072C3A92D44617461646F27207468
+      656E0D0A20202020436865717565507265203A3D20436865717565507265202B
+      2043616978615F4761766574615F4E6F766F5B2756616C6F725F43616C63756C
+      61646F275D200D0A2020656C73652069662043616978615F4761766574615F4E
+      6F766F5B27466F726D615F5067746F275D203D20274C616EC3A7616D656E746F
+      2042616E63C3A172696F27207468656E0D0A202020204465706F7369746F203A
+      3D204465706F7369746F202B2043616978615F4761766574615F4E6F766F5B27
+      56616C6F725F43616C63756C61646F275D3B200D0A656E643B20202020202020
+      202020202020202020202020200D0A0D0A0D436F6D706F6E656E744E616D6506
+      084442546578743236094576656E744E616D6506074F6E5072696E7407457665
+      6E7449440220084361726574506F730102010202000001060F5472614576656E
+      7448616E646C65720B50726F6772616D4E616D65060E4C6162656C32354F6E50
+      72696E740B50726F6772616D54797065070B747450726F63656475726506536F
+      757263650C2902000070726F636564757265204C6162656C32354F6E5072696E
+      743B0D0A626567696E0D0A20206C626C44696E686569726F2E54657874203A3D
+      20466F726D6174466C6F6174282027232C302E30303B2D232C302E3030272C20
+      44696E686569726F20293B0D0A20206C626C436865717565426F6D2E54657874
+      203A3D20466F726D6174466C6F6174282027232C302E30303B2D232C302E3030
+      272C20436865717565426F6D20293B0D0A20206C626C4368657175655072652E
+      54657874203A3D20466F726D6174466C6F6174282027232C302E30303B2D232C
+      302E3030272C2043686571756550726520293B0D0A20206C626C43617274616F
+      2E54657874203A3D20466F726D6174466C6F6174282027232C302E30303B2D23
+      2C302E3030272C2043617274616F20293B0D0A20206C626C4465706F7369746F
+      2E54657874203A3D20466F726D6174466C6F6174282027232C302E30303B2D23
+      2C302E3030272C204465706F7369746F20293B0D0A20206C626C436F6E76656E
+      696F2E54657874203A3D20466F726D6174466C6F6174282027232C302E30303B
+      2D232C302E3030272C20436F6E76656E696F20293B0D0A20206C626C546F7461
+      6C2E54657874203A3D20466F726D6174466C6F6174282027232C302E30303B2D
+      232C302E3030272C2044696E686569726F202B20436865717565426F6D202B20
+      436865717565507265202B2043617274616F202B204465706F7369746F202B20
+      436F6E76656E696F293B0D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+      06074C6162656C3235094576656E744E616D6506074F6E5072696E7407457665
+      6E7449440220084361726574506F730102000200000001060F5472614576656E
+      7448616E646C65720B50726F6772616D4E616D6506145265706F72744F6E456E
+      644669727374506173730B50726F6772616D54797065070B747450726F636564
+      75726506536F75726365069C70726F636564757265205265706F72744F6E456E
+      644669727374506173733B0D0A626567696E0D0A202044696E686569726F203A
+      3D20303B200D0A2020436865717565426F6D203A3D20303B0D0A202043617274
+      616F203A3D20303B200D0A2020436865717565507265203A3D20303B0D0A2020
+      436F6E76656E696F203A3D20303B0D0A20204465706F7369746F203A3D20303B
+      0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065265706F72740945
+      76656E744E616D65060E4F6E456E64466972737450617373074576656E744944
+      0210084361726574506F730102010203000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer30: TppDesignLayer
+      UserName = 'BandLayer30'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer29: TppDesignLayer
+      UserName = 'BandLayer29'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer28: TppDesignLayer
+      UserName = 'BandLayer28'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer27: TppDesignLayer
+      UserName = 'BandLayer27'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer26: TppDesignLayer
+      UserName = 'BandLayer26'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer25: TppDesignLayer
+      UserName = 'BandLayer25'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer24: TppDesignLayer
+      UserName = 'BandLayer24'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer23: TppDesignLayer
+      UserName = 'BandLayer23'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer22: TppDesignLayer
+      UserName = 'BandLayer22'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer21: TppDesignLayer
+      UserName = 'BandLayer21'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 18
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 19
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 20
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 21
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 22
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 23
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 24
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 25
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 26
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 27
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 28
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1'
+      DataType = dtString
+      LookupList.Strings = (
+        'Nro. Fechamento@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo'
+    end
+  end
+end
+$
+GRUPO=PDV@Caixa Gaveta
+NOME=Fechamento Caixa Sintético
+DESCRICAO=Imprime um histórico simplificado do fechamento do caixa
+ALTERADO_EM=13/09/2017 09:43
+SQL=<0><1><2><3><4><5>
+ORDEM=Caixa_Gaveta_Novo.Abertura<Abertura>Caixa_Gaveta_Lctos.Tipo<Tipo>Caixa_Gaveta_Lctos.Forma_Pgto<Forma_Pgto>

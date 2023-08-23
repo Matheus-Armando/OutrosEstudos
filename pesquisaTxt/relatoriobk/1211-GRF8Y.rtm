@@ -1,0 +1,1245 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Agenda
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1211-GRF8Y.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Agenda'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer16: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 15875
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      ParentWidth = True
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 9797
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 10626
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 15346
+      mmTop = 6615
+      mmWidth = 10848
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Descri'#231#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 30163
+      mmTop = 6615
+      mmWidth = 15346
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Data Hora Inicial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 121444
+      mmTop = 6615
+      mmWidth = 24342
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Local'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 30163
+      mmTop = 10848
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      AutoSize = False
+      Caption = 'Cor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 185473
+      mmTop = 6615
+      mmWidth = 10848
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      Caption = 'Data Hora Final'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 123296
+      mmTop = 10848
+      mmWidth = 22490
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      Caption = 'Dura'#231#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 167217
+      mmTop = 6615
+      mmWidth = 12700
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label101'
+      Caption = 'Status'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 170127
+      mmTop = 10848
+      mmWidth = 9790
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine3: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 15346
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 9260
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Agenda
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Agenda'
+      mmHeight = 3260
+      mmLeft = 15346
+      mmTop = 529
+      mmWidth = 10848
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Descri'#231#227'o'
+      DataPipeline = daADOQueryDataView1.Agenda
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Agenda'
+      mmHeight = 3260
+      mmLeft = 30163
+      mmTop = 529
+      mmWidth = 85196
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'data_inicial'
+      DataPipeline = daADOQueryDataView1.Agenda
+      DisplayFormat = 'dd/mm/yyyy hh:nn'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Agenda'
+      mmHeight = 3260
+      mmLeft = 119327
+      mmTop = 529
+      mmWidth = 26458
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'data_final'
+      DataPipeline = daADOQueryDataView1.Agenda
+      DisplayFormat = 'dd/mm/yyyy hh:nn'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Agenda'
+      mmHeight = 3260
+      mmLeft = 119327
+      mmTop = 4763
+      mmWidth = 26458
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Select_a_local_from_Agen'
+      DataPipeline = daADOQueryDataView1.Agenda
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Agenda'
+      mmHeight = 3260
+      mmLeft = 30163
+      mmTop = 4763
+      mmWidth = 85196
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'duracao'
+      DataPipeline = daADOQueryDataView1.Agenda
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Agenda'
+      mmHeight = 3260
+      mmLeft = 149754
+      mmTop = 529
+      mmWidth = 30163
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape2: TppShape
+      UserName = 'Shape2'
+      mmHeight = 8202
+      mmLeft = 185473
+      mmTop = 529
+      mmWidth = 10848
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'Status'
+      DataPipeline = daADOQueryDataView1.Agenda
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Agenda'
+      mmHeight = 3260
+      mmLeft = 149754
+      mmTop = 4763
+      mmWidth = 30163
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 8467
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'cliente'
+    DataPipeline = daADOQueryDataView1.Agenda
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Agenda'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 5556
+      mmPrintPosition = 0
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'cliente'
+        DataPipeline = daADOQueryDataView1.Agenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Agenda'
+        mmHeight = 3683
+        mmLeft = 2117
+        mmTop = 794
+        mmWidth = 158221
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Agenda'
+      Height = 317
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 228
+      AutoSearchTabOrder = 0
+      object Agenda: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Agenda'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Agenda'
+        end
+        object ppField2: TppField
+          FieldAlias = 'data_inicial'
+          FieldName = 'data_inicial'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 1
+          TableName = 'Agenda'
+        end
+        object ppField3: TppField
+          FieldAlias = 'duracao'
+          FieldName = 'duracao'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 2
+          TableName = 'Agenda'
+        end
+        object ppField4: TppField
+          FieldAlias = 'data_final'
+          FieldName = 'data_final'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'Agenda'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Descri'#231#227'o'
+          FieldName = 'Descri'#231#227'o'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 4
+          TableName = 'Agenda'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Status'
+          FieldName = 'Status'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 5
+          TableName = 'Agenda'
+        end
+        object ppField7: TppField
+          FieldAlias = 'cor'
+          FieldName = 'cor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Agenda'
+        end
+        object ppField8: TppField
+          FieldAlias = 'cliente'
+          FieldName = 'cliente'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Agenda'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 8
+          TableName = 'Agenda'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Localizacao'
+          FieldName = 'Select_a_local_from_Agen'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Agenda'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'Select_c_cliente_nome_fr'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Agenda'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Data'
+          FieldName = 'iif_Data_inicial_is_null'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 11
+          TableName = 'Agenda'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Agenda'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Agenda.Codigo, Agenda.data_inicial, '
+          '       Agenda.duracao, Agenda.data_final, '
+          '       Agenda.Descri'#231#227'o, Agenda.Status, '
+          '       Agenda.cor, Agenda.cliente, Agenda.Tipo, '
+          
+            '       ( Select a.[local] from Agenda a where a.codigo = agenda.' +
+            'codigo and a.empresa = agenda.empresa ) AS Select_a_local_from_A' +
+            'gen, '
+          
+            '       ( Select c.cliente_nome from cliente c where c.codigo = A' +
+            'genda.cliente and c.empresa = agenda.empresa )  AS Select_c_clie' +
+            'nte_nome_fr, '
+          
+            '       iif( Data_inicial is null, CDate( 1 ), DateSerial( Year( ' +
+            'Data_inicial ), month( Data_inicial ), day( Data_inicial ) ) ) A' +
+            'S iif_Data_inicial_is_null'
+          'FROM Agenda Agenda'
+          'WHERE '
+          
+            '      ( iif( Data_inicial is null, CDate( 1 ), DateSerial( Year(' +
+            ' Data_inicial ), month( Data_inicial ), day( Data_inicial ) ) ) ' +
+            'BETWEEN #2013-01-01 00.00.00# AND #2013-01-30 00.00.00# )'
+          '       AND ( Agenda.cliente BETWEEN 1 AND 999999 )'
+          '       AND ( Agenda.Compromisso_com = '#39'C'#39' )'
+          'ORDER BY Agenda.cliente, Agenda.Codigo, '
+          '         Agenda.data_inicial')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Localizacao'
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Select_a_local_from_Agen'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+          CalcType = dacaExpression
+          Expression = 
+            '( Select a.[local] from Agenda a where a.codigo = agenda.codigo ' +
+            'and a.empresa = agenda.empresa )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 10
+          FieldAlias = 'cliente'
+          FieldLength = 0
+          FieldName = 'cliente'
+          SQLFieldName = 'Select_c_cliente_nome_fr'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+          CalcType = dacaExpression
+          Expression = 
+            '( Select c.cliente_nome from cliente c where c.codigo = Agenda.c' +
+            'liente and c.empresa = agenda.empresa ) '
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'data_inicial'
+          FieldLength = 0
+          FieldName = 'data_inicial'
+          SQLFieldName = 'iif_Data_inicial_is_null'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Data_inicial is null, CDate( 1 ), DateSerial( Year( Data_in' +
+            'icial ), month( Data_inicial ), day( Data_inicial ) ) )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data'
+          Value = '01/01/2013,30/01/2013'
+          object TdaCalculation
+            ChildType = 8
+            Alias = 'Data'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'data_inicial'
+            FieldLength = 0
+            FieldName = 'data_inicial'
+            SQLFieldName = 'iif_Data_inicial_is_null'
+            TableAlias = 'Agenda'
+            TableName = 'Agenda'
+            TableSQLAlias = 'Agenda'
+            CalcType = dacaExpression
+            Expression = 
+              'iif( Data_inicial is null, CDate( 1 ), DateSerial( Year( Data_in' +
+              'icial ), month( Data_inicial ), day( Data_inicial ) ) )'
+          end
+          object TdaNumericValue
+            Value = 41275.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 41304.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'cliente'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'cliente'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'cliente'
+            FieldLength = 0
+            FieldName = 'cliente'
+            SQLFieldName = 'cliente'
+            TableAlias = 'Agenda'
+            TableName = 'Agenda'
+            TableSQLAlias = 'Agenda'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = 'C'
+          object TdaField
+            Alias = 'Compromisso_com'
+            DisplayWidth = 1
+            FieldAlias = 'Compromisso_com'
+            FieldLength = 1
+            FieldName = 'Compromisso_com'
+            SQLFieldName = 'Compromisso_com'
+            TableAlias = 'Agenda'
+            TableName = 'Agenda'
+            TableSQLAlias = 'Agenda'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField2: TdaField
+          Alias = 'data_inicial'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'data_inicial'
+          FieldLength = 0
+          FieldName = 'data_inicial'
+          SQLFieldName = 'data_inicial'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField3: TdaField
+          Alias = 'duracao'
+          DisplayWidth = 30
+          FieldAlias = 'duracao'
+          FieldLength = 30
+          FieldName = 'duracao'
+          SQLFieldName = 'duracao'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField4: TdaField
+          Alias = 'data_final'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'data_final'
+          FieldLength = 0
+          FieldName = 'data_final'
+          SQLFieldName = 'data_final'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField5: TdaField
+          Alias = 'Descri'#231#227'o'
+          DisplayWidth = 100
+          FieldAlias = 'Descri'#231#227'o'
+          FieldLength = 100
+          FieldName = 'Descri'#231#227'o'
+          SQLFieldName = 'Descri'#231#227'o'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField6: TdaField
+          Alias = 'Status'
+          DisplayWidth = 1
+          FieldAlias = 'Status'
+          FieldLength = 1
+          FieldName = 'Status'
+          SQLFieldName = 'Status'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField7: TdaField
+          Alias = 'cor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'cor'
+          FieldLength = 0
+          FieldName = 'cor'
+          SQLFieldName = 'cor'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField8: TdaField
+          Alias = 'cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'cliente'
+          FieldLength = 0
+          FieldName = 'cliente'
+          SQLFieldName = 'cliente'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField9: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 50
+          FieldAlias = 'Tipo'
+          FieldLength = 50
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'cliente'
+          FieldLength = 0
+          FieldName = 'cliente'
+          SQLFieldName = 'cliente'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField11: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daField12: TdaField
+          ChildType = 2
+          Alias = 'data_inicial'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'data_inicial'
+          FieldLength = 0
+          FieldName = 'data_inicial'
+          SQLFieldName = 'data_inicial'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+          TableSQLAlias = 'Agenda'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Agenda'
+          JoinType = dajtNone
+          SQLAlias = 'Agenda'
+          TableAlias = 'Agenda'
+          TableName = 'Agenda'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874314F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F75726365067270726F6365647572652044425465
+      7874314F6E476574546578742876617220546578743A20537472696E67293B0D
+      0A626567696E0D0A0D0A202054657874203A3D2054657874202B2027202D2027
+      202B204167656E64615B27436C69656E74655F4E6F6D65275D3B0D0A0D0A656E
+      643B0D0A0D436F6D706F6E656E744E616D65060744425465787431094576656E
+      744E616D6506094F6E47657454657874074576656E7449440235084361726574
+      506F730102000200000001060F5472614576656E7448616E646C65720B50726F
+      6772616D4E616D65060D5368617065324F6E5072696E740B50726F6772616D54
+      797065070B747450726F63656475726506536F75726365067570726F63656475
+      7265205368617065324F6E5072696E743B0D0A626567696E0D0A202053686170
+      65322E62727573682E636F6C6F72203A3D204167656E64615B27636F72275D3B
+      0D0A20205368617065322E70656E2E636F6C6F72203A3D204167656E64615B27
+      636F72275D3B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065368
+      61706532094576656E744E616D6506074F6E5072696E74074576656E74494402
+      20084361726574506F730102000200000001060F5472614576656E7448616E64
+      6C65720B50726F6772616D4E616D650610444254657874384F6E476574546578
+      740B50726F6772616D54797065070B747450726F63656475726506536F757263
+      6514F600000070726F63656475726520444254657874384F6E47657454657874
+      2876617220546578743A20537472696E67293B0D0A626567696E0D0A20206966
+      2054657874203D20275027207468656E0D0A2020202054657874203A3D202750
+      656E64656E7465270D0A2020456C73652069662054657874203D202743272074
+      68656E0D0A2020202054657874203A3D2027436F6E636C75C3AD646F270D0A20
+      20456C73652069662054657874203D20275827207468656E0D0A202020205465
+      7874203A3D202743616E63656C61646F27200D0A2020456C73650D0A20202020
+      54657874203A3D202741646961646F273B200D0A0D0A656E643B0D0A0D436F6D
+      706F6E656E744E616D65060744425465787438094576656E744E616D6506094F
+      6E47657454657874074576656E7449440235084361726574506F730102000200
+      000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 17
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object cliente: TppParameter
+      AutoSearchSettings.FieldAlias = 'cliente'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Cliente@Clientes@ID@Nome@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'cliente'
+    end
+    object Data: TppParameter
+      AutoSearchSettings.FieldAlias = 'data_inicial'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/01/2013,30/01/2013'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data Inicial@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/01/2013'
+      UserName = 'Data'
+    end
+  end
+end
+$
+GRUPO=Agenda de Compromissos
+NOME=Compromissos por cliente
+DESCRICAO=Imprime os compromissos dos clientes escolhidos
+ALTERADO_EM=03/12/2014 15:27
+SQL=<0>
+ORDEM=Agenda.cliente<cliente>Agenda.Codigo<Codigo>Agenda.data_inicial<data_inicial>

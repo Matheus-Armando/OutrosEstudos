@@ -1,0 +1,1216 @@
+﻿object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Contas_Receber
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Carta'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 279000
+  PrinterSetup.mmPaperWidth = 216000
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1211-4UXHB.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 75
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBiulder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'Contas_Receber'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 203300
+      BandType = 1
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 12965
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsBDiagonal
+      ParentWidth = True
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 5821
+      mmLeft = 0
+      mmTop = 6879
+      mmWidth = 203300
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1588
+      mmTop = 7938
+      mmWidth = 11377
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      AutoSize = False
+      Caption = 'Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 74613
+      mmTop = 7938
+      mmWidth = 17198
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Descri'#231#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 15610
+      mmTop = 7938
+      mmWidth = 15346
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Valor(R$)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 187008
+      mmTop = 7938
+      mmWidth = 13970
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Vencimento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 166159
+      mmTop = 7938
+      mmWidth = 17907
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      AutoSize = False
+      Caption = 'Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 145521
+      mmTop = 7938
+      mmWidth = 17727
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel23: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLine4: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 6879
+      mmWidth = 203300
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLine5: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 12435
+      mmWidth = 203300
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4763
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3260
+      mmLeft = 1588
+      mmTop = 265
+      mmWidth = 11377
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Descri'#231#227'o'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3175
+      mmLeft = 15610
+      mmTop = 265
+      mmWidth = 56092
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Documento'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3260
+      mmLeft = 145521
+      mmTop = 265
+      mmWidth = 17727
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Data_Vencimento'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3260
+      mmLeft = 166159
+      mmTop = 265
+      mmWidth = 17992
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Valor'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3260
+      mmLeft = 187061
+      mmTop = 265
+      mmWidth = 14023
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'select_codigo_cliente_no'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3175
+      mmLeft = 74613
+      mmTop = 265
+      mmWidth = 67998
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine6: TppLine
+      UserName = 'Line4'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 794
+      mmLeft = 0
+      mmTop = 3969
+      mmWidth = 203300
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 8467
+    mmPrintPosition = 0
+    object ppLine3: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 203300
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 177007
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppLabel13: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95779
+      mmTop = 1852
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 6350
+    mmPrintPosition = 0
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      DataField = 'Valor'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3810
+      mmLeft = 173832
+      mmTop = 1058
+      mmWidth = 27252
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      Caption = 'Total Geral:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 154782
+      mmTop = 1058
+      mmWidth = 17463
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      Caption = 'Nro. de lan'#231'amentos:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 2117
+      mmTop = 1058
+      mmWidth = 30427
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc2: TppDBCalc
+      UserName = 'DBCalc2'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3704
+      mmLeft = 33073
+      mmTop = 1058
+      mmWidth = 17198
+      BandType = 7
+      LayerName = Foreground
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Data_Conta'
+    DataPipeline = daADOQueryDataView1.Contas_Receber
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Contas_Receber'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 5556
+      mmPrintPosition = 0
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        DataField = 'Data_Conta'
+        DataPipeline = daADOQueryDataView1.Contas_Receber
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Contas_Receber'
+        mmHeight = 3810
+        mmLeft = 29369
+        mmTop = 1058
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label9'
+        Caption = 'Data de Emiss'#227'o:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 1376
+        mmTop = 1058
+        mmWidth = 26543
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 4763
+      mmPrintPosition = 0
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        Caption = 'Data de Emiss'#227'o:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 145786
+        mmTop = 0
+        mmWidth = 26458
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBCalc3: TppDBCalc
+        UserName = 'DBCalc3'
+        DataField = 'Valor'
+        DataPipeline = daADOQueryDataView1.Contas_Receber
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Contas_Receber'
+        mmHeight = 3704
+        mmLeft = 173832
+        mmTop = 0
+        mmWidth = 27252
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Contas_Receber'
+      Height = 199
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Contas_Receber: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Contas_Receber'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Contas_Receber'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Documento'
+          FieldName = 'Documento'
+          FieldLength = 25
+          DisplayWidth = 25
+          Position = 1
+          TableName = 'Contas_Receber'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Descri'#231#227'o'
+          FieldName = 'Descri'#231#227'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 2
+          TableName = 'Contas_Receber'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Data_Vencimento'
+          FieldName = 'Data_Vencimento'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'Contas_Receber'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Contas_Receber'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Data_Conta'
+          FieldName = 'Data_Conta'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 5
+          TableName = 'Contas_Receber'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cliente'
+          FieldName = 'select_codigo_cliente_no'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Contas_Receber'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'select_cliente_nome_from'
+          FieldLength = 0
+          DisplayWidth = 5
+          Position = 7
+          TableName = 'Contas_Receber'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Contas_Receber'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Contas_Receber.Codigo, '
+          '       Contas_Receber.Documento, '
+          '       Contas_Receber.Descri'#231#227'o, '
+          '       Contas_Receber.Data_Vencimento, '
+          '       Contas_Receber.Valor, '
+          '       Contas_Receber.Data_Conta, '
+          
+            '       ( select codigo & " - " & cliente_nome from cliente where' +
+            ' codigo = contas_receber.c'#243'digo_cliente and empresa = contas_rec' +
+            'eber.empresa ) AS select_codigo_cliente_no, '
+          
+            '       ( select cliente_nome from cliente where codigo = contas_' +
+            'receber.c'#243'digo_cliente and empresa = contas_receber.empresa ) AS' +
+            ' select_cliente_nome_from'
+          'FROM Contas_Receber Contas_Receber'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Contas_Receber.Data_Pagamento IS NULL  )'
+          
+            '       AND ( Contas_Receber.Data_Conta BETWEEN #2012-08-01 00.00' +
+            '.00# AND #2012-08-31 00.00.00# )'
+          '       AND ( Contas_Receber.Cancelado <> TRUE )'
+          
+            '       AND ( Contas_Receber.Data_Vencimento BETWEEN #2012-09-01 ' +
+            '00.00.00# AND #2012-09-30 00.00.00# )'
+          
+            '       AND ( Contas_Receber.C'#243'digo_Cliente BETWEEN 0 AND 999999 ' +
+            ')'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Cliente'
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Cliente'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Cliente'
+          SQLFieldName = 'select_codigo_cliente_no'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+          CalcType = dacaExpression
+          Expression = 
+            '( select codigo & " - " & cliente_nome from cliente where codigo' +
+            ' = contas_receber.c'#243'digo_cliente and empresa = contas_receber.em' +
+            'presa )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 5
+          FieldAlias = 'Previs'#227'o'
+          FieldLength = 0
+          FieldName = 'Previs'#227'o'
+          SQLFieldName = 'select_cliente_nome_from'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+          CalcType = dacaExpression
+          Expression = 
+            '( select cliente_nome from cliente where codigo = contas_receber' +
+            '.c'#243'digo_cliente and empresa = contas_receber.empresa )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBlank
+          object TdaField
+            Alias = 'Data_Pagamento'
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data_Pagamento'
+            FieldLength = 0
+            FieldName = 'Data_Pagamento'
+            SQLFieldName = 'Data_Pagamento'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data_Conta'
+          Value = '01/08/2012,31/08/2012'
+          object TdaField
+            Alias = 'Data_Conta'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data_Conta'
+            FieldLength = 0
+            FieldName = 'Data_Conta'
+            SQLFieldName = 'Data_Conta'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+          object TdaNumericValue
+            Value = 41122.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 41152.000000000000000000
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data_Vencimento'
+          Value = '01/09/2012,30/09/2012'
+          object TdaField
+            Alias = 'Data_Vencimento'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data_Vencimento'
+            FieldLength = 0
+            FieldName = 'Data_Vencimento'
+            Mandatory = True
+            SQLFieldName = 'Data_Vencimento'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+          object TdaNumericValue
+            Value = 41153.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 41182.000000000000000000
+          end
+        end
+        object daCriteria5: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'C'#243'digo_Cliente'
+          Value = '0,999999'
+          object TdaField
+            Alias = 'C'#243'digo_Cliente'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Cliente'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Cliente'
+            SQLFieldName = 'C'#243'digo_Cliente'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+          object TdaNumericValue
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField2: TdaField
+          Alias = 'Documento'
+          DisplayWidth = 25
+          FieldAlias = 'Documento'
+          FieldLength = 25
+          FieldName = 'Documento'
+          SQLFieldName = 'Documento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField3: TdaField
+          Alias = 'Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Descri'#231#227'o'
+          SQLFieldName = 'Descri'#231#227'o'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField4: TdaField
+          Alias = 'Data_Vencimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Vencimento'
+          FieldLength = 0
+          FieldName = 'Data_Vencimento'
+          SQLFieldName = 'Data_Vencimento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField5: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField6: TdaField
+          Alias = 'Data_Conta'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Conta'
+          FieldLength = 0
+          FieldName = 'Data_Conta'
+          SQLFieldName = 'Data_Conta'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField7: TdaField
+          ChildType = 2
+          Alias = 'Data_Conta'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Conta'
+          FieldLength = 0
+          FieldName = 'Data_Conta'
+          SQLFieldName = 'Data_Conta'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField8: TdaField
+          ChildType = 2
+          Alias = 'Data_Vencimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Vencimento'
+          FieldLength = 0
+          FieldName = 'Data_Vencimento'
+          SQLFieldName = 'Data_Vencimento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField9: TdaField
+          ChildType = 2
+          Alias = 'Documento'
+          DisplayWidth = 25
+          FieldAlias = 'Documento'
+          FieldLength = 25
+          FieldName = 'Documento'
+          SQLFieldName = 'Documento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField11: TdaField
+          ChildType = 2
+          Alias = 'C'#243'digo_Cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Cliente'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Cliente'
+          SQLFieldName = 'C'#243'digo_Cliente'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 2
+          Alias = 'Cliente_Nome'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Previs'#227'o'
+          FieldLength = 0
+          FieldName = 'Previs'#227'o'
+          SQLFieldName = 'select_cliente_nome_from'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+          CalcType = dacaExpression
+          Expression = 
+            '( select cliente_nome from cliente where codigo = contas_receber' +
+            '.c'#243'digo_cliente and empresa = contas_receber.empresa )'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Contas_Receber'
+          JoinType = dajtNone
+          SQLAlias = 'Contas_Receber'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 6
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Data_Conta: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data_Conta'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/08/2012,31/08/2012'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data de Cadastro da Conta@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/08/2012'
+      UserName = 'Data_Conta'
+    end
+    object Código_Cliente: TppParameter
+      AutoSearchSettings.FieldAlias = 'C'#243'digo_Cliente'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '0,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Cliente@Clientes@Id@Descricao@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '0'
+      UserName = 'C'#243'digo_Cliente'
+    end
+    object Data_Vencimento: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data_Vencimento'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/09/2012,30/09/2012'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data de Vencimento@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/09/2012'
+      UserName = 'Data_Vencimento'
+    end
+  end
+end
+$
+GRUPO=Contas a Receber@A Receber
+NOME=A Receber por Vencimento/Emissão
+DESCRICAO=Mostra todas as contas a receber entre as datas escolhidas
+ALTERADO_EM=12/11/2014 11:28
+SQL=<0>
+ORDEM=Contas_Receber.Data_Conta<Data_Conta>Contas_Receber.Data_Vencimento<Data_Vencimento>Contas_Receber.Documento<Documento>Contas_Receber.Codigo<Codigo>Contas_Receber.Código_Cliente<Código_Cliente>Contas_Receber.Previsão<Previsão>

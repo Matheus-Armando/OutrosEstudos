@@ -1,0 +1,742 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Custom'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 0
+  PrinterSetup.mmMarginLeft = 350
+  PrinterSetup.mmMarginRight = 350
+  PrinterSetup.mmMarginTop = 0
+  PrinterSetup.mmPaperHeight = 102000
+  PrinterSetup.mmPaperWidth = 173000
+  PrinterSetup.PaperSize = 256
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1212-8E0RK.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Movimento_Estoque_Cabecalho'
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 102000
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Data_Emiss'#227'o'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 132027
+      mmTop = 16933
+      mmWidth = 26988
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Data_Emiss'#227'o'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 12cpi'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 6350
+      mmTop = 30427
+      mmWidth = 30163
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'N'#250'mero_Nota'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 40217
+      mmTop = 30427
+      mmWidth = 39688
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Total_Nota'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 127794
+      mmTop = 36513
+      mmWidth = 15875
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Nome'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 15081
+      mmTop = 73025
+      mmWidth = 96309
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'Endere'#231'o'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 15081
+      mmTop = 77258
+      mmWidth = 96309
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      DataField = 'Munic'#237'pio'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 32544
+      mmTop = 81492
+      mmWidth = 78846
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      DataField = 'Cep'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 15081
+      mmTop = 81492
+      mmWidth = 16404
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Ap'#243's o vencimento cobrar juros'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 16404
+      mmTop = 59002
+      mmWidth = 62442
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Movimento_Estoque_Cabeca'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4191
+      mmLeft = 66675
+      mmTop = 62971
+      mmWidth = 13229
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      DataField = 'UF'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 4233
+      mmLeft = 112184
+      mmTop = 81492
+      mmWidth = 6350
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      AutoSize = False
+      Caption = 'de mora por dia de atraso de R$'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 10cpi'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 16404
+      mmTop = 62971
+      mmWidth = 49742
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Movimento_Estoque_Cabecalho'
+      Height = 318
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Movimento_Estoque_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Movimento_Estoque_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Data_Emiss'#227'o'
+          FieldName = 'Data_Emiss'#227'o'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 0
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField3: TppField
+          FieldAlias = 'N'#250'mero_Nota'
+          FieldName = 'N'#250'mero_Nota'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 2
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Total_Nota'
+          FieldName = 'Total_Nota'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField5: TppField
+          FieldAlias = 'C'#243'digo_Cliente_Fornecedor'
+          FieldName = 'C'#243'digo_Cliente_Fornecedor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Nome'
+          FieldName = 'Nome'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 5
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Endere'#231'o'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 6
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Cep'
+          FieldName = 'Cep'
+          FieldLength = 9
+          DisplayWidth = 9
+          Position = 7
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Munic'#237'pio'
+          FieldName = 'Munic'#237'pio'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 8
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Bairro'
+          FieldName = 'Bairro'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 9
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField11: TppField
+          FieldAlias = 'UF'
+          FieldName = 'UF'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 10
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField12: TppField
+          FieldAlias = 'nro'
+          FieldName = 'nro'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 11
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Juros'
+          FieldName = 'Movimento_Estoque_Cabeca'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Movimento_Estoque_Cabecalho.Data_Emiss'#227'o, '
+          '       Movimento_Estoque_Cabecalho.Codigo, '
+          '       Movimento_Estoque_Cabecalho.N'#250'mero_Nota, '
+          '       Movimento_Estoque_Cabecalho.Total_Nota, '
+          '       Movimento_Estoque_Cabecalho.C'#243'digo_Cliente_Fornecedor, '
+          '       Movimento_Estoque_Cabecalho.Nome, '
+          '       Movimento_Estoque_Cabecalho.Endere'#231'o, '
+          '       Movimento_Estoque_Cabecalho.Cep, '
+          '       Movimento_Estoque_Cabecalho.Munic'#237'pio, '
+          '       Movimento_Estoque_Cabecalho.Bairro, '
+          '       Movimento_Estoque_Cabecalho.UF, '
+          '       Movimento_Estoque_Cabecalho.nro, '
+          
+            '       ( ( Movimento_Estoque_Cabecalho.Total_Nota * ( select tax' +
+            'a_juros from configuracao_global ) ) / 100 ) / 30 AS Movimento_E' +
+            'stoque_Cabeca'
+          'FROM '
+          '     Movimento_Estoque_Cabecalho Movimento_Estoque_Cabecalho'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Movimento_Estoque_Cabecalho.Tipo IN ('#39'P'#39','#39'S'#39') )'
+          
+            '       AND ( Movimento_Estoque_Cabecalho.Codigo BETWEEN 1 AND 99' +
+            '9999 )'
+          '       AND ( Movimento_Estoque_Cabecalho.Cancelado <> TRUE )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Juros'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_Nota'
+          FieldLength = 0
+          FieldName = 'Total_Nota'
+          SQLFieldName = 'Movimento_Estoque_Cabeca'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( ( Movimento_Estoque_Cabecalho.Total_Nota * ( select taxa_juros' +
+            ' from configuracao_global ) ) / 100 ) / 30'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          Value = 'P,S'
+          object TdaField
+            Alias = 'Tipo'
+            DisplayWidth = 1
+            FieldAlias = 'Tipo'
+            FieldLength = 1
+            FieldName = 'Tipo'
+            SQLFieldName = 'Tipo'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Data_Emiss'#227'o'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Emiss'#227'o'
+          FieldLength = 0
+          FieldName = 'Data_Emiss'#227'o'
+          SQLFieldName = 'Data_Emiss'#227'o'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField3: TdaField
+          Alias = 'N'#250'mero_Nota'
+          DisplayWidth = 20
+          FieldAlias = 'N'#250'mero_Nota'
+          FieldLength = 20
+          FieldName = 'N'#250'mero_Nota'
+          SQLFieldName = 'N'#250'mero_Nota'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField4: TdaField
+          Alias = 'Total_Nota'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_Nota'
+          FieldLength = 0
+          FieldName = 'Total_Nota'
+          SQLFieldName = 'Total_Nota'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField5: TdaField
+          Alias = 'C'#243'digo_Cliente_Fornecedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Cliente_Fornecedor'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Cliente_Fornecedor'
+          SQLFieldName = 'C'#243'digo_Cliente_Fornecedor'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField6: TdaField
+          Alias = 'Nome'
+          DisplayWidth = 255
+          FieldAlias = 'Nome'
+          FieldLength = 255
+          FieldName = 'Nome'
+          SQLFieldName = 'Nome'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField7: TdaField
+          Alias = 'Endere'#231'o'
+          DisplayWidth = 255
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 255
+          FieldName = 'Endere'#231'o'
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField8: TdaField
+          Alias = 'Cep'
+          DisplayWidth = 9
+          FieldAlias = 'Cep'
+          FieldLength = 9
+          FieldName = 'Cep'
+          SQLFieldName = 'Cep'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField9: TdaField
+          Alias = 'Munic'#237'pio'
+          DisplayWidth = 255
+          FieldAlias = 'Munic'#237'pio'
+          FieldLength = 255
+          FieldName = 'Munic'#237'pio'
+          SQLFieldName = 'Munic'#237'pio'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField10: TdaField
+          Alias = 'Bairro'
+          DisplayWidth = 255
+          FieldAlias = 'Bairro'
+          FieldLength = 255
+          FieldName = 'Bairro'
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField11: TdaField
+          Alias = 'UF'
+          DisplayWidth = 2
+          FieldAlias = 'UF'
+          FieldLength = 2
+          FieldName = 'UF'
+          SQLFieldName = 'UF'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField12: TdaField
+          Alias = 'nro'
+          DisplayWidth = 20
+          FieldAlias = 'nro'
+          FieldLength = 20
+          FieldName = 'nro'
+          SQLFieldName = 'nro'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Movimento_Estoque_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Movimento_Estoque_Cabecalho'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874374F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F7572636514A100000070726F6365647572652044
+      4254657874374F6E476574546578742876617220546578743A20537472696E67
+      293B0D0A626567696E0D0A0D0A202054657874203A3D20496E74546F53747228
+      204D6F76696D656E746F5F4573746F7175655F4361626563616C686F5B2743C3
+      B36469676F5F436C69656E74655F466F726E656365646F72275D2029202B2027
+      202D2027202B20546578743B0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+      4E616D65060744425465787437094576656E744E616D6506094F6E4765745465
+      7874074576656E7449440235084361726574506F730102000200000001060F54
+      72614576656E7448616E646C65720B50726F6772616D4E616D65061044425465
+      7874384F6E476574546578740B50726F6772616D54797065070B747450726F63
+      656475726506536F7572636506AF70726F63656475726520444254657874384F
+      6E476574546578742876617220546578743A20537472696E67293B0D0A626567
+      696E0D0A0D0A202054657874203A3D2054657874202B20272027202B204D6F76
+      696D656E746F5F4573746F7175655F4361626563616C686F5B276E726F275D20
+      2B2027202D2027202B204D6F76696D656E746F5F4573746F7175655F43616265
+      63616C686F5B2742616972726F275D3B2020200D0A0D0A656E643B0D0A0D436F
+      6D706F6E656E744E616D65060744425465787438094576656E744E616D650609
+      4F6E47657454657874074576656E7449440235084361726574506F7301020002
+      00000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 3
+    end
+  end
+  object ppParameterList: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo da Venda@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Movimentação de Estoque@Documentos para Saídas
+NOME=Boleto Texto Rápido
+DESCRICAO=Imprime informações para boleto pré impresso
+ALTERADO_EM=10/12/2014 10:56
+SQL=<0><1><2><3>

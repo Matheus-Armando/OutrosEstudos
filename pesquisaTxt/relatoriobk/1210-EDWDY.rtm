@@ -1,0 +1,446 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Cliente
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A5'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5027
+  PrinterSetup.mmMarginLeft = 5027
+  PrinterSetup.mmMarginRight = 5027
+  PrinterSetup.mmMarginTop = 5027
+  PrinterSetup.mmPaperHeight = 148000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 11
+  Template.FileName = 
+    'C:\Program Files (x86)\Koinonia Software\Habil Empresarial\Relat' +
+    'orios\1210-EDWDY.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'Cliente'
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand1: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 22754
+    mmPrintPosition = 0
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText1'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil Aria' +
+        'l;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Tahoma;}}'#13#10'\viewkind4\uc' +
+        '1\pard\b\f0\fs28 <dbtext>\f1 Cliente_Nome\f0 </dbtext>\par'#13#10'\b0 ' +
+        '<dbtext>\f1 Entrega_Endere\'#39'e7o</dbtext>, <dbtext>Entrega_Numero' +
+        '</dbtext> - <dbtext>Entrega_Bairro_Descri\'#39'e7\'#39'e3o</dbtext>\par'#13 +
+        #10'<dbtext>Entrega_Cidade</dbtext> - <dbtext>Entrega_UF</dbtext>\p' +
+        'ar'#13#10'\b CEP: \b0 <dbtext>Entrega_CEP</dbtext>\f2\fs16\par'#13#10'}'#13#10#0
+      mmHeight = 22754
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 199761
+      BandType = 8
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Cliente
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Cliente'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Cliente'
+      Height = 250
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Cliente: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Cliente'
+        object ppField1: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'Cliente_Nome'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 0
+          TableName = 'Cliente'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Cliente'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Entrega_Bairro_Codigo'
+          FieldName = 'Entrega_Bairro_Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Cliente'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Entrega_Bairro_Descri'#231#227'o'
+          FieldName = 'Entrega_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 3
+          TableName = 'Cliente'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Entrega_CEP'
+          FieldName = 'Entrega_CEP'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Cliente'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Entrega_Cidade'
+          FieldName = 'Entrega_Cidade'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 5
+          TableName = 'Cliente'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Entrega_Endere'#231'o'
+          FieldName = 'Entrega_Endere'#231'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 6
+          TableName = 'Cliente'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Entrega_Numero'
+          FieldName = 'Entrega_Numero'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Cliente'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Entrega_Refer'#234'ncia'
+          FieldName = 'Entrega_Refer'#234'ncia'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 8
+          TableName = 'Cliente'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Entrega_UF'
+          FieldName = 'Entrega_UF'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 9
+          TableName = 'Cliente'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Cliente'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Cliente.Cliente_Nome, Cliente.Codigo, '
+          '       Cliente.Entrega_Bairro_Codigo, '
+          '       Cliente.Entrega_Bairro_Descri'#231#227'o, '
+          '       Cliente.Entrega_CEP, '
+          '       Cliente.Entrega_Cidade, '
+          '       Cliente.Entrega_Endere'#231'o, '
+          '       Cliente.Entrega_Numero, '
+          '       Cliente.Entrega_Refer'#234'ncia, '
+          '       Cliente.Entrega_UF'
+          'FROM Cliente Cliente'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Cliente.Codigo BETWEEN 1 AND 999999 )'
+          '       AND ( Cliente.Cliente_Inativo <> TRUE ))')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Cliente'
+            TableName = 'Cliente'
+            TableSQLAlias = 'Cliente'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cliente_Inativo'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cliente_Inativo'
+            FieldLength = 0
+            FieldName = 'Cliente_Inativo'
+            SQLFieldName = 'Cliente_Inativo'
+            TableAlias = 'Cliente'
+            TableName = 'Cliente'
+            TableSQLAlias = 'Cliente'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          SQLFieldName = 'Cliente_Nome'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField2: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField3: TdaField
+          Alias = 'Entrega_Bairro_Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Entrega_Bairro_Codigo'
+          FieldLength = 0
+          FieldName = 'Entrega_Bairro_Codigo'
+          SQLFieldName = 'Entrega_Bairro_Codigo'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField4: TdaField
+          Alias = 'Entrega_Bairro_Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Entrega_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Entrega_Bairro_Descri'#231#227'o'
+          SQLFieldName = 'Entrega_Bairro_Descri'#231#227'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField5: TdaField
+          Alias = 'Entrega_CEP'
+          DisplayWidth = 10
+          FieldAlias = 'Entrega_CEP'
+          FieldLength = 10
+          FieldName = 'Entrega_CEP'
+          SQLFieldName = 'Entrega_CEP'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField6: TdaField
+          Alias = 'Entrega_Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Entrega_Cidade'
+          FieldLength = 50
+          FieldName = 'Entrega_Cidade'
+          SQLFieldName = 'Entrega_Cidade'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField7: TdaField
+          Alias = 'Entrega_Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Entrega_Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Entrega_Endere'#231'o'
+          SQLFieldName = 'Entrega_Endere'#231'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField8: TdaField
+          Alias = 'Entrega_Numero'
+          DisplayWidth = 10
+          FieldAlias = 'Entrega_Numero'
+          FieldLength = 10
+          FieldName = 'Entrega_Numero'
+          SQLFieldName = 'Entrega_Numero'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField9: TdaField
+          Alias = 'Entrega_Refer'#234'ncia'
+          DisplayWidth = 50
+          FieldAlias = 'Entrega_Refer'#234'ncia'
+          FieldLength = 50
+          FieldName = 'Entrega_Refer'#234'ncia'
+          SQLFieldName = 'Entrega_Refer'#234'ncia'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField10: TdaField
+          Alias = 'Entrega_UF'
+          DisplayWidth = 2
+          FieldAlias = 'Entrega_UF'
+          FieldLength = 2
+          FieldName = 'Entrega_UF'
+          SQLFieldName = 'Entrega_UF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Cliente'
+          JoinType = dajtNone
+          SQLAlias = 'Cliente'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Cliente@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo'
+    end
+  end
+end
+$
+GRUPO=Clientes@Etiquetas
+NOME=Envelope A5 - Endereço Entrega
+DESCRICAO=Imprime o endereço de entrega do cliente em um envelope A5
+ALTERADO_EM=24/10/2012 16:39
+SQL=<0>

@@ -1,0 +1,396 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Contatos
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A5'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 148000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 11
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1212-1U3PY.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Contatos'
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 28310
+    mmPrintPosition = 0
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText1'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil Aria' +
+        'l;}{\f1\fnil\fcharset0 Arial;}}'#13#10'{\colortbl ;\red0\green0\blue0;' +
+        '\red128\green128\blue128;}'#13#10'\viewkind4\uc1\pard\cf1\f0\fs20 <dbt' +
+        'ext>Nome</dbtext>\fs18\par'#13#10'<dbtext>Endere\f1\'#39'e7o</dbtext> <dbt' +
+        'ext>Numero</dbtext> - <dbtext>Bairro</dbtext>\par'#13#10'<dbtext>Cidad' +
+        'e</dbtext> - <dbtext>Estado</dbtext>\par'#13#10'<dbtext>CEP</dbtext>\p' +
+        'ar'#13#10'\cf2\f0\fs16\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Transparent = True
+      mmHeight = 16404
+      mmLeft = 5821
+      mmTop = 3175
+      mmWidth = 188384
+      BandType = 8
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Contatos'
+      Height = 216
+      Left = 13
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 472
+      AutoSearchTabOrder = 0
+      object Contatos: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Contatos'
+        object ppField1: TppField
+          FieldAlias = 'Nome'
+          FieldName = 'Nome'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 0
+          TableName = 'Contatos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Endere'#231'o'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 1
+          TableName = 'Contatos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Bairro'
+          FieldName = 'Bairro'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 2
+          TableName = 'Contatos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Cidade'
+          FieldName = 'Cidade'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 3
+          TableName = 'Contatos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Estado'
+          FieldName = 'Estado'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 4
+          TableName = 'Contatos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'CEP'
+          FieldName = 'CEP'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Contatos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Numero'
+          FieldName = 'Numero'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Contatos'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Contatos'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Contatos.Nome, Contatos.Endere'#231'o, '
+          '       Contatos.Bairro, Contatos.Cidade, '
+          '       Contatos.Estado, Contatos.CEP, '
+          '       Contatos.Numero'
+          'FROM Contatos Contatos'
+          'WHERE ( Contatos.Codigo = 24 )'
+          'ORDER BY Contatos.Codigo, Contatos.Nome, '
+          '         Contatos.Data_Nascimento')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          ParamName = 'ID'
+          Value = '1'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Contatos'
+            TableName = 'Contatos'
+            TableSQLAlias = 'Contatos'
+          end
+          object TdaNumericValue
+            Value = 24.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Nome'
+          DisplayWidth = 100
+          FieldAlias = 'Nome'
+          FieldLength = 100
+          FieldName = 'Nome'
+          SQLFieldName = 'Nome'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField2: TdaField
+          Alias = 'Endere'#231'o'
+          DisplayWidth = 255
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 255
+          FieldName = 'Endere'#231'o'
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField3: TdaField
+          Alias = 'Bairro'
+          DisplayWidth = 100
+          FieldAlias = 'Bairro'
+          FieldLength = 100
+          FieldName = 'Bairro'
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField4: TdaField
+          Alias = 'Cidade'
+          DisplayWidth = 100
+          FieldAlias = 'Cidade'
+          FieldLength = 100
+          FieldName = 'Cidade'
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField5: TdaField
+          Alias = 'Estado'
+          DisplayWidth = 2
+          FieldAlias = 'Estado'
+          FieldLength = 2
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField6: TdaField
+          Alias = 'CEP'
+          DisplayWidth = 10
+          FieldAlias = 'CEP'
+          FieldLength = 10
+          FieldName = 'CEP'
+          SQLFieldName = 'CEP'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField7: TdaField
+          Alias = 'Numero'
+          DisplayWidth = 10
+          FieldAlias = 'Numero'
+          FieldLength = 10
+          FieldName = 'Numero'
+          SQLFieldName = 'Numero'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField8: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField9: TdaField
+          ChildType = 2
+          Alias = 'Nome'
+          DisplayWidth = 100
+          FieldAlias = 'Nome'
+          FieldLength = 100
+          FieldName = 'Nome'
+          SQLFieldName = 'Nome'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'Data_Nascimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Data_Nascimento'
+          SQLFieldName = 'Data_Nascimento'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Contatos'
+          JoinType = dajtNone
+          SQLAlias = 'Contatos'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 4
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1'
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Contato@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Agenda de Contatos@Etiquetas e Envelopes
+NOME=Envelope A5
+DESCRICAO=Imprime o endereço do contato escolhido em um envelope A5
+ALTERADO_EM=05/01/2015 10:07
+SQL=<0>
+ORDEM=Contatos.Codigo<Codigo>Contatos.Nome<Nome>Contatos.Data_Nascimento<Data_Nascimento>

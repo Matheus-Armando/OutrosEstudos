@@ -1,0 +1,1300 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Letter'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5027
+  PrinterSetup.mmMarginLeft = 5027
+  PrinterSetup.mmMarginRight = 5027
+  PrinterSetup.mmMarginTop = 5027
+  PrinterSetup.mmPaperHeight = 279400
+  PrinterSetup.mmPaperWidth = 215900
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1210-HCH14.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Caixa_Lancamentos'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 205846
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'Letter'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5027
+        PrinterSetup.mmMarginLeft = 5027
+        PrinterSetup.mmMarginRight = 5027
+        PrinterSetup.mmMarginTop = 5027
+        PrinterSetup.mmPaperHeight = 279400
+        PrinterSetup.mmPaperWidth = 215900
+        PrinterSetup.PaperSize = 1
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer14: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 11377
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      ParentWidth = True
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 5292
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 205846
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'Data'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 0
+      mmTop = 6615
+      mmWidth = 17198
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Conta Caixa'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 27252
+      mmTop = 6615
+      mmWidth = 17992
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'C'#243'digo Lcto.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 49477
+      mmTop = 6615
+      mmWidth = 19473
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Hist'#243'rico'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 70908
+      mmTop = 6615
+      mmWidth = 13801
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Sa'#237'da'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 195750
+      mmTop = 6615
+      mmWidth = 8509
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 195208
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 197325
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      AutoSize = False
+      Caption = 'Entrada'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 163248
+      mmTop = 6615
+      mmWidth = 20373
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 1058
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 205846
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine3: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 1058
+      mmLeft = 0
+      mmTop = 10848
+      mmWidth = 205846
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label8'
+      Caption = 'GR.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 18785
+      mmTop = 6615
+      mmWidth = 5028
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4233
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Data'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 244
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Conta'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3260
+      mmLeft = 27252
+      mmTop = 265
+      mmWidth = 20108
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3260
+      mmLeft = 49477
+      mmTop = 265
+      mmWidth = 18521
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Hist'#243'rico'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3175
+      mmLeft = 70908
+      mmTop = 265
+      mmWidth = 90223
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      BlankWhenZero = True
+      DataField = 'iif_Mid_Caixa_Lancament_2'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3260
+      mmLeft = 187061
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      BlankWhenZero = True
+      DataField = 'iif_Mid_Caixa_Lancamentos'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3175
+      mmLeft = 163248
+      mmTop = 265
+      mmWidth = 20373
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'Line2'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 265
+      mmLeft = 0
+      mmTop = 3969
+      mmWidth = 205846
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'mid_Caixa_Lancamentos_Con'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3175
+      mmLeft = 18785
+      mmTop = 265
+      mmWidth = 4763
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 205846
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 180391
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 9260
+    mmPrintPosition = 0
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      DataField = 'iif_Mid_Caixa_Lancamentos'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3810
+      mmLeft = 179652
+      mmTop = 1058
+      mmWidth = 24606
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label7'
+      Caption = 'Total de Entradas no Per'#237'odo Canceladas:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 112977
+      mmTop = 1058
+      mmWidth = 63669
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBCalc4: TppDBCalc
+      UserName = 'DBCalc4'
+      DataField = 'iif_Mid_Caixa_Lancament_2'
+      DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Lancamentos'
+      mmHeight = 3810
+      mmLeft = 179652
+      mmTop = 5556
+      mmWidth = 24606
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      Caption = 'Total de Sa'#237'das no Per'#237'odo Canceladas:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 116152
+      mmTop = 5556
+      mmWidth = 60325
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLine5: TppLine
+      UserName = 'Line4'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 794
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 205846
+      BandType = 7
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo_Caixa'
+    DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Caixa_Lancamentos'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 5027
+      mmPrintPosition = 0
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        AutoSize = True
+        DataField = 'Caixa_Lancamentos_Codigo'
+        DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Caixa_Lancamentos'
+        mmHeight = 3969
+        mmLeft = 0
+        mmTop = 529
+        mmWidth = 19050
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 10054
+      mmPrintPosition = 0
+      object ppDBCalc2: TppDBCalc
+        UserName = 'DBCalc2'
+        DataField = 'iif_Mid_Caixa_Lancamentos'
+        DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Caixa_Lancamentos'
+        mmHeight = 3810
+        mmLeft = 179652
+        mmTop = 529
+        mmWidth = 24606
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        Caption = 'Total de Entradas no Caixa:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 134938
+        mmTop = 529
+        mmWidth = 41698
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBCalc3: TppDBCalc
+        UserName = 'DBCalc3'
+        DataField = 'iif_Mid_Caixa_Lancament_2'
+        DataPipeline = daADOQueryDataView1.Caixa_Lancamentos
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Caixa_Lancamentos'
+        mmHeight = 3810
+        mmLeft = 179652
+        mmTop = 5556
+        mmWidth = 24606
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel11: TppLabel
+        UserName = 'Label101'
+        Caption = 'Total de Sa'#237'das no Caixa:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 138113
+        mmTop = 5556
+        mmWidth = 38354
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Caixa_Lancamentos'
+      Height = 216
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Caixa_Lancamentos: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Caixa_Lancamentos'
+        object ppField1: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 0
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Conta'
+          FieldName = 'Conta'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 1
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Hist'#243'rico'
+          FieldName = 'Hist'#243'rico'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 3
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Codigo_Caixa'
+          FieldName = 'Codigo_Caixa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Caixa_Nome'
+          FieldName = 'Caixa_Lancamentos_Codigo'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Entrada'
+          FieldName = 'iif_Mid_Caixa_Lancamentos'
+          FieldLength = 30
+          DataType = dtDouble
+          DisplayWidth = 30
+          Position = 7
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Saida'
+          FieldName = 'iif_Mid_Caixa_Lancament_2'
+          FieldLength = 30
+          DataType = dtDouble
+          DisplayWidth = 30
+          Position = 8
+          TableName = 'Caixa_Lancamentos'
+        end
+        object ppField10: TppField
+          FieldAlias = 'GR'
+          FieldName = 'mid_Caixa_Lancamentos_Con'
+          FieldLength = 25
+          DisplayWidth = 25
+          Position = 9
+          TableName = 'Caixa_Lancamentos'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Caixa_Lancamentos'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Caixa_Lancamentos.Data, '
+          '       Caixa_Lancamentos.Conta, '
+          '       Caixa_Lancamentos.Codigo, '
+          '       Caixa_Lancamentos.Hist'#243'rico, '
+          '       Caixa_Lancamentos.Valor, '
+          '       Caixa_Lancamentos.Codigo_Caixa, '
+          
+            '       Caixa_Lancamentos.Codigo_Caixa & " - " & ( Select c.nome ' +
+            'from caixas c where c.codigo = Caixa_Lancamentos.Codigo_Caixa an' +
+            'd c.empresa = Caixa_Lancamentos.empresa)  AS Caixa_Lancamentos_C' +
+            'odigo, '
+          
+            '       iif( Mid( Caixa_Lancamentos.Conta, 1, 1 ) = 1, Valor, 0 )' +
+            ' AS iif_Mid_Caixa_Lancamentos, '
+          
+            '       iif( Mid( Caixa_Lancamentos.Conta, 1, 1 ) = 2, Valor, 0 )' +
+            ' AS iif_Mid_Caixa_Lancament_2, '
+          
+            '       mid(Caixa_Lancamentos.Conta, 1, 1) AS mid_Caixa_Lancament' +
+            'os_Con'
+          'FROM Caixa_Lancamentos Caixa_Lancamentos'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Caixa_Lancamentos.Codigo_Caixa BETWEEN 1 AND 999999 )'
+          '       AND ( Caixa_Lancamentos.Cancelado = TRUE )'
+          
+            '       AND ( Caixa_Lancamentos.Data BETWEEN #2013-01-01 00.00.00' +
+            '# AND #2013-01-30 00.00.00# )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Caixa_Nome'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Caixa'
+          FieldLength = 0
+          FieldName = 'Codigo_Caixa'
+          SQLFieldName = 'Caixa_Lancamentos_Codigo'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+          CalcType = dacaExpression
+          Expression = 
+            'Caixa_Lancamentos.Codigo_Caixa & " - " & ( Select c.nome from ca' +
+            'ixas c where c.codigo = Caixa_Lancamentos.Codigo_Caixa and c.emp' +
+            'resa = Caixa_Lancamentos.empresa) '
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Entrada'
+          DataType = dtDouble
+          DisplayWidth = 30
+          FieldAlias = 'Conta'
+          FieldLength = 30
+          FieldName = 'Conta'
+          SQLFieldName = 'iif_Mid_Caixa_Lancamentos'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+          CalcType = dacaExpression
+          Expression = 'iif( Mid( Caixa_Lancamentos.Conta, 1, 1 ) = 1, Valor, 0 )'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'Saida'
+          DataType = dtDouble
+          DisplayWidth = 30
+          FieldAlias = 'Conta'
+          FieldLength = 30
+          FieldName = 'Conta'
+          SQLFieldName = 'iif_Mid_Caixa_Lancament_2'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+          CalcType = dacaExpression
+          Expression = 'iif( Mid( Caixa_Lancamentos.Conta, 1, 1 ) = 2, Valor, 0 )'
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 8
+          Alias = 'GR'
+          DisplayWidth = 25
+          FieldAlias = 'Documento'
+          FieldLength = 25
+          FieldName = 'Documento'
+          SQLFieldName = 'mid_Caixa_Lancamentos_Con'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+          CalcType = dacaExpression
+          Expression = 'mid(Caixa_Lancamentos.Conta, 1, 1)'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo_Caixa'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo_Caixa'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo_Caixa'
+            FieldLength = 0
+            FieldName = 'Codigo_Caixa'
+            SQLFieldName = 'Codigo_Caixa'
+            TableAlias = 'Caixa_Lancamentos'
+            TableName = 'Caixa_Lancamentos'
+            TableSQLAlias = 'Caixa_Lancamentos'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Caixa_Lancamentos'
+            TableName = 'Caixa_Lancamentos'
+            TableSQLAlias = 'Caixa_Lancamentos'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data'
+          Value = '01/01/2013,30/01/2013'
+          object TdaField
+            Alias = 'Data'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data'
+            FieldLength = 0
+            FieldName = 'Data'
+            SQLFieldName = 'Data'
+            TableAlias = 'Caixa_Lancamentos'
+            TableName = 'Caixa_Lancamentos'
+            TableSQLAlias = 'Caixa_Lancamentos'
+          end
+          object TdaNumericValue
+            Value = 41275.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 41304.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField2: TdaField
+          Alias = 'Conta'
+          DisplayWidth = 30
+          FieldAlias = 'Conta'
+          FieldLength = 30
+          FieldName = 'Conta'
+          SQLFieldName = 'Conta'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField3: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField4: TdaField
+          Alias = 'Hist'#243'rico'
+          DisplayWidth = 100
+          FieldAlias = 'Hist'#243'rico'
+          FieldLength = 100
+          FieldName = 'Hist'#243'rico'
+          SQLFieldName = 'Hist'#243'rico'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField5: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField6: TdaField
+          Alias = 'Codigo_Caixa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Caixa'
+          FieldLength = 0
+          FieldName = 'Codigo_Caixa'
+          SQLFieldName = 'Codigo_Caixa'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField7: TdaField
+          ChildType = 2
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField8: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField9: TdaField
+          ChildType = 2
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'Documento'
+          DisplayWidth = 25
+          FieldAlias = 'Documento'
+          FieldLength = 25
+          FieldName = 'Documento'
+          SQLFieldName = 'Documento'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          TableSQLAlias = 'Caixa_Lancamentos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Lancamentos'
+          JoinType = dajtNone
+          SQLAlias = 'Caixa_Lancamentos'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 14
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo_Caixa: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo_Caixa'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Caixa@Caixas@ID@Nome@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo_Caixa'
+    end
+    object Data: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/01/2013,30/01/2013'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/01/2013'
+      UserName = 'Data'
+    end
+  end
+end
+$
+GRUPO=Caixa
+NOME=Lançamentos no Caixa - Cancelados
+DESCRICAO=Imprime uma lista de lançamentos cancelados durante o período e os caixas escolhidos
+ALTERADO_EM=09/12/2014 09:20
+SQL=<0>
+ORDEM=Caixa_Lancamentos.Data<Data>Caixa_Lancamentos.Codigo<Codigo>Caixa_Lancamentos.Valor<Valor>Caixa_Lancamentos.Documento<Documento>

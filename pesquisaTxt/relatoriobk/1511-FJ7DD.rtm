@@ -1,0 +1,1252 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 256
+  Template.FileName = 
+    'C:\Program Files (x86)\Koinonia Software\Habil Empresarial\Relat' +
+    'orios\1511-FJ7DD.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4763
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo_2'
+      DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+      mmHeight = 3725
+      mmLeft = 794
+      mmTop = 0
+      mmWidth = 13229
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Codigo_Item'
+      DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 16404
+      mmTop = 0
+      mmWidth = 88371
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Quantidade'
+      DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 116681
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Valor'
+      DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 149738
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Almox_Movimentacoes_Detal'
+      DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 182298
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      ParentWidth = True
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 1319
+      mmLeft = 0
+      mmTop = 3438
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Total:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 158747
+      mmTop = 0
+      mmWidth = 8202
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      DataField = 'Almox_Movimentacoes_Detal'
+      DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+      mmHeight = 4498
+      mmLeft = 175948
+      mmTop = 0
+      mmWidth = 23548
+      BandType = 7
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Almox_Movimentacoes_Cabecalho
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      PrintHeight = phDynamic
+      mmBottomOffset = 0
+      mmHeight = 31485
+      mmPrintPosition = 0
+      object ppShape1: TppShape
+        UserName = 'shpCabecalho'
+        Brush.Color = cl3DLight
+        Brush.Style = bsFDiagonal
+        ParentWidth = True
+        Shape = stRoundRect
+        Visible = False
+        mmHeight = 5556
+        mmLeft = 0
+        mmTop = 25917
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppRichText1: TppRichText
+        UserName = 'RichText1'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Caption = 'RichText1'
+        MailMerge = True
+        RichText = 
+          '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcha' +
+          'rset0 Arial;}{\f1\fnil Arial;}}'#13#10'{\colortbl ;\red0\green0\blue0;' +
+          '}'#13#10'\viewkind4\uc1\pard\cf1\b\fs18 C\'#39'f3digo Movimenta\'#39'e7\'#39'e3o: ' +
+          '\b0\f1 <dbtext>Codigo_C</dbtext>\b\par'#13#10'\f0 C\'#39'f3digo Fornecedor' +
+          ': \b0\f1 <dbtext>Codigo_Fornecedor</dbtext>\f0  - <dbtext>Nome_F' +
+          'ornecedor</dbtext>\b\f1\par'#13#10'\f0 C\'#39'f2digo Funcion\'#39'e1rio:\b0  \' +
+          'f1 <dbtext>Codigo_Funcionario</dbtext>\f0  - <dbtext>Nome_Funcio' +
+          'nario</dbtext>\par'#13#10'\b Data: \b0 <dbtext>Data</dbtext>\b\f1\par'#13 +
+          #10'}'#13#10#0
+        RemoveEmptyLines = False
+        Transparent = True
+        mmHeight = 17198
+        mmLeft = 0
+        mmTop = 6615
+        mmWidth = 143934
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+        mmBottomOffset = 0
+        mmOverFlowOffset = 0
+        mmStopPosition = 0
+        mmMinHeight = 0
+      end
+      object ppSubReport1: TppSubReport
+        UserName = 'srTitulo'
+        ExpandAll = False
+        NewPrintJob = False
+        OutlineSettings.CreateNode = True
+        TraverseAllData = False
+        mmHeight = 5027
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+        mmBottomOffset = 0
+        mmOverFlowOffset = 0
+        mmStopPosition = 0
+        mmMinHeight = 0
+        object ppChildReport1: TppChildReport
+          PrinterSetup.BinName = 'Default'
+          PrinterSetup.DocumentName = 'Report'
+          PrinterSetup.PaperName = 'A4'
+          PrinterSetup.PrinterName = 'Default'
+          PrinterSetup.SaveDeviceSettings = False
+          PrinterSetup.mmMarginBottom = 5000
+          PrinterSetup.mmMarginLeft = 5000
+          PrinterSetup.mmMarginRight = 5000
+          PrinterSetup.mmMarginTop = 5000
+          PrinterSetup.mmPaperHeight = 297128
+          PrinterSetup.mmPaperWidth = 210080
+          PrinterSetup.PaperSize = 256
+          Template.Format = ftASCII
+          Units = utScreenPixels
+          Version = '15.04'
+          mmColumnWidth = 0
+          object ppTitleBand2: TppTitleBand
+            Background.Brush.Style = bsClear
+            mmBottomOffset = 0
+            mmHeight = 0
+            mmPrintPosition = 0
+          end
+          object ppDetailBand1: TppDetailBand
+            Background1.Brush.Style = bsClear
+            Background2.Brush.Style = bsClear
+            mmBottomOffset = 0
+            mmHeight = 0
+            mmPrintPosition = 0
+          end
+          object raCodeModule2: TraCodeModule
+            ProgramStream = {00}
+          end
+          object ppDesignLayers2: TppDesignLayers
+            object ppDesignLayer2: TppDesignLayer
+              UserName = 'Foreground'
+              LayerType = ltBanded
+              Index = 0
+            end
+          end
+        end
+      end
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        AutoSize = False
+        Caption = 'C'#243'digo'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 26711
+        mmWidth = 13229
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel2: TppLabel
+        UserName = 'Label2'
+        AutoSize = False
+        Caption = 'Descri'#231#227'o'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 16404
+        mmTop = 26711
+        mmWidth = 15875
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label5'
+        AutoSize = False
+        Caption = 'Quantidade'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 116681
+        mmTop = 26723
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel3: TppLabel
+        UserName = 'Label3'
+        AutoSize = False
+        Caption = 'Valor'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 149738
+        mmTop = 26711
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        AutoSize = False
+        Caption = 'Custo Total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 182298
+        mmTop = 26711
+        mmWidth = 16933
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine3: TppLine
+        UserName = 'lnCabecalho1'
+        ParentWidth = True
+        Weight = 0.750000000000000000
+        mmHeight = 1849
+        mmLeft = 0
+        mmTop = 25927
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine4: TppLine
+        UserName = 'lnCabecalho2'
+        ParentWidth = True
+        Position = lpBottom
+        Weight = 0.750000000000000000
+        mmHeight = 1054
+        mmLeft = 0
+        mmTop = 30430
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874324F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F75726365068670726F6365647572652044425465
+      7874324F6E476574546578742876617220546578743A20537472696E67293B0D
+      0A626567696E0D0A0D0A202054657874203A3D2054657874202B2027202D2027
+      202B20416C6D6F785F4D6F76696D656E7461636F65735F4361626563616C686F
+      5B274E6F6D655F4974656D275D3B0D0A0D0A656E643B0D0A0D436F6D706F6E65
+      6E744E616D65060744425465787432094576656E744E616D6506094F6E476574
+      54657874074576656E7449440235084361726574506F730102450204000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Almox_Movimentacoes_Cabecalho'
+      Height = 284
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Almox_Movimentacoes_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Almox_Movimentacoes_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Codigo_C'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 1
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Codigo_Fornecedor'
+          FieldName = 'Codigo_Fornecedor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo_Funcionario'
+          FieldName = 'Codigo_Funcionario'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Codigo_Pedido'
+          FieldName = 'Codigo_Pedido'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 5
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Referencia'
+          FieldName = 'Referencia'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Codigo_D'
+          FieldName = 'Codigo_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Almox_Movimentacoes_Detalhes'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Codigo_Item'
+          FieldName = 'Codigo_Item'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Almox_Movimentacoes_Detalhes'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Quantidade'
+          FieldName = 'Quantidade'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Almox_Movimentacoes_Detalhes'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Almox_Movimentacoes_Detalhes'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Nome_Funcionario'
+          FieldName = 'select_f_Nome_from_Funci'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Nome_Fornecedor'
+          FieldName = 'select_f_Nome_Fantasia_f'
+          FieldLength = 0
+          DisplayWidth = 18
+          Position = 12
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Nome_Item'
+          FieldName = 'select_i_Descricao_from'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Valor_Total'
+          FieldName = 'Almox_Movimentacoes_Detal'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 5
+          Position = 14
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Almox_Movimentacoes_Cabecalho'
+        Distinct = True
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT DISTINCT '
+          '                Almox_Movimentacoes_Cabecalho.Codigo, '
+          '                Almox_Movimentacoes_Cabecalho.Data, '
+          
+            '                Almox_Movimentacoes_Cabecalho.Codigo_Fornecedor,' +
+            ' '
+          
+            '                Almox_Movimentacoes_Cabecalho.Codigo_Funcionario' +
+            ', '
+          '                Almox_Movimentacoes_Cabecalho.Codigo_Pedido, '
+          '                Almox_Movimentacoes_Cabecalho.Tipo, '
+          '                Almox_Movimentacoes_Cabecalho.Referencia, '
+          
+            '                Almox_Movimentacoes_Detalhes.Codigo AS Codigo_2,' +
+            ' '
+          '                Almox_Movimentacoes_Detalhes.Codigo_Item, '
+          '                Almox_Movimentacoes_Detalhes.Quantidade, '
+          '                Almox_Movimentacoes_Detalhes.Valor, '
+          
+            '                ( select f.Nome from Funcionario f where f.Codig' +
+            'o = Almox_Movimentacoes_Cabecalho.Codigo_Funcionario and f.Empre' +
+            'sa = Almox_Movimentacoes_Cabecalho.Empresa ) AS select_f_Nome_fr' +
+            'om_Funci, '
+          
+            '                ( select f.Nome_Fantasia from Fornecedor f where' +
+            ' f.Codigo = Almox_Movimentacoes_Cabecalho.Codigo_Fornecedor and ' +
+            'f.Empresa = Almox_Movimentacoes_Cabecalho.Empresa ) AS select_f_' +
+            'Nome_Fantasia_f, '
+          
+            '                ( select i.Descricao from Almox_Itens i where i.' +
+            'Codigo = Almox_Movimentacoes_Detalhes.Codigo_Item and i.Empresa ' +
+            '= Almox_Movimentacoes_Detalhes.Empresa ) AS select_i_Descricao_f' +
+            'rom, '
+          
+            '                Almox_Movimentacoes_Detalhes.Valor * Almox_Movim' +
+            'entacoes_Detalhes.Quantidade AS Almox_Movimentacoes_Detal'
+          'FROM ('
+          '     Almox_Movimentacoes_Cabecalho Almox_Movimentacoes_Cabecalho'
+          
+            '      LEFT OUTER JOIN Almox_Movimentacoes_Detalhes Almox_Movimen' +
+            'tacoes_Detalhes ON '
+          
+            '     (Almox_Movimentacoes_Detalhes.Empresa = Almox_Movimentacoes' +
+            '_Cabecalho.Empresa)'
+          
+            '      AND (Almox_Movimentacoes_Detalhes.Codigo_Cabecalho = Almox' +
+            '_Movimentacoes_Cabecalho.Codigo) )'
+          'WHERE ( Almox_Movimentacoes_Cabecalho.Tipo = '#39'S'#39' )'
+          
+            '       AND ( Almox_Movimentacoes_Cabecalho.Codigo BETWEEN 0 AND ' +
+            '999999 )'
+          'ORDER BY Almox_Movimentacoes_Cabecalho.Codigo, '
+          '         Almox_Movimentacoes_Detalhes.Codigo')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Nome_Funcionario'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Fornecedor'
+          FieldLength = 0
+          FieldName = 'Codigo_Fornecedor'
+          SQLFieldName = 'select_f_Nome_from_Funci'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select f.Nome from Funcionario f where f.Codigo = Almox_Movime' +
+            'ntacoes_Cabecalho.Codigo_Funcionario and f.Empresa = Almox_Movim' +
+            'entacoes_Cabecalho.Empresa )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Nome_Fornecedor'
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'select_f_Nome_Fantasia_f'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select f.Nome_Fantasia from Fornecedor f where f.Codigo = Almo' +
+            'x_Movimentacoes_Cabecalho.Codigo_Fornecedor and f.Empresa = Almo' +
+            'x_Movimentacoes_Cabecalho.Empresa )'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'Nome_Item'
+          DisplayWidth = 10
+          FieldAlias = 'Referencia'
+          FieldLength = 0
+          FieldName = 'Referencia'
+          SQLFieldName = 'select_i_Descricao_from'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select i.Descricao from Almox_Itens i where i.Codigo = Almox_M' +
+            'ovimentacoes_Detalhes.Codigo_Item and i.Empresa = Almox_Moviment' +
+            'acoes_Detalhes.Empresa )'
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 8
+          Alias = 'Valor_Total'
+          DataType = dtDouble
+          DisplayWidth = 5
+          FieldAlias = 'Cancelado'
+          FieldLength = 0
+          FieldName = 'Cancelado'
+          SQLFieldName = 'Almox_Movimentacoes_Detal'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            'Almox_Movimentacoes_Detalhes.Valor * Almox_Movimentacoes_Detalhe' +
+            's.Quantidade'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = 'S'
+          object TdaField
+            Alias = 'Tipo'
+            DisplayWidth = 1
+            FieldAlias = 'Tipo'
+            FieldLength = 1
+            FieldName = 'Tipo'
+            SQLFieldName = 'Tipo'
+            TableAlias = 'Almox_Movimentacoes_Cabecalho'
+            TableName = 'Almox_Movimentacoes_Cabecalho'
+            TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo'
+          Value = '0,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Almox_Movimentacoes_Cabecalho'
+            TableName = 'Almox_Movimentacoes_Cabecalho'
+            TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+          end
+          object TdaNumericValue
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo_C'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField3: TdaField
+          Alias = 'Codigo_Fornecedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Fornecedor'
+          FieldLength = 0
+          FieldName = 'Codigo_Fornecedor'
+          SQLFieldName = 'Codigo_Fornecedor'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo_Funcionario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Funcionario'
+          FieldLength = 0
+          FieldName = 'Codigo_Funcionario'
+          SQLFieldName = 'Codigo_Funcionario'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField5: TdaField
+          Alias = 'Codigo_Pedido'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Pedido'
+          FieldLength = 0
+          FieldName = 'Codigo_Pedido'
+          SQLFieldName = 'Codigo_Pedido'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField6: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 1
+          FieldAlias = 'Tipo'
+          FieldLength = 1
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField7: TdaField
+          Alias = 'Referencia'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Referencia'
+          FieldLength = 0
+          FieldName = 'Referencia'
+          SQLFieldName = 'Referencia'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField8: TdaField
+          Alias = 'Codigo_D'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          IsDetail = True
+          SQLFieldName = 'Codigo_2'
+          TableAlias = 'Almox_Movimentacoes_Detalhes'
+          TableName = 'Almox_Movimentacoes_Detalhes'
+          TableSQLAlias = 'Almox_Movimentacoes_Detalhes'
+        end
+        object daField9: TdaField
+          Alias = 'Codigo_Item'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Item'
+          FieldLength = 0
+          FieldName = 'Codigo_Item'
+          IsDetail = True
+          SQLFieldName = 'Codigo_Item'
+          TableAlias = 'Almox_Movimentacoes_Detalhes'
+          TableName = 'Almox_Movimentacoes_Detalhes'
+          TableSQLAlias = 'Almox_Movimentacoes_Detalhes'
+        end
+        object daField10: TdaField
+          Alias = 'Quantidade'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          IsDetail = True
+          SQLFieldName = 'Quantidade'
+          TableAlias = 'Almox_Movimentacoes_Detalhes'
+          TableName = 'Almox_Movimentacoes_Detalhes'
+          TableSQLAlias = 'Almox_Movimentacoes_Detalhes'
+        end
+        object daField11: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          IsDetail = True
+          SQLFieldName = 'Valor'
+          TableAlias = 'Almox_Movimentacoes_Detalhes'
+          TableName = 'Almox_Movimentacoes_Detalhes'
+          TableSQLAlias = 'Almox_Movimentacoes_Detalhes'
+        end
+        object daField12: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daField13: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Almox_Movimentacoes_Detalhes'
+          TableName = 'Almox_Movimentacoes_Detalhes'
+          TableSQLAlias = 'Almox_Movimentacoes_Detalhes'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Almox_Movimentacoes_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableAlias = 'Almox_Movimentacoes_Cabecalho'
+          TableName = 'Almox_Movimentacoes_Cabecalho'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Almox_Movimentacoes_Detalhes'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Almox_Movimentacoes_Detalhes'
+          TableAlias = 'Almox_Movimentacoes_Detalhes'
+          TableName = 'Almox_Movimentacoes_Detalhes'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField15: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Almox_Movimentacoes_Detalhes'
+              TableName = 'Almox_Movimentacoes_Detalhes'
+              TableSQLAlias = 'Almox_Movimentacoes_Detalhes'
+            end
+            object daField14: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Almox_Movimentacoes_Cabecalho'
+              TableName = 'Almox_Movimentacoes_Cabecalho'
+              TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField17: TdaField
+              ChildType = 3
+              Alias = 'Codigo_Cabecalho'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Cabecalho'
+              FieldLength = 0
+              FieldName = 'Codigo_Cabecalho'
+              SQLFieldName = 'Codigo_Cabecalho'
+              TableAlias = 'Almox_Movimentacoes_Detalhes'
+              TableName = 'Almox_Movimentacoes_Detalhes'
+              TableSQLAlias = 'Almox_Movimentacoes_Detalhes'
+            end
+            object daField16: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Almox_Movimentacoes_Cabecalho'
+              TableName = 'Almox_Movimentacoes_Cabecalho'
+              TableSQLAlias = 'Almox_Movimentacoes_Cabecalho'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 18
+    end
+  end
+  object ppParameterList: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '0,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Codigo@ALMOXARIFADO@ID@DESCRICAO@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '0'
+      UserName = 'Codigo'
+    end
+  end
+end
+$
+GRUPO=Almoxarifado@Documentos
+NOME=Saídas - Por Código
+ALTERADO_EM=09/12/2015 10:56
+SQL=<0><1><2><3>
+ORDEM=Almox_Movimentacoes_Cabecalho.Codigo<Codigo>Almox_Movimentacoes_Detalhes.Codigo<Codigo>

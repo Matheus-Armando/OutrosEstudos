@@ -1,0 +1,530 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Cliente
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'Custom'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5027
+  PrinterSetup.mmMarginLeft = 5027
+  PrinterSetup.mmMarginRight = 5027
+  PrinterSetup.mmMarginTop = 5027
+  PrinterSetup.mmPaperHeight = 114000
+  PrinterSetup.mmPaperWidth = 162000
+  PrinterSetup.PaperSize = 256
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1210-EYQGH.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Cliente'
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand1: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 22754
+    mmPrintPosition = 0
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText1'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil Aria' +
+        'l;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Tahoma;}}'#13#10'\viewkind4\uc' +
+        '1\pard\qc\b\f0\fs22 <dbtext>\f1 Cliente_Nome\f0 </dbtext>\par'#13#10'\' +
+        'b0 <dbtext>Cliente_Endere\f1\'#39'e7o</dbtext>, <dbtext>nro</dbtext>' +
+        ' - <dbtext>Cliente_Bairro_Descri\'#39'e7\'#39'e3o</dbtext>\par'#13#10'<dbtext>' +
+        'Cliente_Cidade</dbtext> - <dbtext>Cliente_UF</dbtext>\par'#13#10'\b CE' +
+        'P: \b0 <dbtext>Cliente_CEP</dbtext>\f2\fs16\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      mmHeight = 22754
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 152136
+      BandType = 8
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Cliente
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Cliente'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Cliente'
+      Height = 250
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Cliente: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Cliente'
+        object ppField1: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'Cliente_Nome'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 0
+          TableName = 'Cliente'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Cliente'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldName = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 2
+          TableName = 'Cliente'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 3
+          TableName = 'Cliente'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Cliente_Cidade'
+          FieldName = 'Cliente_Cidade'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 4
+          TableName = 'Cliente'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Cliente_CEP'
+          FieldName = 'Cliente_CEP'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Cliente'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cliente_UF'
+          FieldName = 'Cliente_UF'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 6
+          TableName = 'Cliente'
+        end
+        object ppField8: TppField
+          FieldAlias = 'nro'
+          FieldName = 'nro'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 7
+          TableName = 'Cliente'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Mes'
+          FieldName = 'cint_format_iif_cliente_d'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 18
+          Position = 8
+          TableName = 'Cliente'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Cliente'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Cliente.Cliente_Nome, Cliente.Codigo, '
+          '       Cliente.Cliente_Endere'#231'o, '
+          '       Cliente.Cliente_Bairro_Descri'#231#227'o, '
+          '       Cliente.Cliente_Cidade, '
+          '       Cliente.Cliente_CEP, Cliente.Cliente_UF, '
+          '       Cliente.nro, '
+          
+            '       cint( format( iif( cliente_data_nascimento is null, 0, cl' +
+            'iente_data_nascimento ), "mm" ) ) AS cint_format_iif_cliente_d'
+          'FROM Cliente Cliente'
+          'WHERE ( Cliente.Cliente_Inativo <> TRUE )'
+          
+            '       AND ( cint( format( iif( cliente_data_nascimento is null,' +
+            ' 0, cliente_data_nascimento ), "mm" ) ) = 1 )'
+          '       AND ( Cliente.Cliente_Data_Nascimento IS NOT NULL  )'
+          'ORDER BY Cliente.Cliente_Data_Nascimento, '
+          '         Cliente.Codigo, Cliente.Cliente_Nome, '
+          '         Cliente.Cliente_Raz'#227'o_Social, '
+          '         Cliente.Cliente_Sexo')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Mes'
+          DataType = dtInteger
+          DisplayWidth = 18
+          FieldAlias = 'Cliente_Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Cliente_Data_Nascimento'
+          SQLFieldName = 'cint_format_iif_cliente_d'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+          CalcType = dacaExpression
+          Expression = 
+            'cint( format( iif( cliente_data_nascimento is null, 0, cliente_d' +
+            'ata_nascimento ), "mm" ) )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cliente_Inativo'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cliente_Inativo'
+            FieldLength = 0
+            FieldName = 'Cliente_Inativo'
+            SQLFieldName = 'Cliente_Inativo'
+            TableAlias = 'Cliente'
+            TableName = 'Cliente'
+            TableSQLAlias = 'Cliente'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          ParamName = 'Mes'
+          Value = '1'
+          object TdaCalculation
+            ChildType = 8
+            Alias = 'Mes'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 18
+            FieldAlias = 'Cliente_Data_Nascimento'
+            FieldLength = 0
+            FieldName = 'Cliente_Data_Nascimento'
+            SQLFieldName = 'cint_format_iif_cliente_d'
+            TableAlias = 'Cliente'
+            TableName = 'Cliente'
+            TableSQLAlias = 'Cliente'
+            CalcType = dacaExpression
+            Expression = 
+              'cint( format( iif( cliente_data_nascimento is null, 0, cliente_d' +
+              'ata_nascimento ), "mm" ) )'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotBlank
+          object TdaField
+            Alias = 'Cliente_Data_Nascimento'
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Cliente_Data_Nascimento'
+            FieldLength = 0
+            FieldName = 'Cliente_Data_Nascimento'
+            SQLFieldName = 'Cliente_Data_Nascimento'
+            TableAlias = 'Cliente'
+            TableName = 'Cliente'
+            TableSQLAlias = 'Cliente'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          SQLFieldName = 'Cliente_Nome'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField2: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField3: TdaField
+          Alias = 'Cliente_Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Endere'#231'o'
+          SQLFieldName = 'Cliente_Endere'#231'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField4: TdaField
+          Alias = 'Cliente_Bairro_Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          SQLFieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField5: TdaField
+          Alias = 'Cliente_Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Cidade'
+          FieldLength = 50
+          FieldName = 'Cliente_Cidade'
+          SQLFieldName = 'Cliente_Cidade'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField6: TdaField
+          Alias = 'Cliente_CEP'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente_CEP'
+          FieldLength = 10
+          FieldName = 'Cliente_CEP'
+          SQLFieldName = 'Cliente_CEP'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField7: TdaField
+          Alias = 'Cliente_UF'
+          DisplayWidth = 2
+          FieldAlias = 'Cliente_UF'
+          FieldLength = 2
+          FieldName = 'Cliente_UF'
+          SQLFieldName = 'Cliente_UF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField8: TdaField
+          Alias = 'nro'
+          DisplayWidth = 20
+          FieldAlias = 'nro'
+          FieldLength = 20
+          FieldName = 'nro'
+          SQLFieldName = 'nro'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField9: TdaField
+          ChildType = 2
+          Alias = 'Cliente_Data_Nascimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Cliente_Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Cliente_Data_Nascimento'
+          SQLFieldName = 'Cliente_Data_Nascimento'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField11: TdaField
+          ChildType = 2
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          SQLFieldName = 'Cliente_Nome'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField12: TdaField
+          ChildType = 2
+          Alias = 'Cliente_Raz'#227'o_Social'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Cliente_Raz'#227'o_Social'
+          SQLFieldName = 'Cliente_Raz'#227'o_Social'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField13: TdaField
+          ChildType = 2
+          Alias = 'Cliente_Sexo'
+          DisplayWidth = 1
+          FieldAlias = 'Cliente_Sexo'
+          FieldLength = 1
+          FieldName = 'Cliente_Sexo'
+          SQLFieldName = 'Cliente_Sexo'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Cliente'
+          JoinType = dajtNone
+          SQLAlias = 'Cliente'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 1
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Mes: TppParameter
+      AutoSearchSettings.FieldAlias = 'Cliente_Data_Nascimento'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1'
+      DataType = dtString
+      LookupList.Strings = (
+        'M'#234's de Anivers'#225'rio@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Mes'
+    end
+  end
+end
+$
+GRUPO=Clientes@Aniversariantes
+NOME=Envelope Comercial - Aniversariantes
+DESCRICAO=Imprime o endereço padrão do cliente em um envelope Comercial
+ALTERADO_EM=03/12/2014 17:55
+SQL=<0>
+ORDEM=Cliente.Cliente_Data_Nascimento<Cliente_Data_Nascimento>Cliente.Codigo<Codigo>Cliente.Cliente_Nome<Cliente_Nome>Cliente.Cliente_Razão_Social<Cliente_Razão_Social>Cliente.Cliente_Sexo<Cliente_Sexo>

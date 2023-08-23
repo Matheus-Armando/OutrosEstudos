@@ -1,0 +1,900 @@
+object Relatorio: TppReport
+  AutoStop = False
+  Columns = 2
+  ColumnPositions.Strings = (
+    '5027'
+    '105040')
+  DataPipeline = daADOQueryDataView1.Caixa_Saldos
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1205-1AJBS.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 100040
+  DataPipelineName = 'Caixa_Saldos'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 6350
+    mmPrintPosition = 0
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppColumnHeaderBand1: TppColumnHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    ColumnTraversal = ctLeftToRight
+    mmBottomOffset = 0
+    mmHeight = 41275
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'Caixa:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 6350
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo_Caixa'
+      DataPipeline = daADOQueryDataView1.Caixa_Saldos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 6350
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      AutoSize = False
+      Caption = 'Saldo Anterior:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 17992
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Saldo_Anterior'
+      DataPipeline = daADOQueryDataView1.Caixa_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 18256
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      AutoSize = False
+      Caption = 'Saldo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 35719
+      mmWidth = 29633
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Saldo'
+      DataPipeline = daADOQueryDataView1.Caixa_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 35983
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      AutoSize = False
+      Caption = 'Sa'#237'das:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 23813
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Saidas'
+      DataPipeline = daADOQueryDataView1.Caixa_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 24077
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      AutoSize = False
+      Caption = 'Entradas:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 29633
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Entradas'
+      DataPipeline = daADOQueryDataView1.Caixa_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 29633
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      AutoSize = False
+      Caption = 'Data:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 12171
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Data'
+      DataPipeline = daADOQueryDataView1.Caixa_Saldos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 12435
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label7'
+      AutoSize = False
+      Caption = 'C'#243'digo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 529
+      mmWidth = 30163
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Caixa_Saldos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Caixa_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 794
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 40746
+      mmWidth = 100040
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppColumnFooterBand1: TppColumnFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 1852
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874314F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F75726365067C70726F6365647572652044425465
+      7874314F6E476574546578742876617220546578743A20537472696E67293B0D
+      0A626567696E0D0A0D0A202054657874203A3D2054657874202B2027202D2027
+      202B2043616978615F53616C646F735B2743616978615F44657363726963616F
+      275D203B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506074442
+      5465787431094576656E744E616D6506094F6E47657454657874074576656E74
+      494402350000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_TdaADOQueryDataView'
+      Height = 216
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Caixa_Saldos: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Caixa_Saldos'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Caixa_Saldos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 1
+          TableName = 'Caixa_Saldos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Entradas'
+          FieldName = 'Entradas'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Caixa_Saldos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Saidas'
+          FieldName = 'Saidas'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Caixa_Saldos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Saldo_Anterior'
+          FieldName = 'Saldo_Anterior'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Caixa_Saldos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Saldo'
+          FieldName = 'Saldo'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Caixa_Saldos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Codigo_Caixa'
+          FieldName = 'Codigo_Caixa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Caixa_Saldos'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Caixa_Descricao'
+          FieldName = 'Select_nome_from_caixas'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Caixa_Saldos'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Caixa_Saldos'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Caixa_Saldos.Codigo, Caixa_Saldos.Data, '
+          '       Caixa_Saldos.Entradas, '
+          '       Caixa_Saldos.Saidas, '
+          '       Caixa_Saldos.Saldo_Anterior, '
+          '       Caixa_Saldos.Saldo, '
+          '       Caixa_Saldos.Codigo_Caixa, '
+          
+            '       (Select nome from caixas where codigo = Caixa_Saldos.Codi' +
+            'go_Caixa and empresa = Caixa_Saldos.empresa ) AS Select_nome_fro' +
+            'm_caixas'
+          'FROM Caixa_Saldos Caixa_Saldos'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Caixa_Saldos.Codigo BETWEEN 1 AND 999999 )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Caixa_Descricao'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Caixa'
+          FieldLength = 0
+          FieldName = 'Codigo_Caixa'
+          SQLFieldName = 'Select_nome_from_caixas'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+          CalcType = dacaExpression
+          Expression = 
+            '(Select nome from caixas where codigo = Caixa_Saldos.Codigo_Caix' +
+            'a and empresa = Caixa_Saldos.empresa )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Caixa_Saldos'
+            TableName = 'Caixa_Saldos'
+            TableSQLAlias = 'Caixa_Saldos'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField2: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField3: TdaField
+          Alias = 'Entradas'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Entradas'
+          FieldLength = 0
+          FieldName = 'Entradas'
+          SQLFieldName = 'Entradas'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField4: TdaField
+          Alias = 'Saidas'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saidas'
+          FieldLength = 0
+          FieldName = 'Saidas'
+          SQLFieldName = 'Saidas'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField5: TdaField
+          Alias = 'Saldo_Anterior'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_Anterior'
+          FieldLength = 0
+          FieldName = 'Saldo_Anterior'
+          SQLFieldName = 'Saldo_Anterior'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField6: TdaField
+          Alias = 'Saldo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo'
+          FieldLength = 0
+          FieldName = 'Saldo'
+          SQLFieldName = 'Saldo'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField7: TdaField
+          Alias = 'Codigo_Caixa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Caixa'
+          FieldLength = 0
+          FieldName = 'Codigo_Caixa'
+          SQLFieldName = 'Codigo_Caixa'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField8: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField9: TdaField
+          ChildType = 2
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'Entradas'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Entradas'
+          FieldLength = 0
+          FieldName = 'Entradas'
+          SQLFieldName = 'Entradas'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daField11: TdaField
+          ChildType = 2
+          Alias = 'Saidas'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saidas'
+          FieldLength = 0
+          FieldName = 'Saidas'
+          SQLFieldName = 'Saidas'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+          TableSQLAlias = 'Caixa_Saldos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Saldos'
+          JoinType = dajtNone
+          SQLAlias = 'Caixa_Saldos'
+          TableAlias = 'Caixa_Saldos'
+          TableName = 'Caixa_Saldos'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 2
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Fechamento@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Caixa@Fechamento do Caixa
+NOME=Fechamento de Caixa
+DESCRICAO=Mosta os totais do fechamento do caixa - Este relatório poderá ser utilizado na tela de fechamento do caixa
+ALTERADO_EM=08/11/2014 08:42
+SQL=<0>
+ORDEM=Caixa_Saldos.Codigo<Codigo>Caixa_Saldos.Data<Data>Caixa_Saldos.Entradas<Entradas>Caixa_Saldos.Saidas<Saidas>

@@ -1,0 +1,964 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Controle_Telefonico
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Letter'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 279000
+  PrinterSetup.mmPaperWidth = 216000
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1112-48FGE.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 75
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBiulder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Controle_Telefonico'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 203300
+      BandType = 1
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer13: TppDesignLayer
+            UserName = 'Foreground1'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 17463
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsBDiagonal
+      ParentWidth = True
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 10049
+      mmLeft = 0
+      mmTop = 6879
+      mmWidth = 203300
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Data'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 2646
+      mmTop = 7938
+      mmWidth = 6900
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Hora'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 23101
+      mmTop = 7938
+      mmWidth = 7239
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Solicitado por'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 35983
+      mmTop = 7938
+      mmWidth = 21251
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Efetuada por'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 125255
+      mmTop = 7938
+      mmWidth = 19473
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      Caption = 'Telefone'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 189537
+      mmTop = 7938
+      mmWidth = 12869
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel23: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLine3: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 6879
+      mmWidth = 203300
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLine4: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 794
+      mmLeft = 0
+      mmTop = 16669
+      mmWidth = 203300
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Observa'#231#245'es'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 2646
+      mmTop = 12435
+      mmWidth = 19981
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      Caption = 'Tipo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 166349
+      mmTop = 7938
+      mmWidth = 6689
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      Caption = 'Efetuada por'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 125148
+      mmTop = 7938
+      mmWidth = 19473
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      Caption = 'Efetuada por'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 125148
+      mmTop = 7938
+      mmWidth = 19473
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label11'
+      Caption = 'Efetuada por'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 125148
+      mmTop = 7938
+      mmWidth = 19473
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2381
+      mmLeft = 191559
+      mmTop = 2646
+      mmWidth = 10583
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2381
+      mmLeft = 193675
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10319
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Hora'
+      DataPipeline = daADOQueryDataView1.Controle_Telefonico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Controle_Telefonico'
+      mmHeight = 3175
+      mmLeft = 23019
+      mmTop = 529
+      mmWidth = 10583
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Solicitado'
+      DataPipeline = daADOQueryDataView1.Controle_Telefonico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Controle_Telefonico'
+      mmHeight = 3260
+      mmLeft = 35983
+      mmTop = 529
+      mmWidth = 56621
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'select_nome_from_funcion'
+      DataPipeline = daADOQueryDataView1.Controle_Telefonico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Controle_Telefonico'
+      mmHeight = 3260
+      mmLeft = 96838
+      mmTop = 529
+      mmWidth = 45773
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Tipo'
+      DataPipeline = daADOQueryDataView1.Controle_Telefonico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Controle_Telefonico'
+      mmHeight = 3260
+      mmLeft = 145521
+      mmTop = 529
+      mmWidth = 27517
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'Fone'
+      DataPipeline = daADOQueryDataView1.Controle_Telefonico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Controle_Telefonico'
+      mmHeight = 3260
+      mmLeft = 178859
+      mmTop = 529
+      mmWidth = 23548
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBRichText1: TppDBRichText
+      UserName = 'DBRichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      DataField = 'Obs'
+      DataPipeline = daADOQueryDataView1.Controle_Telefonico
+      RemoveEmptyLines = False
+      Transparent = True
+      DataPipelineName = 'Controle_Telefonico'
+      mmHeight = 3969
+      mmLeft = 2646
+      mmTop = 5292
+      mmWidth = 203200
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Pen.Color = clGray
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 9789
+      mmWidth = 203300
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Data'
+      DataPipeline = daADOQueryDataView1.Controle_Telefonico
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Controle_Telefonico'
+      mmHeight = 3175
+      mmLeft = 2646
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 6085
+    mmPrintPosition = 0
+    object ppLine2: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 203300
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 176456
+      mmTop = 529
+      mmWidth = 25950
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppLabel13: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 96192
+      mmTop = 1852
+      mmWidth = 7874
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_TdaADOQueryDataView'
+      Height = 216
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Controle_Telefonico: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Controle_Telefonico'
+        object ppField1: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 0
+          TableName = 'Controle_Telefonico'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Hora'
+          FieldName = 'Hora'
+          FieldLength = 5
+          DisplayWidth = 5
+          Position = 1
+          TableName = 'Controle_Telefonico'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Solicitado'
+          FieldName = 'Solicitado'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 2
+          TableName = 'Controle_Telefonico'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Fone'
+          FieldName = 'Fone'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 3
+          TableName = 'Controle_Telefonico'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 4
+          TableName = 'Controle_Telefonico'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Obs'
+          FieldName = 'Obs'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Controle_Telefonico'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Efetuada_Por'
+          FieldName = 'Efetuada_Por'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Controle_Telefonico'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Efetuada_Por_funcionario'
+          FieldName = 'select_nome_from_funcion'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Controle_Telefonico'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Controle_Telefonico'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Controle_Telefonico.Data, '
+          '       Controle_Telefonico.Hora, '
+          '       Controle_Telefonico.Solicitado, '
+          '       Controle_Telefonico.Fone, '
+          '       Controle_Telefonico.Tipo, '
+          '       Controle_Telefonico.Obs, '
+          '       Controle_Telefonico.Efetuada_Por, '
+          
+            '       ( select nome from funcionario where codigo = controle_te' +
+            'lefonico.efetuada_por and empresa = controle_telefonico.empresa ' +
+            ') AS select_nome_from_funcion'
+          'FROM Controle_Telefonico Controle_Telefonico'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          
+            '      ( Controle_Telefonico.Data BETWEEN #2011-12-01 00.00.00# A' +
+            'ND #2011-12-31 00.00.00# )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Efetuada_Por_funcionario'
+          DisplayWidth = 10
+          FieldAlias = 'Efetuada_Por'
+          FieldLength = 0
+          FieldName = 'Efetuada_Por'
+          SQLFieldName = 'select_nome_from_funcion'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+          CalcType = dacaExpression
+          Expression = 
+            '( select nome from funcionario where codigo = controle_telefonic' +
+            'o.efetuada_por and empresa = controle_telefonico.empresa )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data'
+          Value = '01/12/2011,31/12/2011'
+          object TdaField
+            Alias = 'Data'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data'
+            FieldLength = 0
+            FieldName = 'Data'
+            Mandatory = True
+            SQLFieldName = 'Data'
+            TableAlias = 'Controle_Telefonico'
+            TableName = 'Controle_Telefonico'
+            TableSQLAlias = 'Controle_Telefonico'
+          end
+          object TdaNumericValue
+            Value = 40878.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 40908.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+        end
+        object daField2: TdaField
+          Alias = 'Hora'
+          DisplayWidth = 5
+          FieldAlias = 'Hora'
+          FieldLength = 5
+          FieldName = 'Hora'
+          SQLFieldName = 'Hora'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+        end
+        object daField3: TdaField
+          Alias = 'Solicitado'
+          DisplayWidth = 100
+          FieldAlias = 'Solicitado'
+          FieldLength = 100
+          FieldName = 'Solicitado'
+          SQLFieldName = 'Solicitado'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+        end
+        object daField4: TdaField
+          Alias = 'Fone'
+          DisplayWidth = 20
+          FieldAlias = 'Fone'
+          FieldLength = 20
+          FieldName = 'Fone'
+          SQLFieldName = 'Fone'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+        end
+        object daField5: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 20
+          FieldAlias = 'Tipo'
+          FieldLength = 20
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+        end
+        object daField6: TdaField
+          Alias = 'Obs'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Obs'
+          FieldLength = 0
+          FieldName = 'Obs'
+          Linkable = False
+          SQLFieldName = 'Obs'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+        end
+        object daField7: TdaField
+          Alias = 'Efetuada_Por'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Efetuada_Por'
+          FieldLength = 0
+          FieldName = 'Efetuada_Por'
+          SQLFieldName = 'Efetuada_Por'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+          TableSQLAlias = 'Controle_Telefonico'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Controle_Telefonico'
+          JoinType = dajtNone
+          SQLAlias = 'Controle_Telefonico'
+          TableAlias = 'Controle_Telefonico'
+          TableName = 'Controle_Telefonico'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 13
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Data: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/12/2011,31/12/2011'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/12/2011'
+      UserName = 'Data'
+    end
+  end
+end
+$
+GRUPO=Especiais
+NOME=Chamadas Telefônicas
+DESCRICAO=Mostra chamadas telefônicas registradas entre as datas informadas
+ALTERADO_EM=11/12/2014 14:53
+SQL=<0>

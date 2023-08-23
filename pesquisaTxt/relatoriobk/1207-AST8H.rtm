@@ -1,0 +1,935 @@
+object Relatorio: TppReport
+  AutoStop = False
+  Columns = 2
+  ColumnPositions.Strings = (
+    '5027'
+    '105040')
+  DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1207-AST8H.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 100040
+  DataPipelineName = 'Contas_Bancarias_Saldos'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 6350
+    mmPrintPosition = 0
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppColumnHeaderBand1: TppColumnHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 41275
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'Caixa:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 5821
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Select_Codigo_Descri'#231#227'o'
+      DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Bancarias_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 5821
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      AutoSize = False
+      Caption = 'Saldo Anterior:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 17463
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Saldo_Anterior'
+      DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Bancarias_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 17727
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      AutoSize = False
+      Caption = 'Saldo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 35190
+      mmWidth = 29633
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Saldo'
+      DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Bancarias_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 35454
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      AutoSize = False
+      Caption = 'Sa'#237'das:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 23283
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Saidas'
+      DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Bancarias_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 23548
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      AutoSize = False
+      Caption = 'Entradas:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 29104
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Entradas'
+      DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Bancarias_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 29104
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      AutoSize = False
+      Caption = 'Data:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 11642
+      mmWidth = 29898
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Data'
+      DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Bancarias_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 11906
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label7'
+      AutoSize = False
+      Caption = 'C'#243'digo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 9790
+      mmTop = 0
+      mmWidth = 30163
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView2.Contas_Bancarias_Saldos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Bancarias_Saldos'
+      mmHeight = 3598
+      mmLeft = 41010
+      mmTop = 265
+      mmWidth = 49213
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 40746
+      mmWidth = 100040
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppColumnFooterBand1: TppColumnFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174890
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_TdaADOQueryDataView1'
+      Height = 250
+      Left = 6
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 6
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Contas_Bancarias_Saldos: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Contas_Bancarias_Saldos'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Conta'
+          FieldName = 'Conta'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Entradas'
+          FieldName = 'Entradas'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Saidas'
+          FieldName = 'Saidas'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Saldo_Anterior'
+          FieldName = 'Saldo_Anterior'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Saldo'
+          FieldName = 'Saldo'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Usuario'
+          FieldName = 'Usuario'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+        object ppField10: TppField
+          FieldAlias = 'ContaBancariaDescricao'
+          FieldName = 'Select_Codigo_Descri'#231#227'o'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Contas_Bancarias_Saldos'
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Contas_Bancarias_Saldos.Codigo, '
+          '       Contas_Bancarias_Saldos.Empresa, '
+          '       Contas_Bancarias_Saldos.Conta, '
+          '       Contas_Bancarias_Saldos.Data, '
+          '       Contas_Bancarias_Saldos.Entradas, '
+          '       Contas_Bancarias_Saldos.Saidas, '
+          '       Contas_Bancarias_Saldos.Saldo_Anterior, '
+          '       Contas_Bancarias_Saldos.Saldo, '
+          '       Contas_Bancarias_Saldos.Usuario, '
+          
+            '       ( Select Codigo & " - " & Descri'#231#227'o from contas_bancarias' +
+            ' where codigo = Contas_bancarias_Saldos.conta and empresa = cont' +
+            'as_bancarias_saldos.empresa ) AS Select_Codigo_Descri'#231#227'o'
+          'FROM '
+          '     Contas_Bancarias_Saldos Contas_Bancarias_Saldos'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Contas_Bancarias_Saldos.Codigo BETWEEN 1 AND 999999 )'
+          
+            '       AND ( Contas_Bancarias_Saldos.Data BETWEEN #2012-07-01 00' +
+            '.00.00# AND #2012-07-30 00.00.00# )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'ContaBancariaDescricao'
+          DisplayWidth = 10
+          FieldAlias = 'Conta'
+          FieldLength = 0
+          FieldName = 'Conta'
+          SQLFieldName = 'Select_Codigo_Descri'#231#227'o'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+          CalcType = dacaExpression
+          Expression = 
+            '( Select Codigo & " - " & Descri'#231#227'o from contas_bancarias where ' +
+            'codigo = Contas_bancarias_Saldos.conta and empresa = contas_banc' +
+            'arias_saldos.empresa )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Contas_Bancarias_Saldos'
+            TableName = 'Contas_Bancarias_Saldos'
+            TableSQLAlias = 'Contas_Bancarias_Saldos'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data'
+          Value = '01/01/2013,30/01/2013'
+          object TdaField
+            Alias = 'Data'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data'
+            FieldLength = 0
+            FieldName = 'Data'
+            SQLFieldName = 'Data'
+            TableAlias = 'Contas_Bancarias_Saldos'
+            TableName = 'Contas_Bancarias_Saldos'
+            TableSQLAlias = 'Contas_Bancarias_Saldos'
+          end
+          object TdaNumericValue
+            Value = 41091.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 41120.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField3: TdaField
+          Alias = 'Conta'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Conta'
+          FieldLength = 0
+          FieldName = 'Conta'
+          SQLFieldName = 'Conta'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField4: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField5: TdaField
+          Alias = 'Entradas'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Entradas'
+          FieldLength = 0
+          FieldName = 'Entradas'
+          SQLFieldName = 'Entradas'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField6: TdaField
+          Alias = 'Saidas'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saidas'
+          FieldLength = 0
+          FieldName = 'Saidas'
+          SQLFieldName = 'Saidas'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField7: TdaField
+          Alias = 'Saldo_Anterior'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_Anterior'
+          FieldLength = 0
+          FieldName = 'Saldo_Anterior'
+          SQLFieldName = 'Saldo_Anterior'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField8: TdaField
+          Alias = 'Saldo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo'
+          FieldLength = 0
+          FieldName = 'Saldo'
+          SQLFieldName = 'Saldo'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daField9: TdaField
+          Alias = 'Usuario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Usuario'
+          FieldLength = 0
+          FieldName = 'Usuario'
+          SQLFieldName = 'Usuario'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+          TableSQLAlias = 'Contas_Bancarias_Saldos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Contas_Bancarias_Saldos'
+          JoinType = dajtNone
+          SQLAlias = 'Contas_Bancarias_Saldos'
+          TableAlias = 'Contas_Bancarias_Saldos'
+          TableName = 'Contas_Bancarias_Saldos'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 4
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        
+          'C'#243'digo do Fechamento Banc'#225'rio@Contas_Bancarias_Saldos@ID@ID@dtIn' +
+          'teger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+    object Data: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/01/2013,30/01/2013'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data do Fechamenteo Banc'#225'rio@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/01/2013'
+      UserName = 'Data'
+    end
+  end
+end
+$
+GRUPO=Banco@Fechamento Bancário
+NOME=Fechamento Bancário Por Data
+DESCRICAO=Mosta os totais do fechamento bancário do(s) dia(s) escolhido(s)
+ALTERADO_EM=08/11/2014 08:46
+SQL=<0>

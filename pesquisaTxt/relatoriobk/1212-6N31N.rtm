@@ -1,0 +1,627 @@
+﻿object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Produto
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files (x86)\Koinonia Software\Habil Empresarial\Relat' +
+    'orios\1212-6N31N.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'Produto'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 136261
+    mmPrintPosition = 0
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppDPTeeChart1: TppDPTeeChart
+      UserName = 'DPTeeChart1'
+      mmHeight = 129911
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 199761
+      BandType = 0
+      LayerName = Foreground1
+      object ppDPTeeChartControl1: TppDPTeeChartControl
+        Left = 0
+        Top = 0
+        Width = 400
+        Height = 250
+        BackWall.Color = clWhite
+        Title.Text.Strings = (
+          'Chart')
+        Title.Visible = False
+        View3DOptions.Elevation = 315
+        View3DOptions.Orthogonal = False
+        View3DOptions.Perspective = 0
+        View3DOptions.Rotation = 360
+        Shadow.Visible = False
+        BackColor = clWhite
+        Legend.ColorWidth = 5
+        Legend.Shadow.Visible = False
+        Legend.Symbol.Shadow.Visible = False
+        Legend.Symbol.Width = 5
+        Legend.Title.Shadow.Visible = False
+        MaxPointsPerPage = 0
+        Page = 1
+        ScaleLastPage = True
+        View3D = False
+        BevelOuter = bvNone
+        BorderStyle = bsNone
+        Color = clWhite
+        ColorPaletteIndex = 10
+        object Series1: TPieSeries
+          Marks.Arrow.Color = 8388863
+          Marks.Arrow.Visible = True
+          Marks.Callout.Brush.Color = clBlack
+          Marks.Callout.Arrow.Color = 8388863
+          Marks.Callout.Arrow.Visible = True
+          Marks.Style = smsValue
+          Marks.Visible = True
+          DataSource = daADOQueryDataView1.Produto
+          XLabelsSource = 'Familias'
+          XValues.Order = loAscending
+          YValues.Name = 'Pie'
+          YValues.Order = loNone
+          YValues.ValueSource = 'Contagem'
+          Frame.InnerBrush.BackColor = clRed
+          Frame.InnerBrush.Gradient.EndColor = clGray
+          Frame.InnerBrush.Gradient.MidColor = clWhite
+          Frame.InnerBrush.Gradient.StartColor = 4210752
+          Frame.InnerBrush.Gradient.Visible = True
+          Frame.MiddleBrush.BackColor = clYellow
+          Frame.MiddleBrush.Gradient.EndColor = 8553090
+          Frame.MiddleBrush.Gradient.MidColor = clWhite
+          Frame.MiddleBrush.Gradient.StartColor = clGray
+          Frame.MiddleBrush.Gradient.Visible = True
+          Frame.OuterBrush.BackColor = clGreen
+          Frame.OuterBrush.Gradient.EndColor = 4210752
+          Frame.OuterBrush.Gradient.MidColor = clWhite
+          Frame.OuterBrush.Gradient.StartColor = clSilver
+          Frame.OuterBrush.Gradient.Visible = True
+          Frame.Visible = False
+          Frame.Width = 4
+          OtherSlice.Legend.Visible = False
+        end
+      end
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Produto'
+      Height = 131
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Produto: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Produto'
+        object ppField1: TppField
+          FieldAlias = 'Contagem'
+          FieldName = 'COUNT_2'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Produto'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Familias'
+          FieldName = 'iif_Produto_Fam'#237'lia_is_nu'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Produto'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Produto'
+        IsCaseSensitive = True
+        GroupByFieldsSynced = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT COUNT(*) AS COUNT_2, '
+          
+            '       iif( ( Produto.Fam'#237'lia is null ) or ( Produto.Fam'#237'lia <= ' +
+            '0 ), "Sem Fam'#237'lia", familias.descri'#231#227'o )  AS iif_Produto_Fam'#237'lia' +
+            '_is_nu'
+          'FROM (Produto Produto'
+          '      LEFT OUTER JOIN Familias Familias ON '
+          '     (Familias.Codigo = Produto.Fam'#237'lia)'
+          '      AND (Familias.Empresa = Produto.Empresa) )'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Produto.Codigo BETWEEN 1 AND 999999 )'
+          '       AND ( Produto.Fam'#237'lia BETWEEN 0 AND 999999 )'
+          '      )'
+          'GROUP BY '
+          
+            '         iif( ( Produto.Fam'#237'lia is null ) or ( Produto.Fam'#237'lia <' +
+            '= 0 ), "Sem Fam'#237'lia", familias.descri'#231#227'o ) ')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Contagem'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          Linkable = False
+          SQLFieldName = 'COUNT_2'
+          TableAlias = 'Produto'
+          TableName = 'Produto'
+          TableSQLAlias = 'Produto'
+          CalcType = dacaCount
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Familias'
+          DisplayWidth = 10
+          FieldAlias = 'Fam'#237'lia'
+          FieldLength = 0
+          FieldName = 'Fam'#237'lia'
+          SQLFieldName = 'iif_Produto_Fam'#237'lia_is_nu'
+          TableAlias = 'Produto'
+          TableName = 'Produto'
+          TableSQLAlias = 'Produto'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( ( Produto.Fam'#237'lia is null ) or ( Produto.Fam'#237'lia <= 0 ), "S' +
+            'em Fam'#237'lia", familias.descri'#231#227'o ) '
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Produto'
+            TableName = 'Produto'
+            TableSQLAlias = 'Produto'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Fam'#237'lia'
+          Value = '0,999999'
+          object TdaField
+            Alias = 'Fam'#237'lia'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Fam'#237'lia'
+            FieldLength = 0
+            FieldName = 'Fam'#237'lia'
+            SQLFieldName = 'Fam'#237'lia'
+            TableAlias = 'Produto'
+            TableName = 'Produto'
+            TableSQLAlias = 'Produto'
+          end
+          object TdaNumericValue
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 1
+          Alias = 'Familias'
+          DisplayWidth = 10
+          FieldAlias = 'Fam'#237'lia'
+          FieldLength = 0
+          FieldName = 'Fam'#237'lia'
+          SQLFieldName = 'iif_Produto_Fam'#237'lia_is_nu'
+          TableAlias = 'Produto'
+          TableName = 'Produto'
+          TableSQLAlias = 'Produto'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( ( Produto.Fam'#237'lia is null ) or ( Produto.Fam'#237'lia <= 0 ), "S' +
+            'em Fam'#237'lia", familias.descri'#231#227'o ) '
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Produto'
+          JoinType = dajtNone
+          SQLAlias = 'Produto'
+          TableAlias = 'Produto'
+          TableName = 'Produto'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Familias'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Familias'
+          TableAlias = 'Familias'
+          TableName = 'Familias'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField2: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Familias'
+              TableName = 'Familias'
+              TableSQLAlias = 'Familias'
+            end
+            object daField1: TdaField
+              ChildType = 4
+              Alias = 'Fam'#237'lia'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Fam'#237'lia'
+              FieldLength = 0
+              FieldName = 'Fam'#237'lia'
+              SQLFieldName = 'Fam'#237'lia'
+              TableAlias = 'Produto'
+              TableName = 'Produto'
+              TableSQLAlias = 'Produto'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField4: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Familias'
+              TableName = 'Familias'
+              TableSQLAlias = 'Familias'
+            end
+            object daField3: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Produto'
+              TableName = 'Produto'
+              TableSQLAlias = 'Produto'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 5
+    end
+  end
+  object ppParameterList: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Produto@Produtos@Id@Descricao@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo'
+    end
+    object Família: TppParameter
+      AutoSearchSettings.FieldAlias = 'Fam'#237'lia'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '0,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo da Fam'#237'lia@Familias@ID@Descricao@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '0'
+      UserName = 'Fam'#237'lia'
+    end
+  end
+end
+$
+GRUPO=Gráficos@Produtos - Gráficos
+NOME=Produtos por Família
+DESCRICAO=Imprime um gráfico de produtos por família
+ALTERADO_EM=11/12/2012 16:16
+SQL=<0><1><2><3>

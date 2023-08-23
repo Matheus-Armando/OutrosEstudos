@@ -1,0 +1,1062 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Ponto_Funcionario
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1205-HYI96.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'Ponto_Funcionario'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 11377
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      ParentWidth = True
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 5556
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Funcion'#225'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 18246
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Primeira Entrada'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 70115
+      mmTop = 6615
+      mmWidth = 25400
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Primeira Sa'#237'da'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 105304
+      mmTop = 6615
+      mmWidth = 22225
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Segunda Entrada'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 140494
+      mmTop = 6615
+      mmWidth = 26194
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Segunda Sa'#237'da'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 176319
+      mmTop = 6615
+      mmWidth = 22860
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine5: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 1323
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine6: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 1323
+      mmLeft = 0
+      mmTop = 10848
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 1852
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppGroup3: TppGroup
+    BreakName = 'Data'
+    DataPipeline = daADOQueryDataView1.Ponto_Funcionario
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group3'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Ponto_Funcionario'
+    NewFile = False
+    object ppGroupHeaderBand3: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 4763
+      mmPrintPosition = 0
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        AutoSize = True
+        DataField = 'Data'
+        DataPipeline = daADOQueryDataView1.Ponto_Funcionario
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Ponto_Funcionario'
+        mmHeight = 4191
+        mmLeft = 794
+        mmTop = 0
+        mmWidth = 7620
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand3: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 3440
+      mmPrintPosition = 0
+    end
+  end
+  object ppGroup4: TppGroup
+    BreakName = 'Funcionario'
+    DataPipeline = daADOQueryDataView1.Ponto_Funcionario
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group4'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Ponto_Funcionario'
+    NewFile = False
+    object ppGroupHeaderBand4: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand4: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 4763
+      mmPrintPosition = 0
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'Funcionario'
+        DataPipeline = daADOQueryDataView1.Ponto_Funcionario
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Ponto_Funcionario'
+        mmHeight = 3260
+        mmLeft = 794
+        mmTop = 794
+        mmWidth = 63765
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel2: TppLabel
+        UserName = 'Label2'
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 70115
+        mmTop = 794
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label9'
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 105304
+        mmTop = 794
+        mmWidth = 22225
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 140494
+        mmTop = 794
+        mmWidth = 26194
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLabel11: TppLabel
+        UserName = 'Label11'
+        AutoSize = False
+        Caption = ' '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 176213
+        mmTop = 794
+        mmWidth = 22754
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppLine4: TppLine
+        UserName = 'Line4'
+        Pen.Color = clGray
+        Pen.Style = psDot
+        Pen.Width = 0
+        ParentWidth = True
+        Position = lpBottom
+        Weight = 0.125000000000000000
+        mmHeight = 529
+        mmLeft = 0
+        mmTop = 4233
+        mmWidth = 200080
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Ponto_Funcionario'
+      Height = 227
+      Left = 14
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 220
+      AutoSearchTabOrder = 0
+      object Ponto_Funcionario: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Ponto_Funcionario'
+        object ppField1: TppField
+          FieldAlias = 'DataHora'
+          FieldName = 'DataHora'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 0
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Funcionario'
+          FieldName = 'Funcionario'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Nome'
+          FieldName = 'select_nome_from_funcion'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Primeira_Entrada'
+          FieldName = 'iif_Ponto_Funcionario_Tip'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Primeira_Saida'
+          FieldName = 'iif_Ponto_Funcionario_T_2'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Segunda_Entrada'
+          FieldName = 'iif_Ponto_Funcionario_T_3'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Ponto_Funcionario'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Segunda_Saida'
+          FieldName = 'iif_Ponto_Funcionario_T_4'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Ponto_Funcionario'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Ponto_Funcionario'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Ponto_Funcionario.DataHora, '
+          '       Ponto_Funcionario.Funcionario, '
+          '       Ponto_Funcionario.Tipo, '
+          '       Ponto_Funcionario.Data, '
+          
+            '       ( select nome from funcionario where empresa = Ponto_func' +
+            'ionario.empresa and codigo = ponto_funcionario.funcionario ) AS ' +
+            'select_nome_from_funcion, '
+          
+            '       iif( Ponto_Funcionario.Tipo = 1, format( Ponto_Funcionari' +
+            'o.DataHora, "hh:nn:ss" ), "" )  AS iif_Ponto_Funcionario_Tip, '
+          
+            '       iif( Ponto_Funcionario.Tipo = 2, format( Ponto_Funcionari' +
+            'o.DataHora, "hh:nn:ss" ), "" )  AS iif_Ponto_Funcionario_T_2, '
+          
+            '       iif( Ponto_Funcionario.Tipo = 3, format( Ponto_Funcionari' +
+            'o.DataHora, "hh:nn:ss" ), "" )  AS iif_Ponto_Funcionario_T_3, '
+          
+            '       iif( Ponto_Funcionario.Tipo = 4, format( Ponto_Funcionari' +
+            'o.DataHora, "hh:nn:ss" ), "" )  AS iif_Ponto_Funcionario_T_4'
+          'FROM Ponto_Funcionario Ponto_Funcionario'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          
+            '      ( Ponto_Funcionario.Data BETWEEN #2013-08-20 00.00.00# AND' +
+            ' #2013-08-20 00.00.00# )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Nome'
+          DisplayWidth = 10
+          FieldAlias = 'Funcionario'
+          FieldLength = 0
+          FieldName = 'Funcionario'
+          SQLFieldName = 'select_nome_from_funcion'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+          CalcType = dacaExpression
+          Expression = 
+            '( select nome from funcionario where empresa = Ponto_funcionario' +
+            '.empresa and codigo = ponto_funcionario.funcionario )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Primeira_Entrada'
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'iif_Ponto_Funcionario_Tip'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Ponto_Funcionario.Tipo = 1, format( Ponto_Funcionario.DataH' +
+            'ora, "hh:nn:ss" ), "" ) '
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'Primeira_Saida'
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'iif_Ponto_Funcionario_T_2'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Ponto_Funcionario.Tipo = 2, format( Ponto_Funcionario.DataH' +
+            'ora, "hh:nn:ss" ), "" ) '
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 8
+          Alias = 'Segunda_Entrada'
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'iif_Ponto_Funcionario_T_3'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Ponto_Funcionario.Tipo = 3, format( Ponto_Funcionario.DataH' +
+            'ora, "hh:nn:ss" ), "" ) '
+        end
+        object daCalculation5: TdaCalculation
+          ChildType = 8
+          Alias = 'Segunda_Saida'
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'iif_Ponto_Funcionario_T_4'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Ponto_Funcionario.Tipo = 4, format( Ponto_Funcionario.DataH' +
+            'ora, "hh:nn:ss" ), "" ) '
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data'
+          Value = '20/08/2013,20/08/2013'
+          object TdaField
+            Alias = 'Data'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data'
+            FieldLength = 0
+            FieldName = 'Data'
+            Mandatory = True
+            SQLFieldName = 'Data'
+            TableAlias = 'Ponto_Funcionario'
+            TableName = 'Ponto_Funcionario'
+            TableSQLAlias = 'Ponto_Funcionario'
+          end
+          object TdaNumericValue
+            Value = 41506.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 41506.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'DataHora'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'DataHora'
+          FieldLength = 0
+          FieldName = 'DataHora'
+          SQLFieldName = 'DataHora'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+        end
+        object daField2: TdaField
+          Alias = 'Funcionario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Funcionario'
+          FieldLength = 0
+          FieldName = 'Funcionario'
+          SQLFieldName = 'Funcionario'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+        end
+        object daField3: TdaField
+          Alias = 'Tipo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+        end
+        object daField4: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+        end
+        object daField5: TdaField
+          ChildType = 2
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+        end
+        object daField6: TdaField
+          ChildType = 2
+          Alias = 'Funcionario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Funcionario'
+          FieldLength = 0
+          FieldName = 'Funcionario'
+          SQLFieldName = 'Funcionario'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+        end
+        object daField7: TdaField
+          ChildType = 2
+          Alias = 'Tipo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+        end
+        object daCalculation6: TdaCalculation
+          ChildType = 2
+          Alias = 'Nome'
+          DisplayWidth = 10
+          FieldAlias = 'Funcionario'
+          FieldLength = 0
+          FieldName = 'Funcionario'
+          SQLFieldName = 'select_nome_from_funcion'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+          TableSQLAlias = 'Ponto_Funcionario'
+          CalcType = dacaExpression
+          Expression = 
+            '( select nome from funcionario where empresa = Ponto_funcionario' +
+            '.empresa and codigo = ponto_funcionario.funcionario )'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Ponto_Funcionario'
+          JoinType = dajtNone
+          SQLAlias = 'Ponto_Funcionario'
+          TableAlias = 'Ponto_Funcionario'
+          TableName = 'Ponto_Funcionario'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365066F70726F6365647572652056
+      61726961626C65733B0D0A7661720D0A7072696D6569726F2C20736567756E64
+      6F2C20746572636569726F2C2071756172746F203A20537472696E673B0D0A63
+      6F6E74203A20696E74656765723B2020200D0A0D0A626567696E0D0A0D0A656E
+      643B0D0A0001060A54726150726F6772616D094368696C645479706502130B50
+      726F6772616D4E616D65060E476C6F62616C4F6E4372656174650B50726F6772
+      616D54797065070B747450726F63656475726506536F75726365063570726F63
+      656475726520476C6F62616C4F6E4372656174653B0D0A626567696E0D0A2063
+      6F6E74203A3D20303B0D0A656E643B0D0A0001060F5472614576656E7448616E
+      646C65720B50726F6772616D4E616D650610444254657874314F6E4765745465
+      78740B50726F6772616D54797065070B747450726F63656475726506536F7572
+      6365067570726F63656475726520444254657874314F6E476574546578742876
+      617220546578743A20537472696E67293B0D0A626567696E0D0A0D0A20205465
+      7874203A3D2054657874202B2027202D2027202B20506F6E746F5F46756E6369
+      6F6E6172696F5B274E6F6D65275D3B0D0A0D0A656E643B0D0A0D436F6D706F6E
+      656E744E616D65060744425465787431094576656E744E616D6506094F6E4765
+      7454657874074576656E74494402350001060F5472614576656E7448616E646C
+      65720B50726F6772616D4E616D65061144657461696C4265666F72655072696E
+      740B50726F6772616D54797065070B747450726F63656475726506536F757263
+      650C8F01000070726F6365647572652044657461696C4265666F72655072696E
+      743B0D0A626567696E0D0A2020696620506F6E746F5F46756E63696F6E617269
+      6F5B275469706F275D203D2031207468656E0D0A202020207072696D6569726F
+      203A3D20506F6E746F5F46756E63696F6E6172696F5B275072696D656972615F
+      456E7472616461275D200D0A2020656C736520696620506F6E746F5F46756E63
+      696F6E6172696F5B275469706F275D203D2032207468656E0D0A202020207365
+      67756E646F203A3D20506F6E746F5F46756E63696F6E6172696F5B275072696D
+      656972615F5361696461275D0D0A2020656C736520696620506F6E746F5F4675
+      6E63696F6E6172696F5B275469706F275D203D2033207468656E0D0A20202020
+      746572636569726F203A3D20506F6E746F5F46756E63696F6E6172696F5B2753
+      6567756E64615F456E7472616461275D0D0A2020656C73650D0A202020207175
+      6172746F203A3D20506F6E746F5F46756E63696F6E6172696F5B27536567756E
+      64615F5361696461275D3B20200D0A656E643B0D0A0D436F6D706F6E656E744E
+      616D65060644657461696C094576656E744E616D65060B4265666F7265507269
+      6E74074576656E74494402180001060F5472614576656E7448616E646C65720B
+      50726F6772616D4E616D65060F4C6162656C324F6E476574546578740B50726F
+      6772616D54797065070B747450726F63656475726506536F75726365066E7072
+      6F636564757265204C6162656C324F6E47657454657874287661722054657874
+      3A20537472696E67293B0D0A626567696E0D0A20206966205072696D6569726F
+      203C3E202727207468656E0D0A2020202054657874203A3D205072696D656972
+      6F3B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064C616265
+      6C32094576656E744E616D6506094F6E47657454657874074576656E74494402
+      350001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
+      060F4C6162656C394F6E476574546578740B50726F6772616D54797065070B74
+      7450726F63656475726506536F75726365066A70726F636564757265204C6162
+      656C394F6E476574546578742876617220546578743A20537472696E67293B0D
+      0A626567696E0D0A2020696620536567756E646F203C3E202727207468656E0D
+      0A202054657874203A3D20536567756E646F3B0D0A0D0A656E643B0D0A0D436F
+      6D706F6E656E744E616D6506064C6162656C39094576656E744E616D6506094F
+      6E47657454657874074576656E74494402350001060F5472614576656E744861
+      6E646C65720B50726F6772616D4E616D6506104C6162656C31304F6E47657454
+      6578740B50726F6772616D54797065070B747450726F63656475726506536F75
+      726365066D70726F636564757265204C6162656C31304F6E4765745465787428
+      76617220546578743A20537472696E67293B0D0A626567696E0D0A2020696620
+      546572636569726F203C3E202727207468656E0D0A202054657874203A3D2054
+      6572636569726F3B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+      06074C6162656C3130094576656E744E616D6506094F6E476574546578740745
+      76656E74494402350001060F5472614576656E7448616E646C65720B50726F67
+      72616D4E616D6506104C6162656C31314F6E476574546578740B50726F677261
+      6D54797065070B747450726F63656475726506536F75726365066970726F6365
+      64757265204C6162656C31314F6E476574546578742876617220546578743A20
+      537472696E67293B0D0A626567696E0D0A202069662051756172746F203C3E20
+      2727207468656E0D0A202054657874203A3D2051756172746F3B0D0A0D0A656E
+      643B0D0A0D436F6D706F6E656E744E616D6506074C6162656C3131094576656E
+      744E616D6506094F6E47657454657874074576656E74494402350001060F5472
+      614576656E7448616E646C65720B50726F6772616D4E616D65061B47726F7570
+      48656164657242616E64344265666F72655072696E740B50726F6772616D5479
+      7065070B747450726F63656475726506536F75726365067670726F6365647572
+      652047726F757048656164657242616E64344265666F72655072696E743B0D0A
+      626567696E0D0A7072696D6569726F203A3D2027273B0D0A736567756E646F20
+      3A3D2027273B0D0A746572636569726F203A3D2027273B0D0A71756172746F20
+      3A3D2027273B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506104772
+      6F757048656164657242616E6434094576656E744E616D65060B4265666F7265
+      5072696E74074576656E74494402180000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 9
+    end
+  end
+  object ppParameterList3: TppParameterList
+    object Data: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '20/08/2013,20/08/2013'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '20/08/2013'
+      UserName = 'Data'
+    end
+  end
+end
+$
+GRUPO=Funcionários@Controle de Ponto
+NOME=Lista de Ponto de Funcionários
+DESCRICAO=Mostra uma lista com os pontos de funcionários em um período de tempo
+ALTERADO_EM=08/11/2014 11:43
+SQL=<0><1><2>
+ORDEM=Ponto_Funcionario.Data<Data>Ponto_Funcionario.Funcionario<Funcionario>Ponto_Funcionario.Tipo<Tipo>Ponto_Funcionario.Funcionario<Funcionario>

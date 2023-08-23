@@ -1,0 +1,1921 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1212-8FTWW.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Movimento_Estoque_Cabecalho'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 36513
+    mmPrintPosition = 0
+    object ppRichText3: TppRichText
+      UserName = 'RichText3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText3'
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\froman\fc' +
+        'harset0 Times New Roman;}{\f1\froman Times New Roman;}{\f2\fswis' +
+        's MS Sans Serif;}}'#13#10'{\colortbl ;\red255\green0\blue0;}'#13#10'\viewkin' +
+        'd4\uc1\pard\cf1\f0\fs18 obs: este e um modelo de contrato para u' +
+        'so em cursos, treinamentos ( e claro que pode ser usado para out' +
+        'ros fins, desde que alteradas as suas cl\'#39'e1usulas ); deixamos d' +
+        'estacadas em vermelho informacoes que devem ser trocadas ou por ' +
+        'dados corretos ou ainda voce pode criar campos do usuario e incl' +
+        'ui-los aqui no relatorio.\f1\par'#13#10'( informacoes a serem incluida' +
+        's( no caso de optar por criar campos do usuario: \par'#13#10'   - cada' +
+        'stro de clientes: cpf do responsavel, nome do responsavel\par'#13#10'\' +
+        'f0    - cadastro de produtos: local do treinamento, descri\'#39'e7\'#39 +
+        'e3o dos dias do curso ( segunda, ter\'#39'e7a, quarta... ), data de ' +
+        'in\'#39'edcio, data de t\'#39'e9rmino .\cf0\f2\fs16\par'#13#10'Este texto pode' +
+        ' ser apagado, clique sobre ele para seleciona-lo e depois pressi' +
+        'one o botao Delete.\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      mmHeight = 28046
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200025
+      BandType = 0
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 20
+      Font.Style = [fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 8086
+      mmLeft = 92604
+      mmTop = 28046
+      mmWidth = 107421
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 278871
+    mmPrintPosition = 0
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText1'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fswiss Ta' +
+        'homa;}{\f1\fswiss\fcharset0 Tahoma;}{\f2\froman\fprq2 Times New ' +
+        'Roman;}{\f3\fswiss Arial Narrow;}{\f4\fswiss\fcharset0 Arial Nar' +
+        'row;}{\f5\fnil\fcharset0 Arial Narrow;}{\f6\fnil Arial Narrow;}{' +
+        '\f7\fswiss MS Sans Serif;}}'#13#10'{\colortbl ;\red255\green0\blue0;}'#13 +
+        #10'\viewkind4\uc1\pard\i\f0\fs36\par'#13#10'C\fs34 ontrato de \fs36 P\f1' +
+        '\fs34 resta\'#39'e7\'#39'e3o de \f0\fs36 S\f1\fs34 ervi\'#39'e7os N\b .\'#39'ba ' +
+        '<dbtext>Codigo</dbtext>\f0\par'#13#10'\b0\i0\f2\fs24                  ' +
+        '                                                                ' +
+        '        \par'#13#10'\b\f3\fs20 Contratada -\f4  <dbtext>Raz\'#39'e3o_Socia' +
+        'l_E</dbtext>\b0 , <dbtext>Endere\'#39'e7o_E</dbtext> <dbtext>N\'#39'fame' +
+        'ro_E</dbtext> \f3 - <dbtext>Bairro_E</dbtext> -  CEP - <dbtext>C' +
+        'EP_E</dbtext>, <dbtext>Cidade_E</dbtext>-  <dbtext>UF_E</dbtext>' +
+        ' - CNPJ- <dbtext>CGC_E</dbtext>.\par'#13#10'\par'#13#10'\b Contratante\b0  -' +
+        ' \b <dbtext>Cliente_Nome</dbtext>\b0\f4 , RG n\'#39'ba <dbtext>Clien' +
+        'te_RG</dbtext> e CPF n\'#39'ba <dbtext>Cliente_CPF</dbtext>, nascido' +
+        '(a) em <dbtext>Cliente_Data_Nascimento</dbtext>, residente \'#39'e0 ' +
+        '<dbtext>Cliente_Endere\'#39'e7o</dbtext> <dbtext>nro</dbtext> - <dbt' +
+        'ext>Cliente_Refer\'#39'eancia</dbtext>, <dbtext>Cliente_Bairro_Descr' +
+        'i\'#39'e7\'#39'e3o</dbtext>, CEP <dbtext>Cliente_CEP</dbtext>, na cidade' +
+        ' de <dbtext>Cliente_Cidade</dbtext>/<dbtext>Cliente_UF</dbtext>,' +
+        ' contrata a seguinte t\'#39'e9cnica: \f3\par'#13#10'\par'#13#10'\b\f4 T\'#39'e9cnica' +
+        ' Contratada:  <dbtext>Nome_Produto</dbtext> \b0\f3 (curso, trein' +
+        'amento) a ser ministrada no local: \cf1\f5 (descri\'#39'e7\'#39'e3o do l' +
+        'ocal)\cf0\f3 , no dias da semana de \cf1\f5 ( descri\'#39'e7\'#39'e3o do' +
+        's dias )\cf0\f4 , no hor\'#39'e1rio das \cf1\f5 ( descri\'#39'e7\'#39'e3o do' +
+        ' hor\'#39'e1rio )\cf0\f4 , com in\'#39'edcio para \cf1\f6 ( dia inicio )' +
+        '\cf0\f4  e t\'#39'e9rmino das aulas em \cf1\f6 ( dia fim )\cf0\f3 . ' +
+        '               \par'#13#10'\f7\fs16\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Stretch = True
+      mmHeight = 64029
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200025
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppRichText2: TppRichText
+      UserName = 'RichText2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText2'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fswiss\fc' +
+        'harset0 Arial Narrow;}{\f1\fswiss Arial Narrow;}{\f2\fnil Arial ' +
+        'Narrow;}}'#13#10'{\colortbl ;\red255\green0\blue0;}'#13#10'\viewkind4\uc1\pa' +
+        'rd\ul\b\f0\fs20 Cl\'#39'e1usulas e Condi\'#39'e7\'#39'f5es\f1\par'#13#10'\ulnone\b' +
+        '0\f0 Contratada e Contratante, de comum acordo, estabelecem as s' +
+        'eguintes cl\'#39'e1usulas e condi\'#39'e7\'#39'f5es para reger o presente in' +
+        'strumento Particular de Contrato de Presta\'#39'e7\'#39'e3o de Servi\'#39'e7' +
+        'os.\f1\par'#13#10'\par'#13#10'\ul\b\f0 Cl\'#39'e1usula Primeira\ulnone\f1  - Do ' +
+        'Pagamento de Mensalidade.\par'#13#10'\b0\f0 O vencimento das parcelas ' +
+        'dar- se-\'#39'e1 nas datas pr\'#39'e9-estabelecidas no item Forma de Pag' +
+        'amento.\f1\par'#13#10'\f0 Par\'#39'e1grafo \'#39'danico \f1 -\f0  Da falta de ' +
+        'pagamento na data de vencimento, incorrer\'#39'e1 a perda da vaga.\f' +
+        '1\par'#13#10'\par'#13#10'\ul\b\f0 Cl\'#39'e1usula Segunda\ulnone\f1  -\f0  Das C' +
+        'ondi\'#39'e7\'#39'f5es de Transfer\'#39'eancias, Desist\'#39'eancias e Mudan\'#39'e7' +
+        'a de Atividade.\f1\par'#13#10'\b0\f0 Contratada e Contratante ratifica' +
+        'm o acima exposto nos t\'#39'edtulos: T\'#39'e9cnica Contratada, Valor d' +
+        'os Servi\'#39'e7os e Forma de Pagamento, ficando certo e ajustado qu' +
+        'e qualquer modifica\'#39'e7\'#39'e3o somente ter\'#39'e1 o valor se feita de' +
+        ' forma expressa e assinada pelas partes.\f1\par'#13#10'\pard\fi-1276\l' +
+        'i1276\b\f0 Par\'#39'e1grafo 1\'#39'ba:\b0  Caso o Contratante pretenda s' +
+        'e transferir de turma ou de t\'#39'e9cnica desenvolvida pela Contrat' +
+        'ada al\'#39'e9m de tal pretens\'#39'e3o estar sujeita \'#39'e0 disponibilida' +
+        'de de vagas na turma e t\'#39'e9cnicas pretendidas, acordam as parte' +
+        's no seguinte:\f1\par'#13#10'\pard\li1276\b I\b0  -\f0  As solicita\'#39'e' +
+        '7\'#39'f5es de transfer\'#39'eancias dever\'#39'e3o ser feitas com anteced\'#39 +
+        'eancia m\'#39'ednima de 07 (sete) dias \'#39'fateis;\f1\par'#13#10'\b II\b0  -' +
+        '\f0  Pagamento pelo Contratante de eventuais diferen\'#39'e7as resul' +
+        'tantes da transfer\'#39'eancias para t\'#39'e9cnicas com outro valor men' +
+        'sal e/ou carga hor\'#39'e1ria maior.\f1\par'#13#10'\pard\par'#13#10'\ul\b\f0 Cl\' +
+        #39'e1usula Terceira\ulnone\f1  -\f0  Das Instala\'#39'e7\'#39'f5es e Progr' +
+        'ama\'#39'e7\'#39'e3o das T\'#39'e9cnicas.\f1\par'#13#10'\b0\f0 A Contratada se obr' +
+        'iga a ministrar a t\'#39'e9cnica nos locais previamente indicados, g' +
+        'arantindo a qualidade, o cumprimento de hor\'#39'e1rio.\f1\par'#13#10'\par' +
+        #13#10'\ul\b\f0 Cl\'#39'e1usula Quarta\ulnone\f1  -\f0  Dos Danos nos Equ' +
+        'ipamentos ou Instala\'#39'e7\'#39'f5es.\f1\par'#13#10'\b0\f0 O contratante se ' +
+        'responsabiliza por eventuais danos causados aos equipamentos ou ' +
+        'instala\'#39'e7\'#39'f5es da Contratada, que venham a ser provocados por' +
+        ' culpa ou neglig\'#39'eancia do Contratante.\f1\par'#13#10'\ul\b\f0 Cl\'#39'e1' +
+        'usula Quinta\ulnone\f1  -\f0  Dos Servi\'#39'e7os Contratados.\f1\pa' +
+        'r'#13#10'\b0\f0 Os valores da contrapresta\'#39'e7\'#39'e3o na cl\'#39'e1usula ant' +
+        'erior incluem, exclusivamente, a presta\'#39'e7\'#39'e3o de servi\'#39'e7os ' +
+        'decorrentes da carga hor\'#39'e1ria constante na programa\'#39'e7\'#39'e3o d' +
+        'e cada t\'#39'e9cnica, estando exclu\'#39'eddos os demais custos ao forn' +
+        'ecimento de materiais e ao desenvolvimento de t\'#39'e9cnicas extras' +
+        '.\f1\par'#13#10'\pard\fi-1276\li1276\b\f0 Par\'#39'e1grafo 1\'#39'ba:\b0  Os v' +
+        'alores da contrapresta\'#39'e7\'#39'e3o das demais t\'#39'e9cnicas, n\'#39'e3o i' +
+        'nclu\'#39'eddas neste contrato, ser\'#39'e3o fixados a cada servi\'#39'e7o, ' +
+        'pela Contratada, de comum acordo com o Contratante.\f1\par'#13#10'\b\f' +
+        '0 Par\'#39'e1grafo 2\'#39'ba:\b0   A Contratada deve devolver ou compens' +
+        'ar valores em caso de aus\'#39'eancia parcial ou total \'#39'e0s sess\'#39'f' +
+        '5es ou de impossibilidade de freq\'#39'fc\'#39'eancia, pelo Contratante,' +
+        ' nos dias e hor\'#39'e1rios definidos para reposi\'#39'e7\'#39'e3o.\f1\par'#13#10 +
+        '\pard\par'#13#10'\ul\b\f0 Cl\'#39'e1usula Sexta\ulnone\f1  -\f0  Da Rescis' +
+        '\'#39'e3o.\f1\par'#13#10'\b0\f0 A rescis\'#39'e3o do presente Contrato, nas se' +
+        'guintes hip\'#39'f3teses, implicam em suspens\'#39'e3o da presta\'#39'e7\'#39'e3' +
+        'o de servi\'#39'e7os:\f1\par'#13#10'\b I\b0  -\f0  Pelo Contratante ou seu' +
+        ' Respons\'#39'e1vel Legal: em qualquer tempo, devendo informar quand' +
+        'o da desist\'#39'eancia dos servi\'#39'e7os contratados;\f1\par'#13#10'\b II\b' +
+        '0  - Pela Contratada:\par'#13#10'\pard\fi-1276\li1276\b\f0 Par\'#39'e1graf' +
+        'o 1\'#39'ba:\b0\f1   por descumprimento pelo Contratante da \b\f0 Cl' +
+        '\'#39'e1usula Primeira\b0\f1  deste Contrato.\par'#13#10'\b\f0 Par\'#39'e1graf' +
+        'o 2\'#39'ba: \b0  Se n\'#39'e3o ocorrer o preenchimento de no m\'#39'ednimo ' +
+        '70% das vagas dispon\'#39'edveis na t\'#39'e9cnica em que o contratante ' +
+        'estiver inscrito, reservando-se ainda, o direito \'#39'e0 Contratada' +
+        ' de adiar a data de seu in\'#39'edcio.\f1\par'#13#10'\b\f0 Par\'#39'e1grafo 3\' +
+        #39'b0:\b0  No caso de cancelamento proceder devolu\'#39'e7\'#39'e3o ao Con' +
+        'tratante, de import\'#39'e2ncias j\'#39'e1 pagas,   correspondentes ao n' +
+        '\'#39'famero de aulas que n\'#39'e3o ser\'#39'e3o cumpridas.\f1\par'#13#10'\pard\p' +
+        'ar'#13#10'\ul\b\f0 Cl\'#39'e1usula S\'#39'e9tima\ulnone\f1  -\f0  Da For\'#39'e7a ' +
+        'Maior.\f1\par'#13#10'\b0\f0 As partes n\'#39'e3o poder\'#39'e3o ser responsabi' +
+        'lizados pelo n\'#39'e3o cumprimento, no todo ou em parte, do present' +
+        'e Contrato, em virtude da ocorr\'#39'eancia de casos fortuito ou for' +
+        '\'#39'e7a maior, na forma como se encontram definidos no artigo 1.05' +
+        '8 do C\'#39'f3digo Civil.\f1\par'#13#10'\par'#13#10'\ul\b\f0 Cl\'#39'e1usula Oitava\' +
+        'ulnone\f1  -\f0  Das Disposi\'#39'e7\'#39'f5es Gerais.\f1\par'#13#10'I\b0  -\f' +
+        '0  O presente Contrato se constitu\'#39'ed em \'#39'fanico e exclusivo e' +
+        'ntre as partes, somente podendo ser alterado por escrito e atrav' +
+        '\'#39'e9s de instrumento por elas assinado.\f1\par'#13#10'\b II\b0  -\f0  ' +
+        'A simples toler\'#39'e2ncia ou benevol\'#39'eancia de qualquer partes em' +
+        ' n\'#39'e3o agir imediatamente no caso de falta ou atraso no cumprim' +
+        'ento pela outra parte das obriga\'#39'e7\'#39'f5es assumidas neste Contr' +
+        'ato, n\'#39'e3o se constituir\'#39'e1 em altera\'#39'e7\'#39'e3o t\'#39'e1cita ou de' +
+        'sist\'#39'eancia de qualquer das partes de seus direitos previstos n' +
+        'este, no C\'#39'f3digo de Defesa do Consumidor ou legisla\'#39'e7\'#39'e3o c' +
+        'omplementares.\f1\par'#13#10'\b III\b0  -\f0  O presente contrato n\'#39'e' +
+        '3o poder ser cedido pelo Contratante \'#39'e0 terceiros em nenhuma h' +
+        'ip\'#39'f3tese.\f1\par'#13#10'\par'#13#10'\ul\b\f0 Cl\'#39'e1usula Nona\ulnone\f1  -' +
+        ' Do Foro.\par'#13#10'\b0\f0 Para dirimir quest\'#39'f5es oriundas deste Co' +
+        'ntrato, fica eleito o Foro da Comarca de <CidadeE>, com exclus\'#39 +
+        'e3o de qualquer outro, por mais privilegiado que seja ou venha a' +
+        ' se tornar.\f1\par'#13#10'\par'#13#10'\f0 E, por estarem justos e contratado' +
+        's, assinam o anverso do presente instrumento, em tr\'#39'eas vias de' +
+        ' igual forma e teor.\f1\par'#13#10'\par'#13#10'\f0                          ' +
+        '                                     <CidadeE>, <Data_Emiss\'#39'e3o' +
+        '>\f1\par'#13#10'\f0 Contratada:                                       ' +
+        '                                                  Contratante / ' +
+        'Respons\'#39'e1vel:\f1\par'#13#10'\par'#13#10'\par'#13#10'____________________________' +
+        '___                                              _______________' +
+        '________________\par'#13#10'\f0           <Raz\'#39'e3o_SocialE>          ' +
+        '                                                \cf1\f2 ( Nome d' +
+        'o responsavel )\cf0\f1\par'#13#10'  <Nome>                            ' +
+        '                                                                ' +
+        ' \cf1\f2 ( CPF do Responsavel )\cf0\f1\par'#13#10'\par'#13#10'\par'#13#10'\par'#13#10'__' +
+        '_____________________________                                   ' +
+        '            _______________________________\par'#13#10'Testemunha 1-RG' +
+        '.:                                                              ' +
+        '                 Testemunha 2-RG.:  \par'#13#10'Nome:                 ' +
+        '                                                                ' +
+        '                   Nome:\par'#13#10'\fs16  \par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      ShiftRelativeTo = ppSubReport1
+      Stretch = True
+      mmHeight = 190236
+      mmLeft = 0
+      mmTop = 87577
+      mmWidth = 200025
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppSubReport1: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ShiftRelativeTo = ppRichText1
+      TraverseAllData = False
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 21960
+      mmLeft = 0
+      mmTop = 64558
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView2.Contas_Receber
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Contrato New Life Sesc'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 20000
+        PrinterSetup.mmMarginLeft = 30000
+        PrinterSetup.mmMarginRight = 20000
+        PrinterSetup.mmMarginTop = 10000
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.DatabaseSettings.Name = '32ContratocomContasaReceber'
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Contas_Receber'
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 11906
+          mmPrintPosition = 0
+          object ppLabel3: TppLabel
+            UserName = 'Label3'
+            Caption = 'Ordem - Parcela'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 48419
+            mmTop = 6350
+            mmWidth = 25665
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel4: TppLabel
+            UserName = 'Label4'
+            Caption = 'N'#186' Aluno(a)'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 28046
+            mmTop = 6350
+            mmWidth = 17463
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel5: TppLabel
+            UserName = 'Label5'
+            Caption = 'Data de Vencimento'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 78052
+            mmTop = 6350
+            mmWidth = 31221
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel6: TppLabel
+            UserName = 'Label6'
+            Caption = 'Valor da Parcela'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 111125
+            mmTop = 6350
+            mmWidth = 25400
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLine2: TppLine
+            UserName = 'Line2'
+            Weight = 0.750000000000000000
+            mmHeight = 1323
+            mmLeft = 28046
+            mmTop = 10583
+            mmWidth = 111125
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel7: TppLabel
+            UserName = 'Label7'
+            Caption = 'Forma de Pagamento:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 37571
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel1: TppLabel
+            UserName = 'Label1'
+            Caption = 
+              'O valor total dos servi'#231'os contratados ser'#225'('#227'o) pago(s) da segui' +
+              'nte forma:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 38629
+            mmTop = 0
+            mmWidth = 112713
+            BandType = 1
+            LayerName = Foreground
+          end
+        end
+        object ppDetailBand2: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 4233
+          mmPrintPosition = 0
+          object ppDBText3: TppDBText
+            UserName = 'DBText3'
+            DataField = 'Codigo_CR'
+            DataPipeline = daADOQueryDataView2.Contas_Receber
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Contas_Receber'
+            mmHeight = 4233
+            mmLeft = 49742
+            mmTop = 0
+            mmWidth = 12700
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText4: TppDBText
+            UserName = 'DBText4'
+            DataField = 'Data_Vencimento'
+            DataPipeline = daADOQueryDataView2.Contas_Receber
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Contas_Receber'
+            mmHeight = 4233
+            mmLeft = 77258
+            mmTop = 0
+            mmWidth = 22490
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText5: TppDBText
+            UserName = 'DBText5'
+            DataField = 'Valor'
+            DataPipeline = daADOQueryDataView2.Contas_Receber
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Contas_Receber'
+            mmHeight = 4233
+            mmLeft = 110596
+            mmTop = 0
+            mmWidth = 19579
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText6: TppDBText
+            UserName = 'DBText6'
+            DataField = 'C'#243'digo_Cliente'
+            DataPipeline = daADOQueryDataView2.Contas_Receber
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Contas_Receber'
+            mmHeight = 4233
+            mmLeft = 29104
+            mmTop = 0
+            mmWidth = 10848
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText7: TppDBText
+            UserName = 'DBText7'
+            DataField = 'Documento'
+            DataPipeline = daADOQueryDataView2.Contas_Receber
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'Contas_Receber'
+            mmHeight = 4233
+            mmLeft = 62971
+            mmTop = 0
+            mmWidth = 10848
+            BandType = 4
+            LayerName = Foreground
+          end
+        end
+        object ppSummaryBand2: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 15081
+          mmPrintPosition = 0
+          object ppShape1: TppShape
+            UserName = 'Shape1'
+            Shape = stRoundRect
+            mmHeight = 7408
+            mmLeft = 15610
+            mmTop = 4763
+            mmWidth = 144727
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel2: TppLabel
+            UserName = 'Label2'
+            Caption = 'Total das Parcelas ==>>'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 74877
+            mmTop = 529
+            mmWidth = 38100
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel8: TppLabel
+            UserName = 'Label8'
+            Caption = 'Valor por'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 794
+            mmTop = 2117
+            mmWidth = 13758
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel9: TppLabel
+            UserName = 'Label9'
+            Caption = 'Extenso:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 1588
+            mmTop = 6615
+            mmWidth = 12435
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLine1: TppLine
+            UserName = 'Line1'
+            Weight = 0.750000000000000000
+            mmHeight = 1323
+            mmLeft = 27517
+            mmTop = 0
+            mmWidth = 111125
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppDBCalc1: TppDBCalc
+            UserName = 'DBCalc1'
+            BlankWhenZero = True
+            DataField = 'Valor'
+            DataPipeline = daADOQueryDataView2.Contas_Receber
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Contas_Receber'
+            mmHeight = 4233
+            mmLeft = 113771
+            mmTop = 529
+            mmWidth = 16669
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppDBCalc2: TppDBCalc
+            UserName = 'DBCalc2'
+            BlankWhenZero = True
+            DataField = 'Valor'
+            DataPipeline = daADOQueryDataView2.Contas_Receber
+            DisplayFormat = 'Extenso'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            Transparent = True
+            DataPipelineName = 'Contas_Receber'
+            mmHeight = 4233
+            mmLeft = 17198
+            mmTop = 6085
+            mmWidth = 141552
+            BandType = 7
+            LayerName = Foreground
+          end
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 160073
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable8: TppSystemVariable
+      UserName = 'SystemVariable8'
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Times New Roman'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 143140
+      mmTop = 265
+      mmWidth = 16669
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable2'
+      VarType = vtPrintDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Times New Roman'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 24606
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 16933
+    mmPrintPosition = 0
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Movimento_Estoque_Cabecalho'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Movimento_Estoque_Cabecalho'
+      Height = 424
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Movimento_Estoque_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Movimento_Estoque_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Refer'#234'ncia'
+          FieldName = 'Refer'#234'ncia'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Raz'#227'o_Social_E'
+          FieldName = 'Raz'#227'o_Social'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 3
+          TableName = 'Empresa'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Endere'#231'o_E'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 4
+          TableName = 'Empresa'
+        end
+        object ppField6: TppField
+          FieldAlias = 'N'#250'mero_E'
+          FieldName = 'N'#250'mero'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Empresa'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Bairro_E'
+          FieldName = 'Bairro'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 6
+          TableName = 'Empresa'
+        end
+        object ppField8: TppField
+          FieldAlias = 'CEP_E'
+          FieldName = 'CEP'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Empresa'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Cidade_E'
+          FieldName = 'Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 8
+          TableName = 'Empresa'
+        end
+        object ppField10: TppField
+          FieldAlias = 'UF_E'
+          FieldName = 'UF'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 9
+          TableName = 'Empresa'
+        end
+        object ppField11: TppField
+          FieldAlias = 'CGC_E'
+          FieldName = 'CGC'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 10
+          TableName = 'Empresa'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'Cliente_Nome'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 11
+          TableName = 'Cliente'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Cliente_RG'
+          FieldName = 'Cliente_RG'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 12
+          TableName = 'Cliente'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Cliente_CPF'
+          FieldName = 'Cliente_CPF'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 13
+          TableName = 'Cliente'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Cliente_Data_Nascimento'
+          FieldName = 'Cliente_Data_Nascimento'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 14
+          TableName = 'Cliente'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldName = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 15
+          TableName = 'Cliente'
+        end
+        object ppField17: TppField
+          FieldAlias = 'nro'
+          FieldName = 'nro'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 16
+          TableName = 'Cliente'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Cliente_Refer'#234'ncia'
+          FieldName = 'Cliente_Refer'#234'ncia'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 17
+          TableName = 'Cliente'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 18
+          TableName = 'Cliente'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Cliente_CEP'
+          FieldName = 'Cliente_CEP'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'Cliente'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Cliente_Cidade'
+          FieldName = 'Cliente_Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 20
+          TableName = 'Cliente'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Cliente_UF'
+          FieldName = 'Cliente_UF'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 21
+          TableName = 'Cliente'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Nome_Produto'
+          FieldName = 'Nome_Produto'
+          FieldLength = 255
+          IsDetail = True
+          DisplayWidth = 255
+          Position = 22
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Movimento_Estoque_Cabecalho.Empresa, '
+          '       Movimento_Estoque_Cabecalho.Refer'#234'ncia, '
+          '       Movimento_Estoque_Cabecalho.Codigo, '
+          '       Empresa.Raz'#227'o_Social, Empresa.Endere'#231'o, '
+          '       Empresa.N'#250'mero, Empresa.Bairro, '
+          '       Empresa.CEP, Empresa.Cidade, Empresa.UF, '
+          '       Empresa.CGC, Cliente.Cliente_Nome, '
+          '       Cliente.Cliente_RG, Cliente.Cliente_CPF, '
+          '       Cliente.Cliente_Data_Nascimento, '
+          '       Cliente.Cliente_Endere'#231'o, Cliente.nro, '
+          '       Cliente.Cliente_Refer'#234'ncia, '
+          '       Cliente.Cliente_Bairro_Descri'#231#227'o, '
+          '       Cliente.Cliente_CEP, '
+          '       Cliente.Cliente_Cidade, '
+          '       Cliente.Cliente_UF, '
+          '       Movimento_Estoque_Detalhe.Nome_Produto'
+          'FROM ((('
+          '     Movimento_Estoque_Cabecalho Movimento_Estoque_Cabecalho'
+          '      LEFT OUTER JOIN Empresa Empresa ON '
+          '     (Empresa.Codigo = Movimento_Estoque_Cabecalho.Empresa) )'
+          '      INNER JOIN Cliente Cliente ON '
+          '     (Cliente.Empresa = Movimento_Estoque_Cabecalho.Empresa)'
+          
+            '      AND (Cliente.Codigo = Movimento_Estoque_Cabecalho.C'#243'digo_C' +
+            'liente_Fornecedor) )'
+          
+            '      LEFT OUTER JOIN Movimento_Estoque_Detalhe Movimento_Estoqu' +
+            'e_Detalhe ON '
+          
+            '     (Movimento_Estoque_Detalhe.Empresa = Movimento_Estoque_Cabe' +
+            'calho.Empresa)'
+          
+            '      AND (Movimento_Estoque_Detalhe.C'#243'digo_Entrada = Movimento_' +
+            'Estoque_Cabecalho.Codigo) )'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Movimento_Estoque_Cabecalho.Codigo BETWEEN 1 AND 150 )'
+          '       AND ( Movimento_Estoque_Cabecalho.Tipo IN ('#39'P'#39','#39'S'#39') )'
+          '       AND ( Movimento_Estoque_Cabecalho.Cancelado <> TRUE )'
+          '       AND ( Movimento_Estoque_Detalhe.Cancelado <> TRUE )'
+          '      )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 150.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          Value = 'P,S'
+          object TdaField
+            Alias = 'Tipo'
+            DisplayWidth = 1
+            FieldAlias = 'Tipo'
+            FieldLength = 1
+            FieldName = 'Tipo'
+            SQLFieldName = 'Tipo'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Movimento_Estoque_Detalhe'
+            TableName = 'Movimento_Estoque_Detalhe'
+            TableSQLAlias = 'Movimento_Estoque_Detalhe'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Refer'#234'ncia'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Refer'#234'ncia'
+          FieldLength = 0
+          FieldName = 'Refer'#234'ncia'
+          SQLFieldName = 'Refer'#234'ncia'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField3: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField4: TdaField
+          Alias = 'Raz'#227'o_Social_E'
+          DisplayWidth = 50
+          FieldAlias = 'Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Raz'#227'o_Social'
+          IsDetail = True
+          SQLFieldName = 'Raz'#227'o_Social'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField5: TdaField
+          Alias = 'Endere'#231'o_E'
+          DisplayWidth = 50
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField6: TdaField
+          Alias = 'N'#250'mero_E'
+          DisplayWidth = 10
+          FieldAlias = 'N'#250'mero'
+          FieldLength = 10
+          FieldName = 'N'#250'mero'
+          IsDetail = True
+          SQLFieldName = 'N'#250'mero'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField7: TdaField
+          Alias = 'Bairro_E'
+          DisplayWidth = 20
+          FieldAlias = 'Bairro'
+          FieldLength = 20
+          FieldName = 'Bairro'
+          IsDetail = True
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField8: TdaField
+          Alias = 'CEP_E'
+          DisplayWidth = 10
+          FieldAlias = 'CEP'
+          FieldLength = 10
+          FieldName = 'CEP'
+          IsDetail = True
+          SQLFieldName = 'CEP'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField9: TdaField
+          Alias = 'Cidade_E'
+          DisplayWidth = 50
+          FieldAlias = 'Cidade'
+          FieldLength = 50
+          FieldName = 'Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField10: TdaField
+          Alias = 'UF_E'
+          DisplayWidth = 2
+          FieldAlias = 'UF'
+          FieldLength = 2
+          FieldName = 'UF'
+          IsDetail = True
+          SQLFieldName = 'UF'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField11: TdaField
+          Alias = 'CGC_E'
+          DisplayWidth = 20
+          FieldAlias = 'CGC'
+          FieldLength = 20
+          FieldName = 'CGC'
+          IsDetail = True
+          SQLFieldName = 'CGC'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField12: TdaField
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Nome'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField13: TdaField
+          Alias = 'Cliente_RG'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_RG'
+          FieldLength = 20
+          FieldName = 'Cliente_RG'
+          IsDetail = True
+          SQLFieldName = 'Cliente_RG'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField14: TdaField
+          Alias = 'Cliente_CPF'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_CPF'
+          FieldLength = 20
+          FieldName = 'Cliente_CPF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CPF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField15: TdaField
+          Alias = 'Cliente_Data_Nascimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Cliente_Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Cliente_Data_Nascimento'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Data_Nascimento'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField16: TdaField
+          Alias = 'Cliente_Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Endere'#231'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField17: TdaField
+          Alias = 'nro'
+          DisplayWidth = 20
+          FieldAlias = 'nro'
+          FieldLength = 20
+          FieldName = 'nro'
+          IsDetail = True
+          SQLFieldName = 'nro'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField18: TdaField
+          Alias = 'Cliente_Refer'#234'ncia'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Refer'#234'ncia'
+          FieldLength = 50
+          FieldName = 'Cliente_Refer'#234'ncia'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Refer'#234'ncia'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField19: TdaField
+          Alias = 'Cliente_Bairro_Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField20: TdaField
+          Alias = 'Cliente_CEP'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente_CEP'
+          FieldLength = 10
+          FieldName = 'Cliente_CEP'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CEP'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField21: TdaField
+          Alias = 'Cliente_Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Cidade'
+          FieldLength = 50
+          FieldName = 'Cliente_Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Cidade'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField22: TdaField
+          Alias = 'Cliente_UF'
+          DisplayWidth = 2
+          FieldAlias = 'Cliente_UF'
+          FieldLength = 2
+          FieldName = 'Cliente_UF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_UF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField23: TdaField
+          Alias = 'Nome_Produto'
+          DisplayWidth = 255
+          FieldAlias = 'Nome_Produto'
+          FieldLength = 255
+          FieldName = 'Nome_Produto'
+          IsDetail = True
+          SQLFieldName = 'Nome_Produto'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Movimento_Estoque_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Movimento_Estoque_Cabecalho'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Empresa'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Empresa'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField25: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtLongint
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Empresa'
+              TableName = 'Empresa'
+              TableSQLAlias = 'Empresa'
+            end
+            object daField24: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Cliente'
+          SQLAlias = 'Cliente'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField27: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField26: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField29: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField28: TdaField
+              ChildType = 4
+              Alias = 'C'#243'digo_Cliente_Fornecedor'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'C'#243'digo_Cliente_Fornecedor'
+              FieldLength = 0
+              FieldName = 'C'#243'digo_Cliente_Fornecedor'
+              SQLFieldName = 'C'#243'digo_Cliente_Fornecedor'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+        end
+        object daTable4: TdaTable
+          ChildType = 5
+          Alias = 'Movimento_Estoque_Detalhe'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Movimento_Estoque_Detalhe'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          object daTableJoin4: TdaTableJoin
+            ChildType = 6
+            object daField31: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Movimento_Estoque_Detalhe'
+              TableName = 'Movimento_Estoque_Detalhe'
+              TableSQLAlias = 'Movimento_Estoque_Detalhe'
+            end
+            object daField30: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+          object daTableJoin5: TdaTableJoin
+            ChildType = 6
+            object daField33: TdaField
+              ChildType = 3
+              Alias = 'C'#243'digo_Entrada'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'C'#243'digo_Entrada'
+              FieldLength = 0
+              FieldName = 'C'#243'digo_Entrada'
+              SQLFieldName = 'C'#243'digo_Entrada'
+              TableAlias = 'Movimento_Estoque_Detalhe'
+              TableName = 'Movimento_Estoque_Detalhe'
+              TableSQLAlias = 'Movimento_Estoque_Detalhe'
+            end
+            object daField32: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Contas_Receber'
+      Height = 216
+      Left = 284
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 223
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Movimento_Estoque_Cabecalho'
+      object Contas_Receber: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Contas_Receber'
+        MasterDataPipelineName = 'Movimento_Estoque_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Contas_Receber'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Refer'#234'ncia'
+          FieldName = 'Refer'#234'ncia'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Contas_Receber'
+        end
+        object ppField3: TppField
+          FieldAlias = 'C'#243'digo_Cliente'
+          FieldName = 'C'#243'digo_Cliente'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Contas_Receber'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Contas_Receber'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Documento'
+          FieldName = 'Documento'
+          FieldLength = 25
+          DisplayWidth = 25
+          Position = 4
+          TableName = 'Contas_Receber'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Data_Vencimento'
+          FieldName = 'Data_Vencimento'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 5
+          TableName = 'Contas_Receber'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Contas_Receber'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Refer'#234'ncia'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Refer'#234'ncia'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Contas_Receber'
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Contas_Receber.Empresa, '
+          '       Contas_Receber.Refer'#234'ncia, '
+          '       Contas_Receber.C'#243'digo_Cliente, '
+          '       Contas_Receber.Codigo, '
+          '       Contas_Receber.Documento, '
+          '       Contas_Receber.Data_Vencimento, '
+          '       Contas_Receber.Valor'
+          'FROM Contas_Receber Contas_Receber'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField2: TdaField
+          Alias = 'Refer'#234'ncia'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Refer'#234'ncia'
+          FieldLength = 0
+          FieldName = 'Refer'#234'ncia'
+          SQLFieldName = 'Refer'#234'ncia'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField3: TdaField
+          Alias = 'C'#243'digo_Cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Cliente'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Cliente'
+          SQLFieldName = 'C'#243'digo_Cliente'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField5: TdaField
+          Alias = 'Documento'
+          DisplayWidth = 25
+          FieldAlias = 'Documento'
+          FieldLength = 25
+          FieldName = 'Documento'
+          SQLFieldName = 'Documento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField6: TdaField
+          Alias = 'Data_Vencimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Vencimento'
+          FieldLength = 0
+          FieldName = 'Data_Vencimento'
+          SQLFieldName = 'Data_Vencimento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField7: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Contas_Receber'
+          JoinType = dajtNone
+          SQLAlias = 'Contas_Receber'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+        end
+        object daSQLLink1: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+        end
+        object daSQLLink2: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Refer'#234'ncia'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Refer'#234'ncia'
+            FieldLength = 0
+            FieldName = 'Refer'#234'ncia'
+            SQLFieldName = 'Refer'#234'ncia'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Refer'#234'ncia'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Refer'#234'ncia'
+            FieldLength = 0
+            FieldName = 'Refer'#234'ncia'
+            SQLFieldName = 'Refer'#234'ncia'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 4
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo da Sa'#237'da@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo'
+    end
+  end
+end
+$
+GRUPO=Movimentação de Estoque@Documentos para Saídas
+NOME=Contrato de Contas a Receber
+DESCRICAO=Imprime um contrato modelo de serviço com contas a receber
+ALTERADO_EM=05/01/2015 10:25
+SQL=<0><1><2><3>

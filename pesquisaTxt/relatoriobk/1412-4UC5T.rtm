@@ -1,0 +1,3187 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Alugueis
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 'C:\Program Files\Koinonia Software\REL\Relatorios\1412-4UC5T.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<Texto a localizar>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Alugueis'
+  object ppHeaderBand1: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppDetailBand1: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 188119
+    mmPrintPosition = 0
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Font.Quality = fqClearTypeNatural
+      Caption = 'RichText1'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcha' +
+        'rset0 Arial;}{\f1\fnil Arial;}}'#13#10'{\colortbl ;\red0\green0\blue0;' +
+        '}'#13#10'\viewkind4\uc1\pard\qc\cf1\b\fs24 CONTRATO DE PRESTA\'#39'c7\'#39'c3O' +
+        ' DE SERVI\'#39'c7OS\f1\par'#13#10'\pard\b0\fs16\par'#13#10' \par'#13#10'\fs18\par'#13#10'Por' +
+        ' este instrumento particular de Contrato de Prestacao de Servico' +
+        's, entre si fazem:\par'#13#10'\par'#13#10'DE UM LADO:\par'#13#10'\par'#13#10'%dadoscontr' +
+        'atante%\par'#13#10'\par'#13#10'DE OUTRO LADO:\par'#13#10'\par'#13#10'%dadoscontratada%\p' +
+        'ar'#13#10'\par'#13#10'\f0 CL\'#39'c1USULA PRIMEIRA: (Compromisso de Trabalho)\f1' +
+        '\par'#13#10'\par'#13#10'A CONTRATADA compromete-se, pelo presente instrument' +
+        'o particular, a executar para a CONTRATANTE trabalhos de <dbtext' +
+        '>Descricao</dbtext>.\par'#13#10'\tab\f0 Itens a serem utilizados pela ' +
+        'CONTRATADA na presta\'#39'e7\'#39'e3o dos servi\'#39'e7os:\f1\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Stretch = True
+      Transparent = True
+      mmHeight = 70644
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200025
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppSubReport1: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentWidth = False
+      ShiftRelativeTo = ppRichText1
+      TraverseAllData = False
+      DataPipelineName = 'Alugueis_Produtos'
+      mmHeight = 5027
+      mmLeft = 11906
+      mmTop = 71702
+      mmWidth = 188119
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Alugueis_Produtos'
+        object ppTitleBand1: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5821
+          mmPrintPosition = 0
+          object ppLine2: TppLine
+            UserName = 'Line2'
+            Weight = 0.500000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 110596
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLine3: TppLine
+            UserName = 'Line3'
+            Weight = 0.500000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 5292
+            mmWidth = 110596
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel1: TppLabel
+            UserName = 'Label1'
+            Caption = 'Descri'#231#227'o'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 0
+            mmTop = 1058
+            mmWidth = 15346
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel2: TppLabel
+            UserName = 'Label2'
+            Caption = 'Quantidade'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 68263
+            mmTop = 1058
+            mmWidth = 17198
+            BandType = 1
+            LayerName = Foreground1
+          end
+          object ppLabel3: TppLabel
+            UserName = 'Label3'
+            Caption = 'Valor Unit'#225'rio'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 88636
+            mmTop = 1058
+            mmWidth = 20373
+            BandType = 1
+            LayerName = Foreground1
+          end
+        end
+        object ppDetailBand2: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5821
+          mmPrintPosition = 0
+          object ppDBText1: TppDBText
+            UserName = 'DBText1'
+            DataField = 'Codigo_Produto'
+            DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Alugueis_Produtos'
+            mmHeight = 3968
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 63500
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppDBText2: TppDBText
+            UserName = 'DBText2'
+            DataField = 'Qtde'
+            DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Alugueis_Produtos'
+            mmHeight = 3968
+            mmLeft = 68263
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppDBText3: TppDBText
+            UserName = 'DBText3'
+            DataField = 'Valor_Unitario'
+            DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+            DisplayFormat = '$#,0.00;-$#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Alugueis_Produtos'
+            mmHeight = 3968
+            mmLeft = 91811
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppLine1: TppLine
+            UserName = 'Line1'
+            Pen.Style = psDot
+            Pen.Width = 0
+            Weight = 0.125000000000000000
+            mmHeight = 793
+            mmLeft = 0
+            mmTop = 5027
+            mmWidth = 110596
+            BandType = 4
+            LayerName = Foreground1
+          end
+        end
+        object ppSummaryBand1: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 794
+          mmPrintPosition = 0
+          object ppLine7: TppLine
+            UserName = 'Line7'
+            Weight = 0.750000000000000000
+            mmHeight = 794
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 110596
+            BandType = 7
+            LayerName = Foreground1
+          end
+        end
+        object raCodeModule3: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer6: TppDesignLayer
+            UserName = 'Foreground1'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppRichText2: TppRichText
+      UserName = 'RichText2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Font.Quality = fqClearTypeNatural
+      Caption = 'RichText2'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcha' +
+        'rset0 Arial;}{\f1\fnil Arial;}}'#13#10'{\colortbl ;\red0\green0\blue0;' +
+        '}'#13#10'\viewkind4\uc1\pard\cf1\fs18 CL\'#39'c1USULA SEGUNDA: (Prazo de C' +
+        'ontrato)\f1\par'#13#10'\par'#13#10'\f0 O prazo de dura\'#39'e7\'#39'e3o do presente ' +
+        'contrato \'#39'e9 de <dbtext displayformat='#39'#,0;-#,0'#39'>DiferencaData<' +
+        '/dbtext> dias, iniciadas em <dbtext displayformat='#39'dd "de" mmmm ' +
+        '"de" yyyy'#39'>Data_Inicio</dbtext>, devendo encerrar-se em <dbtext ' +
+        'displayformat='#39'dd/mm/yyyy'#39'>Valido_Ate</dbtext>.\f1\par'#13#10'\par'#13#10'\f' +
+        '0 CL\'#39'c1USULA TERCEIRA: (Custo do Trabalho)\f1\par'#13#10'\par'#13#10'%claus' +
+        'ula3%\par'#13#10'\par'#13#10'\f0 CL\'#39'c1USULA QUINTA: (Rescis\'#39'e3o Contratual' +
+        ')\f1\par'#13#10'\par'#13#10'\f0 Este contrato poder\'#39'e1 ser rescindido por a' +
+        'mbas as partes dentro do per\'#39'edodo contratado, sem \'#39'f4nus ou p' +
+        'enalidade, devendo, todavia, ser pago o per\'#39'edodo efetivamente ' +
+        'trabalhado.\f1\par'#13#10'\par'#13#10'\f0 CL\'#39'c1USULA SEXTA: (Prorroga\'#39'e7\'#39 +
+        'e3o de Contrato)\f1\par'#13#10'\par'#13#10'\f0 Este contrato poder\'#39'e1 ser p' +
+        'rorrogado quanto ao prazo previsto na cl\'#39'e1usula segunda, desde' +
+        ' que ambas as partes estejam de acordo com a nova condi\'#39'e7\'#39'e3o' +
+        '.\f1\par'#13#10'\par'#13#10'\f0 CL\'#39'c1USULA SETIMA: (Quest\'#39'f5es Judiciais)\' +
+        'f1\par'#13#10'\par'#13#10'\f0 Fica o Foro da Comarca de <dbtext>Cidade</dbte' +
+        'xt>, Estado do %estemp%, para todas e quaisquer quest\'#39'f5es judi' +
+        'ciais decorrentes deste Instrumento Particular.\f1\par'#13#10'\par'#13#10'\f' +
+        '0 E, por estarem justos e contratados, datam e assinam o present' +
+        'e instrumento em 03 (tr\'#39'eas) vias de igual teor e forma, perant' +
+        'e as testemunhas abaixo nomeadas, para que produza os seus devid' +
+        'os e legais efeitos e por isso prometem cumprir e fazer cumprir ' +
+        '- bem e fielmente o que nele cont\'#39'e9m.\f1\par'#13#10'\par'#13#10'<dbtext>Ci' +
+        'dade</dbtext>, <dbtext displayformat='#39'dd "de" mmmm "de" yyyy'#39'>Da' +
+        'ta_Inicio</dbtext>\par'#13#10'\par'#13#10'\par'#13#10'\pard\qc\f0 ----------------' +
+        '---------------------\par'#13#10'%nomecliente%\par'#13#10'\par'#13#10'\par'#13#10'------' +
+        '-------------------------------\f1\par'#13#10'<dbtext>Raz\f0\'#39'e3o_Soci' +
+        'al</dbtext>\f1\par'#13#10'\pard\par'#13#10'\par'#13#10'\pard\qc Testemunhas:\par'#13#10 +
+        '\par'#13#10'\f0 ----\f1 --------------------------------\par'#13#10'NOME\f0 ' +
+        ':\tab\tab\tab\f1\par'#13#10'CPF\f0 :\tab\tab\tab\f1\par'#13#10'\par'#13#10'\par'#13#10'-' +
+        '--\f0 -----\f1 -----------------------------\par'#13#10'NOME\f0 :\tab\' +
+        'tab\tab\f1\par'#13#10'CPF\f0 :\tab\tab\tab\f1\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      ShiftRelativeTo = ppSubReport2
+      Stretch = True
+      Transparent = True
+      mmHeight = 75142
+      mmLeft = 0
+      mmTop = 88636
+      mmWidth = 202407
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppSubReport2: TppSubReport
+      UserName = 'SubReport2'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentWidth = False
+      ShiftRelativeTo = ppRichText3
+      TraverseAllData = False
+      DataPipelineName = 'Alugueis_Equipamentos'
+      mmHeight = 5027
+      mmLeft = 11906
+      mmTop = 83873
+      mmWidth = 188119
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport2: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView3.Alugueis_Equipamentos
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Alugueis_Equipamentos'
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 7673
+          mmPrintPosition = 0
+          object ppLine4: TppLine
+            UserName = 'Line4'
+            Weight = 0.750000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 1589
+            mmWidth = 110596
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel4: TppLabel
+            UserName = 'Label4'
+            Caption = 'Descri'#231#227'o'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3968
+            mmLeft = 0
+            mmTop = 2380
+            mmWidth = 15346
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel5: TppLabel
+            UserName = 'Label5'
+            Caption = 'S'#233'rie'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3968
+            mmLeft = 60325
+            mmTop = 2380
+            mmWidth = 7938
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel6: TppLabel
+            UserName = 'Label6'
+            Caption = 'Quantidade'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3968
+            mmLeft = 89165
+            mmTop = 2380
+            mmWidth = 17198
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLine5: TppLine
+            UserName = 'Line5'
+            Weight = 0.750000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 7144
+            mmWidth = 110596
+            BandType = 1
+            LayerName = Foreground2
+          end
+        end
+        object ppDetailBand3: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5292
+          mmPrintPosition = 0
+          object ppDBText4: TppDBText
+            UserName = 'DBText4'
+            DataField = 'Numero_Serie'
+            DataPipeline = daADOQueryDataView3.Alugueis_Equipamentos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Alugueis_Equipamentos'
+            mmHeight = 3704
+            mmLeft = 60325
+            mmTop = 265
+            mmWidth = 26194
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText5: TppDBText
+            UserName = 'DBText5'
+            DataField = 'Qtde'
+            DataPipeline = daADOQueryDataView3.Alugueis_Equipamentos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Alugueis_Equipamentos'
+            mmHeight = 3704
+            mmLeft = 89165
+            mmTop = 265
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText6: TppDBText
+            UserName = 'DBText6'
+            DataField = 'Codigo_Equipamento'
+            DataPipeline = daADOQueryDataView3.Alugueis_Equipamentos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Alugueis_Equipamentos'
+            mmHeight = 3704
+            mmLeft = 0
+            mmTop = 265
+            mmWidth = 57150
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppLine6: TppLine
+            UserName = 'Line6'
+            Pen.Color = 9868950
+            Pen.Style = psDot
+            Pen.Width = 0
+            Weight = 0.125000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 4763
+            mmWidth = 110596
+            BandType = 4
+            LayerName = Foreground2
+          end
+        end
+        object ppSummaryBand2: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 3175
+          mmPrintPosition = 0
+          object ppLine8: TppLine
+            UserName = 'Line8'
+            Weight = 0.750000000000000000
+            mmHeight = 2910
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 110596
+            BandType = 7
+            LayerName = Foreground2
+          end
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+            444254657874364F6E476574546578740B50726F6772616D54797065070B7474
+            50726F63656475726506536F75726365148100000070726F6365647572652044
+            4254657874364F6E476574546578742876617220546578743A20537472696E67
+            293B0D0A626567696E0D0A0D0A202054657874203A3D2074657874202B202720
+            2D2027202B2020416C7567756569735F4571756970616D656E746F735B274465
+            73637269C3A7C3A36F275D3B0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+            4E616D65060744425465787436094576656E744E616D6506094F6E4765745465
+            7874074576656E7449440235084361726574506F7301023E0204000000}
+        end
+        object ppDesignLayers3: TppDesignLayers
+          object ppDesignLayer16: TppDesignLayer
+            UserName = 'Foreground2'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppRichText3: TppRichText
+      UserName = 'RichText3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Font.Quality = fqClearTypeNatural
+      Caption = 'RichText3'
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil Aria' +
+        'l;}{\f1\fnil\fcharset0 Arial;}}'#13#10'{\colortbl ;\red0\green0\blue0;' +
+        '}'#13#10'\viewkind4\uc1\pard\cf1\f0\fs18\tab\f1 Equipamentos a serem u' +
+        'tilizados pela CONTRATADA na presta\'#39'e7\'#39'e3o dos servi\'#39'e7os:\f0' +
+        '\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      ShiftRelativeTo = ppSubReport1
+      Stretch = True
+      Transparent = True
+      mmHeight = 6350
+      mmLeft = 0
+      mmTop = 77258
+      mmWidth = 200025
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppRichText4: TppRichText
+      UserName = 'RichText4'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Caption = 'RichText4'
+      Color = clRed
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcha' +
+        'rset0 Arial;}{\f1\fnil Arial;}}'#13#10'{\colortbl ;\red255\green255\bl' +
+        'ue255;}'#13#10'\viewkind4\uc1\pard\cf1\b\fs20 ATEN\'#39'c7\'#39'c3O!!!!!!!!!\f' +
+        '1\par'#13#10'\f0\'#39'c9 muito importante que voc\'#39'ea N\'#39'c3O exclua nada q' +
+        'ue se encontra entre %% de dentro dos RICHTEXTS.\f1\par'#13#10'\f0 Faz' +
+        'endo isto, este relat\'#39'f3rio deixar\'#39'e1 de funcionar corretament' +
+        'e!\f1\par'#13#10'\f0 Em caso de d\'#39'favidas, entre em contato com nosso' +
+        ' Departamento de Relat\'#39'f3rios, pelo telefone (46) 3225 - 6234 o' +
+        'u pelo e-mail relatorios@habil.com.br\f1\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Visible = False
+      mmHeight = 23548
+      mmLeft = 0
+      mmTop = 164571
+      mmWidth = 200025
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Alugueis
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Alugueis'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      5269636854657874314F6E5072696E740B50726F6772616D54797065070B7474
+      50726F63656475726506536F7572636514B328000070726F6365647572652052
+      69636854657874314F6E5072696E743B0D0A7661720D0A202073417578203A20
+      537472696E673B0D0A202073417578456D70203A20537472696E673B0D0A2020
+      734175784333203A20537472696E673B0D0A20207341757856616C6F72203A20
+      537472696E673B0D0A202065737461646F203A20537472696E673B0D0A202065
+      737461646F656D70203A20537472696E673B0D0A2020636C696E6F6D65203A20
+      537472696E673B0D0A2020636C69666F6E65203A20537472696E673B0D0A2020
+      636C69646F63203A20537472696E673B0D0A20206E6F6D65636C69656E746520
+      3A20537472696E673B0D0A20200D0A626567696E0D0A20207B4154454EC387C3
+      834F2121210D0A20202020415320494E464F524D41C387C39545532041424149
+      584F2053C3834F20455353454E43494149532050415241204F20434F52524554
+      4F2046554E43494F4E414D454E544F2044455354452052454C4154C39352494F
+      2C2051554149535155455220414C54455241C387C3954553204E454C41532050
+      4F44454D20434F4D50524F4D45544552204F2046554E43494F4E414D454E544F
+      20444F2052454C4154C39352494F20494E544549524F2E0D0A20202020414C54
+      4552C3812D4C41532052455155455220434F4E484543494D454E544F53204156
+      414EC38741444F5320454D2050524F4752414D41C387C3834F2E20504544494D
+      4F53205155452C204341534F20504F53535541205155414C515545522044C39A
+      56494441205155414E544F20C38020414C54455241C387C3834F2C20564F43C3
+      8A204EC3834F205245414C495A45204E454E48554D41204F50455241C387C383
+      4F2053454D20414E54455320434F4E53554C5441520D0A202020204E4F53534F
+      20444550415254414D454E544F2044452052454C4154C39352494F532E0D0A20
+      2020207D0D0A0D0A0D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2045
+      736372657665206120554620646F20436C69656E746520706F7220457874656E
+      736F202D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A
+      2020696628416C7567756569735B27436C69656E74655F5546275D203D202741
+      432729207468656E0D0A2020202065737461646F203A3D202741637265270D0A
+      2020656C736520696628416C7567756569735B27436C69656E74655F5546275D
+      203D2027414C272029207468656E0D0A2020202065737461646F203A3D202741
+      6C61676F6173272020200D0A2020656C736520696628416C7567756569735B27
+      436C69656E74655F5546275D203D2027414D272029207468656E0D0A20202020
+      65737461646F203A3D2027416D617A6F6E6173270D0A2020656C736520696628
+      416C7567756569735B27436C69656E74655F5546275D203D2027415027202920
+      7468656E0D0A2020202065737461646F203A3D2027416D6170C3A1272020200D
+      0A2020656C736520696628416C7567756569735B27436C69656E74655F554627
+      5D203D20274241272029207468656E0D0A2020202065737461646F203A3D2027
+      4261686961272020200D0A2020656C736520696628416C7567756569735B2743
+      6C69656E74655F5546275D203D20274345272029207468656E0D0A2020202065
+      737461646F203A3D202743656172C3A1272020200D0A2020656C736520696628
+      416C7567756569735B27436C69656E74655F5546275D203D2027444627202920
+      7468656E0D0A2020202065737461646F203A3D2027446973747269746F204665
+      646572616C272020200D0A2020656C736520696628416C7567756569735B2743
+      6C69656E74655F5546275D203D20274553272029207468656E0D0A2020202065
+      737461646F203A3D2027457370697269746F2053616E746F272020200D0A2020
+      656C736520696628416C7567756569735B27436C69656E74655F5546275D203D
+      2027474F272029207468656E0D0A2020202065737461646F203A3D2027476F69
+      C3A173272020200D0A2020656C736520696628416C7567756569735B27436C69
+      656E74655F5546275D203D20274D41272029207468656E0D0A20202020657374
+      61646F203A3D20274D6172616E68C3A36F272020200D0A2020656C7365206966
+      28416C7567756569735B27436C69656E74655F5546275D203D20274D47272920
+      7468656E0D0A2020202065737461646F203A3D20274D696E6173204765726169
+      73272020200D0A2020656C736520696628416C7567756569735B27436C69656E
+      74655F5546275D203D20274D53272029207468656E0D0A202020206573746164
+      6F203A3D20274D61746F2047726F73736F20646F2053756C272020200D0A2020
+      656C736520696628416C7567756569735B27436C69656E74655F5546275D203D
+      20274D54272029207468656E0D0A2020202065737461646F203A3D20274D6174
+      6F2047726F73736F272020200D0A2020656C736520696628416C756775656973
+      5B27436C69656E74655F5546275D203D20275041272029207468656E0D0A2020
+      202065737461646F203A3D2027506172C3A1272020200D0A2020656C73652069
+      6628416C7567756569735B27436C69656E74655F5546275D203D202750422720
+      29207468656E0D0A2020202065737461646F203A3D202750617261C3AD626127
+      2020200D0A2020656C736520696628416C7567756569735B27436C69656E7465
+      5F5546275D203D20275045272029207468656E0D0A2020202065737461646F20
+      3A3D20275065726E616D6275636F272020200D0A2020656C736520696628416C
+      7567756569735B27436C69656E74655F5546275D203D20275049272029207468
+      656E0D0A2020202065737461646F203A3D202750696175C3AD272020200D0A20
+      20656C736520696628416C7567756569735B27436C69656E74655F5546275D20
+      3D20275052272029207468656E0D0A2020202065737461646F203A3D20275061
+      72616EC3A1272020200D0A2020656C736520696628416C7567756569735B2743
+      6C69656E74655F5546275D203D2027524A272029207468656E0D0A2020202065
+      737461646F203A3D202752696F206465204A616E6569726F272020200D0A2020
+      656C736520696628416C7567756569735B27436C69656E74655F5546275D203D
+      2027524E272029207468656E0D0A2020202065737461646F203A3D202752696F
+      204772616E646520646F204E6F727465272020200D0A2020656C736520696628
+      416C7567756569735B27436C69656E74655F5546275D203D2027524F27202920
+      7468656E0D0A2020202065737461646F203A3D2027526F6E64C3B46E69612720
+      20200D0A2020656C736520696628416C7567756569735B27436C69656E74655F
+      5546275D203D20275252272029207468656E0D0A2020202065737461646F203A
+      3D2027526F7261696D61272020200D0A2020656C736520696628416C75677565
+      69735B27436C69656E74655F5546275D203D20275253272029207468656E0D0A
+      2020202065737461646F203A3D202752696F204772616E646520646F2053756C
+      272020200D0A2020656C736520696628416C7567756569735B27436C69656E74
+      655F5546275D203D20275343272029207468656E0D0A2020202065737461646F
+      203A3D202753616E7461204361746172696E61272020200D0A2020656C736520
+      696628416C7567756569735B27436C69656E74655F5546275D203D2027534527
+      2029207468656E0D0A2020202065737461646F203A3D20275365726769706527
+      2020200D0A2020656C736520696628416C7567756569735B27436C69656E7465
+      5F5546275D203D20275350272029207468656E0D0A2020202065737461646F20
+      3A3D202753C3A36F205061756C6F272020200D0A2020656C736520696628416C
+      7567756569735B27436C69656E74655F5546275D203D2027544F272029207468
+      656E0D0A2020202065737461646F203A3D2027546F63616E74696E7327202020
+      0D0A2020656C736520696628416C7567756569735B27436C69656E74655F5546
+      275D203D20274558272029207468656E0D0A2020202065737461646F203A3D20
+      274578746572696F72270D0A2020656C73650D0A2020202065737461646F203A
+      3D2027273B200D0A202020200D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2045736372657665206120554620646120456D707265736120706F72204578
+      74656E736F202D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D2020202020200D0A20
+      20696628416C7567756569735B275546275D203D202741432729207468656E0D
+      0A2020202065737461646F656D70203A3D202741637265270D0A2020656C7365
+      20696628416C7567756569735B275546275D203D2027414C272029207468656E
+      0D0A2020202065737461646F656D70203A3D2027416C61676F6173272020200D
+      0A2020656C736520696628416C7567756569735B275546275D203D2027414D27
+      2029207468656E0D0A2020202065737461646F656D70203A3D2027416D617A6F
+      6E6173270D0A2020656C736520696628416C7567756569735B275546275D203D
+      20274150272029207468656E0D0A2020202065737461646F656D70203A3D2027
+      416D6170C3A1272020200D0A2020656C736520696628416C7567756569735B27
+      5546275D203D20274241272029207468656E0D0A2020202065737461646F656D
+      70203A3D20274261686961272020200D0A2020656C736520696628416C756775
+      6569735B275546275D203D20274345272029207468656E0D0A20202020657374
+      61646F656D70203A3D202743656172C3A1272020200D0A2020656C7365206966
+      28416C7567756569735B275546275D203D20274446272029207468656E0D0A20
+      20202065737461646F656D70203A3D2027446973747269746F20466564657261
+      6C272020200D0A2020656C736520696628416C7567756569735B275546275D20
+      3D20274553272029207468656E0D0A2020202065737461646F656D70203A3D20
+      27457370697269746F2053616E746F272020200D0A2020656C73652069662841
+      6C7567756569735B275546275D203D2027474F272029207468656E0D0A202020
+      2065737461646F656D70203A3D2027476F69C3A173272020200D0A2020656C73
+      6520696628416C7567756569735B275546275D203D20274D4127202920746865
+      6E0D0A2020202065737461646F656D70203A3D20274D6172616E68C3A36F2720
+      20200D0A2020656C736520696628416C7567756569735B275546275D203D2027
+      4D472729207468656E0D0A2020202065737461646F656D70203A3D20274D696E
+      617320476572616973272020200D0A2020656C736520696628416C7567756569
+      735B275546275D203D20274D53272029207468656E0D0A202020206573746164
+      6F656D70203A3D20274D61746F2047726F73736F20646F2053756C272020200D
+      0A2020656C736520696628416C7567756569735B275546275D203D20274D5427
+      2029207468656E0D0A2020202065737461646F656D70203A3D20274D61746F20
+      47726F73736F272020200D0A2020656C736520696628416C7567756569735B27
+      5546275D203D20275041272029207468656E0D0A2020202065737461646F656D
+      70203A3D2027506172C3A1272020200D0A2020656C736520696628416C756775
+      6569735B275546275D203D20275042272029207468656E0D0A20202020657374
+      61646F656D70203A3D202750617261C3AD6261272020200D0A2020656C736520
+      696628416C7567756569735B275546275D203D20275045272029207468656E0D
+      0A2020202065737461646F656D70203A3D20275065726E616D6275636F272020
+      200D0A2020656C736520696628416C7567756569735B275546275D203D202750
+      49272029207468656E0D0A2020202065737461646F656D70203A3D2027506961
+      75C3AD272020200D0A2020656C736520696628416C7567756569735B27554627
+      5D203D20275052272029207468656E0D0A2020202065737461646F656D70203A
+      3D2027506172616EC3A1272020200D0A2020656C736520696628416C75677565
+      69735B275546275D203D2027524A272029207468656E0D0A2020202065737461
+      646F656D70203A3D202752696F206465204A616E6569726F272020200D0A2020
+      656C736520696628416C7567756569735B275546275D203D2027524E27202920
+      7468656E0D0A2020202065737461646F656D70203A3D202752696F204772616E
+      646520646F204E6F727465272020200D0A2020656C736520696628416C756775
+      6569735B275546275D203D2027524F272029207468656E0D0A20202020657374
+      61646F656D70203A3D2027526F6E64C3B46E6961272020200D0A2020656C7365
+      20696628416C7567756569735B275546275D203D20275252272029207468656E
+      0D0A2020202065737461646F656D70203A3D2027526F7261696D61272020200D
+      0A2020656C736520696628416C7567756569735B275546275D203D2027525327
+      2029207468656E0D0A2020202065737461646F656D70203A3D202752696F2047
+      72616E646520646F2053756C272020200D0A2020656C736520696628416C7567
+      756569735B275546275D203D20275343272029207468656E0D0A202020206573
+      7461646F656D70203A3D202753616E7461204361746172696E61272020200D0A
+      2020656C736520696628416C7567756569735B275546275D203D202753452720
+      29207468656E0D0A2020202065737461646F656D70203A3D2027536572676970
+      65272020200D0A2020656C736520696628416C7567756569735B275546275D20
+      3D20275350272029207468656E0D0A2020202065737461646F656D70203A3D20
+      2753C3A36F205061756C6F272020200D0A2020656C736520696628416C756775
+      6569735B275546275D203D2027544F272029207468656E0D0A20202020657374
+      61646F656D70203A3D2027546F63616E74696E73272020200D0A2020656C7365
+      20696628416C7567756569735B275546275D203D20274558272029207468656E
+      0D0A2020202065737461646F656D70203A3D20274578746572696F72270D0A20
+      20656C73650D0A2020202065737461646F656D70203A3D2027273B2020202020
+      2020202020202020200D0A20200D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2056616C696461205469706F20646520506573736F61202D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A2020696628416C
+      7567756569735B274F7574726F735F506573736F615F4A75726964696361275D
+      203D205472756529207468656E20626567696E0D0A20202020696628416C7567
+      756569735B27436C69656E74655F52617AC3A36F5F536F6369616C275D203C3E
+      20272729207468656E20626567696E0D0A202020202020636C696E6F6D65203A
+      3D20416C7567756569735B27436C69656E74655F52617AC3A36F5F536F636961
+      6C275D202B20272C20706573736F61206A7572C3AD64696361273B0D0A202020
+      202020636C69646F63203A3D2027434E504A273B0D0A20202020656E640D0A20
+      202020656C736520626567696E0D0A202020202020636C696E6F6D65203A3D20
+      416C7567756569735B27436C69656E74655F4E6F6D65275D202B20272C207065
+      73736F61206A7572C3AD64696361273B0D0A202020202020636C69646F63203A
+      3D2027434E504A273B0D0A20202020656E643B0D0A2020656E640D0A2020656C
+      736520626567696E0D0A20202020636C696E6F6D65203A3D20416C7567756569
+      735B27436C69656E74655F4E6F6D65275D202B20272C20706573736F612066C3
+      AD73696361273B0D0A20202020636C69646F63203A3D2027435046273B0D0A20
+      20656E643B0D0A202020200D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D20
+      56616C69646120466F6E6520436C69656E7465202D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A2020696628416C7567
+      756569735B27444444275D203D20272729207468656E0D0A20202020636C6966
+      6F6E65203A3D20416C7567756569735B27466F6E65275D0D0A2020656C73650D
+      0A20202020636C69666F6E65203A3D20272827202B20416C7567756569735B27
+      444444275D202B2027292027202B20416C7567756569735B27466F6E65275D3B
+      0D0A202020200D0A202020200D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      204573637269746120526963685465787420436F6E74726174616E7465202D2D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D20200D0A202073417578
+      203A3D20636C696E6F6D65202B2027206465766964616D656E746520696E7363
+      72697461206E6F20272B20636C69646F63202B202720736F62206EC2BA202720
+      2B20416C7567756569735B27436C69656E74655F435046275D202B202720636F
+      6D20657363726974C3B372696F20656D2027202B20416C7567756569735B2743
+      6C69656E74655F456E64657265C3A76F275D202B20272C2027202B20416C7567
+      756569735B276E726F275D202B20272C206E6120636964616465206465202720
+      2B20416C7567756569735B27436C69656E74655F436964616465275D202B2027
+      206E6F2065737461646F20646F2027202B2065737461646F202B20272C20666F
+      6E652027202B20636C69666F6E65202B20272C20434550206EC2BA2027202B20
+      416C7567756569735B27436C69656E74655F434550275D202B20272C20617175
+      692064656E6F6D696E61646120434F4E54524154414E54452E27203B2020200D
+      0A20200D0A20205269636854657874312E5269636854657874203A3D20537472
+      696E675265706C616365285269636854657874312E52696368746578742C2725
+      6461646F73636F6E74726174616E746525272C205472696D2873417578292029
+      3B0D0A20200D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D20457363726974
+      6120526963685465787420436F6E74726174616461202D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A202073417578456D70203A3D20416C
+      7567756569735B2752617AC3A36F5F536F6369616C275D202B20272C20706573
+      736F61206A7572C3AD64696361206465766964616D656E746520696E73637269
+      7461206E6F20434E504A2027202B20416C7567756569735B27434743275D202B
+      20272C20636F6D20657363726974C3B372696F206E612027202B20416C756775
+      6569735B27456E64657265C3A76F275D202B20272C2027202B20416C75677565
+      69735B274EC3BA6D65726F275D202B2027206E61206369646164652064652027
+      202B20416C7567756569735B27436964616465275D202B20272065737461646F
+      20646F2027202B2065737461646F656D70202B202720666F6E652027202B2041
+      6C7567756569735B2754656C65666F6E65275D202B20272C20434550206EC2BA
+      2027202B20416C7567756569735B27434550275D202B20272064656469636164
+      6120616F2074726162616C686F20646520505245535441C387C3834F20444520
+      5345525649C3874F532C20617175692064656E6F6D696E61646120434F4E5452
+      41544144412C206F7320717561697320616A757374616D2D7365206520736520
+      7375626F7264696E616D20616F2064657465726D696E61646F2070656C617320
+      636CC3A17573756C61732061626169786F3A273B0D0A20200D0A202052696368
+      54657874312E5269636854657874203A3D20537472696E675265706C61636528
+      5269636854657874312E52696368546578742C2027256461646F73636F6E7472
+      617461646125272C205472696D2873417578456D7029293B0D0A20200D0A2020
+      7B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2056657269666963612073652074656D
+      20456E7472616461202D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D7D0D0A2020696628416C7567756569735B2750617263656C617327
+      5D203C3E206E756C6C29207468656E20626567696E0D0A20202020696628416C
+      7567756569735B2754656D5F456E7472616461275D203D205472756529207468
+      656E20626567696E0D0A202020202020696628416C7567756569735B27546970
+      6F5F436F6272616E6361275D203D2031297468656E0D0A202020202020202073
+      41757856616C6F72203A3D20466F726D6174466C6F617428202724232C302E30
+      303B2D24232C302E3030272C20416C7567756569735B2756616C6F72275D2029
+      202B202720282027202B20457874656E736F28416C7567756569735B2756616C
+      6F72275D29202B202720292C20636F6D20656E74726164612064652027202B20
+      466F726D6174466C6F6174282724232C302E30303B2D24232C302E3030272C20
+      416C7567756569735B2756616C6F725F456E7472616461275D29202B20272C20
+      652064656D6169732070617263656C617320636F6D206F732076616C6F726573
+      2064652027202B20466F726D6174466C6F6174282724232C302E30303B2D2423
+      2C302E3030272C20416C7567756569735B2756616C6F7250617263656C617327
+      5D29202B202720706F72206DC3AA732C270D0A202020202020656C73650D0A20
+      202020202020207341757856616C6F72203A3D20466F726D6174466C6F617428
+      202724232C302E30303B2D24232C302E3030272C20416C7567756569735B2756
+      616C6F725F546F74616C275D2029202B202720282027202B20457874656E736F
+      28416C7567756569735B2756616C6F725F546F74616C275D29202B202720292C
+      20636F6D20656E74726164612064652027202B20466F726D6174466C6F617428
+      2724232C302E30303B2D24232C302E3030272C20416C7567756569735B275661
+      6C6F725F456E7472616461275D29202B20272C20652064656D61697320706172
+      63656C617320636F6D206F732076616C6F7265732064652027202B20466F726D
+      6174466C6F6174282724232C302E30303B2D24232C302E3030272C20416C7567
+      756569735B2756616C6F7250617263656C6173275D29202B202720706F72206D
+      C3AA732C273B0D0A202020202020656E640D0A20202020656C73652062656769
+      6E0D0A202020202020696628416C7567756569735B275469706F5F436F627261
+      6E6361275D203D2031297468656E0D0A20202020202020207341757856616C6F
+      72203A3D20466F726D6174466C6F6174282724232C302E30303B2D24232C302E
+      3030272C20416C7567756569735B2756616C6F72275D29202B20202720282027
+      202B20457874656E736F28416C7567756569735B2756616C6F72275D29202B20
+      2720292C20746F74616C697A616E646F2027202B20466F726D6174466C6F6174
+      282724232C302E30303B2D24232C302E3030272C20416C7567756569735B2756
+      616C6F7250617263656C6173275D29202B202720706F72206DC3AA732C270D0A
+      202020202020656C73650D0A20202020202020207341757856616C6F72203A3D
+      20466F726D6174466C6F6174282724232C302E30303B2D24232C302E3030272C
+      20416C7567756569735B2756616C6F725F546F74616C275D29202B2020272028
+      2027202B20457874656E736F28416C7567756569735B2756616C6F725F546F74
+      616C275D29202B202720292C20746F74616C697A616E646F2027202B20466F72
+      6D6174466C6F6174282724232C302E30303B2D24232C302E3030272C20416C75
+      67756569735B2756616C6F7250617263656C6173275D29202B202720706F7220
+      6DC3AA732C273B0D0A20202020656E643B0D0A2020656E640D0A2020656C7365
+      20626567696E0D0A20202020696628416C7567756569735B2754656D5F456E74
+      72616461275D203D205472756529207468656E20626567696E0D0A2020202020
+      20696628416C7567756569735B275469706F5F436F6272616E6361275D203D20
+      3129207468656E202020200D0A20202020202020207341757856616C6F72203A
+      3D20466F726D6174466C6F617428202724232C302E30303B2D24232C302E3030
+      272C20416C7567756569735B2756616C6F72275D2029202B202720282027202B
+      20457874656E736F28416C7567756569735B2756616C6F72275D29202B202720
+      292C20636F6D20656E74726164612064652027202B20466F726D6174466C6F61
+      74282724232C302E30303B2D24232C302E3030272C20416C7567756569735B27
+      56616C6F725F456E7472616461275D290D0A202020202020656C73650D0A2020
+      2020202020207341757856616C6F72203A3D20466F726D6174466C6F61742820
+      2724232C302E30303B2D24232C302E3030272C20416C7567756569735B275661
+      6C6F725F546F74616C275D2029202B202720282027202B20457874656E736F28
+      416C7567756569735B2756616C6F725F546F74616C275D29202B202720292C20
+      636F6D20656E74726164612064652027202B20466F726D6174466C6F61742827
+      24232C302E30303B2D24232C302E3030272C20416C7567756569735B2756616C
+      6F725F456E7472616461275D293B0D0A20202020656E64202020200D0A202020
+      20656C73650D0A2020202020207341757856616C6F72203A3D20466F726D6174
+      466C6F6174282724232C302E30303B2D24232C302E3030272C20416C75677565
+      69735B2756616C6F72275D29202B20202720282027202B20457874656E736F28
+      416C7567756569735B2756616C6F72275D29202B20272029273B0D0A2020656E
+      643B202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      20200D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D20436C617573756C6120
+      5465726365697261202D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D2D2D2D2D7D0D0A2020734175784333203A3D20274120434F4E
+      54524154414E5445207061676172C3A120C3A020434F4E545241544144412061
+      20696D706F7274C3A26E6369612064652027202B207341757856616C6F72202B
+      2027206174C3A9206F206469612027202B20416C7567756569735B274469615F
+      5663746F275D202B202720646F206DC3AA732073756273657175656E74652C20
+      6D656469616E74652072656369626F207175697461646F2E273B0D0A20200D0A
+      20205269636854657874322E5269636854657874203A3D20537472696E675265
+      706C616365285269636854657874322E52696368546578742C202725636C6175
+      73756C613325272C20734175784333293B0D0A20200D0A20200D0A20207B2D2D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2045737461646F20636C617573756C6137202D
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D7D0D0A20200D0A20205269636854657874322E5269636854657874203A3D
+      20537472696E675265706C616365285269636854657874322E52696368546578
+      742C202725657374656D7025272C2065737461646F656D70293B0D0A20200D0A
+      20207B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D204E6F6D6520436C69656E746520
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D7D0D0A20202020696628416C7567756569735B274F7574726F
+      735F506573736F615F4A75726964696361275D203D205472756529207468656E
+      20626567696E0D0A20202020696628416C7567756569735B27436C69656E7465
+      5F52617AC3A36F5F536F6369616C275D203C3E20272729207468656E20626567
+      696E0D0A202020202020636C696E6F6D65203A3D20416C7567756569735B2743
+      6C69656E74655F52617AC3A36F5F536F6369616C275D3B0D0A20202020656E64
+      0D0A20202020656C736520626567696E0D0A2020202020206E6F6D65636C6965
+      6E7465203A3D20416C7567756569735B27436C69656E74655F4E6F6D65275D3B
+      0D0A20202020656E643B0D0A2020656E640D0A2020656C736520626567696E0D
+      0A202020206E6F6D65636C69656E7465203A3D20416C7567756569735B27436C
+      69656E74655F4E6F6D65275D3B0D0A2020656E643B0D0A202052696368546578
+      74322E5269636854657874203A3D20537472696E675265706C61636528526963
+      6854657874322E52696368546578742C2027256E6F6D65636C69656E74652527
+      2C206E6F6D65636C69656E7465293B2020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506095269636854657874
+      31094576656E744E616D6506074F6E5072696E74074576656E74494402200843
+      61726574506F730102010203000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Alugueis'
+      Height = 420
+      Left = 42
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 328
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Alugueis: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Alugueis'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Alugueis'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Alugueis'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Descricao'
+          FieldName = 'Descricao'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 2
+          TableName = 'Alugueis'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Numero'
+          FieldName = 'Numero'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 3
+          TableName = 'Alugueis'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Data_Inicio'
+          FieldName = 'Data_Inicio'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 4
+          TableName = 'Alugueis'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Valido_Ate'
+          FieldName = 'Valido_Ate'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 5
+          TableName = 'Alugueis'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Tipo_Cobranca'
+          FieldName = 'Tipo_Cobranca'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Alugueis'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Alugueis'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Tem_Entrada'
+          FieldName = 'Tem_Entrada'
+          FieldLength = 0
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 8
+          TableName = 'Alugueis'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Valor_Entrada'
+          FieldName = 'Valor_Entrada'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Alugueis'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Parcelas'
+          FieldName = 'Parcelas'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Alugueis'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Texto_Contrato'
+          FieldName = 'Texto_Contrato'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Alugueis'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Dia_Vcto'
+          FieldName = 'Dia_Vcto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Alugueis'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Indice_Reajuste'
+          FieldName = 'Indice_Reajuste'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 13
+          TableName = 'Alugueis'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Tempo_Reajuste'
+          FieldName = 'Tempo_Reajuste'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'Alugueis'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Reajuste_Em'
+          FieldName = 'Reajuste_Em'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'Alugueis'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Referencia'
+          FieldName = 'Referencia'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'Alugueis'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Proximo_Reajuste'
+          FieldName = 'Proximo_Reajuste'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 17
+          TableName = 'Alugueis'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Ultimo_Reajuste'
+          FieldName = 'Ultimo_Reajuste'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 18
+          TableName = 'Alugueis'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Cliente_UF'
+          FieldName = 'Cliente_UF'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 19
+          TableName = 'Cliente'
+        end
+        object ppField21: TppField
+          FieldAlias = 'UF'
+          FieldName = 'UF'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 20
+          TableName = 'Empresa'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Cidade'
+          FieldName = 'Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 21
+          TableName = 'Empresa'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Bairro'
+          FieldName = 'Bairro'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 22
+          TableName = 'Empresa'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Endere'#231'o'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 23
+          TableName = 'Empresa'
+        end
+        object ppField25: TppField
+          FieldAlias = 'CEP'
+          FieldName = 'CEP'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'Empresa'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Nome_Fantasia'
+          FieldName = 'Nome_Fantasia'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 25
+          TableName = 'Empresa'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Raz'#227'o_Social'
+          FieldName = 'Raz'#227'o_Social'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 26
+          TableName = 'Empresa'
+        end
+        object ppField28: TppField
+          FieldAlias = 'CGC'
+          FieldName = 'CGC'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 27
+          TableName = 'Empresa'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Inscri'#231#227'o_Estadual'
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 28
+          TableName = 'Empresa'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Telefone'
+          FieldName = 'Telefone'
+          FieldLength = 30
+          IsDetail = True
+          DisplayWidth = 30
+          Position = 29
+          TableName = 'Empresa'
+        end
+        object ppField31: TppField
+          FieldAlias = 'FAX'
+          FieldName = 'FAX'
+          FieldLength = 30
+          IsDetail = True
+          DisplayWidth = 30
+          Position = 30
+          TableName = 'Empresa'
+        end
+        object ppField32: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'Cliente_Nome'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 31
+          TableName = 'Cliente'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Cliente_Raz'#227'o_Social'
+          FieldName = 'Cliente_Raz'#227'o_Social'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 32
+          TableName = 'Cliente'
+        end
+        object ppField34: TppField
+          FieldAlias = 'Cliente_Sexo'
+          FieldName = 'Cliente_Sexo'
+          FieldLength = 1
+          IsDetail = True
+          DisplayWidth = 1
+          Position = 33
+          TableName = 'Cliente'
+        end
+        object ppField35: TppField
+          FieldAlias = 'Cliente_Data_Nascimento'
+          FieldName = 'Cliente_Data_Nascimento'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 34
+          TableName = 'Cliente'
+        end
+        object ppField36: TppField
+          FieldAlias = 'Cliente_Natural'
+          FieldName = 'Cliente_Natural'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 35
+          TableName = 'Cliente'
+        end
+        object ppField37: TppField
+          FieldAlias = 'Cliente_Data_Cadastro'
+          FieldName = 'Cliente_Data_Cadastro'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 36
+          TableName = 'Cliente'
+        end
+        object ppField38: TppField
+          FieldAlias = 'Cliente_Data_Abertura'
+          FieldName = 'Cliente_Data_Abertura'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 37
+          TableName = 'Cliente'
+        end
+        object ppField39: TppField
+          FieldAlias = 'Cliente_CPF'
+          FieldName = 'Cliente_CPF'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 38
+          TableName = 'Cliente'
+        end
+        object ppField40: TppField
+          FieldAlias = 'Cliente_RG'
+          FieldName = 'Cliente_RG'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 39
+          TableName = 'Cliente'
+        end
+        object ppField41: TppField
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldName = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 40
+          TableName = 'Cliente'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Cliente_Refer'#234'ncia'
+          FieldName = 'Cliente_Refer'#234'ncia'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 41
+          TableName = 'Cliente'
+        end
+        object ppField43: TppField
+          FieldAlias = 'Cliente_Numero'
+          FieldName = 'Cliente_Numero'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'Cliente'
+        end
+        object ppField44: TppField
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 43
+          TableName = 'Cliente'
+        end
+        object ppField45: TppField
+          FieldAlias = 'Cliente_Cidade'
+          FieldName = 'Cliente_Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 44
+          TableName = 'Cliente'
+        end
+        object ppField46: TppField
+          FieldAlias = 'Cliente_CEP'
+          FieldName = 'Cliente_CEP'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'Cliente'
+        end
+        object ppField47: TppField
+          FieldAlias = 'Outros_Pessoa_Juridica'
+          FieldName = 'Outros_Pessoa_Juridica'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 46
+          TableName = 'Cliente'
+        end
+        object ppField48: TppField
+          FieldAlias = 'nro'
+          FieldName = 'nro'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 47
+          TableName = 'Cliente'
+        end
+        object ppField49: TppField
+          FieldAlias = 'ValorParcelas'
+          FieldName = 'iif_Alugueis_Tem_Entrada'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 48
+          TableName = 'Alugueis'
+        end
+        object ppField50: TppField
+          FieldAlias = 'DiferencaData'
+          FieldName = 'DateDiff_d_Alugueis_Data'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 49
+          TableName = 'Cliente'
+        end
+        object ppField51: TppField
+          FieldAlias = 'Valor_Total'
+          FieldName = 'iif_Alugueis_Tem_Entrad_2'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 50
+          TableName = 'Alugueis'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Alugueis'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Alugueis.Codigo, Alugueis.Empresa, '
+          '       Alugueis.Descricao, Alugueis.Numero, '
+          '       Alugueis.Data_Inicio, Alugueis.Valido_Ate, '
+          '       Alugueis.Tipo_Cobranca, Alugueis.Valor, '
+          '       Alugueis.Tem_Entrada, '
+          '       Alugueis.Valor_Entrada, Alugueis.Parcelas, '
+          '       Alugueis.Texto_Contrato, '
+          '       Alugueis.Dia_Vcto, '
+          '       Alugueis.Indice_Reajuste, '
+          '       Alugueis.Tempo_Reajuste, '
+          '       Alugueis.Reajuste_Em, Alugueis.Referencia, '
+          '       Alugueis.Proximo_Reajuste, '
+          '       Alugueis.Ultimo_Reajuste, '
+          '       Cliente.Cliente_UF, Empresa.UF, '
+          '       Empresa.Cidade, Empresa.Bairro, '
+          '       Empresa.Endere'#231'o, Empresa.CEP, '
+          '       Empresa.Nome_Fantasia, '
+          '       Empresa.Raz'#227'o_Social, Empresa.CGC, '
+          '       Empresa.Inscri'#231#227'o_Estadual, '
+          '       Empresa.Telefone, Empresa.FAX, '
+          '       Cliente.Cliente_Nome, '
+          '       Cliente.Cliente_Raz'#227'o_Social, '
+          '       Cliente.Cliente_Sexo, '
+          '       Cliente.Cliente_Data_Nascimento, '
+          '       Cliente.Cliente_Natural, '
+          '       Cliente.Cliente_Data_Cadastro, '
+          '       Cliente.Cliente_Data_Abertura, '
+          '       Cliente.Cliente_CPF, Cliente.Cliente_RG, '
+          '       Cliente.Cliente_Endere'#231'o, '
+          '       Cliente.Cliente_Refer'#234'ncia, '
+          '       Cliente.Cliente_Numero, '
+          '       Cliente.Cliente_Bairro_Descri'#231#227'o, '
+          '       Cliente.Cliente_Cidade, '
+          '       Cliente.Cliente_CEP, '
+          '       Cliente.Outros_Pessoa_Juridica, '
+          '       Cliente.nro, '
+          
+            '       iif( Alugueis.Tem_Entrada = True, ( (Alugueis.Valor - Alu' +
+            'gueis.Valor_Entrada) / iif( (Alugueis.Parcelas is null) or (Alug' +
+            'ueis.Parcelas = 0), 1, Alugueis.Parcelas ) ), ( Alugueis.Valor/ ' +
+            'iif( (Alugueis.Parcelas is null) or (Alugueis.Parcelas = 0), 1, ' +
+            'Alugueis.Parcelas ) ) ) AS iif_Alugueis_Tem_Entrada, '
+          
+            '       DateDiff("d", Alugueis.Data_Inicio, Alugueis.Valido_Ate) ' +
+            'AS DateDiff_d_Alugueis_Data, '
+          
+            '       (iif( Alugueis.Tem_Entrada = True, ( (Alugueis.Valor - Al' +
+            'ugueis.Valor_Entrada) / iif( (Alugueis.Parcelas is null) or (Alu' +
+            'gueis.Parcelas = 0), 1, Alugueis.Parcelas ) ), ( Alugueis.Valor/' +
+            ' iif( (Alugueis.Parcelas is null) or (Alugueis.Parcelas = 0) , 1' +
+            ', Alugueis.Parcelas ) ) ) * iif( (Alugueis.Parcelas is null) or ' +
+            '(Alugueis.Parcelas =  0), 1, Alugueis.Parcelas )) + iif(Alugueis' +
+            '.Tem_Entrada = True, Alugueis.Valor_Entrada, 0) AS iif_Alugueis_' +
+            'Tem_Entrad_2'
+          'FROM ((Alugueis Alugueis'
+          '      LEFT OUTER JOIN Cliente Cliente ON '
+          '     (Cliente.Empresa = Alugueis.Empresa)'
+          '      AND (Cliente.Codigo = Alugueis.Codigo_Pessoa) )'
+          '      LEFT OUTER JOIN Empresa Empresa ON '
+          '     (Empresa.Empresa = Alugueis.Empresa) )'
+          'WHERE ( Alugueis.Codigo BETWEEN 1 AND 999999 )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'ValorParcelas'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'iif_Alugueis_Tem_Entrada'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Alugueis.Tem_Entrada = True, ( (Alugueis.Valor - Alugueis.V' +
+            'alor_Entrada) / iif( (Alugueis.Parcelas is null) or (Alugueis.Pa' +
+            'rcelas = 0), 1, Alugueis.Parcelas ) ), ( Alugueis.Valor/ iif( (A' +
+            'lugueis.Parcelas is null) or (Alugueis.Parcelas = 0), 1, Aluguei' +
+            's.Parcelas ) ) )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'DiferencaData'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'DateDiff_d_Alugueis_Data'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+          CalcType = dacaExpression
+          Expression = 'DateDiff("d", Alugueis.Data_Inicio, Alugueis.Valido_Ate)'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'Valor_Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Cobranca'
+          FieldLength = 0
+          FieldName = 'Tipo_Cobranca'
+          SQLFieldName = 'iif_Alugueis_Tem_Entrad_2'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+          CalcType = dacaExpression
+          Expression = 
+            '(iif( Alugueis.Tem_Entrada = True, ( (Alugueis.Valor - Alugueis.' +
+            'Valor_Entrada) / iif( (Alugueis.Parcelas is null) or (Alugueis.P' +
+            'arcelas = 0), 1, Alugueis.Parcelas ) ), ( Alugueis.Valor/ iif( (' +
+            'Alugueis.Parcelas is null) or (Alugueis.Parcelas = 0) , 1, Alugu' +
+            'eis.Parcelas ) ) ) * iif( (Alugueis.Parcelas is null) or (Alugue' +
+            'is.Parcelas =  0), 1, Alugueis.Parcelas )) + iif(Alugueis.Tem_En' +
+            'trada = True, Alugueis.Valor_Entrada, 0)'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField3: TdaField
+          Alias = 'Descricao'
+          DisplayWidth = 100
+          FieldAlias = 'Descricao'
+          FieldLength = 100
+          FieldName = 'Descricao'
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField4: TdaField
+          Alias = 'Numero'
+          DisplayWidth = 30
+          FieldAlias = 'Numero'
+          FieldLength = 30
+          FieldName = 'Numero'
+          SQLFieldName = 'Numero'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField5: TdaField
+          Alias = 'Data_Inicio'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Inicio'
+          FieldLength = 0
+          FieldName = 'Data_Inicio'
+          SQLFieldName = 'Data_Inicio'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField6: TdaField
+          Alias = 'Valido_Ate'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Valido_Ate'
+          FieldLength = 0
+          FieldName = 'Valido_Ate'
+          SQLFieldName = 'Valido_Ate'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField7: TdaField
+          Alias = 'Tipo_Cobranca'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Cobranca'
+          FieldLength = 0
+          FieldName = 'Tipo_Cobranca'
+          SQLFieldName = 'Tipo_Cobranca'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField8: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField9: TdaField
+          Alias = 'Tem_Entrada'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Tem_Entrada'
+          FieldLength = 0
+          FieldName = 'Tem_Entrada'
+          SQLFieldName = 'Tem_Entrada'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField10: TdaField
+          Alias = 'Valor_Entrada'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor_Entrada'
+          FieldLength = 0
+          FieldName = 'Valor_Entrada'
+          SQLFieldName = 'Valor_Entrada'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField11: TdaField
+          Alias = 'Parcelas'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Parcelas'
+          FieldLength = 0
+          FieldName = 'Parcelas'
+          SQLFieldName = 'Parcelas'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField12: TdaField
+          Alias = 'Texto_Contrato'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Texto_Contrato'
+          FieldLength = 0
+          FieldName = 'Texto_Contrato'
+          Linkable = False
+          SQLFieldName = 'Texto_Contrato'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField13: TdaField
+          Alias = 'Dia_Vcto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Dia_Vcto'
+          FieldLength = 0
+          FieldName = 'Dia_Vcto'
+          SQLFieldName = 'Dia_Vcto'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField14: TdaField
+          Alias = 'Indice_Reajuste'
+          DisplayWidth = 30
+          FieldAlias = 'Indice_Reajuste'
+          FieldLength = 30
+          FieldName = 'Indice_Reajuste'
+          SQLFieldName = 'Indice_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField15: TdaField
+          Alias = 'Tempo_Reajuste'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tempo_Reajuste'
+          FieldLength = 0
+          FieldName = 'Tempo_Reajuste'
+          SQLFieldName = 'Tempo_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField16: TdaField
+          Alias = 'Reajuste_Em'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Reajuste_Em'
+          FieldLength = 0
+          FieldName = 'Reajuste_Em'
+          SQLFieldName = 'Reajuste_Em'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField17: TdaField
+          Alias = 'Referencia'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Referencia'
+          FieldLength = 0
+          FieldName = 'Referencia'
+          SQLFieldName = 'Referencia'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField18: TdaField
+          Alias = 'Proximo_Reajuste'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Proximo_Reajuste'
+          FieldLength = 0
+          FieldName = 'Proximo_Reajuste'
+          SQLFieldName = 'Proximo_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField19: TdaField
+          Alias = 'Ultimo_Reajuste'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Ultimo_Reajuste'
+          FieldLength = 0
+          FieldName = 'Ultimo_Reajuste'
+          SQLFieldName = 'Ultimo_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField20: TdaField
+          Alias = 'Cliente_UF'
+          DisplayWidth = 2
+          FieldAlias = 'Cliente_UF'
+          FieldLength = 2
+          FieldName = 'Cliente_UF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_UF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField21: TdaField
+          Alias = 'UF'
+          DisplayWidth = 2
+          FieldAlias = 'UF'
+          FieldLength = 2
+          FieldName = 'UF'
+          IsDetail = True
+          SQLFieldName = 'UF'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField22: TdaField
+          Alias = 'Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Cidade'
+          FieldLength = 50
+          FieldName = 'Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField23: TdaField
+          Alias = 'Bairro'
+          DisplayWidth = 20
+          FieldAlias = 'Bairro'
+          FieldLength = 20
+          FieldName = 'Bairro'
+          IsDetail = True
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField24: TdaField
+          Alias = 'Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField25: TdaField
+          Alias = 'CEP'
+          DisplayWidth = 10
+          FieldAlias = 'CEP'
+          FieldLength = 10
+          FieldName = 'CEP'
+          IsDetail = True
+          SQLFieldName = 'CEP'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField26: TdaField
+          Alias = 'Nome_Fantasia'
+          DisplayWidth = 50
+          FieldAlias = 'Nome_Fantasia'
+          FieldLength = 50
+          FieldName = 'Nome_Fantasia'
+          IsDetail = True
+          SQLFieldName = 'Nome_Fantasia'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField27: TdaField
+          Alias = 'Raz'#227'o_Social'
+          DisplayWidth = 50
+          FieldAlias = 'Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Raz'#227'o_Social'
+          IsDetail = True
+          SQLFieldName = 'Raz'#227'o_Social'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField28: TdaField
+          Alias = 'CGC'
+          DisplayWidth = 20
+          FieldAlias = 'CGC'
+          FieldLength = 20
+          FieldName = 'CGC'
+          IsDetail = True
+          SQLFieldName = 'CGC'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField29: TdaField
+          Alias = 'Inscri'#231#227'o_Estadual'
+          DisplayWidth = 20
+          FieldAlias = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          IsDetail = True
+          SQLFieldName = 'Inscri'#231#227'o_Estadual'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField30: TdaField
+          Alias = 'Telefone'
+          DisplayWidth = 30
+          FieldAlias = 'Telefone'
+          FieldLength = 30
+          FieldName = 'Telefone'
+          IsDetail = True
+          SQLFieldName = 'Telefone'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField31: TdaField
+          Alias = 'FAX'
+          DisplayWidth = 30
+          FieldAlias = 'FAX'
+          FieldLength = 30
+          FieldName = 'FAX'
+          IsDetail = True
+          SQLFieldName = 'FAX'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField32: TdaField
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Nome'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField33: TdaField
+          Alias = 'Cliente_Raz'#227'o_Social'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Cliente_Raz'#227'o_Social'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Raz'#227'o_Social'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField34: TdaField
+          Alias = 'Cliente_Sexo'
+          DisplayWidth = 1
+          FieldAlias = 'Cliente_Sexo'
+          FieldLength = 1
+          FieldName = 'Cliente_Sexo'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Sexo'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField35: TdaField
+          Alias = 'Cliente_Data_Nascimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Cliente_Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Cliente_Data_Nascimento'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Data_Nascimento'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField36: TdaField
+          Alias = 'Cliente_Natural'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Natural'
+          FieldLength = 50
+          FieldName = 'Cliente_Natural'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Natural'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField37: TdaField
+          Alias = 'Cliente_Data_Cadastro'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Cliente_Data_Cadastro'
+          FieldLength = 0
+          FieldName = 'Cliente_Data_Cadastro'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Data_Cadastro'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField38: TdaField
+          Alias = 'Cliente_Data_Abertura'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Cliente_Data_Abertura'
+          FieldLength = 0
+          FieldName = 'Cliente_Data_Abertura'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Data_Abertura'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField39: TdaField
+          Alias = 'Cliente_CPF'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_CPF'
+          FieldLength = 20
+          FieldName = 'Cliente_CPF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CPF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField40: TdaField
+          Alias = 'Cliente_RG'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_RG'
+          FieldLength = 20
+          FieldName = 'Cliente_RG'
+          IsDetail = True
+          SQLFieldName = 'Cliente_RG'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField41: TdaField
+          Alias = 'Cliente_Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Endere'#231'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField42: TdaField
+          Alias = 'Cliente_Refer'#234'ncia'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Refer'#234'ncia'
+          FieldLength = 50
+          FieldName = 'Cliente_Refer'#234'ncia'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Refer'#234'ncia'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField43: TdaField
+          Alias = 'Cliente_Numero'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente_Numero'
+          FieldLength = 10
+          FieldName = 'Cliente_Numero'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Numero'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField44: TdaField
+          Alias = 'Cliente_Bairro_Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField45: TdaField
+          Alias = 'Cliente_Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Cidade'
+          FieldLength = 50
+          FieldName = 'Cliente_Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Cidade'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField46: TdaField
+          Alias = 'Cliente_CEP'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente_CEP'
+          FieldLength = 10
+          FieldName = 'Cliente_CEP'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CEP'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField47: TdaField
+          Alias = 'Outros_Pessoa_Juridica'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Outros_Pessoa_Juridica'
+          FieldLength = 0
+          FieldName = 'Outros_Pessoa_Juridica'
+          IsDetail = True
+          SQLFieldName = 'Outros_Pessoa_Juridica'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField48: TdaField
+          Alias = 'nro'
+          DisplayWidth = 20
+          FieldAlias = 'nro'
+          FieldLength = 20
+          FieldName = 'nro'
+          IsDetail = True
+          SQLFieldName = 'nro'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis'
+          JoinType = dajtNone
+          SQLAlias = 'Alugueis'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Cliente'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Cliente'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField50: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField49: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis'
+              TableName = 'Alugueis'
+              TableSQLAlias = 'Alugueis'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField52: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField51: TdaField
+              ChildType = 4
+              Alias = 'Codigo_Pessoa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Pessoa'
+              FieldLength = 0
+              FieldName = 'Codigo_Pessoa'
+              SQLFieldName = 'Codigo_Pessoa'
+              TableAlias = 'Alugueis'
+              TableName = 'Alugueis'
+              TableSQLAlias = 'Alugueis'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Empresa'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Empresa'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField54: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Empresa'
+              TableName = 'Empresa'
+              TableSQLAlias = 'Empresa'
+            end
+            object daField53: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis'
+              TableName = 'Alugueis'
+              TableSQLAlias = 'Alugueis'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Alugueis_Produtos'
+      Height = 199
+      Left = 453
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 108
+      TypeColumnWidth = 52
+      Width = 315
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Alugueis'
+      object Alugueis_Produtos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Alugueis_Produtos'
+        MasterDataPipelineName = 'Alugueis'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Codigo_Cabecalho'
+          FieldName = 'Codigo_Cabecalho'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo_Produto'
+          FieldName = 'Codigo_Produto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Qtde'
+          FieldName = 'Qtde'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Valor_Unitario'
+          FieldName = 'Valor_Unitario'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Alugueis_Produtos'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Codigo_Cabecalho'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Alugueis_Produtos'
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Alugueis_Produtos.Codigo, '
+          '       Alugueis_Produtos.Empresa, '
+          '       Alugueis_Produtos.Codigo_Cabecalho, '
+          '       Alugueis_Produtos.Codigo_Produto, '
+          '       Alugueis_Produtos.Qtde, '
+          '       Alugueis_Produtos.Valor_Unitario'
+          'FROM Alugueis_Produtos Alugueis_Produtos')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField3: TdaField
+          Alias = 'Codigo_Cabecalho'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Cabecalho'
+          FieldLength = 0
+          FieldName = 'Codigo_Cabecalho'
+          SQLFieldName = 'Codigo_Cabecalho'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Produto'
+          FieldLength = 0
+          FieldName = 'Codigo_Produto'
+          SQLFieldName = 'Codigo_Produto'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField5: TdaField
+          Alias = 'Qtde'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Qtde'
+          FieldLength = 0
+          FieldName = 'Qtde'
+          SQLFieldName = 'Qtde'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField6: TdaField
+          Alias = 'Valor_Unitario'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor_Unitario'
+          FieldLength = 0
+          FieldName = 'Valor_Unitario'
+          SQLFieldName = 'Valor_Unitario'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis_Produtos'
+          JoinType = dajtNone
+          SQLAlias = 'Alugueis_Produtos'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+        end
+        object daSQLLink1: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Alugueis_Produtos'
+            TableName = 'Alugueis_Produtos'
+            TableSQLAlias = 'Alugueis_Produtos'
+          end
+        end
+        object daSQLLink2: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Codigo_Cabecalho'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo_Cabecalho'
+            FieldLength = 0
+            FieldName = 'Codigo_Cabecalho'
+            SQLFieldName = 'Codigo_Cabecalho'
+            TableAlias = 'Alugueis_Produtos'
+            TableName = 'Alugueis_Produtos'
+            TableSQLAlias = 'Alugueis_Produtos'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView3: TdaADOQueryDataView
+      UserName = 'Query_Alugueis_Equipamentos'
+      Height = 199
+      Left = 855
+      NameColumnWidth = 156
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 176
+      TypeColumnWidth = 52
+      Width = 322
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Alugueis'
+      object Alugueis_Equipamentos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Alugueis_Equipamentos'
+        MasterDataPipelineName = 'Alugueis'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Alugueis_Equipamentos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Alugueis_Equipamentos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Codigo_Cabecalho'
+          FieldName = 'Codigo_Cabecalho'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Alugueis_Equipamentos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo_Equipamento'
+          FieldName = 'Codigo_Equipamento'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Alugueis_Equipamentos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Numero_Serie'
+          FieldName = 'Numero_Serie'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 4
+          TableName = 'Alugueis_Equipamentos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Qtde'
+          FieldName = 'Qtde'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Alugueis_Equipamentos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Descri'#231#227'o'
+          FieldName = 'Descri'#231#227'o'
+          FieldLength = 255
+          IsDetail = True
+          DisplayWidth = 255
+          Position = 6
+          TableName = 'OS_Equipamento'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Codigo_Cabecalho'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL3: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Alugueis_Equipamentos'
+        IsCaseSensitive = True
+        LinkColor = clGreen
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Alugueis_Equipamentos.Codigo, '
+          '       Alugueis_Equipamentos.Empresa, '
+          '       Alugueis_Equipamentos.Codigo_Cabecalho, '
+          '       Alugueis_Equipamentos.Codigo_Equipamento, '
+          '       Alugueis_Equipamentos.Numero_Serie, '
+          '       Alugueis_Equipamentos.Qtde, '
+          '       OS_Equipamento.Descri'#231#227'o'
+          'FROM (Alugueis_Equipamentos Alugueis_Equipamentos'
+          '      LEFT OUTER JOIN OS_Equipamento OS_Equipamento ON '
+          '     (OS_Equipamento.Empresa = Alugueis_Equipamentos.Empresa)'
+          
+            '      AND (OS_Equipamento.Codigo = Alugueis_Equipamentos.Codigo_' +
+            'Equipamento) )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Alugueis_Equipamentos'
+          TableName = 'Alugueis_Equipamentos'
+          TableSQLAlias = 'Alugueis_Equipamentos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Alugueis_Equipamentos'
+          TableName = 'Alugueis_Equipamentos'
+          TableSQLAlias = 'Alugueis_Equipamentos'
+        end
+        object daField3: TdaField
+          Alias = 'Codigo_Cabecalho'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Cabecalho'
+          FieldLength = 0
+          FieldName = 'Codigo_Cabecalho'
+          SQLFieldName = 'Codigo_Cabecalho'
+          TableAlias = 'Alugueis_Equipamentos'
+          TableName = 'Alugueis_Equipamentos'
+          TableSQLAlias = 'Alugueis_Equipamentos'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo_Equipamento'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Equipamento'
+          FieldLength = 0
+          FieldName = 'Codigo_Equipamento'
+          SQLFieldName = 'Codigo_Equipamento'
+          TableAlias = 'Alugueis_Equipamentos'
+          TableName = 'Alugueis_Equipamentos'
+          TableSQLAlias = 'Alugueis_Equipamentos'
+        end
+        object daField5: TdaField
+          Alias = 'Numero_Serie'
+          DisplayWidth = 30
+          FieldAlias = 'Numero_Serie'
+          FieldLength = 30
+          FieldName = 'Numero_Serie'
+          SQLFieldName = 'Numero_Serie'
+          TableAlias = 'Alugueis_Equipamentos'
+          TableName = 'Alugueis_Equipamentos'
+          TableSQLAlias = 'Alugueis_Equipamentos'
+        end
+        object daField6: TdaField
+          Alias = 'Qtde'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Qtde'
+          FieldLength = 0
+          FieldName = 'Qtde'
+          SQLFieldName = 'Qtde'
+          TableAlias = 'Alugueis_Equipamentos'
+          TableName = 'Alugueis_Equipamentos'
+          TableSQLAlias = 'Alugueis_Equipamentos'
+        end
+        object daField7: TdaField
+          Alias = 'Descri'#231#227'o'
+          DisplayWidth = 255
+          FieldAlias = 'Descri'#231#227'o'
+          FieldLength = 255
+          FieldName = 'Descri'#231#227'o'
+          IsDetail = True
+          SQLFieldName = 'Descri'#231#227'o'
+          TableAlias = 'OS_Equipamento'
+          TableName = 'OS_Equipamento'
+          TableSQLAlias = 'OS_Equipamento'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis_Equipamentos'
+          JoinType = dajtNone
+          SQLAlias = 'Alugueis_Equipamentos'
+          TableAlias = 'Alugueis_Equipamentos'
+          TableName = 'Alugueis_Equipamentos'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'OS_Equipamento'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'OS_Equipamento'
+          TableAlias = 'OS_Equipamento'
+          TableName = 'OS_Equipamento'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField9: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'OS_Equipamento'
+              TableName = 'OS_Equipamento'
+              TableSQLAlias = 'OS_Equipamento'
+            end
+            object daField8: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis_Equipamentos'
+              TableName = 'Alugueis_Equipamentos'
+              TableSQLAlias = 'Alugueis_Equipamentos'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField11: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'OS_Equipamento'
+              TableName = 'OS_Equipamento'
+              TableSQLAlias = 'OS_Equipamento'
+            end
+            object daField10: TdaField
+              ChildType = 4
+              Alias = 'Codigo_Equipamento'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Equipamento'
+              FieldLength = 0
+              FieldName = 'Codigo_Equipamento'
+              SQLFieldName = 'Codigo_Equipamento'
+              TableAlias = 'Alugueis_Equipamentos'
+              TableName = 'Alugueis_Equipamentos'
+              TableSQLAlias = 'Alugueis_Equipamentos'
+            end
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField12: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object daField13: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Alugueis_Equipamentos'
+            TableName = 'Alugueis_Equipamentos'
+            TableSQLAlias = 'Alugueis_Equipamentos'
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField14: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object daField15: TdaField
+            ChildType = 11
+            Alias = 'Codigo_Cabecalho'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo_Cabecalho'
+            FieldLength = 0
+            FieldName = 'Codigo_Cabecalho'
+            SQLFieldName = 'Codigo_Cabecalho'
+            TableAlias = 'Alugueis_Equipamentos'
+            TableName = 'Alugueis_Equipamentos'
+            TableSQLAlias = 'Alugueis_Equipamentos'
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer44: TppDesignLayer
+      UserName = 'BandLayer44'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer43: TppDesignLayer
+      UserName = 'BandLayer43'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer42: TppDesignLayer
+      UserName = 'BandLayer42'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer41: TppDesignLayer
+      UserName = 'BandLayer41'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer40: TppDesignLayer
+      UserName = 'BandLayer40'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer39: TppDesignLayer
+      UserName = 'BandLayer39'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer38: TppDesignLayer
+      UserName = 'BandLayer38'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer37: TppDesignLayer
+      UserName = 'BandLayer37'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer36: TppDesignLayer
+      UserName = 'BandLayer36'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer35: TppDesignLayer
+      UserName = 'BandLayer35'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer34: TppDesignLayer
+      UserName = 'BandLayer34'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer33: TppDesignLayer
+      UserName = 'BandLayer33'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer32: TppDesignLayer
+      UserName = 'BandLayer32'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer31: TppDesignLayer
+      UserName = 'BandLayer31'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer30: TppDesignLayer
+      UserName = 'BandLayer30'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer29: TppDesignLayer
+      UserName = 'BandLayer29'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer28: TppDesignLayer
+      UserName = 'BandLayer28'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer27: TppDesignLayer
+      UserName = 'BandLayer27'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer26: TppDesignLayer
+      UserName = 'BandLayer26'
+      LayerType = ltBanded
+      Index = 18
+    end
+    object ppDesignLayer25: TppDesignLayer
+      UserName = 'BandLayer25'
+      LayerType = ltBanded
+      Index = 19
+    end
+    object ppDesignLayer24: TppDesignLayer
+      UserName = 'BandLayer24'
+      LayerType = ltBanded
+      Index = 20
+    end
+    object ppDesignLayer23: TppDesignLayer
+      UserName = 'BandLayer23'
+      LayerType = ltBanded
+      Index = 21
+    end
+    object ppDesignLayer22: TppDesignLayer
+      UserName = 'BandLayer22'
+      LayerType = ltBanded
+      Index = 22
+    end
+    object ppDesignLayer21: TppDesignLayer
+      UserName = 'BandLayer21'
+      LayerType = ltBanded
+      Index = 23
+    end
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 24
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 25
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 26
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 27
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 28
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 29
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 30
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 31
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 32
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 33
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 34
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 35
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 36
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 37
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 38
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 39
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 40
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 41
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Contrato@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Aluguéis e Contratos@Documentos
+NOME=Contrato de Prestação de Serviços
+DESCRICAO=Imprime um contrato de prestação de serviços com um modelo pré definido.
+ALTERADO_EM=02/01/2015 11:26
+SQL=<0>

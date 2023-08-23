@@ -1,0 +1,1210 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1506-HYH02.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Lctos_Antecipados'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 11377
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      Shape = stRoundRect
+      mmHeight = 5556
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 10319
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Fornecedor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 23283
+      mmTop = 6615
+      mmWidth = 17198
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Data'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 87577
+      mmTop = 6615
+      mmWidth = 6879
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Tipo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 161661
+      mmTop = 6615
+      mmWidth = 6350
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Valor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 191294
+      mmTop = 6615
+      mmWidth = 7938
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Conta Caixa'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 106892
+      mmTop = 6615
+      mmWidth = 17992
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 5556
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Lctos_Antecipados'
+      mmHeight = 3725
+      mmLeft = 794
+      mmTop = 244
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Codigo_Pessoa'
+      DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Lctos_Antecipados'
+      mmHeight = 3704
+      mmLeft = 23283
+      mmTop = 265
+      mmWidth = 62442
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Data'
+      DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Lctos_Antecipados'
+      mmHeight = 3704
+      mmLeft = 87577
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Tipo'
+      DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Lctos_Antecipados'
+      mmHeight = 3704
+      mmLeft = 161661
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Valor'
+      DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Lctos_Antecipados'
+      mmHeight = 3725
+      mmLeft = 182034
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Caixa_Contas_C'#243'digo_Conta'
+      DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Lctos_Antecipados'
+      mmHeight = 3704
+      mmLeft = 106892
+      mmTop = 265
+      mmWidth = 52123
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'Line1'
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 5027
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 7673
+    mmPrintPosition = 0
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      DataField = 'iif_Lctos_Antecipados_Tip'
+      DataPipeline = daADOQueryDataView1.Lctos_Antecipados
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Lctos_Antecipados'
+      mmHeight = 3969
+      mmLeft = 169598
+      mmTop = 1058
+      mmWidth = 29633
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label7'
+      Caption = 'Total:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 157692
+      mmTop = 1058
+      mmWidth = 8202
+      BandType = 7
+      LayerName = Foreground1
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Lctos_Antecipados'
+      Height = 318
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Lctos_Antecipados: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Lctos_Antecipados'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Lcto_Para'
+          FieldName = 'Lcto_Para'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Codigo_Pessoa'
+          FieldName = 'Codigo_Pessoa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Codigo_ContaCaixa'
+          FieldName = 'Codigo_ContaCaixa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Codigo_CentroCusto'
+          FieldName = 'Codigo_CentroCusto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Descricao'
+          FieldName = 'Descricao'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 7
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 8
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Referencia'
+          FieldName = 'Referencia'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Origem'
+          FieldName = 'Origem'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Codigo_Origem'
+          FieldName = 'Codigo_Origem'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Fornecedor'
+          FieldName = 'select_F_Nome_Fantasia_f'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Lctos_Antecipados'
+        end
+        object ppField15: TppField
+          FieldAlias = 'ContaCaixa'
+          FieldName = 'Caixa_Contas_C'#243'digo_Conta'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 14
+          TableName = 'Caixa_Contas'
+        end
+        object ppField16: TppField
+          FieldAlias = 'ValorT'
+          FieldName = 'iif_Lctos_Antecipados_Tip'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'Lctos_Antecipados'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Lctos_Antecipados'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Lctos_Antecipados.Codigo, '
+          '       Lctos_Antecipados.Empresa, '
+          '       Lctos_Antecipados.Lcto_Para, '
+          '       Lctos_Antecipados.Tipo, '
+          '       Lctos_Antecipados.Codigo_Pessoa, '
+          '       Lctos_Antecipados.Codigo_ContaCaixa, '
+          '       Lctos_Antecipados.Codigo_CentroCusto, '
+          '       Lctos_Antecipados.Descricao, '
+          '       Lctos_Antecipados.Data, '
+          '       Lctos_Antecipados.Valor, '
+          '       Lctos_Antecipados.Referencia, '
+          '       Lctos_Antecipados.Origem, '
+          '       Lctos_Antecipados.Codigo_Origem, '
+          
+            '       ( select F.Nome_Fantasia from Fornecedor F where F.Codigo' +
+            ' =  Lctos_Antecipados.Codigo_Pessoa and F.Empresa = Lctos_Anteci' +
+            'pados.Empresa )  AS select_F_Nome_Fantasia_f, '
+          
+            '       Caixa_Contas.[C'#243'digo_Conta] & " - " & Caixa_Contas.[Descr' +
+            'i'#231#227'o] AS Caixa_Contas_C'#243'digo_Conta, '
+          
+            '       iif(Lctos_Antecipados.Tipo = 0, Lctos_Antecipados.Valor, ' +
+            'Lctos_Antecipados.Valor * (-1)) AS iif_Lctos_Antecipados_Tip'
+          'FROM (Lctos_Antecipados Lctos_Antecipados'
+          '      LEFT OUTER JOIN Caixa_Contas Caixa_Contas ON '
+          '     (Caixa_Contas.Empresa = Lctos_Antecipados.Empresa)'
+          
+            '      AND (Caixa_Contas.Codigo = Lctos_Antecipados.Codigo_ContaC' +
+            'aixa) )'
+          'WHERE ( Lctos_Antecipados.Lcto_Para = 1 )'
+          
+            '       AND ( Lctos_Antecipados.Data BETWEEN #2015-01-01 00.00.00' +
+            '# AND #2015-12-31 00.00.00# )'
+          
+            '       AND ( Lctos_Antecipados.Codigo_Pessoa BETWEEN 1 AND 99999' +
+            '9 )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Fornecedor'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Pessoa'
+          FieldLength = 0
+          FieldName = 'Codigo_Pessoa'
+          SQLFieldName = 'select_F_Nome_Fantasia_f'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+          CalcType = dacaExpression
+          Expression = 
+            '( select F.Nome_Fantasia from Fornecedor F where F.Codigo =  Lct' +
+            'os_Antecipados.Codigo_Pessoa and F.Empresa = Lctos_Antecipados.E' +
+            'mpresa ) '
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'ContaCaixa'
+          DisplayWidth = 30
+          FieldAlias = 'C'#243'digo_Conta'
+          FieldLength = 30
+          FieldName = 'C'#243'digo_Conta'
+          SQLFieldName = 'Caixa_Contas_C'#243'digo_Conta'
+          TableAlias = 'Caixa_Contas'
+          TableName = 'Caixa_Contas'
+          TableSQLAlias = 'Caixa_Contas'
+          CalcType = dacaExpression
+          Expression = 'Caixa_Contas.[C'#243'digo_Conta] & " - " & Caixa_Contas.[Descri'#231#227'o]'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'ValorT'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'iif_Lctos_Antecipados_Tip'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+          CalcType = dacaExpression
+          Expression = 
+            'iif(Lctos_Antecipados.Tipo = 0, Lctos_Antecipados.Valor, Lctos_A' +
+            'ntecipados.Valor * (-1))'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = '1'
+          object TdaField
+            Alias = 'Lcto_Para'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Lcto_Para'
+            FieldLength = 0
+            FieldName = 'Lcto_Para'
+            SQLFieldName = 'Lcto_Para'
+            TableAlias = 'Lctos_Antecipados'
+            TableName = 'Lctos_Antecipados'
+            TableSQLAlias = 'Lctos_Antecipados'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data'
+          Value = '01/01/2015,31/12/2015'
+          object TdaField
+            Alias = 'Data'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data'
+            FieldLength = 0
+            FieldName = 'Data'
+            SQLFieldName = 'Data'
+            TableAlias = 'Lctos_Antecipados'
+            TableName = 'Lctos_Antecipados'
+            TableSQLAlias = 'Lctos_Antecipados'
+          end
+          object TdaNumericValue
+            Value = 42005.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 42369.000000000000000000
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo_Pessoa'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo_Pessoa'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo_Pessoa'
+            FieldLength = 0
+            FieldName = 'Codigo_Pessoa'
+            SQLFieldName = 'Codigo_Pessoa'
+            TableAlias = 'Lctos_Antecipados'
+            TableName = 'Lctos_Antecipados'
+            TableSQLAlias = 'Lctos_Antecipados'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField3: TdaField
+          Alias = 'Lcto_Para'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Lcto_Para'
+          FieldLength = 0
+          FieldName = 'Lcto_Para'
+          SQLFieldName = 'Lcto_Para'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField4: TdaField
+          Alias = 'Tipo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 0
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField5: TdaField
+          Alias = 'Codigo_Pessoa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Pessoa'
+          FieldLength = 0
+          FieldName = 'Codigo_Pessoa'
+          SQLFieldName = 'Codigo_Pessoa'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField6: TdaField
+          Alias = 'Codigo_ContaCaixa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_ContaCaixa'
+          FieldLength = 0
+          FieldName = 'Codigo_ContaCaixa'
+          SQLFieldName = 'Codigo_ContaCaixa'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField7: TdaField
+          Alias = 'Codigo_CentroCusto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_CentroCusto'
+          FieldLength = 0
+          FieldName = 'Codigo_CentroCusto'
+          SQLFieldName = 'Codigo_CentroCusto'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField8: TdaField
+          Alias = 'Descricao'
+          DisplayWidth = 100
+          FieldAlias = 'Descricao'
+          FieldLength = 100
+          FieldName = 'Descricao'
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField9: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField10: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField11: TdaField
+          Alias = 'Referencia'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Referencia'
+          FieldLength = 0
+          FieldName = 'Referencia'
+          SQLFieldName = 'Referencia'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField12: TdaField
+          Alias = 'Origem'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Origem'
+          FieldLength = 0
+          FieldName = 'Origem'
+          SQLFieldName = 'Origem'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daField13: TdaField
+          Alias = 'Codigo_Origem'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Origem'
+          FieldLength = 0
+          FieldName = 'Codigo_Origem'
+          SQLFieldName = 'Codigo_Origem'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+          TableSQLAlias = 'Lctos_Antecipados'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Lctos_Antecipados'
+          JoinType = dajtNone
+          SQLAlias = 'Lctos_Antecipados'
+          TableAlias = 'Lctos_Antecipados'
+          TableName = 'Lctos_Antecipados'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Contas'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Caixa_Contas'
+          TableAlias = 'Caixa_Contas'
+          TableName = 'Caixa_Contas'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField15: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Caixa_Contas'
+              TableName = 'Caixa_Contas'
+              TableSQLAlias = 'Caixa_Contas'
+            end
+            object daField14: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Lctos_Antecipados'
+              TableName = 'Lctos_Antecipados'
+              TableSQLAlias = 'Lctos_Antecipados'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField17: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Caixa_Contas'
+              TableName = 'Caixa_Contas'
+              TableSQLAlias = 'Caixa_Contas'
+            end
+            object daField16: TdaField
+              ChildType = 4
+              Alias = 'Codigo_ContaCaixa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_ContaCaixa'
+              FieldLength = 0
+              FieldName = 'Codigo_ContaCaixa'
+              SQLFieldName = 'Codigo_ContaCaixa'
+              TableAlias = 'Lctos_Antecipados'
+              TableName = 'Lctos_Antecipados'
+              TableSQLAlias = 'Lctos_Antecipados'
+            end
+          end
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874324F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F75726365067A70726F6365647572652044425465
+      7874324F6E476574546578742876617220546578743A20537472696E67293B0D
+      0A626567696E0D0A0D0A202054657874203A3D2074657874202B2027202D2027
+      2B204C63746F735F416E746563697061646F735B27466F726E656365646F7227
+      5D3B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060744425465
+      787432094576656E744E616D6506094F6E47657454657874074576656E744944
+      0235084361726574506F730102390204000001060F5472614576656E7448616E
+      646C65720B50726F6772616D4E616D650610444254657874354F6E4765745465
+      78740B50726F6772616D54797065070B747450726F63656475726506536F7572
+      636514A100000070726F63656475726520444254657874354F6E476574546578
+      742876617220546578743A20537472696E67293B0D0A626567696E0D0A202069
+      66204C63746F735F416E746563697061646F735B275469706F275D203D203020
+      7468656E0D0A2020202054657874203A3D20274372C3A96469746F270D0A2020
+      656C73650D0A2020202054657874203A3D20275265746972616461273B200D0A
+      0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506074442546578743509
+      4576656E744E616D6506094F6E47657454657874074576656E74494402350843
+      61726574506F730102180206000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 10
+    end
+  end
+  object ppParameterList: TppParameterList
+    object Data: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/01/2015,31/12/2015'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data do Lan'#231'amento@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/01/2015'
+      UserName = 'Data'
+    end
+    object Codigo_Pessoa: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo_Pessoa'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Fornecedor@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo_Pessoa'
+    end
+  end
+end
+$
+GRUPO=Lançamentos Antecipados
+NOME=Lista de Pagamentos Antecipados
+DESCRICAO=Mostra uma lista dos pagamentos antecipados realizados
+ALTERADO_EM=30/06/2015 16:47
+SQL=<0><1>

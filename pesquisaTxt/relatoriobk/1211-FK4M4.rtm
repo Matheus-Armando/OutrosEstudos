@@ -1,0 +1,1728 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 265
+  PrinterSetup.mmMarginLeft = 794
+  PrinterSetup.mmMarginRight = 794
+  PrinterSetup.mmMarginTop = 265
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1211-FK4M4.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Orcamentos_Cabecalho'
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 7938
+    mmPrintPosition = 0
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      DataField = 'Codigo_Produto'
+      DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+      DisplayFormat = '##0-0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Orcamentos_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 794
+      mmTop = 0
+      mmWidth = 16933
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      DataField = 'Qtde_Original'
+      DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+      DisplayFormat = '#,0;-#,0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Orcamentos_Cabecalho'
+      mmHeight = 3175
+      mmLeft = 794
+      mmTop = 4233
+      mmWidth = 11906
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      DataField = 'Custo_Unit'#225'rio'
+      DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Orcamentos_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 20373
+      mmTop = 4233
+      mmWidth = 21167
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Custo_Total'
+      DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Orcamentos_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 41804
+      mmTop = 4233
+      mmWidth = 28310
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText21: TppDBText
+      UserName = 'DBText21'
+      DataField = 'Nome_Produto'
+      DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      VerticalAlignment = avBottom
+      DataPipelineName = 'Orcamentos_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 18785
+      mmTop = 0
+      mmWidth = 43921
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'x'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 12965
+      mmTop = 4233
+      mmWidth = 1588
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Unidade'
+      DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+      DisplayFormat = '9999'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Orcamentos_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 64294
+      mmTop = 0
+      mmWidth = 5821
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Orcamentos_Cabecalho'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 47096
+      mmPrintPosition = 0
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        AutoSize = False
+        Caption = 'Valor Total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 41804
+        mmTop = 42598
+        mmWidth = 28310
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel4: TppLabel
+        UserName = 'Label4'
+        AutoSize = False
+        Caption = 'Cod.Produto'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 38629
+        mmWidth = 16933
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label5'
+        AutoSize = False
+        Caption = 'Qtde'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 794
+        mmTop = 42598
+        mmWidth = 11906
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        AutoSize = False
+        Caption = 'Valor Unitario'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 18256
+        mmTop = 42598
+        mmWidth = 23283
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        AutoSize = False
+        Caption = 'CGC/CPF :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 21167
+        mmWidth = 14288
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel15: TppLabel
+        UserName = 'Label15'
+        AutoSize = False
+        Caption = 'Descricao'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 18785
+        mmTop = 38629
+        mmWidth = 43921
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText11: TppDBText
+        UserName = 'DBText11'
+        DataField = 'Cliente_Nome'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 16933
+        mmWidth = 69850
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText12: TppDBText
+        UserName = 'DBText12'
+        DataField = 'Cliente_CPF'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 16140
+        mmTop = 21167
+        mmWidth = 31750
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText14: TppDBText
+        UserName = 'DBText14'
+        DataField = 'Data'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        DisplayFormat = 'dd/mm/yyyy'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 1058
+        mmTop = 8467
+        mmWidth = 24077
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine7: TppLine
+        UserName = 'Line7'
+        Pen.Width = 0
+        Weight = 0.250000000000000000
+        mmHeight = 529
+        mmLeft = 0
+        mmTop = 7408
+        mmWidth = 70379
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel18: TppLabel
+        UserName = 'Label18'
+        AutoSize = False
+        Caption = 'Unid'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 63236
+        mmTop = 38629
+        mmWidth = 6879
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine8: TppLine
+        UserName = 'Line8'
+        Pen.Width = 0
+        Weight = 0.250000000000000000
+        mmHeight = 529
+        mmLeft = 0
+        mmTop = 37835
+        mmWidth = 70379
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine9: TppLine
+        UserName = 'Line9'
+        Pen.Width = 0
+        Weight = 0.250000000000000000
+        mmHeight = 529
+        mmLeft = 0
+        mmTop = 46567
+        mmWidth = 70115
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel3: TppLabel
+        UserName = 'Label3'
+        Caption = 'Nro Or'#231'.:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 1058
+        mmTop = 12700
+        mmWidth = 11642
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'Codigo'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 13494
+        mmTop = 12700
+        mmWidth = 29104
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label7'
+        Caption = 'Or'#231'amento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 0
+        mmTop = 1323
+        mmWidth = 18521
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'Vendedor'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 16669
+        mmTop = 33867
+        mmWidth = 15875
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel8: TppLabel
+        UserName = 'Label101'
+        AutoSize = False
+        Caption = 'Vendedor :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 33867
+        mmWidth = 15081
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label102'
+        AutoSize = False
+        Caption = 'Endere'#231'o :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 25400
+        mmWidth = 14288
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText6: TppDBText
+        UserName = 'DBText6'
+        DataField = 'Cliente_Endere'#231'o'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 16140
+        mmTop = 25400
+        mmWidth = 54240
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        DataField = 'select_top_1_ddd_fone_fr'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 9525
+        mmTop = 29633
+        mmWidth = 38365
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel11: TppLabel
+        UserName = 'Label11'
+        AutoSize = False
+        Caption = 'Fone:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 29633
+        mmWidth = 7938
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 7673
+      mmPrintPosition = 0
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'Total'
+        DataPipeline = daADOQueryDataView1.Orcamentos_Cabecalho
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Times New Roman'
+        Font.Size = 10
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        mmHeight = 3969
+        mmLeft = 41804
+        mmTop = 0
+        mmWidth = 28310
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel14: TppLabel
+        UserName = 'Label14'
+        Caption = 'Total Saida'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Times New Roman'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 25665
+        mmTop = 0
+        mmWidth = 15875
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Orcamentos_Cabecalho'
+      Height = 284
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Orcamentos_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Orcamentos_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Cliente'
+          FieldName = 'Cliente'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'Cliente_Nome'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 1
+          TableName = 'Cliente'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cliente_CPF'
+          FieldName = 'Cliente_CPF'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 2
+          TableName = 'Cliente'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldName = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 3
+          TableName = 'Cliente'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Cliente_Numero'
+          FieldName = 'Cliente_Numero'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Cliente'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 5
+          TableName = 'Cliente'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cliente_Cidade'
+          FieldName = 'Cliente_Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 6
+          TableName = 'Cliente'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Cliente_CEP'
+          FieldName = 'Cliente_CEP'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Cliente'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Cliente_UF'
+          FieldName = 'Cliente_UF'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 8
+          TableName = 'Cliente'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Cliente_Numeor'
+          FieldName = 'nro'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 9
+          TableName = 'Cliente'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 11
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Codigo_Produto'
+          FieldName = 'Codigo_Produto'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Nome_Produto'
+          FieldName = 'Nome_Produto'
+          FieldLength = 255
+          IsDetail = True
+          DisplayWidth = 255
+          Position = 13
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldName = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Qtde_Original'
+          FieldName = 'Qtde_Original'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Custo_Total'
+          FieldName = 'Custo_Total'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Desconto%'
+          FieldName = 'Desconto'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Acr'#233'scimo%'
+          FieldName = 'Acr'#233'scimo'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Total'
+          FieldName = 'Total'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Frete'
+          FieldName = 'Frete'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Peso'
+          FieldName = 'Peso'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Total_Desconto'
+          FieldName = 'Total_Desconto'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Acr'#233'scimo_Extra'
+          FieldName = 'Acr'#233'scimo_Extra'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Desconto_Extra'
+          FieldName = 'Desconto_Extra'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Observa'#231#245'es'
+          FieldName = 'Observa'#231#245'es'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Cliente_RG'
+          FieldName = 'Cliente_RG'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 26
+          TableName = 'Cliente'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Unidade'
+          FieldName = 'Unidade'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 27
+          TableName = 'Orcamentos_Detalhe'
+        end
+        object ppField29: TppField
+          FieldAlias = 'PlanoPagamento_Descricao'
+          FieldName = 'select_descri'#231#227'o_from_pl'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Transportadora_Descricao'
+          FieldName = 'select_codigo_Nome_Fanta'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField31: TppField
+          FieldAlias = 'Cliente_Telefone'
+          FieldName = 'select_top_1_ddd_fone_fr'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object ppField32: TppField
+          FieldAlias = 'Vendedor_Nome'
+          FieldName = 'select_nome_from_funcion'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'Orcamentos_Detalhe'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Orcamentos_Cabecalho'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Orcamentos_Cabecalho.Cliente, '
+          '       Cliente.Cliente_Nome, Cliente.Cliente_CPF, '
+          '       Cliente.Cliente_Endere'#231'o, '
+          '       Cliente.Cliente_Numero, '
+          '       Cliente.Cliente_Bairro_Descri'#231#227'o, '
+          '       Cliente.Cliente_Cidade, '
+          '       Cliente.Cliente_CEP, Cliente.Cliente_UF, '
+          '       Cliente.nro, Orcamentos_Cabecalho.Codigo, '
+          '       Orcamentos_Cabecalho.Data, '
+          '       Orcamentos_Detalhe.Codigo_Produto, '
+          '       Orcamentos_Detalhe.Nome_Produto, '
+          '       Orcamentos_Detalhe.Custo_Unit'#225'rio, '
+          '       Orcamentos_Detalhe.Qtde_Original, '
+          '       Orcamentos_Detalhe.Custo_Total, '
+          '       Orcamentos_Detalhe.[Desconto%] AS Desconto, '
+          '       Orcamentos_Detalhe.[Acr'#233'scimo%] AS Acr'#233'scimo, '
+          '       Orcamentos_Cabecalho.Total, '
+          '       Orcamentos_Cabecalho.Frete, '
+          '       Orcamentos_Cabecalho.Peso, '
+          '       Orcamentos_Cabecalho.Total_Desconto, '
+          '       Orcamentos_Cabecalho.Acr'#233'scimo_Extra, '
+          '       Orcamentos_Cabecalho.Desconto_Extra, '
+          '       Orcamentos_Cabecalho.Observa'#231#245'es, '
+          '       Cliente.Cliente_RG, '
+          '       Orcamentos_Detalhe.Unidade, '
+          
+            '       ( select [descri'#231#227'o] from planos_pagamentos where empresa' +
+            ' = Orcamentos_cabecalho.empresa and codigo = Orcamentos_cabecalh' +
+            'o.plano_pagamento ) AS select_descri'#231#227'o_from_pl, '
+          
+            '       ( select [codigo] & " - " & [Nome_Fantasia] from Transpor' +
+            'tadora where empresa = Orcamentos_cabecalho.empresa and codigo =' +
+            ' Orcamentos_cabecalho.transportadora ) AS select_codigo_Nome_Fan' +
+            'ta, '
+          
+            '       ( select top 1 ddd & " " & fone from clientes_fones where' +
+            ' codigo_cliente = orcamentos_cabecalho.cliente and empresa  = or' +
+            'camentos_cabecalho.empresa and tipo = "Residencial"  ) AS select' +
+            '_top_1_ddd_fone_fr, '
+          
+            '       ( select nome from funcionario where codigo = orcamentos_' +
+            'detalhe.vendedor and empresa = orcamentos_cabecalho.empresa ) AS' +
+            ' select_nome_from_funcion'
+          'FROM ((Orcamentos_Cabecalho Orcamentos_Cabecalho'
+          '      LEFT OUTER JOIN Orcamentos_Detalhe Orcamentos_Detalhe ON '
+          
+            '     (Orcamentos_Detalhe.Codigo_Or'#231'amento = Orcamentos_Cabecalho' +
+            '.Codigo)'
+          
+            '      AND (Orcamentos_Detalhe.Empresa = Orcamentos_Cabecalho.Emp' +
+            'resa) )'
+          '      LEFT OUTER JOIN Cliente Cliente ON '
+          '     (Cliente.Codigo = Orcamentos_Cabecalho.Cliente)'
+          '      AND (Cliente.Empresa = Orcamentos_Cabecalho.Empresa) )'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Orcamentos_Cabecalho.Baixa_Estoque <> TRUE )'
+          '       AND ( Orcamentos_Cabecalho.Codigo BETWEEN 1 AND 999999 )'
+          '       AND ( Orcamentos_Detalhe.CANCELADO <> TRUE )'
+          '       AND ( Orcamentos_Cabecalho.cancelado <> TRUE )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'PlanoPagamento_Descricao'
+          DisplayWidth = 10
+          FieldAlias = 'Plano_Pagamento'
+          FieldLength = 0
+          FieldName = 'Plano_Pagamento'
+          SQLFieldName = 'select_descri'#231#227'o_from_pl'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select [descri'#231#227'o] from planos_pagamentos where empresa = Orca' +
+            'mentos_cabecalho.empresa and codigo = Orcamentos_cabecalho.plano' +
+            '_pagamento )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Transportadora_Descricao'
+          DisplayWidth = 10
+          FieldAlias = 'Transportadora'
+          FieldLength = 0
+          FieldName = 'Transportadora'
+          SQLFieldName = 'select_codigo_Nome_Fanta'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select [codigo] & " - " & [Nome_Fantasia] from Transportadora ' +
+            'where empresa = Orcamentos_cabecalho.empresa and codigo = Orcame' +
+            'ntos_cabecalho.transportadora )'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'Cliente_Telefone'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente'
+          FieldLength = 0
+          FieldName = 'Cliente'
+          SQLFieldName = 'select_top_1_ddd_fone_fr'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select top 1 ddd & " " & fone from clientes_fones where codigo' +
+            '_cliente = orcamentos_cabecalho.cliente and empresa  = orcamento' +
+            's_cabecalho.empresa and tipo = "Residencial"  )'
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 8
+          Alias = 'Vendedor_Nome'
+          DisplayWidth = 10
+          FieldAlias = 'Vendedor'
+          FieldLength = 0
+          FieldName = 'Vendedor'
+          SQLFieldName = 'select_nome_from_funcion'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+          CalcType = dacaExpression
+          Expression = 
+            '( select nome from funcionario where codigo = orcamentos_detalhe' +
+            '.vendedor and empresa = orcamentos_cabecalho.empresa )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Baixa_Estoque'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Baixa_Estoque'
+            FieldLength = 0
+            FieldName = 'Baixa_Estoque'
+            SQLFieldName = 'Baixa_Estoque'
+            TableAlias = 'Orcamentos_Cabecalho'
+            TableName = 'Orcamentos_Cabecalho'
+            TableSQLAlias = 'Orcamentos_Cabecalho'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Orcamentos_Cabecalho'
+            TableName = 'Orcamentos_Cabecalho'
+            TableSQLAlias = 'Orcamentos_Cabecalho'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'CANCELADO'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'CANCELADO'
+            FieldLength = 0
+            FieldName = 'CANCELADO'
+            SQLFieldName = 'CANCELADO'
+            TableAlias = 'Orcamentos_Detalhe'
+            TableName = 'Orcamentos_Detalhe'
+            TableSQLAlias = 'Orcamentos_Detalhe'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'cancelado'
+            FieldLength = 0
+            FieldName = 'cancelado'
+            SQLFieldName = 'cancelado'
+            TableAlias = 'Orcamentos_Cabecalho'
+            TableName = 'Orcamentos_Cabecalho'
+            TableSQLAlias = 'Orcamentos_Cabecalho'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Cliente'
+          FieldLength = 0
+          FieldName = 'Cliente'
+          SQLFieldName = 'Cliente'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Nome'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField3: TdaField
+          Alias = 'Cliente_CPF'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_CPF'
+          FieldLength = 20
+          FieldName = 'Cliente_CPF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CPF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField4: TdaField
+          Alias = 'Cliente_Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Endere'#231'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField5: TdaField
+          Alias = 'Cliente_Numero'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente_Numero'
+          FieldLength = 10
+          FieldName = 'Cliente_Numero'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Numero'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField6: TdaField
+          Alias = 'Cliente_Bairro_Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField7: TdaField
+          Alias = 'Cliente_Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Cidade'
+          FieldLength = 50
+          FieldName = 'Cliente_Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Cidade'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField8: TdaField
+          Alias = 'Cliente_CEP'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente_CEP'
+          FieldLength = 10
+          FieldName = 'Cliente_CEP'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CEP'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField9: TdaField
+          Alias = 'Cliente_UF'
+          DisplayWidth = 2
+          FieldAlias = 'Cliente_UF'
+          FieldLength = 2
+          FieldName = 'Cliente_UF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_UF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField10: TdaField
+          Alias = 'Cliente_Numeor'
+          DisplayWidth = 20
+          FieldAlias = 'nro'
+          FieldLength = 20
+          FieldName = 'nro'
+          IsDetail = True
+          SQLFieldName = 'nro'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField11: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField12: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField13: TdaField
+          Alias = 'Codigo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Produto'
+          FieldLength = 0
+          FieldName = 'Codigo_Produto'
+          IsDetail = True
+          SQLFieldName = 'Codigo_Produto'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daField14: TdaField
+          Alias = 'Nome_Produto'
+          DisplayWidth = 255
+          FieldAlias = 'Nome_Produto'
+          FieldLength = 255
+          FieldName = 'Nome_Produto'
+          IsDetail = True
+          SQLFieldName = 'Nome_Produto'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daField15: TdaField
+          Alias = 'Custo_Unit'#225'rio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          FieldName = 'Custo_Unit'#225'rio'
+          IsDetail = True
+          SQLFieldName = 'Custo_Unit'#225'rio'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daField16: TdaField
+          Alias = 'Qtde_Original'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Qtde_Original'
+          FieldLength = 0
+          FieldName = 'Qtde_Original'
+          IsDetail = True
+          SQLFieldName = 'Qtde_Original'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daField17: TdaField
+          Alias = 'Custo_Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Total'
+          FieldLength = 0
+          FieldName = 'Custo_Total'
+          IsDetail = True
+          SQLFieldName = 'Custo_Total'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daField18: TdaField
+          Alias = 'Desconto%'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto%'
+          FieldLength = 0
+          FieldName = 'Desconto%'
+          IsDetail = True
+          SQLFieldName = 'Desconto'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daField19: TdaField
+          Alias = 'Acr'#233'scimo%'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Acr'#233'scimo%'
+          FieldLength = 0
+          FieldName = 'Acr'#233'scimo%'
+          IsDetail = True
+          SQLFieldName = 'Acr'#233'scimo'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daField20: TdaField
+          Alias = 'Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total'
+          FieldLength = 0
+          FieldName = 'Total'
+          SQLFieldName = 'Total'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField21: TdaField
+          Alias = 'Frete'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Frete'
+          FieldLength = 0
+          FieldName = 'Frete'
+          SQLFieldName = 'Frete'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField22: TdaField
+          Alias = 'Peso'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Peso'
+          FieldLength = 0
+          FieldName = 'Peso'
+          SQLFieldName = 'Peso'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField23: TdaField
+          Alias = 'Total_Desconto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_Desconto'
+          FieldLength = 0
+          FieldName = 'Total_Desconto'
+          SQLFieldName = 'Total_Desconto'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField24: TdaField
+          Alias = 'Acr'#233'scimo_Extra'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Acr'#233'scimo_Extra'
+          FieldLength = 0
+          FieldName = 'Acr'#233'scimo_Extra'
+          SQLFieldName = 'Acr'#233'scimo_Extra'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField25: TdaField
+          Alias = 'Desconto_Extra'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto_Extra'
+          FieldLength = 0
+          FieldName = 'Desconto_Extra'
+          SQLFieldName = 'Desconto_Extra'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField26: TdaField
+          Alias = 'Observa'#231#245'es'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Observa'#231#245'es'
+          FieldLength = 0
+          FieldName = 'Observa'#231#245'es'
+          Linkable = False
+          SQLFieldName = 'Observa'#231#245'es'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+          TableSQLAlias = 'Orcamentos_Cabecalho'
+        end
+        object daField27: TdaField
+          Alias = 'Cliente_RG'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_RG'
+          FieldLength = 20
+          FieldName = 'Cliente_RG'
+          IsDetail = True
+          SQLFieldName = 'Cliente_RG'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField28: TdaField
+          Alias = 'Unidade'
+          DisplayWidth = 20
+          FieldAlias = 'Unidade'
+          FieldLength = 20
+          FieldName = 'Unidade'
+          IsDetail = True
+          SQLFieldName = 'Unidade'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          TableSQLAlias = 'Orcamentos_Detalhe'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Orcamentos_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Orcamentos_Cabecalho'
+          TableAlias = 'Orcamentos_Cabecalho'
+          TableName = 'Orcamentos_Cabecalho'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Orcamentos_Detalhe'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Orcamentos_Detalhe'
+          TableAlias = 'Orcamentos_Detalhe'
+          TableName = 'Orcamentos_Detalhe'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField30: TdaField
+              ChildType = 3
+              Alias = 'Codigo_Or'#231'amento'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Or'#231'amento'
+              FieldLength = 0
+              FieldName = 'Codigo_Or'#231'amento'
+              SQLFieldName = 'Codigo_Or'#231'amento'
+              TableAlias = 'Orcamentos_Detalhe'
+              TableName = 'Orcamentos_Detalhe'
+              TableSQLAlias = 'Orcamentos_Detalhe'
+            end
+            object daField29: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Orcamentos_Cabecalho'
+              TableName = 'Orcamentos_Cabecalho'
+              TableSQLAlias = 'Orcamentos_Cabecalho'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField32: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Orcamentos_Detalhe'
+              TableName = 'Orcamentos_Detalhe'
+              TableSQLAlias = 'Orcamentos_Detalhe'
+            end
+            object daField31: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Orcamentos_Cabecalho'
+              TableName = 'Orcamentos_Cabecalho'
+              TableSQLAlias = 'Orcamentos_Cabecalho'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Cliente'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Cliente'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField34: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField33: TdaField
+              ChildType = 4
+              Alias = 'Cliente'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Cliente'
+              FieldLength = 0
+              FieldName = 'Cliente'
+              SQLFieldName = 'Cliente'
+              TableAlias = 'Orcamentos_Cabecalho'
+              TableName = 'Orcamentos_Cabecalho'
+              TableSQLAlias = 'Orcamentos_Cabecalho'
+            end
+          end
+          object daTableJoin4: TdaTableJoin
+            ChildType = 6
+            object daField36: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField35: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Orcamentos_Cabecalho'
+              TableName = 'Orcamentos_Cabecalho'
+              TableSQLAlias = 'Orcamentos_Cabecalho'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 5
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Condicional@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Orçamentos e Condicionais@Documentos Orçamentos
+NOME=Orçamentos 40 col
+DESCRICAO=Imprime o Orçamento selecionado
+ALTERADO_EM=11/12/2014 08:47
+SQL=<0><1><2><3>

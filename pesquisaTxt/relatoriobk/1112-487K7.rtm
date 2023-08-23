@@ -1,0 +1,967 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Recibo
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Letter'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 1000
+  PrinterSetup.mmMarginLeft = 1000
+  PrinterSetup.mmMarginRight = 1000
+  PrinterSetup.mmMarginTop = 1000
+  PrinterSetup.mmPaperHeight = 279000
+  PrinterSetup.mmPaperWidth = 216000
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1112-487K7.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 75
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBiulder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Recibo'
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 89959
+    mmPrintPosition = 0
+    object ppShape2: TppShape
+      UserName = 'Shape1'
+      ParentHeight = True
+      Pen.Width = 2
+      mmHeight = 89959
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 203730
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBRichText1: TppDBRichText
+      UserName = 'DBRichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = []
+      DataPipeline = daADOQueryDataView1.Recibo
+      RemoveEmptyLines = False
+      Transparent = True
+      DataPipelineName = 'Recibo'
+      mmHeight = 15346
+      mmLeft = 5027
+      mmTop = 46831
+      mmWidth = 193675
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Recebemos do(a) Sr(a).'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 7535
+      mmLeft = 5000
+      mmTop = 20902
+      mmWidth = 70866
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 74083
+      mmTop = 24342
+      mmWidth = 124619
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'a quantia de '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 7535
+      mmLeft = 5027
+      mmTop = 30427
+      mmWidth = 38862
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppShape3: TppShape
+      UserName = 'Shape2'
+      Brush.Color = clSilver
+      Pen.Color = clSilver
+      mmHeight = 6879
+      mmLeft = 42863
+      mmTop = 30692
+      mmWidth = 155840
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppShape4: TppShape
+      UserName = 'Shape4'
+      Brush.Color = clSilver
+      Pen.Color = clSilver
+      mmHeight = 6085
+      mmLeft = 5027
+      mmTop = 38629
+      mmWidth = 193730
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'referente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 7535
+      mmLeft = 5027
+      mmTop = 46831
+      mmWidth = 27093
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 32808
+      mmTop = 49477
+      mmWidth = 165894
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine4: TppLine
+      UserName = 'Line4'
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 5027
+      mmTop = 57150
+      mmWidth = 193675
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Label4'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4995
+      mmLeft = 5027
+      mmTop = 80000
+      mmWidth = 13462
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'R$'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5821
+      mmLeft = 155046
+      mmTop = 10848
+      mmWidth = 6350
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      Color = clSilver
+      DataField = 'Valor'
+      DataPipeline = daADOQueryDataView1.Recibo
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = []
+      TextAlignment = taCentered
+      DataPipelineName = 'Recibo'
+      mmHeight = 5715
+      mmLeft = 162454
+      mmTop = 10848
+      mmWidth = 36248
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = []
+      MailMerge = True
+      RemoveEmptyLines = False
+      Transparent = True
+      mmHeight = 14817
+      mmLeft = 5027
+      mmTop = 30956
+      mmWidth = 193730
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Nome'
+      DataPipeline = daADOQueryDataView1.Recibo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Recibo'
+      mmHeight = 6879
+      mmLeft = 76729
+      mmTop = 21960
+      mmWidth = 121973
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine5: TppLine
+      UserName = 'Line2'
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 119327
+      mmTop = 76729
+      mmWidth = 79375
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Emitente'
+      DataPipeline = daADOQueryDataView1.Recibo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Recibo'
+      mmHeight = 3969
+      mmLeft = 119327
+      mmTop = 76729
+      mmWidth = 79375
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Recibo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 26
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 10848
+      mmLeft = 86255
+      mmTop = 5000
+      mmWidth = 30692
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Emitente_Cgc_Cpf'
+      DataPipeline = daADOQueryDataView1.Recibo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Recibo'
+      mmHeight = 3969
+      mmLeft = 119327
+      mmTop = 80963
+      mmWidth = 79375
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_TdaADOQueryDataView'
+      Height = 301
+      Left = 10
+      NameColumnWidth = 163
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Recibo: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Recibo'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Recibo'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Recibo'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 2
+          TableName = 'Recibo'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Pagando'
+          FieldName = 'Pagando'
+          FieldLength = 0
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 3
+          TableName = 'Recibo'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Nome'
+          FieldName = 'Nome'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 4
+          TableName = 'Recibo'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Endere'#231'o'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 5
+          TableName = 'Recibo'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Recibo'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Referente'
+          FieldName = 'Referente'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Recibo'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Emitente'
+          FieldName = 'Emitente'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 8
+          TableName = 'Recibo'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Emitente_Endere'#231'o'
+          FieldName = 'Emitente_Endere'#231'o'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 9
+          TableName = 'Recibo'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Emitente_Cgc_Cpf'
+          FieldName = 'Emitente_Cgc_Cpf'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 10
+          TableName = 'Recibo'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Cidade'
+          FieldName = 'Cidade'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 11
+          TableName = 'Recibo'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Cidade_Empresa'
+          FieldName = 'select_cidade_from_empre'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Recibo'
+        end
+        object ppField14: TppField
+          FieldAlias = 'CodigoText'
+          FieldName = 'Cstr_Recibo_Codigo'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Recibo'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Moeda'
+          FieldName = 'select_Moeda_Nome_Moeda'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'Recibo'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Recibo'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Recibo.Codigo, Recibo.Empresa, '
+          '       Recibo.Data, Recibo.Pagando, Recibo.Nome, '
+          '       Recibo.Endere'#231'o, Recibo.Valor, '
+          '       Recibo.Referente, Recibo.Emitente, '
+          '       Recibo.Emitente_Endere'#231'o, '
+          '       Recibo.Emitente_Cgc_Cpf, Recibo.Cidade, '
+          
+            '       ( select cidade from empresa where codigo = recibo.empres' +
+            'a ) AS select_cidade_from_empre, '
+          '       Cstr(Recibo.Codigo)  AS Cstr_Recibo_Codigo, '
+          
+            '       ( select Moeda_Nome & "|" & Moeda_Plural from configuraca' +
+            'o_global ) AS select_Moeda_Nome_Moeda'
+          'FROM Recibo Recibo'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Cstr(Recibo.Codigo)  BETWEEN '#39'1'#39' AND '#39'999999'#39' )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Cidade_Empresa'
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'select_cidade_from_empre'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+          CalcType = dacaExpression
+          Expression = '( select cidade from empresa where codigo = recibo.empresa )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'CodigoText'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Cstr_Recibo_Codigo'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+          CalcType = dacaExpression
+          Expression = 'Cstr(Recibo.Codigo) '
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'Moeda'
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'select_Moeda_Nome_Moeda'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+          CalcType = dacaExpression
+          Expression = 
+            '( select Moeda_Nome & "|" & Moeda_Plural from configuracao_globa' +
+            'l )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaCalculation
+            ChildType = 8
+            Alias = 'CodigoText'
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Cstr_Recibo_Codigo'
+            TableAlias = 'Recibo'
+            TableName = 'Recibo'
+            TableSQLAlias = 'Recibo'
+            CalcType = dacaExpression
+            Expression = 'Cstr(Recibo.Codigo) '
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField3: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField4: TdaField
+          Alias = 'Pagando'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Pagando'
+          FieldLength = 0
+          FieldName = 'Pagando'
+          SQLFieldName = 'Pagando'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField5: TdaField
+          Alias = 'Nome'
+          DisplayWidth = 255
+          FieldAlias = 'Nome'
+          FieldLength = 255
+          FieldName = 'Nome'
+          SQLFieldName = 'Nome'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField6: TdaField
+          Alias = 'Endere'#231'o'
+          DisplayWidth = 255
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 255
+          FieldName = 'Endere'#231'o'
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField7: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField8: TdaField
+          Alias = 'Referente'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Referente'
+          FieldLength = 0
+          FieldName = 'Referente'
+          Linkable = False
+          SQLFieldName = 'Referente'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField9: TdaField
+          Alias = 'Emitente'
+          DisplayWidth = 255
+          FieldAlias = 'Emitente'
+          FieldLength = 255
+          FieldName = 'Emitente'
+          SQLFieldName = 'Emitente'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField10: TdaField
+          Alias = 'Emitente_Endere'#231'o'
+          DisplayWidth = 255
+          FieldAlias = 'Emitente_Endere'#231'o'
+          FieldLength = 255
+          FieldName = 'Emitente_Endere'#231'o'
+          SQLFieldName = 'Emitente_Endere'#231'o'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField11: TdaField
+          Alias = 'Emitente_Cgc_Cpf'
+          DisplayWidth = 255
+          FieldAlias = 'Emitente_Cgc_Cpf'
+          FieldLength = 255
+          FieldName = 'Emitente_Cgc_Cpf'
+          SQLFieldName = 'Emitente_Cgc_Cpf'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daField12: TdaField
+          Alias = 'Cidade'
+          DisplayWidth = 100
+          FieldAlias = 'Cidade'
+          FieldLength = 100
+          FieldName = 'Cidade'
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+          TableSQLAlias = 'Recibo'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Recibo'
+          JoinType = dajtNone
+          SQLAlias = 'Recibo'
+          TableAlias = 'Recibo'
+          TableName = 'Recibo'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650614
+      5269636854657874314F6E4D61696C4D657267650B50726F6772616D54797065
+      070B747450726F63656475726506536F757263650C1202000070726F63656475
+      7265205269636854657874314F6E4D61696C4D657267653B0D0A7661720D0A20
+      20706C7572616C2C2073696E67756C61722C206D6F656461203A20537472696E
+      673B0D0A626567696E0D0A20206D6F656461203A3D2052656369626F5B274D6F
+      656461275D3B0D0A202073696E67756C6172203A3D20436F707928206D6F6564
+      612C20312C20506F732820277C272C206D6F6564612029202D203120293B0D0A
+      202044656C65746528206D6F6564612C20312C20506F732820277C272C6D6F65
+      6461202920293B0D0A2020706C7572616C203A3D206D6F6564613B0D0A20200D
+      0A2020696620205472756E63282052656369626F5B2756616C6F72275D202920
+      3E2031207468656E0D0A202020205269636854657874312E5269636854657874
+      203A3D2027202020202020202020202020202020202020202020202027202B20
+      537472696E675265706C6163652820457874656E736F282052656369626F5B27
+      56616C6F72275D2029202C20275265616973272C20706C7572616C20290D0A20
+      20656C73650D0A202020205269636854657874312E5269636854657874203A3D
+      2027202020202020202020202020202020202020202020202027202B20537472
+      696E675265706C6163652820457874656E736F282052656369626F5B2756616C
+      6F72275D2029202C20275265616973272C2073696E67756C617220293B0D0A20
+      200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506095269636854
+      65787431094576656E744E616D65060B4F6E4D61696C4D65726765074576656E
+      744944038E00084361726574506F730102000200000001060F5472614576656E
+      7448616E646C65720B50726F6772616D4E616D65060F4C6162656C344F6E4765
+      74546578740B50726F6772616D54797065070B747450726F6365647572650653
+      6F7572636506A770726F636564757265204C6162656C344F6E47657454657874
+      2876617220546578743A20537472696E67293B0D0A626567696E0D0A0D0A2020
+      54657874203A3D2052656369626F5B274369646164655F456D7072657361275D
+      202B20272C2027202B20466F726D61744461746554696D652827646420226465
+      22206D6D6D6D20226465222079797979272C52656369626F5B2744617461275D
+      293B0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064C61
+      62656C34094576656E744E616D6506094F6E47657454657874074576656E7449
+      440235084361726574506F730102000200000001060F5472614576656E744861
+      6E646C65720B50726F6772616D4E616D65061844425269636854657874314F6E
+      47657452696368546578740B50726F6772616D54797065070B747450726F6365
+      6475726506536F75726365146209000070726F63656475726520444252696368
+      54657874314F6E47657452696368546578742876617220546578743A20537472
+      696E67293B0D0A7661720D0A2020734175782C2073417578322C207341757833
+      2C207346696E616C2C2073436F64496E696369616C203A20537472696E673B0D
+      0A2020625061726172203A20426F6F6C65616E3B0D0A626567696E0D0A202069
+      662052656369626F5B275265666572656E7465275D203C3E202727207468656E
+      20626567696E0D0A20202020696620506F732820277B5C727466272C20526563
+      69626F5B275265666572656E7465275D20293E2030207468656E20626567696E
+      200D0A20202020202073417578203A3D2052656369626F5B275265666572656E
+      7465275D3B0D0A202020202020625061726172203A3D2046616C73653B202020
+      200D0A2020202020200D0A20202020202073436F64496E696369616C203A3D20
+      436F70792820734175782C20312C20506F732820275C6673272C207341757820
+      29202D203120293B207B205F4F4B5F20436F70696172206F20636F6E74657564
+      6F206174C3A9206F207072696D6569726F205C6673207D0D0A20202020202044
+      656C65746528734175782C20312C20506F732820275C6673272C207341757820
+      29202B203220293B2020202020202020202020202020207B205F4F4B5F204170
+      616761206F205C6673207D0D0A20202020202044656C65746528734175782C20
+      312C20506F7328202720272C20734175782029202D203120293B202020202020
+      20202020202020202020207B205F4F4B5F204170616761206174C3A9206F2070
+      72696D6569726F2065737061C3A76F207D0D0A2020202020207341757832203A
+      3D2027273B0D0A2020202020200D0A2020202020207768696C65206E6F742062
+      506172617220646F20626567696E207B20656E7175616E746F20686F75766572
+      205C6673206972C3A12072657065746972207D0D0A2020202020200D0A202020
+      2020202020696620506F732820275C6673272C207341757820293E2030207468
+      656E20626567696E202020200D0A202020202020202020207341757832203A3D
+      207341757832202B20275C6673333627202B20436F70792820734175782C2031
+      2C20506F7328275C6673272C207341757829202D2031293B207B436F6E636174
+      656E6120636F6D206F207175652074656D206174C3A9206F2070726F78696D6F
+      205C66737D0D0A2020202020202020202044656C6574652820734175782C2031
+      2C20506F732820275C6673272C20734175782029202D203120293B0D0A202020
+      202020202020207341757833203A3D20436F70792820734175782C20312C2036
+      293B0D0A20202020202020202020202020202020200D0A202020202020202020
+      20696620436F7079282073417578332C204C656E677468282073417578332029
+      2C20312029203D20272027207468656E207B536520666F7220756D2065737061
+      C3A76F206170C3B3737D0D0A20202020202020202020202044656C6574652820
+      734175782C20312C20506F7328202720272C20734175782029202D2031202920
+      20202020200D0A20202020202020202020656C736520696620436F7079282073
+      417578332C204C656E6774682820734175783320292C20312029203D20275C27
+      207468656E207B536520666F726D20756D61206261727261206170C3B3737D0D
+      0A20202020202020202020202044656C6574652820734175782C20312C203520
+      290D0A20202020202020202020656C73650D0A20202020202020202020202044
+      656C6574652820734175782C20312C203620293B0D0A20202020202020202020
+      2020202020200D0A20202020202020202020696620506F732820275C6673272C
+      20734175782029203C3D2030207468656E20626567696E0D0A20202020202020
+      20202020207341757832203A3D207341757832202B20734175783B0D0A202020
+      202020202020202020625061726172203A3D20547275653B0D0A202020202020
+      20202020656E643B0D0A202020202020202020200D0A2020202020202020656E
+      640D0A2020202020202020656C736520626567696E0D0A202020202020202020
+      207341757832203A3D207341757832202B20275C6673333627202B2073417578
+      3B0D0A20202020202020202020625061726172203A3D20547275653B0D0A2020
+      202020202020656E643B0D0A2020202020200D0A202020202020656E643B200D
+      0A2020202020200D0A2020202020207341757833203A3D20636F707928207341
+      7578322C20312C203520293B0D0A20202020202044656C657465282073417578
+      322C20312C203520293B0D0A2020202020207341757833203A3D207341757833
+      20202B20202720202020202020202020202020202020202720202B205472696D
+      287341757832293B20200D0A2020202020207341757833203A3D2073436F6469
+      6E696369616C202B2073417578333B0D0A202020200D0A2020202020207B4D75
+      6E64616E646F206120636F7220646F20746578746F3D3D3D3D3D3D3D3D3D3D3D
+      3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D
+      3D3D3D3D3D3D3D3D3D3D7D200D0A20202020202073417578203A3D20436F7079
+      282073417578332C20312C20506F732820277B5C636F6C6F7274626C27202C20
+      734175783329202D203120293B0D0A20202020202044656C6574652820734175
+      78332C20312C20506F732820275C766965776B696E64272C2073417578332029
+      202D203120293B0D0A2020202020207341757833203A3D2073417578202B2027
+      7B5C636F6C6F7274626C203B5C726564305C677265656E305C626C7565303B7D
+      27202B2073417578333B2020202020202020200D0A2020202020200D0A202020
+      20202054657874203A3D2073417578333B0D0A20202020656E640D0A20202020
+      656C736520626567696E0D0A20202020202054657874203A3D20277B5C727466
+      315C616E73695C64656666307B5C666F6E7474626C7B5C66305C666E696C5C66
+      6368617273657430205461686F6D613B7D7B5C66315C666E696C205461686F6D
+      613B7D7D7B5C636F6C6F7274626C203B5C726564305C677265656E305C626C75
+      65303B7D205C766965776B696E64345C7563315C706172645C6366315C6C616E
+      67313034365C66305C667333362027202B20200D0A2020202027202020202020
+      20202020202020202720202B2052656369626F5B275265666572656E7465275D
+      202B20275C66733336205C66315C7061727D273B0D0A20202020656E643B0D0A
+      2020656E643B0D0A656E643B0D0A0D0A0D0A0D436F6D706F6E656E744E616D65
+      060B4442526963685465787431094576656E744E616D65060D4F6E4765745269
+      636854657874074576656E7449440235084361726574506F7301020002000000
+      00}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 13
+    end
+  end
+  object ppParameterList3: TppParameterList
+    object ppParameter1: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Recibo@@@@dtString')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Especiais@Documentos
+NOME=Recibo Rápido I
+DESCRICAO=Imprime um recibo rápido conforme o escolhido
+ALTERADO_EM=11/12/2014 14:57
+SQL=<0>

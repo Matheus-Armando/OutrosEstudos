@@ -1,0 +1,2051 @@
+﻿object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 210080
+  PrinterSetup.mmPaperWidth = 297128
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1409-DSGJZ.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'Movimento_Estoque_Cabecalho'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 287128
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.Orientation = poLandscape
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 210080
+        PrinterSetup.mmPaperWidth = 297128
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 18785
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 10964
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Nro. Nota'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 46302
+      mmTop = 6615
+      mmWidth = 14288
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Data Emiss'#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 17198
+      mmTop = 6615
+      mmWidth = 20902
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 72496
+      mmTop = 6615
+      mmWidth = 10583
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Desconto'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 252413
+      mmTop = 13229
+      mmWidth = 14552
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Comiss'#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 270405
+      mmTop = 13229
+      mmWidth = 15346
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 276490
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 278607
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label10'
+      Caption = 'Produto'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 38100
+      mmTop = 13229
+      mmWidth = 12171
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label11'
+      Caption = 'C'#243'digo do Produto'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 794
+      mmTop = 13229
+      mmWidth = 28840
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label14'
+      Caption = 'Valor Total'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 232401
+      mmTop = 13229
+      mmWidth = 16044
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel19: TppLabel
+      UserName = 'Label17'
+      Caption = 'Valor Unit'#225'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 201285
+      mmTop = 13229
+      mmWidth = 20701
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel20: TppLabel
+      UserName = 'Label18'
+      Caption = 'Forma de Pagamento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 197909
+      mmTop = 6615
+      mmWidth = 32544
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'Line3'
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 265
+      mmLeft = 0
+      mmTop = 5556
+      mmWidth = 287128
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine5: TppLine
+      UserName = 'Line5'
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 265
+      mmLeft = 0
+      mmTop = 17992
+      mmWidth = 287128
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel18: TppLabel
+      UserName = 'Label16'
+      Caption = 'Total da Nota'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 268055
+      mmTop = 6615
+      mmWidth = 17695
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4763
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'C'#243'digo_Produto'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 2879
+      mmLeft = 794
+      mmTop = 1058
+      mmWidth = 28840
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Nome_Produto'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 2879
+      mmLeft = 38100
+      mmTop = 1058
+      mmWidth = 110067
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Custo_Total'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 2879
+      mmLeft = 227807
+      mmTop = 1058
+      mmWidth = 20638
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      DataField = 'Custo_Unit'#225'rio'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 2879
+      mmLeft = 201348
+      mmTop = 1058
+      mmWidth = 20638
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      DataField = 'iif_100_Movimento_Estoque'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 3175
+      mmLeft = 268553
+      mmTop = 1058
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      DataField = 'Movimento_Estoque_Det'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 3175
+      mmLeft = 249767
+      mmTop = 1058
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 7144
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 287128
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 261673
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 6615
+    mmPrintPosition = 0
+    object ppLabel10: TppLabel
+      UserName = 'Label8'
+      Caption = 'TOTAL PAGO EM COMISS'#195'O:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 211932
+      mmTop = 2910
+      mmWidth = 44979
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBCalc3: TppDBCalc
+      UserName = 'DBCalc3'
+      DataField = 'iif_100_Movimento_Estoque'
+      DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Movimento_Estoque_Cabecalho'
+      mmHeight = 3704
+      mmLeft = 261673
+      mmTop = 2910
+      mmWidth = 24077
+      BandType = 7
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup2: TppGroup
+    BreakName = 'Vendedor'
+    DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group2'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Movimento_Estoque_Cabecalho'
+    NewFile = False
+    object ppGroupHeaderBand2: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 7938
+      mmPrintPosition = 0
+      object ppDBText6: TppDBText
+        UserName = 'DBText6'
+        DataField = 'select_f_nome_from_funci'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3440
+        mmLeft = 0
+        mmTop = 1852
+        mmWidth = 50006
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand2: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 8996
+      mmPrintPosition = 0
+      object ppDBCalc2: TppDBCalc
+        UserName = 'DBCalc2'
+        DataField = 'iif_100_Movimento_Estoque'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup2
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3387
+        mmLeft = 268553
+        mmTop = 3175
+        mmWidth = 17198
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label7'
+        Caption = 'Comiss'#227'o Total Vendedor: '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3387
+        mmLeft = 230601
+        mmTop = 3175
+        mmWidth = 36364
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine6: TppLine
+        UserName = 'Line4'
+        Pen.Color = clAppWorkSpace
+        ParentWidth = True
+        Position = lpBottom
+        Weight = 0.750000000000000000
+        mmHeight = 1588
+        mmLeft = 0
+        mmTop = 6615
+        mmWidth = 287128
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Movimento_Estoque_Cabecalho'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 4763
+      mmPrintPosition = 0
+      object ppLine2: TppLine
+        UserName = 'Line1'
+        Pen.Color = clAppWorkSpace
+        Pen.Style = psDot
+        ParentHeight = True
+        ParentWidth = True
+        Position = lpBottom
+        Weight = 0.750000000000000000
+        mmHeight = 4763
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 287128
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'Codigo'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3387
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        DataField = 'Data_Emiss'#227'o'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3387
+        mmLeft = 17198
+        mmTop = 0
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'Nome'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3440
+        mmLeft = 72496
+        mmTop = 0
+        mmWidth = 46831
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel11: TppLabel
+        UserName = 'Label9'
+        Caption = 'Label9'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3387
+        mmLeft = 48693
+        mmTop = 0
+        mmWidth = 8975
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText10: TppDBText
+        UserName = 'DBText10'
+        DataField = 'NOME_2'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3440
+        mmLeft = 197909
+        mmTop = 0
+        mmWidth = 69056
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText8: TppDBText
+        UserName = 'DBText8'
+        DataField = 'Total_Nota'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3440
+        mmLeft = 265113
+        mmTop = 0
+        mmWidth = 20638
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 7144
+      mmPrintPosition = 0
+      object ppLine3: TppLine
+        UserName = 'Line2'
+        Pen.Color = clAppWorkSpace
+        Pen.Style = psDot
+        ParentWidth = True
+        Weight = 0.750000000000000000
+        mmHeight = 265
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 287128
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel17: TppLabel
+        UserName = 'Label15'
+        Caption = 'Total de Comiss'#227'o: '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3387
+        mmLeft = 240210
+        mmTop = 1852
+        mmWidth = 26755
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        DataField = 'iif_100_Movimento_Estoque'
+        DataPipeline = daADOQueryDataView1.Movimento_Estoque_Cabecalho
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        mmHeight = 3387
+        mmLeft = 268553
+        mmTop = 1852
+        mmWidth = 17198
+        BandType = 5
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Movimento_Estoque_Cabecalho'
+      Height = 308
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Movimento_Estoque_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Movimento_Estoque_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Data_Emiss'#227'o'
+          FieldName = 'Data_Emiss'#227'o'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 1
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField3: TppField
+          FieldAlias = 'C'#243'digo_Cliente_Fornecedor'
+          FieldName = 'C'#243'digo_Cliente_Fornecedor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Vendedor'
+          FieldName = 'Vendedor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField5: TppField
+          FieldAlias = 'N'#250'mero_Nota'
+          FieldName = 'N'#250'mero_Nota'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 4
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Total_Nota'
+          FieldName = 'Total_Nota'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Desconto%'
+          FieldName = 'Desconto'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Desconto$'
+          FieldName = 'Desconto_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldName = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Custo_Total'
+          FieldName = 'Custo_Total'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Nome'
+          FieldName = 'Nome'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 10
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField12: TppField
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldName = 'C'#243'digo_Produto'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Quantidade'
+          FieldName = 'Quantidade'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Nome_Produto'
+          FieldName = 'Nome_Produto'
+          FieldLength = 255
+          IsDetail = True
+          DisplayWidth = 255
+          Position = 13
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField15: TppField
+          FieldAlias = 'NOMEFormaPGTO'
+          FieldName = 'NOME_2'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 25
+          Position = 14
+          TableName = 'FORMAS_PGTO'
+        end
+        object ppField16: TppField
+          FieldAlias = 'VendNome'
+          FieldName = 'select_f_nome_from_funci'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Comissao'
+          FieldName = 'iif_100_Movimento_Estoque'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'Movimento_Estoque_Detalhe'
+        end
+        object ppField18: TppField
+          FieldAlias = 'teste'
+          FieldName = 'Movimento_Estoque_Det'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Movimento_Estoque_Cabecalho'
+        Distinct = True
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT DISTINCT '
+          '                Movimento_Estoque_Cabecalho.Codigo, '
+          '                Movimento_Estoque_Cabecalho.Data_Emiss'#227'o, '
+          
+            '                Movimento_Estoque_Cabecalho.C'#243'digo_Cliente_Forne' +
+            'cedor, '
+          '                Movimento_Estoque_Cabecalho.Vendedor, '
+          '                Movimento_Estoque_Cabecalho.N'#250'mero_Nota, '
+          '                Movimento_Estoque_Cabecalho.Total_Nota, '
+          
+            '                Movimento_Estoque_Detalhe.[Desconto%] AS Descont' +
+            'o, '
+          
+            '                Movimento_Estoque_Detalhe.[Desconto$] AS Descont' +
+            'o_2, '
+          '                Movimento_Estoque_Detalhe.Custo_Unit'#225'rio, '
+          '                Movimento_Estoque_Detalhe.Custo_Total, '
+          '                Movimento_Estoque_Cabecalho.Nome, '
+          '                Movimento_Estoque_Detalhe.C'#243'digo_Produto, '
+          '                Movimento_Estoque_Detalhe.Quantidade, '
+          '                Movimento_Estoque_Detalhe.Nome_Produto, '
+          '                FORMAS_PGTO.NOME AS NOME_2, '
+          
+            '                ( select f.nome from funcionario f where f.codig' +
+            'o = movimento_estoque_cabecalho.vendedor and f.empresa = movimen' +
+            'to_estoque_cabecalho.empresa ) AS select_f_nome_from_funci, '
+          
+            '                iif( ( 100 - ( ( Movimento_Estoque_Detalhe.Custo' +
+            '_Total * 100 )/( Movimento_Estoque_Detalhe.Custo_Unit'#225'rio * Movi' +
+            'mento_Estoque_Detalhe.Quantidade ) ) ) <= 10, Movimento_Estoque_' +
+            'Detalhe.Custo_Total * 0.10, iif( ( ( 100 - ( ( Movimento_Estoque' +
+            '_Detalhe.Custo_Total * 100 )/( Movimento_Estoque_Detalhe.Custo_U' +
+            'nit'#225'rio * Movimento_Estoque_Detalhe.Quantidade ) ) ) > 10) and (' +
+            ' ( 100 - ( ( Movimento_Estoque_Detalhe.Custo_Total * 100 )/( Mov' +
+            'imento_Estoque_Detalhe.Custo_Unit'#225'rio * Movimento_Estoque_Detalh' +
+            'e.Quantidade ) ) ) <= 15), Movimento_Estoque_Detalhe.Custo_Total' +
+            ' * 0.07, iif( ( 100 - ( ( Movimento_Estoque_Detalhe.Custo_Total ' +
+            '* 100 )/( Movimento_Estoque_Detalhe.Custo_Unit'#225'rio * Movimento_E' +
+            'stoque_Detalhe.Quantidade ) ) ) > 15, Movimento_Estoque_Detalhe.' +
+            'Custo_Total * 0.05, 0 ) ) ) AS iif_100_Movimento_Estoque, '
+          
+            '                100 - ( ( Movimento_Estoque_Detalhe.Custo_Total ' +
+            '* 100 )/( Movimento_Estoque_Detalhe.Custo_Unit'#225'rio * Movimento_E' +
+            'stoque_Detalhe.Quantidade ) ) AS Movimento_Estoque_Det'
+          'FROM (((('
+          '     Movimento_Estoque_Cabecalho Movimento_Estoque_Cabecalho'
+          
+            '      LEFT OUTER JOIN Movimento_Estoque_Detalhe Movimento_Estoqu' +
+            'e_Detalhe ON '
+          
+            '     (Movimento_Estoque_Detalhe.C'#243'digo_Entrada = Movimento_Estoq' +
+            'ue_Cabecalho.Codigo)'
+          
+            '      AND (Movimento_Estoque_Detalhe.Empresa = Movimento_Estoque' +
+            '_Cabecalho.Empresa) )'
+          '      LEFT OUTER JOIN Caixa_Lancamentos Caixa_Lancamentos ON '
+          
+            '     (Caixa_Lancamentos.Empresa = Movimento_Estoque_Cabecalho.Em' +
+            'presa)'
+          
+            '      AND (Caixa_Lancamentos.Refer'#234'ncia = Movimento_Estoque_Cabe' +
+            'calho.Refer'#234'ncia) )'
+          
+            '      LEFT OUTER JOIN Caixa_Lancamentos_Detalhes Caixa_Lancament' +
+            'os_Detalhes ON '
+          
+            '     (Caixa_Lancamentos_Detalhes.Empresa = Caixa_Lancamentos.Emp' +
+            'resa)'
+          
+            '      AND (Caixa_Lancamentos_Detalhes.Codigo_Caixa_Lctos = Caixa' +
+            '_Lancamentos.Codigo) )'
+          '      LEFT OUTER JOIN FORMAS_PGTO FORMAS_PGTO ON '
+          '     (FORMAS_PGTO.EMPRESA = Caixa_Lancamentos_Detalhes.Empresa)'
+          
+            '      AND (FORMAS_PGTO.CODIGO = Caixa_Lancamentos_Detalhes.Codig' +
+            'o_Forma_Pgto) )'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Movimento_Estoque_Cabecalho.Tipo IN ('#39'S'#39','#39'P'#39') )'
+          '       AND ( Movimento_Estoque_Cabecalho.Cancelado <> TRUE )'
+          
+            '       AND ( Movimento_Estoque_Cabecalho.C'#243'digo_Cliente_Forneced' +
+            'or BETWEEN 1 AND 999999 )'
+          
+            '       AND ( Movimento_Estoque_Cabecalho.Vendedor BETWEEN 1 AND ' +
+            '999999 )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'VendNome'
+          DisplayWidth = 10
+          FieldAlias = 'S'#233'rie'
+          FieldLength = 10
+          FieldName = 'S'#233'rie'
+          SQLFieldName = 'select_f_nome_from_funci'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select f.nome from funcionario f where f.codigo = movimento_es' +
+            'toque_cabecalho.vendedor and f.empresa = movimento_estoque_cabec' +
+            'alho.empresa )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Comissao'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto%'
+          FieldLength = 0
+          FieldName = 'Desconto%'
+          SQLFieldName = 'iif_100_Movimento_Estoque'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( ( 100 - ( ( Movimento_Estoque_Detalhe.Custo_Total * 100 )/(' +
+            ' Movimento_Estoque_Detalhe.Custo_Unit'#225'rio * Movimento_Estoque_De' +
+            'talhe.Quantidade ) ) ) <= 10, Movimento_Estoque_Detalhe.Custo_To' +
+            'tal * 0.10, iif( ( ( 100 - ( ( Movimento_Estoque_Detalhe.Custo_T' +
+            'otal * 100 )/( Movimento_Estoque_Detalhe.Custo_Unit'#225'rio * Movime' +
+            'nto_Estoque_Detalhe.Quantidade ) ) ) > 10) and ( ( 100 - ( ( Mov' +
+            'imento_Estoque_Detalhe.Custo_Total * 100 )/( Movimento_Estoque_D' +
+            'etalhe.Custo_Unit'#225'rio * Movimento_Estoque_Detalhe.Quantidade ) )' +
+            ' ) <= 15), Movimento_Estoque_Detalhe.Custo_Total * 0.07, iif( ( ' +
+            '100 - ( ( Movimento_Estoque_Detalhe.Custo_Total * 100 )/( Movime' +
+            'nto_Estoque_Detalhe.Custo_Unit'#225'rio * Movimento_Estoque_Detalhe.Q' +
+            'uantidade ) ) ) > 15, Movimento_Estoque_Detalhe.Custo_Total * 0.' +
+            '05, 0 ) ) )'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'teste'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'N'#250'mero_Pedido'
+          FieldLength = 0
+          FieldName = 'N'#250'mero_Pedido'
+          SQLFieldName = 'Movimento_Estoque_Det'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '100 - ( ( Movimento_Estoque_Detalhe.Custo_Total * 100 )/( Movime' +
+            'nto_Estoque_Detalhe.Custo_Unit'#225'rio * Movimento_Estoque_Detalhe.Q' +
+            'uantidade ) )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          Value = 'S,P'
+          object TdaField
+            Alias = 'Tipo'
+            DisplayWidth = 1
+            FieldAlias = 'Tipo'
+            FieldLength = 1
+            FieldName = 'Tipo'
+            SQLFieldName = 'Tipo'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'C'#243'digo_Cliente_Fornecedor'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'C'#243'digo_Cliente_Fornecedor'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Cliente_Fornecedor'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Cliente_Fornecedor'
+            SQLFieldName = 'C'#243'digo_Cliente_Fornecedor'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Vendedor'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Vendedor'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Vendedor'
+            FieldLength = 0
+            FieldName = 'Vendedor'
+            SQLFieldName = 'Vendedor'
+            TableAlias = 'Movimento_Estoque_Cabecalho'
+            TableName = 'Movimento_Estoque_Cabecalho'
+            TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Data_Emiss'#227'o'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Emiss'#227'o'
+          FieldLength = 0
+          FieldName = 'Data_Emiss'#227'o'
+          SQLFieldName = 'Data_Emiss'#227'o'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField3: TdaField
+          Alias = 'C'#243'digo_Cliente_Fornecedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Cliente_Fornecedor'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Cliente_Fornecedor'
+          SQLFieldName = 'C'#243'digo_Cliente_Fornecedor'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField4: TdaField
+          Alias = 'Vendedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Vendedor'
+          FieldLength = 0
+          FieldName = 'Vendedor'
+          SQLFieldName = 'Vendedor'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField5: TdaField
+          Alias = 'N'#250'mero_Nota'
+          DisplayWidth = 20
+          FieldAlias = 'N'#250'mero_Nota'
+          FieldLength = 20
+          FieldName = 'N'#250'mero_Nota'
+          SQLFieldName = 'N'#250'mero_Nota'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField6: TdaField
+          Alias = 'Total_Nota'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_Nota'
+          FieldLength = 0
+          FieldName = 'Total_Nota'
+          SQLFieldName = 'Total_Nota'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField7: TdaField
+          Alias = 'Desconto%'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto%'
+          FieldLength = 0
+          FieldName = 'Desconto%'
+          IsDetail = True
+          SQLFieldName = 'Desconto'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daField8: TdaField
+          Alias = 'Desconto$'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto$'
+          FieldLength = 0
+          FieldName = 'Desconto$'
+          IsDetail = True
+          SQLFieldName = 'Desconto_2'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daField9: TdaField
+          Alias = 'Custo_Unit'#225'rio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          FieldName = 'Custo_Unit'#225'rio'
+          IsDetail = True
+          SQLFieldName = 'Custo_Unit'#225'rio'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daField10: TdaField
+          Alias = 'Custo_Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Total'
+          FieldLength = 0
+          FieldName = 'Custo_Total'
+          IsDetail = True
+          SQLFieldName = 'Custo_Total'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daField11: TdaField
+          Alias = 'Nome'
+          DisplayWidth = 255
+          FieldAlias = 'Nome'
+          FieldLength = 255
+          FieldName = 'Nome'
+          SQLFieldName = 'Nome'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField12: TdaField
+          Alias = 'C'#243'digo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Produto'
+          IsDetail = True
+          SQLFieldName = 'C'#243'digo_Produto'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daField13: TdaField
+          Alias = 'Quantidade'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          IsDetail = True
+          SQLFieldName = 'Quantidade'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daField14: TdaField
+          Alias = 'Nome_Produto'
+          DisplayWidth = 255
+          FieldAlias = 'Nome_Produto'
+          FieldLength = 255
+          FieldName = 'Nome_Produto'
+          IsDetail = True
+          SQLFieldName = 'Nome_Produto'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          TableSQLAlias = 'Movimento_Estoque_Detalhe'
+        end
+        object daField15: TdaField
+          Alias = 'NOMEFormaPGTO'
+          DisplayWidth = 25
+          FieldAlias = 'NOME'
+          FieldLength = 25
+          FieldName = 'NOME'
+          IsDetail = True
+          SQLFieldName = 'NOME_2'
+          TableAlias = 'FORMAS_PGTO'
+          TableName = 'FORMAS_PGTO'
+          TableSQLAlias = 'FORMAS_PGTO'
+        end
+        object daField16: TdaField
+          ChildType = 2
+          Alias = 'Vendedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Vendedor'
+          FieldLength = 0
+          FieldName = 'Vendedor'
+          SQLFieldName = 'Vendedor'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daField17: TdaField
+          ChildType = 2
+          Alias = 'Data_Emiss'#227'o'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Emiss'#227'o'
+          FieldLength = 0
+          FieldName = 'Data_Emiss'#227'o'
+          SQLFieldName = 'Data_Emiss'#227'o'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+          TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Movimento_Estoque_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Movimento_Estoque_Cabecalho'
+          TableAlias = 'Movimento_Estoque_Cabecalho'
+          TableName = 'Movimento_Estoque_Cabecalho'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Movimento_Estoque_Detalhe'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Movimento_Estoque_Detalhe'
+          TableAlias = 'Movimento_Estoque_Detalhe'
+          TableName = 'Movimento_Estoque_Detalhe'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField19: TdaField
+              ChildType = 3
+              Alias = 'C'#243'digo_Entrada'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'C'#243'digo_Entrada'
+              FieldLength = 0
+              FieldName = 'C'#243'digo_Entrada'
+              SQLFieldName = 'C'#243'digo_Entrada'
+              TableAlias = 'Movimento_Estoque_Detalhe'
+              TableName = 'Movimento_Estoque_Detalhe'
+              TableSQLAlias = 'Movimento_Estoque_Detalhe'
+            end
+            object daField18: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField21: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Movimento_Estoque_Detalhe'
+              TableName = 'Movimento_Estoque_Detalhe'
+              TableSQLAlias = 'Movimento_Estoque_Detalhe'
+            end
+            object daField20: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Lancamentos'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Caixa_Lancamentos'
+          TableAlias = 'Caixa_Lancamentos'
+          TableName = 'Caixa_Lancamentos'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField23: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Caixa_Lancamentos'
+              TableName = 'Caixa_Lancamentos'
+              TableSQLAlias = 'Caixa_Lancamentos'
+            end
+            object daField22: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+          object daTableJoin4: TdaTableJoin
+            ChildType = 6
+            object daField25: TdaField
+              ChildType = 3
+              Alias = 'Refer'#234'ncia'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Refer'#234'ncia'
+              FieldLength = 0
+              FieldName = 'Refer'#234'ncia'
+              SQLFieldName = 'Refer'#234'ncia'
+              TableAlias = 'Caixa_Lancamentos'
+              TableName = 'Caixa_Lancamentos'
+              TableSQLAlias = 'Caixa_Lancamentos'
+            end
+            object daField24: TdaField
+              ChildType = 4
+              Alias = 'Refer'#234'ncia'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Refer'#234'ncia'
+              FieldLength = 0
+              FieldName = 'Refer'#234'ncia'
+              SQLFieldName = 'Refer'#234'ncia'
+              TableAlias = 'Movimento_Estoque_Cabecalho'
+              TableName = 'Movimento_Estoque_Cabecalho'
+              TableSQLAlias = 'Movimento_Estoque_Cabecalho'
+            end
+          end
+        end
+        object daTable4: TdaTable
+          ChildType = 5
+          Alias = 'Caixa_Lancamentos_Detalhes'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Caixa_Lancamentos_Detalhes'
+          TableAlias = 'Caixa_Lancamentos_Detalhes'
+          TableName = 'Caixa_Lancamentos_Detalhes'
+          object daTableJoin5: TdaTableJoin
+            ChildType = 6
+            object daField27: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Caixa_Lancamentos_Detalhes'
+              TableName = 'Caixa_Lancamentos_Detalhes'
+              TableSQLAlias = 'Caixa_Lancamentos_Detalhes'
+            end
+            object daField26: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Caixa_Lancamentos'
+              TableName = 'Caixa_Lancamentos'
+              TableSQLAlias = 'Caixa_Lancamentos'
+            end
+          end
+          object daTableJoin6: TdaTableJoin
+            ChildType = 6
+            object daField29: TdaField
+              ChildType = 3
+              Alias = 'Codigo_Caixa_Lctos'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Caixa_Lctos'
+              FieldLength = 0
+              FieldName = 'Codigo_Caixa_Lctos'
+              SQLFieldName = 'Codigo_Caixa_Lctos'
+              TableAlias = 'Caixa_Lancamentos_Detalhes'
+              TableName = 'Caixa_Lancamentos_Detalhes'
+              TableSQLAlias = 'Caixa_Lancamentos_Detalhes'
+            end
+            object daField28: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Caixa_Lancamentos'
+              TableName = 'Caixa_Lancamentos'
+              TableSQLAlias = 'Caixa_Lancamentos'
+            end
+          end
+        end
+        object daTable5: TdaTable
+          ChildType = 5
+          Alias = 'FORMAS_PGTO'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'FORMAS_PGTO'
+          TableAlias = 'FORMAS_PGTO'
+          TableName = 'FORMAS_PGTO'
+          object daTableJoin7: TdaTableJoin
+            ChildType = 6
+            object daField31: TdaField
+              ChildType = 3
+              Alias = 'EMPRESA'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'EMPRESA'
+              FieldLength = 0
+              FieldName = 'EMPRESA'
+              SQLFieldName = 'EMPRESA'
+              TableAlias = 'FORMAS_PGTO'
+              TableName = 'FORMAS_PGTO'
+              TableSQLAlias = 'FORMAS_PGTO'
+            end
+            object daField30: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Caixa_Lancamentos_Detalhes'
+              TableName = 'Caixa_Lancamentos_Detalhes'
+              TableSQLAlias = 'Caixa_Lancamentos_Detalhes'
+            end
+          end
+          object daTableJoin8: TdaTableJoin
+            ChildType = 6
+            object daField33: TdaField
+              ChildType = 3
+              Alias = 'CODIGO'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'CODIGO'
+              FieldLength = 0
+              FieldName = 'CODIGO'
+              SQLFieldName = 'CODIGO'
+              TableAlias = 'FORMAS_PGTO'
+              TableName = 'FORMAS_PGTO'
+              TableSQLAlias = 'FORMAS_PGTO'
+            end
+            object daField32: TdaField
+              ChildType = 4
+              Alias = 'Codigo_Forma_Pgto'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Forma_Pgto'
+              FieldLength = 0
+              FieldName = 'Codigo_Forma_Pgto'
+              SQLFieldName = 'Codigo_Forma_Pgto'
+              TableAlias = 'Caixa_Lancamentos_Detalhes'
+              TableName = 'Caixa_Lancamentos_Detalhes'
+              TableSQLAlias = 'Caixa_Lancamentos_Detalhes'
+            end
+          end
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365068F70726F6365647572652056
+      61726961626C65733B0D0A7661720D0A636F6D697373616F31302C20636F6D69
+      7373616F372C20636F6D697373616F35203A20646F75626C653B0D0A64657363
+      6F6E746F706F72632C20646573636F6E746F2C20644175782C20636F6D692C20
+      6441757832203A20646F75626C653B20200D0A0D0A626567696E0D0A0D0A656E
+      643B0D0A0001060F5472614576656E7448616E646C65720B50726F6772616D4E
+      616D65060F4C6162656C394F6E476574546578740B50726F6772616D54797065
+      070B747450726F63656475726506536F7572636514E000000070726F63656475
+      7265204C6162656C394F6E476574546578742876617220546578743A20537472
+      696E67293B0D0A626567696E0D0A2020696620284D6F76696D656E746F5F4573
+      746F7175655F4361626563616C686F5B274EC3BA6D65726F5F4E6F7461275D20
+      3D20272729207468656E0D0A2020202054657874203A3D202753656D206E726F
+      2E204E6F7461270D0A2020656C73650D0A2020202054657874203A3D204D6F76
+      696D656E746F5F4573746F7175655F4361626563616C686F5B274EC3BA6D6572
+      6F5F4E6F7461275D3B0D0A2020656E643B0D0A656E643B0D0A0D436F6D706F6E
+      656E744E616D6506064C6162656C39094576656E744E616D6506094F6E476574
+      54657874074576656E74494402350001060F5472614576656E7448616E646C65
+      720B50726F6772616D4E616D650610444254657874364F6E476574546578740B
+      50726F6772616D54797065070B747450726F63656475726506536F7572636506
+      D070726F63656475726520444254657874364F6E476574546578742876617220
+      546578743A20537472696E67293B0D0A626567696E0D0A2020696620284D6F76
+      696D656E746F5F4573746F7175655F4361626563616C686F5B2756656E644E6F
+      6D65275D203D20272729207468656E0D0A2020202054657874203A3D20275365
+      6D2056656E6465646F72270D0A2020656C73650D0A2020202054657874203A3D
+      204D6F76696D656E746F5F4573746F7175655F4361626563616C686F5B275665
+      6E644E6F6D65275D3B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+      0744425465787436094576656E744E616D6506094F6E47657454657874074576
+      656E74494402350000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer25: TppDesignLayer
+      UserName = 'BandLayer25'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer24: TppDesignLayer
+      UserName = 'BandLayer24'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer23: TppDesignLayer
+      UserName = 'BandLayer23'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer22: TppDesignLayer
+      UserName = 'BandLayer22'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer21: TppDesignLayer
+      UserName = 'BandLayer21'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 18
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 19
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 20
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 21
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 22
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 23
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 24
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Código_Cliente_Fornecedor: TppParameter
+      AutoSearchSettings.FieldAlias = 'C'#243'digo_Cliente_Fornecedor'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Cliente@Clientes@ID@Razao_Social@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'C'#243'digo_Cliente_Fornecedor'
+    end
+    object Vendedor: TppParameter
+      AutoSearchSettings.FieldAlias = 'Vendedor'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Vendedor@Funcionarios@ID@Nome@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Vendedor'
+    end
+  end
+end
+$
+GRUPO=Funcionários@Comissões
+NOME=Comissões dos Vendedores - Analítico
+DESCRICAO=Mostra as comissões do vendedor por venda, com detalhamento, de acordo com um plano de comissões pré-definido.
+ALTERADO_EM=25/09/2014 13:54
+SQL=<0>

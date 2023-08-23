@@ -1,0 +1,1667 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 256
+  Template.FileName = 
+    'C:\Program Files (x86)\Koinonia Software\Habil Empresarial\Relat' +
+    'orios\1511-EZ1YN.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 256
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 17727
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 11651
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 10319
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Data'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 15333
+      mmTop = 6615
+      mmWidth = 6880
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Setor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 33309
+      mmTop = 6615
+      mmWidth = 8202
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Funcion'#225'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 65547
+      mmTop = 6615
+      mmWidth = 17463
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Motivo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 127759
+      mmTop = 6615
+      mmWidth = 9790
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Status'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 189442
+      mmTop = 6615
+      mmWidth = 9790
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label7'
+      Caption = 'Item'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 3969
+      mmTop = 11111
+      mmWidth = 6614
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      Caption = 'Custo Unit.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 69861
+      mmTop = 11113
+      mmWidth = 16140
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label8'
+      Caption = 'Qntde Solicitada'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 91811
+      mmTop = 11113
+      mmWidth = 24606
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      Caption = 'Qntde Atual'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 125413
+      mmTop = 11113
+      mmWidth = 17463
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label13'
+      Caption = 'Previs'#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 157163
+      mmTop = 11113
+      mmWidth = 13229
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label9'
+      Caption = 'Total'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 184415
+      mmTop = 11113
+      mmWidth = 7408
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 1588
+      mmLeft = 0
+      mmTop = 4498
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine5: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 1319
+      mmLeft = 0
+      mmTop = 16145
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Codigo_Item'
+      DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+      mmHeight = 3703
+      mmLeft = 3969
+      mmTop = 0
+      mmWidth = 61383
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'Custo'
+      DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+      mmHeight = 3703
+      mmLeft = 68801
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      DataField = 'Quantidade'
+      DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+      mmHeight = 3703
+      mmLeft = 91811
+      mmTop = 0
+      mmWidth = 24606
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      DataField = 'Quantidade_2'
+      DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+      mmHeight = 3703
+      mmLeft = 125678
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      DataField = 'iif_Almox_Solicitacoes_Ca'
+      DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+      mmHeight = 3703
+      mmLeft = 153194
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      DataField = 'Almox_Itens_Custo_Almox_I'
+      DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+      mmHeight = 3703
+      mmLeft = 174625
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      ParentWidth = True
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 0
+      mmTop = 3440
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 3969
+    mmPrintPosition = 0
+    object ppLabel16: TppLabel
+      UserName = 'Label16'
+      Caption = 'Total por Geral:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 149225
+      mmTop = 0
+      mmWidth = 22755
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBCalc2: TppDBCalc
+      UserName = 'DBCalc2'
+      DataField = 'Almox_Itens_Custo_Almox_I'
+      DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+      mmHeight = 3968
+      mmLeft = 174625
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 7
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 4498
+      mmPrintPosition = 0
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'Codigo'
+        DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 0
+        mmWidth = 10319
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'Data'
+        DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 15346
+        mmTop = 0
+        mmWidth = 14552
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        DataField = 'Setor'
+        DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 33338
+        mmTop = 0
+        mmWidth = 28575
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'Nome'
+        DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 65617
+        mmTop = 0
+        mmWidth = 58473
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText5: TppDBText
+        UserName = 'DBText5'
+        DataField = 'Motivo'
+        DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 127794
+        mmTop = 0
+        mmWidth = 52388
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText6: TppDBText
+        UserName = 'DBText6'
+        DataField = 'Status'
+        DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 184415
+        mmTop = 0
+        mmWidth = 14817
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine2: TppLine
+        UserName = 'Line1'
+        Pen.Color = 9868950
+        ParentWidth = True
+        Position = lpBottom
+        Weight = 0.750000000000000000
+        mmHeight = 1054
+        mmLeft = 0
+        mmTop = 3436
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 3969
+      mmPrintPosition = 0
+      object ppLabel15: TppLabel
+        UserName = 'Label11'
+        Caption = 'Total por C'#243'digo:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 146844
+        mmTop = 0
+        mmWidth = 25135
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        DataField = 'Almox_Itens_Custo_Almox_I'
+        DataPipeline = daADOQueryDataView1.Almox_Solicitacoes_Cabecalho
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        mmHeight = 3968
+        mmLeft = 174625
+        mmTop = 0
+        mmWidth = 17198
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874364F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F7572636506E070726F6365647572652044425465
+      7874364F6E476574546578742876617220546578743A20537472696E67293B0D
+      0A626567696E0D0A2020696620416C6D6F785F536F6C6963697461636F65735F
+      4361626563616C686F5B27537461747573275D203D20275027207468656E0D0A
+      20202020626567696E0D0A20202020202054657874203A3D202750656E64656E
+      7465273B0D0A20202020656E6420656C73650D0A202020202020626567696E0D
+      0A202020202020202054657874203A3D20274174656E6469646F273B0D0A2020
+      20202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+      060744425465787436094576656E744E616D6506094F6E476574546578740745
+      76656E7449440235084361726574506F7301021C0208000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Almox_Solicitacoes_Cabecalho'
+      Height = 301
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Almox_Solicitacoes_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Almox_Solicitacoes_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Codigo_Funcionario'
+          FieldName = 'Codigo_Funcionario'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 2
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Status'
+          FieldName = 'Status'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 3
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Motivo'
+          FieldName = 'Motivo'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 4
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Setor'
+          FieldName = 'Setor'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 5
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Codigo_Item'
+          FieldName = 'Codigo_Item'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Almox_Solicitacoes_Detalhes'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Qntde_Solicitada'
+          FieldName = 'Quantidade'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Almox_Solicitacoes_Detalhes'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Nome'
+          FieldName = 'Nome'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 8
+          TableName = 'Funcionario'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Descricao'
+          FieldName = 'Descricao'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 9
+          TableName = 'Almox_Itens'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Qntde_Atual'
+          FieldName = 'Quantidade_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Almox_Itens'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Custo'
+          FieldName = 'Custo'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Almox_Itens'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Qntde_Prevista'
+          FieldName = 'iif_Almox_Solicitacoes_Ca'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Almox_Solicitacoes_Detalhes'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Custo_Total'
+          FieldName = 'Almox_Itens_Custo_Almox_I'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Almox_Solicitacoes_Detalhes'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Almox_Solicitacoes_Cabecalho'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Almox_Solicitacoes_Cabecalho.Codigo, '
+          '       Almox_Solicitacoes_Cabecalho.Codigo_Funcionario, '
+          '       Almox_Solicitacoes_Cabecalho.Data, '
+          '       Almox_Solicitacoes_Cabecalho.Status, '
+          '       Almox_Solicitacoes_Cabecalho.Motivo, '
+          '       Almox_Solicitacoes_Cabecalho.Setor, '
+          '       Almox_Solicitacoes_Detalhes.Codigo_Item, '
+          '       Almox_Solicitacoes_Detalhes.Quantidade, '
+          '       Funcionario.Nome, Almox_Itens.Descricao, '
+          '       Almox_Itens.Quantidade AS Quantidade_2, '
+          '       Almox_Itens.Custo, '
+          
+            '       iif ( Almox_Solicitacoes_Cabecalho.Status = '#39'P'#39', Almox_It' +
+            'ens.Quantidade - Almox_Solicitacoes_Detalhes.Quantidade, 0) AS i' +
+            'if_Almox_Solicitacoes_Ca, '
+          
+            '       Almox_Itens.Custo * Almox_Itens.Quantidade AS Almox_Itens' +
+            '_Custo_Almox_I'
+          'FROM ((('
+          '     Almox_Solicitacoes_Cabecalho Almox_Solicitacoes_Cabecalho'
+          
+            '      INNER JOIN Almox_Solicitacoes_Detalhes Almox_Solicitacoes_' +
+            'Detalhes ON '
+          
+            '     (Almox_Solicitacoes_Detalhes.Empresa = Almox_Solicitacoes_C' +
+            'abecalho.Empresa)'
+          
+            '      AND (Almox_Solicitacoes_Detalhes.Codigo_Cabecalho = Almox_' +
+            'Solicitacoes_Cabecalho.Codigo) )'
+          '      LEFT OUTER JOIN Funcionario Funcionario ON '
+          
+            '     (Funcionario.Codigo = Almox_Solicitacoes_Cabecalho.Codigo_F' +
+            'uncionario)'
+          
+            '      AND (Funcionario.Empresa = Almox_Solicitacoes_Cabecalho.Em' +
+            'presa) )'
+          '      INNER JOIN Almox_Itens Almox_Itens ON '
+          
+            '     (Almox_Itens.Codigo = Almox_Solicitacoes_Detalhes.Codigo_It' +
+            'em)'
+          
+            '      AND (Almox_Itens.Empresa = Almox_Solicitacoes_Detalhes.Emp' +
+            'resa) )'
+          'WHERE '
+          
+            '      ( Almox_Solicitacoes_Cabecalho.Codigo BETWEEN 0 AND 999999' +
+            ' )'
+          'ORDER BY Almox_Solicitacoes_Cabecalho.Empresa, '
+          '         Almox_Solicitacoes_Cabecalho.Codigo, '
+          '         Almox_Solicitacoes_Detalhes.Codigo')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Qntde_Prevista'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Item'
+          FieldLength = 0
+          FieldName = 'Codigo_Item'
+          SQLFieldName = 'iif_Almox_Solicitacoes_Ca'
+          TableAlias = 'Almox_Solicitacoes_Detalhes'
+          TableName = 'Almox_Solicitacoes_Detalhes'
+          TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+          CalcType = dacaExpression
+          Expression = 
+            'iif ( Almox_Solicitacoes_Cabecalho.Status = '#39'P'#39', Almox_Itens.Qua' +
+            'ntidade - Almox_Solicitacoes_Detalhes.Quantidade, 0)'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Custo_Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Almox_Itens_Custo_Almox_I'
+          TableAlias = 'Almox_Solicitacoes_Detalhes'
+          TableName = 'Almox_Solicitacoes_Detalhes'
+          TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+          CalcType = dacaExpression
+          Expression = 'Almox_Itens.Custo * Almox_Itens.Quantidade'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo'
+          Value = '0,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Almox_Solicitacoes_Cabecalho'
+            TableName = 'Almox_Solicitacoes_Cabecalho'
+            TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+          end
+          object TdaNumericValue
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Codigo_Funcionario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Funcionario'
+          FieldLength = 0
+          FieldName = 'Codigo_Funcionario'
+          SQLFieldName = 'Codigo_Funcionario'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField3: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          SQLFieldName = 'Data'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField4: TdaField
+          Alias = 'Status'
+          DisplayWidth = 1
+          FieldAlias = 'Status'
+          FieldLength = 1
+          FieldName = 'Status'
+          SQLFieldName = 'Status'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField5: TdaField
+          Alias = 'Motivo'
+          DisplayWidth = 100
+          FieldAlias = 'Motivo'
+          FieldLength = 100
+          FieldName = 'Motivo'
+          SQLFieldName = 'Motivo'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField6: TdaField
+          Alias = 'Setor'
+          DisplayWidth = 50
+          FieldAlias = 'Setor'
+          FieldLength = 50
+          FieldName = 'Setor'
+          SQLFieldName = 'Setor'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField7: TdaField
+          Alias = 'Codigo_Item'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Item'
+          FieldLength = 0
+          FieldName = 'Codigo_Item'
+          IsDetail = True
+          SQLFieldName = 'Codigo_Item'
+          TableAlias = 'Almox_Solicitacoes_Detalhes'
+          TableName = 'Almox_Solicitacoes_Detalhes'
+          TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+        end
+        object daField8: TdaField
+          Alias = 'Qntde_Solicitada'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          IsDetail = True
+          SQLFieldName = 'Quantidade'
+          TableAlias = 'Almox_Solicitacoes_Detalhes'
+          TableName = 'Almox_Solicitacoes_Detalhes'
+          TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+        end
+        object daField9: TdaField
+          Alias = 'Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Nome'
+          FieldLength = 50
+          FieldName = 'Nome'
+          IsDetail = True
+          SQLFieldName = 'Nome'
+          TableAlias = 'Funcionario'
+          TableName = 'Funcionario'
+          TableSQLAlias = 'Funcionario'
+        end
+        object daField10: TdaField
+          Alias = 'Descricao'
+          DisplayWidth = 50
+          FieldAlias = 'Descricao'
+          FieldLength = 50
+          FieldName = 'Descricao'
+          IsDetail = True
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Almox_Itens'
+          TableName = 'Almox_Itens'
+          TableSQLAlias = 'Almox_Itens'
+        end
+        object daField11: TdaField
+          Alias = 'Qntde_Atual'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          IsDetail = True
+          SQLFieldName = 'Quantidade_2'
+          TableAlias = 'Almox_Itens'
+          TableName = 'Almox_Itens'
+          TableSQLAlias = 'Almox_Itens'
+        end
+        object daField12: TdaField
+          Alias = 'Custo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo'
+          FieldLength = 0
+          FieldName = 'Custo'
+          IsDetail = True
+          SQLFieldName = 'Custo'
+          TableAlias = 'Almox_Itens'
+          TableName = 'Almox_Itens'
+          TableSQLAlias = 'Almox_Itens'
+        end
+        object daField13: TdaField
+          ChildType = 2
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField14: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+          TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daField15: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Almox_Solicitacoes_Detalhes'
+          TableName = 'Almox_Solicitacoes_Detalhes'
+          TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Almox_Solicitacoes_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableAlias = 'Almox_Solicitacoes_Cabecalho'
+          TableName = 'Almox_Solicitacoes_Cabecalho'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Almox_Solicitacoes_Detalhes'
+          SQLAlias = 'Almox_Solicitacoes_Detalhes'
+          TableAlias = 'Almox_Solicitacoes_Detalhes'
+          TableName = 'Almox_Solicitacoes_Detalhes'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField17: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Almox_Solicitacoes_Detalhes'
+              TableName = 'Almox_Solicitacoes_Detalhes'
+              TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+            end
+            object daField16: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Almox_Solicitacoes_Cabecalho'
+              TableName = 'Almox_Solicitacoes_Cabecalho'
+              TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField19: TdaField
+              ChildType = 3
+              Alias = 'Codigo_Cabecalho'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Cabecalho'
+              FieldLength = 0
+              FieldName = 'Codigo_Cabecalho'
+              SQLFieldName = 'Codigo_Cabecalho'
+              TableAlias = 'Almox_Solicitacoes_Detalhes'
+              TableName = 'Almox_Solicitacoes_Detalhes'
+              TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+            end
+            object daField18: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Almox_Solicitacoes_Cabecalho'
+              TableName = 'Almox_Solicitacoes_Cabecalho'
+              TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Funcionario'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Funcionario'
+          TableAlias = 'Funcionario'
+          TableName = 'Funcionario'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField21: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Funcionario'
+              TableName = 'Funcionario'
+              TableSQLAlias = 'Funcionario'
+            end
+            object daField20: TdaField
+              ChildType = 4
+              Alias = 'Codigo_Funcionario'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Funcionario'
+              FieldLength = 0
+              FieldName = 'Codigo_Funcionario'
+              SQLFieldName = 'Codigo_Funcionario'
+              TableAlias = 'Almox_Solicitacoes_Cabecalho'
+              TableName = 'Almox_Solicitacoes_Cabecalho'
+              TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+            end
+          end
+          object daTableJoin4: TdaTableJoin
+            ChildType = 6
+            object daField23: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Funcionario'
+              TableName = 'Funcionario'
+              TableSQLAlias = 'Funcionario'
+            end
+            object daField22: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Almox_Solicitacoes_Cabecalho'
+              TableName = 'Almox_Solicitacoes_Cabecalho'
+              TableSQLAlias = 'Almox_Solicitacoes_Cabecalho'
+            end
+          end
+        end
+        object daTable4: TdaTable
+          ChildType = 5
+          Alias = 'Almox_Itens'
+          SQLAlias = 'Almox_Itens'
+          TableAlias = 'Almox_Itens'
+          TableName = 'Almox_Itens'
+          object daTableJoin5: TdaTableJoin
+            ChildType = 6
+            object daField25: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Almox_Itens'
+              TableName = 'Almox_Itens'
+              TableSQLAlias = 'Almox_Itens'
+            end
+            object daField24: TdaField
+              ChildType = 4
+              Alias = 'Codigo_Item'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Item'
+              FieldLength = 0
+              FieldName = 'Codigo_Item'
+              SQLFieldName = 'Codigo_Item'
+              TableAlias = 'Almox_Solicitacoes_Detalhes'
+              TableName = 'Almox_Solicitacoes_Detalhes'
+              TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+            end
+          end
+          object daTableJoin6: TdaTableJoin
+            ChildType = 6
+            object daField27: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Almox_Itens'
+              TableName = 'Almox_Itens'
+              TableSQLAlias = 'Almox_Itens'
+            end
+            object daField26: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Almox_Solicitacoes_Detalhes'
+              TableName = 'Almox_Solicitacoes_Detalhes'
+              TableSQLAlias = 'Almox_Solicitacoes_Detalhes'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer24: TppDesignLayer
+      UserName = 'BandLayer24'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer23: TppDesignLayer
+      UserName = 'BandLayer23'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer22: TppDesignLayer
+      UserName = 'BandLayer22'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer21: TppDesignLayer
+      UserName = 'BandLayer21'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 18
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 19
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 20
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 21
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 22
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '0,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '0'
+      UserName = 'Codigo'
+    end
+  end
+end
+$
+GRUPO=Almoxarifado@Documentos
+NOME=Solicitações Internas
+DESCRICAO=Relatório de solicitações internas com detalhes (itens solicitados)
+ALTERADO_EM=09/12/2015 10:56
+SQL=<0><1><2><3>
+ORDEM=Almox_Solicitacoes_Cabecalho.Empresa<Empresa>Almox_Solicitacoes_Cabecalho.Codigo<Codigo>Almox_Solicitacoes_Detalhes.Codigo<Codigo>

@@ -1,0 +1,913 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.INDICES
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1206-7ST48.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'INDICES'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer3: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 8467
+    mmPrintPosition = 0
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'VALOR'
+      DataPipeline = daADOQueryDataView1.INDICES
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'INDICES'
+      mmHeight = 3260
+      mmLeft = 23283
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Label4'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 48154
+      mmTop = 0
+      mmWidth = 8467
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'DATA'
+      DataPipeline = daADOQueryDataView1.INDICES
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'INDICES'
+      mmHeight = 3260
+      mmLeft = 794
+      mmTop = 244
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine6: TppLine
+      UserName = 'Line6'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 3969
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 5556
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 1852
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'CODIGO'
+    DataPipeline = daADOQueryDataView1.INDICES
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'INDICES'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 11642
+      mmPrintPosition = 0
+      object ppShape1: TppShape
+        UserName = 'shpCabecalho'
+        Brush.Color = cl3DLight
+        Brush.Style = bsBDiagonal
+        ParentWidth = True
+        Shape = stRoundRect
+        Visible = False
+        mmHeight = 5809
+        mmLeft = 0
+        mmTop = 5820
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        Caption = 'Data'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 794
+        mmTop = 6615
+        mmWidth = 6900
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel2: TppLabel
+        UserName = 'Label2'
+        Caption = 'Valor'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 23283
+        mmTop = 6615
+        mmWidth = 7789
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label7'
+        Caption = 'Varia'#231#245'es do '#205'ndice'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 29633
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        DataField = 'DESCRICAO'
+        DataPipeline = daADOQueryDataView1.INDICES
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'INDICES'
+        mmHeight = 4191
+        mmLeft = 35983
+        mmTop = 0
+        mmWidth = 86519
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText8: TppDBText
+        UserName = 'DBText8'
+        DataField = 'VALOR_INDICE'
+        DataPipeline = daADOQueryDataView1.INDICES
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'INDICES'
+        mmHeight = 4191
+        mmLeft = 161661
+        mmTop = 0
+        mmWidth = 33073
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel3: TppLabel
+        UserName = 'Label3'
+        Caption = 'Valor Atual'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 139700
+        mmTop = 0
+        mmWidth = 16404
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine4: TppLine
+        UserName = 'lnCabecalho1'
+        ParentWidth = True
+        Weight = 0.500000000000000000
+        mmHeight = 529
+        mmLeft = 0
+        mmTop = 5821
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine5: TppLine
+        UserName = 'lnCabecalho2'
+        ParentWidth = True
+        Weight = 0.500000000000000000
+        mmHeight = 529
+        mmLeft = 0
+        mmTop = 11377
+        mmWidth = 200080
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 1058
+      mmPrintPosition = 0
+      object ppLine2: TppLine
+        UserName = 'Line1'
+        Pen.Color = clGray
+        Pen.Style = psDot
+        ParentWidth = True
+        Weight = 1.000000000000000000
+        mmHeight = 0
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 200080
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365064870726F6365647572652056
+      61726961626C65733B0D0A7661720D0A76616C6F72616E7469676F203A206578
+      74656E6465643B2020200D0A0D0A626567696E0D0A0D0A656E643B0D0A084361
+      726574506F730102000200000001060F5472614576656E7448616E646C65720B
+      50726F6772616D4E616D6506115265706F72744265666F72655072696E740B50
+      726F6772616D54797065070B747450726F63656475726506536F75726365063F
+      70726F636564757265205265706F72744265666F72655072696E743B0D0A6265
+      67696E0D0A76616C6F72616E7469676F20203A3D20303B0D0A656E643B0D0A0D
+      436F6D706F6E656E744E616D6506065265706F7274094576656E744E616D6506
+      0B4265666F72655072696E74074576656E7449440201084361726574506F7301
+      02000200000001060F5472614576656E7448616E646C65720B50726F6772616D
+      4E616D65060E444254657874384F6E5072696E740B50726F6772616D54797065
+      070B747450726F63656475726506536F7572636506B670726F63656475726520
+      444254657874384F6E5072696E743B0D0A7661720D0A2020737472203A205374
+      72696E673B0D0A626567696E0D0A2020696620444254657874382E5465787420
+      3D202727207468656E0D0A20202020537472203A3D202730270D0A2020656C73
+      650D0A20202020537472203A3D20444254657874382E546578743B0D0A202020
+      200D0A202076616C6F72616E7469676F203A3D20737472746F666C6F61742853
+      7472293B0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060744425465
+      787438094576656E744E616D6506074F6E5072696E74074576656E7449440220
+      084361726574506F730102000200000001060F5472614576656E7448616E646C
+      65720B50726F6772616D4E616D65060E444254657874324F6E5072696E740B50
+      726F6772616D54797065070B747450726F63656475726506536F757263650C4D
+      03000070726F63656475726520444254657874324F6E5072696E743B0D0A7661
+      720D0A202076616C6F72446961203A20457874656E6465643B0D0A626567696E
+      0D0A696620444254657874322E54657874203D202727207468656E0D0A202076
+      616C6F72446961203A3D20300D0A656C73650D0A202076616C6F72446961203A
+      3D20537472546F466C6F61742820444254657874322E5465787420293B0D0A0D
+      0A6966202876616C6F72646961203C2076616C6F72616E7469676F2920207468
+      656E20626567696E0D0A20204C6162656C342E74657874203A3D20272D202020
+      2027202B20466F726D6174466C6F6174282027302E30302025272C2028313030
+      202D2020282028313030202F2076616C6F72616E7469676F29202A2076616C6F
+      7264696120202920293B20202020202020202020202020202020202020202020
+      2020202020202020202020202020202020202020202020202020202020202020
+      202020202020202020202020202020202020202020200D0A20204C6162656C34
+      2E666F6E742E636F6C6F72203A3D20636C7265643B0D0A656E640D0A656C7365
+      206966202876616C6F72646961203D2076616C6F72616E7469676F2920746865
+      6E20626567696E0D0A20204C6162656C342E74657874203A3D20273D20202020
+      3025273B0D0A20204C6162656C342E666F6E742E636F6C6F72203A3D20636C62
+      6C75653B0D0A656E640D0A656C7365206966202876616C6F72616E7469676F20
+      3D203029207468656E20626567696E0D0A20204C6162656C342E74657874203A
+      3D20272B2020202031303025273B0D0A20204C6162656C342E666F6E742E636F
+      6C6F72203A3D20636C677265656E3B0D0A656E640D0A656C7365206966202876
+      616C6F72646961203E2076616C6F72616E7469676F29207468656E2062656769
+      6E0D0A20204C6162656C342E74657874203A3D20272B2020202027202B20466F
+      726D6174466C6F6174282027302E30302025272C2028282028313030202F2076
+      616C6F72616E7469676F29202A2076616C6F72646961202029202D2031303020
+      293B0D0A20204C6162656C342E666F6E742E636F6C6F72203A3D20636C677265
+      656E3B0D0A656E643B0D0A0D0A76616C6F72616E7469676F20203A3D2076616C
+      6F726469613B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650607
+      44425465787432094576656E744E616D6506074F6E5072696E74074576656E74
+      49440220084361726574506F730102000200000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_INDICES'
+      Height = 182
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object INDICES: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'INDICES'
+        object ppField1: TppField
+          FieldAlias = 'DESCRICAO'
+          FieldName = 'DESCRICAO'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 0
+          TableName = 'INDICES'
+        end
+        object ppField2: TppField
+          FieldAlias = 'VALOR_INDICE'
+          FieldName = 'VALOR_INDICE'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'INDICES'
+        end
+        object ppField3: TppField
+          FieldAlias = 'SIMBOLO'
+          FieldName = 'SIMBOLO'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'INDICES'
+        end
+        object ppField4: TppField
+          FieldAlias = 'DATA'
+          FieldName = 'DATA'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'INDICES_DIARIOS'
+        end
+        object ppField5: TppField
+          FieldAlias = 'VALOR'
+          FieldName = 'VALOR'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'INDICES_DIARIOS'
+        end
+        object ppField6: TppField
+          FieldAlias = 'CODIGO'
+          FieldName = 'CODIGO'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'INDICES'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'INDICES'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT INDICES.DESCRICAO, INDICES.VALOR_INDICE, '
+          '       INDICES.SIMBOLO, INDICES_DIARIOS.DATA, '
+          '       INDICES_DIARIOS.VALOR, INDICES.CODIGO'
+          'FROM (INDICES INDICES'
+          '      LEFT OUTER JOIN INDICES_DIARIOS INDICES_DIARIOS ON '
+          '     (INDICES_DIARIOS.EMPRESA = INDICES.EMPRESA)'
+          '      AND (INDICES_DIARIOS.CODIGO_INDICE = INDICES.CODIGO) )'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( INDICES.CODIGO BETWEEN 1 AND 999999 ))')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'CODIGO'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'CODIGO'
+            FieldLength = 0
+            FieldName = 'CODIGO'
+            Mandatory = True
+            SQLFieldName = 'CODIGO'
+            TableAlias = 'INDICES'
+            TableName = 'INDICES'
+            TableSQLAlias = 'INDICES'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'DESCRICAO'
+          DisplayWidth = 50
+          FieldAlias = 'DESCRICAO'
+          FieldLength = 50
+          FieldName = 'DESCRICAO'
+          SQLFieldName = 'DESCRICAO'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          TableSQLAlias = 'INDICES'
+        end
+        object daField2: TdaField
+          Alias = 'VALOR_INDICE'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'VALOR_INDICE'
+          FieldLength = 0
+          FieldName = 'VALOR_INDICE'
+          SQLFieldName = 'VALOR_INDICE'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          TableSQLAlias = 'INDICES'
+        end
+        object daField3: TdaField
+          Alias = 'SIMBOLO'
+          DisplayWidth = 10
+          FieldAlias = 'SIMBOLO'
+          FieldLength = 10
+          FieldName = 'SIMBOLO'
+          SQLFieldName = 'SIMBOLO'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          TableSQLAlias = 'INDICES'
+        end
+        object daField4: TdaField
+          Alias = 'DATA'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'DATA'
+          FieldLength = 0
+          FieldName = 'DATA'
+          IsDetail = True
+          SQLFieldName = 'DATA'
+          TableAlias = 'INDICES_DIARIOS'
+          TableName = 'INDICES_DIARIOS'
+          TableSQLAlias = 'INDICES_DIARIOS'
+        end
+        object daField5: TdaField
+          Alias = 'VALOR'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'VALOR'
+          FieldLength = 0
+          FieldName = 'VALOR'
+          IsDetail = True
+          SQLFieldName = 'VALOR'
+          TableAlias = 'INDICES_DIARIOS'
+          TableName = 'INDICES_DIARIOS'
+          TableSQLAlias = 'INDICES_DIARIOS'
+        end
+        object daField6: TdaField
+          Alias = 'CODIGO'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'CODIGO'
+          FieldLength = 0
+          FieldName = 'CODIGO'
+          SQLFieldName = 'CODIGO'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          TableSQLAlias = 'INDICES'
+        end
+        object daField7: TdaField
+          ChildType = 2
+          Alias = 'CODIGO'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'CODIGO'
+          FieldLength = 0
+          FieldName = 'CODIGO'
+          SQLFieldName = 'CODIGO'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          TableSQLAlias = 'INDICES'
+        end
+        object daField8: TdaField
+          ChildType = 2
+          Alias = 'DATA'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'DATA'
+          FieldLength = 0
+          FieldName = 'DATA'
+          SQLFieldName = 'DATA'
+          TableAlias = 'INDICES_DIARIOS'
+          TableName = 'INDICES_DIARIOS'
+          TableSQLAlias = 'INDICES_DIARIOS'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'INDICES'
+          JoinType = dajtNone
+          SQLAlias = 'INDICES'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'INDICES_DIARIOS'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'INDICES_DIARIOS'
+          TableAlias = 'INDICES_DIARIOS'
+          TableName = 'INDICES_DIARIOS'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField10: TdaField
+              ChildType = 3
+              Alias = 'EMPRESA'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'EMPRESA'
+              FieldLength = 0
+              FieldName = 'EMPRESA'
+              SQLFieldName = 'EMPRESA'
+              TableAlias = 'INDICES_DIARIOS'
+              TableName = 'INDICES_DIARIOS'
+              TableSQLAlias = 'INDICES_DIARIOS'
+            end
+            object daField9: TdaField
+              ChildType = 4
+              Alias = 'EMPRESA'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'EMPRESA'
+              FieldLength = 0
+              FieldName = 'EMPRESA'
+              SQLFieldName = 'EMPRESA'
+              TableAlias = 'INDICES'
+              TableName = 'INDICES'
+              TableSQLAlias = 'INDICES'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField12: TdaField
+              ChildType = 3
+              Alias = 'CODIGO_INDICE'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'CODIGO_INDICE'
+              FieldLength = 0
+              FieldName = 'CODIGO_INDICE'
+              SQLFieldName = 'CODIGO_INDICE'
+              TableAlias = 'INDICES_DIARIOS'
+              TableName = 'INDICES_DIARIOS'
+              TableSQLAlias = 'INDICES_DIARIOS'
+            end
+            object daField11: TdaField
+              ChildType = 4
+              Alias = 'CODIGO'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'CODIGO'
+              FieldLength = 0
+              FieldName = 'CODIGO'
+              SQLFieldName = 'CODIGO'
+              TableAlias = 'INDICES'
+              TableName = 'INDICES'
+              TableSQLAlias = 'INDICES'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 3
+    end
+  end
+  object ppParameterList3: TppParameterList
+    object CODIGO: TppParameter
+      AutoSearchSettings.FieldAlias = 'CODIGO'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do '#205'ndice@Indices@ID@Descricao@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Especiais
+NOME=Índices
+DESCRICAO=Imprime a variação de cada índice
+ALTERADO_EM=11/12/2014 14:56
+SQL=<0>
+ORDEM=INDICES.CODIGO<CODIGO>INDICES_DIARIOS.DATA<DATA>

@@ -1,0 +1,941 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Fluxo_Caixa_CS
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1206-FKSJN.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'Fluxo_Caixa_CS'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 11377
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 5556
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Conta Caixa'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 18415
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Total'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 192352
+      mmTop = 6615
+      mmWidth = 7366
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189177
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191294
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine5: TppLine
+      UserName = 'lnCabacalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 11113
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Conta_Caixa'
+      DataPipeline = daADOQueryDataView1.Fluxo_Caixa_CS
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fluxo_Caixa_CS'
+      mmHeight = 3260
+      mmLeft = 794
+      mmTop = 265
+      mmWidth = 158486
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Total'
+      DataPipeline = daADOQueryDataView1.Fluxo_Caixa_CS
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Fluxo_Caixa_CS'
+      mmHeight = 3260
+      mmLeft = 175155
+      mmTop = 265
+      mmWidth = 24606
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 3969
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 24871
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 1852
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 16933
+    mmPrintPosition = 0
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Periodo'
+    DataPipeline = daADOQueryDataView1.Fluxo_Caixa_CS
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Fluxo_Caixa_CS'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 5556
+      mmPrintPosition = 0
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        AutoSize = True
+        DataField = 'Periodo'
+        DataPipeline = daADOQueryDataView1.Fluxo_Caixa_CS
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Fluxo_Caixa_CS'
+        mmHeight = 3810
+        mmLeft = 794
+        mmTop = 794
+        mmWidth = 889
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'Saldo_Inicial'
+        DataPipeline = daADOQueryDataView1.Fluxo_Caixa_CS
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Fluxo_Caixa_CS'
+        mmHeight = 3810
+        mmLeft = 175155
+        mmTop = 794
+        mmWidth = 24606
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label7'
+        Caption = 'Saldo Inicial:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 152136
+        mmTop = 794
+        mmWidth = 19643
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 5821
+      mmPrintPosition = 0
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        DataField = 'Saldo_Final'
+        DataPipeline = daADOQueryDataView1.Fluxo_Caixa_CS
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Fluxo_Caixa_CS'
+        mmHeight = 3810
+        mmLeft = 175155
+        mmTop = 794
+        mmWidth = 24606
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        Caption = 'Saldo Final:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3810
+        mmLeft = 153723
+        mmTop = 794
+        mmWidth = 18034
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Fluxo_Caixa_CS'
+      Height = 206
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Fluxo_Caixa_CS: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Fluxo_Caixa_CS'
+        object ppField1: TppField
+          FieldAlias = 'Periodo'
+          FieldName = 'Periodo'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 0
+          TableName = 'Fluxo_Caixa_CS'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Conta_Caixa'
+          FieldName = 'Conta_Caixa'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 1
+          TableName = 'Fluxo_Caixa_CS'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Descricao'
+          FieldName = 'Descricao'
+          FieldLength = 200
+          DisplayWidth = 200
+          Position = 2
+          TableName = 'Fluxo_Caixa_CS'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Total'
+          FieldName = 'Total'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Fluxo_Caixa_CS'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Saldo_Inicial'
+          FieldName = 'Saldo_Inicial'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Fluxo_Caixa_CS'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Saldo_Final'
+          FieldName = 'Saldo_Final'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Fluxo_Caixa_CS'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Ordem'
+          FieldName = 'iif_InStr_fluxo_caixa_cs'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 6
+          TableName = 'Fluxo_Caixa_CS'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Fluxo_Caixa_CS'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Fluxo_Caixa_CS.Periodo, '
+          '       Fluxo_Caixa_CS.Conta_Caixa, '
+          '       Fluxo_Caixa_CS.Descricao, '
+          '       Fluxo_Caixa_CS.Total, '
+          '       Fluxo_Caixa_CS.Saldo_Inicial, '
+          '       Fluxo_Caixa_CS.Saldo_Final, '
+          
+            '       iif( ( InStr( fluxo_caixa_cs.periodo, "seg" ) > 0 ) or ( ' +
+            'InStr( fluxo_caixa_cs.periodo, "ter" ) > 0 ) or ( InStr( fluxo_c' +
+            'aixa_cs.periodo, "qua" ) > 0 ) or ( InStr( fluxo_caixa_cs.period' +
+            'o, "qui" ) > 0 ) or ( InStr( fluxo_caixa_cs.periodo, "sex" ) > 0' +
+            ' ) or ( InStr( fluxo_caixa_cs.periodo, "s'#225'b" ) > 0 ) or ( InStr(' +
+            ' fluxo_caixa_cs.periodo, "dom" ) > 0 ), iif( InStr( fluxo_caixa_' +
+            'cs.periodo, "jan" ), "01 " & Mid(fluxo_caixa_cs.periodo, 6, 2), ' +
+            'iif( InStr( fluxo_caixa_cs.periodo, "fev" ), "02 " & Mid(fluxo_c' +
+            'aixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "mar' +
+            '" ), "03 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( flux' +
+            'o_caixa_cs.periodo, "abr" ), "04 " & Mid(fluxo_caixa_cs.periodo,' +
+            ' 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "mai" ), "05 " & Mid' +
+            '(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.perio' +
+            'do, "jun" ), "06 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( InS' +
+            'tr( fluxo_caixa_cs.periodo, "jul" ), "07 " & Mid(fluxo_caixa_cs.' +
+            'periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "ago" ), "08' +
+            ' " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_' +
+            'cs.periodo, "set" ), "09 " & Mid(fluxo_caixa_cs.periodo, 6, 2), ' +
+            'iif( InStr( fluxo_caixa_cs.periodo, "out" ), "10 " & Mid(fluxo_c' +
+            'aixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "nov' +
+            '" ), "11 " & Mid(fluxo_caixa_cs.periodo, 6, 2), "12 " & Mid(flux' +
+            'o_caixa_cs.periodo, 6, 2) ) ) ) ) ) ) ) ) ) ) ) , iif( InStr( fl' +
+            'uxo_caixa_cs.periodo, "jan" ), "01 " & Mid(fluxo_caixa_cs.period' +
+            'o, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "fev" ), "02 " & M' +
+            'id(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.per' +
+            'iodo, "mar" ), "03 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( I' +
+            'nStr( fluxo_caixa_cs.periodo, "abr" ), "04 " & Mid(fluxo_caixa_c' +
+            's.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "mai" ), "' +
+            '05 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caix' +
+            'a_cs.periodo, "jun" ), "06 " & Mid(fluxo_caixa_cs.periodo, 1, 7)' +
+            ', iif( InStr( fluxo_caixa_cs.periodo, "jul" ), "07 " & Mid(fluxo' +
+            '_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "a' +
+            'go" ), "08 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fl' +
+            'uxo_caixa_cs.periodo, "set" ), "09 " & Mid(fluxo_caixa_cs.period' +
+            'o, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "out" ), "10 " & M' +
+            'id(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.per' +
+            'iodo, "nov" ), "11 " & Mid(fluxo_caixa_cs.periodo, 1, 7), "12 " ' +
+            '& Mid(fluxo_caixa_cs.periodo, 1, 7) ) ) ) ) ) ) ) ) ) ) ) ) AS i' +
+            'if_InStr_fluxo_caixa_cs'
+          'FROM Fluxo_Caixa_CS Fluxo_Caixa_CS'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Ordem'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'iif_InStr_fluxo_caixa_cs'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( ( InStr( fluxo_caixa_cs.periodo, "seg" ) > 0 ) or ( InStr( ' +
+            'fluxo_caixa_cs.periodo, "ter" ) > 0 ) or ( InStr( fluxo_caixa_cs' +
+            '.periodo, "qua" ) > 0 ) or ( InStr( fluxo_caixa_cs.periodo, "qui' +
+            '" ) > 0 ) or ( InStr( fluxo_caixa_cs.periodo, "sex" ) > 0 ) or (' +
+            ' InStr( fluxo_caixa_cs.periodo, "s'#225'b" ) > 0 ) or ( InStr( fluxo_' +
+            'caixa_cs.periodo, "dom" ) > 0 ), iif( InStr( fluxo_caixa_cs.peri' +
+            'odo, "jan" ), "01 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( In' +
+            'Str( fluxo_caixa_cs.periodo, "fev" ), "02 " & Mid(fluxo_caixa_cs' +
+            '.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "mar" ), "0' +
+            '3 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa' +
+            '_cs.periodo, "abr" ), "04 " & Mid(fluxo_caixa_cs.periodo, 6, 2),' +
+            ' iif( InStr( fluxo_caixa_cs.periodo, "mai" ), "05 " & Mid(fluxo_' +
+            'caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "ju' +
+            'n" ), "06 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( flu' +
+            'xo_caixa_cs.periodo, "jul" ), "07 " & Mid(fluxo_caixa_cs.periodo' +
+            ', 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "ago" ), "08 " & Mi' +
+            'd(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.peri' +
+            'odo, "set" ), "09 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( In' +
+            'Str( fluxo_caixa_cs.periodo, "out" ), "10 " & Mid(fluxo_caixa_cs' +
+            '.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "nov" ), "1' +
+            '1 " & Mid(fluxo_caixa_cs.periodo, 6, 2), "12 " & Mid(fluxo_caixa' +
+            '_cs.periodo, 6, 2) ) ) ) ) ) ) ) ) ) ) ) , iif( InStr( fluxo_cai' +
+            'xa_cs.periodo, "jan" ), "01 " & Mid(fluxo_caixa_cs.periodo, 1, 7' +
+            '), iif( InStr( fluxo_caixa_cs.periodo, "fev" ), "02 " & Mid(flux' +
+            'o_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "' +
+            'mar" ), "03 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( f' +
+            'luxo_caixa_cs.periodo, "abr" ), "04 " & Mid(fluxo_caixa_cs.perio' +
+            'do, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "mai" ), "05 " & ' +
+            'Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.pe' +
+            'riodo, "jun" ), "06 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( ' +
+            'InStr( fluxo_caixa_cs.periodo, "jul" ), "07 " & Mid(fluxo_caixa_' +
+            'cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "ago" ), ' +
+            '"08 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_cai' +
+            'xa_cs.periodo, "set" ), "09 " & Mid(fluxo_caixa_cs.periodo, 1, 7' +
+            '), iif( InStr( fluxo_caixa_cs.periodo, "out" ), "10 " & Mid(flux' +
+            'o_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "' +
+            'nov" ), "11 " & Mid(fluxo_caixa_cs.periodo, 1, 7), "12 " & Mid(f' +
+            'luxo_caixa_cs.periodo, 1, 7) ) ) ) ) ) ) ) ) ) ) ) )'
+        end
+        object daField1: TdaField
+          Alias = 'Periodo'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'Periodo'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField2: TdaField
+          Alias = 'Conta_Caixa'
+          DisplayWidth = 50
+          FieldAlias = 'Conta_Caixa'
+          FieldLength = 50
+          FieldName = 'Conta_Caixa'
+          SQLFieldName = 'Conta_Caixa'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField3: TdaField
+          Alias = 'Descricao'
+          DisplayWidth = 200
+          FieldAlias = 'Descricao'
+          FieldLength = 200
+          FieldName = 'Descricao'
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField4: TdaField
+          Alias = 'Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total'
+          FieldLength = 0
+          FieldName = 'Total'
+          SQLFieldName = 'Total'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField5: TdaField
+          Alias = 'Saldo_Inicial'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_Inicial'
+          FieldLength = 0
+          FieldName = 'Saldo_Inicial'
+          SQLFieldName = 'Saldo_Inicial'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField6: TdaField
+          Alias = 'Saldo_Final'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Saldo_Final'
+          FieldLength = 0
+          FieldName = 'Saldo_Final'
+          SQLFieldName = 'Saldo_Final'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 2
+          Alias = 'Ordem'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'iif_InStr_fluxo_caixa_cs'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( ( InStr( fluxo_caixa_cs.periodo, "seg" ) > 0 ) or ( InStr( ' +
+            'fluxo_caixa_cs.periodo, "ter" ) > 0 ) or ( InStr( fluxo_caixa_cs' +
+            '.periodo, "qua" ) > 0 ) or ( InStr( fluxo_caixa_cs.periodo, "qui' +
+            '" ) > 0 ) or ( InStr( fluxo_caixa_cs.periodo, "sex" ) > 0 ) or (' +
+            ' InStr( fluxo_caixa_cs.periodo, "s'#225'b" ) > 0 ) or ( InStr( fluxo_' +
+            'caixa_cs.periodo, "dom" ) > 0 ), iif( InStr( fluxo_caixa_cs.peri' +
+            'odo, "jan" ), "01 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( In' +
+            'Str( fluxo_caixa_cs.periodo, "fev" ), "02 " & Mid(fluxo_caixa_cs' +
+            '.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "mar" ), "0' +
+            '3 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa' +
+            '_cs.periodo, "abr" ), "04 " & Mid(fluxo_caixa_cs.periodo, 6, 2),' +
+            ' iif( InStr( fluxo_caixa_cs.periodo, "mai" ), "05 " & Mid(fluxo_' +
+            'caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "ju' +
+            'n" ), "06 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( flu' +
+            'xo_caixa_cs.periodo, "jul" ), "07 " & Mid(fluxo_caixa_cs.periodo' +
+            ', 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "ago" ), "08 " & Mi' +
+            'd(fluxo_caixa_cs.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.peri' +
+            'odo, "set" ), "09 " & Mid(fluxo_caixa_cs.periodo, 6, 2), iif( In' +
+            'Str( fluxo_caixa_cs.periodo, "out" ), "10 " & Mid(fluxo_caixa_cs' +
+            '.periodo, 6, 2), iif( InStr( fluxo_caixa_cs.periodo, "nov" ), "1' +
+            '1 " & Mid(fluxo_caixa_cs.periodo, 6, 2), "12 " & Mid(fluxo_caixa' +
+            '_cs.periodo, 6, 2) ) ) ) ) ) ) ) ) ) ) ) , iif( InStr( fluxo_cai' +
+            'xa_cs.periodo, "jan" ), "01 " & Mid(fluxo_caixa_cs.periodo, 1, 7' +
+            '), iif( InStr( fluxo_caixa_cs.periodo, "fev" ), "02 " & Mid(flux' +
+            'o_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "' +
+            'mar" ), "03 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( f' +
+            'luxo_caixa_cs.periodo, "abr" ), "04 " & Mid(fluxo_caixa_cs.perio' +
+            'do, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "mai" ), "05 " & ' +
+            'Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.pe' +
+            'riodo, "jun" ), "06 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( ' +
+            'InStr( fluxo_caixa_cs.periodo, "jul" ), "07 " & Mid(fluxo_caixa_' +
+            'cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "ago" ), ' +
+            '"08 " & Mid(fluxo_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_cai' +
+            'xa_cs.periodo, "set" ), "09 " & Mid(fluxo_caixa_cs.periodo, 1, 7' +
+            '), iif( InStr( fluxo_caixa_cs.periodo, "out" ), "10 " & Mid(flux' +
+            'o_caixa_cs.periodo, 1, 7), iif( InStr( fluxo_caixa_cs.periodo, "' +
+            'nov" ), "11 " & Mid(fluxo_caixa_cs.periodo, 1, 7), "12 " & Mid(f' +
+            'luxo_caixa_cs.periodo, 1, 7) ) ) ) ) ) ) ) ) ) ) ) )'
+        end
+        object daField7: TdaField
+          ChildType = 2
+          Alias = 'Conta_Caixa'
+          DisplayWidth = 50
+          FieldAlias = 'Conta_Caixa'
+          FieldLength = 50
+          FieldName = 'Conta_Caixa'
+          SQLFieldName = 'Conta_Caixa'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField8: TdaField
+          ChildType = 2
+          Alias = 'Periodo'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'Periodo'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField9: TdaField
+          ChildType = 2
+          Alias = 'Descricao'
+          DisplayWidth = 200
+          FieldAlias = 'Descricao'
+          FieldLength = 200
+          FieldName = 'Descricao'
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daField10: TdaField
+          ChildType = 2
+          Alias = 'Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total'
+          FieldLength = 0
+          FieldName = 'Total'
+          SQLFieldName = 'Total'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+          TableSQLAlias = 'Fluxo_Caixa_CS'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Fluxo_Caixa_CS'
+          JoinType = dajtNone
+          SQLAlias = 'Fluxo_Caixa_CS'
+          TableAlias = 'Fluxo_Caixa_CS'
+          TableName = 'Fluxo_Caixa_CS'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060E
+      444254657874314F6E5072696E740B50726F6772616D54797065070B74745072
+      6F63656475726506536F757263650C1F01000070726F63656475726520444254
+      657874314F6E5072696E743B0D0A7661720D0A20207341757820203A20537472
+      696E673B0D0A202069436F6E74203A20496E74656765723B0D0A626567696E0D
+      0A202073417578203A3D20466C75786F5F43616978615F43535B27436F6E7461
+      5F4361697861275D203B0D0A202069436F6E74203A3D20303B0D0A2020776869
+      6C6520506F732820272E272C20734175782029203E203020646F20626567696E
+      0D0A2020202069436F6E74203A3D2069436F6E74202B20313B0D0A2020202044
+      656C6574652820734175782C20312C20506F732820272E272C20734175782029
+      20293B0D0A2020656E643B0D0A2020444254657874312E6C656674203A3D2069
+      436F6E74202A2031303B0D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+      060744425465787431094576656E744E616D6506074F6E5072696E7407457665
+      6E74494402200001060F5472614576656E7448616E646C65720B50726F677261
+      6D4E616D650610444254657874314F6E476574546578740B50726F6772616D54
+      797065070B747450726F63656475726506536F75726365067870726F63656475
+      726520444254657874314F6E476574546578742876617220546578743A205374
+      72696E67293B0D0A626567696E0D0A0D0A202054657874203A3D205465787420
+      2B2027202D2027202B20466C75786F5F43616978615F43535B27446573637269
+      63616F275D3B200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+      0744425465787431094576656E744E616D6506094F6E47657454657874074576
+      656E74494402350001060F5472614576656E7448616E646C65720B50726F6772
+      616D4E616D650610444254657874354F6E476574546578740B50726F6772616D
+      54797065070B747450726F63656475726506536F75726365068270726F636564
+      75726520444254657874354F6E476574546578742876617220546578743A2053
+      7472696E67293B0D0A626567696E0D0A202069662054657874203D2027272074
+      68656E0D0A2020202054657874203A3D2027302C3030270D0A2020656C73650D
+      0A2020202054657874203A3D20546578743B0D0A0D0A656E643B0D0A0D436F6D
+      706F6E656E744E616D65060744425465787435094576656E744E616D6506094F
+      6E47657454657874074576656E74494402350000}
+  end
+  object ppDesignLayers2: TppDesignLayers
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 5
+    end
+  end
+  object ppParameterList2: TppParameterList
+  end
+end
+$
+GRUPO=Caixa@Fluxo de Caixa
+NOME=Fluxo de Caixa - Analítico
+DESCRICAO=Lista os valores do fluxo de caixa gerado no período escolhido
+ALTERADO_EM=08/11/2014 08:42
+SQL=<0><1>
+ORDEM=Fluxo_Caixa_CS.Periodo<Periodo>Fluxo_Caixa_CS.Conta_Caixa<Conta_Caixa>Fluxo_Caixa_CS.Periodo<Periodo>Fluxo_Caixa_CS.Descricao<Descricao>Fluxo_Caixa_CS.Total<Total>

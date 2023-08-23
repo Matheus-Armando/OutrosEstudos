@@ -1,0 +1,1963 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Fornecedor
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Carta'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 279000
+  PrinterSetup.mmPaperWidth = 216000
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1112-CLFNN.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 75
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBiulder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Fornecedor'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 203300
+      BandType = 1
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer10: TppDesignLayer
+            UserName = 'Foreground1'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 7673
+    mmPrintPosition = 0
+    object ppLabel23: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 32808
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'C'#243'digo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1323
+      mmTop = 4763
+      mmWidth = 11980
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3260
+      mmLeft = 14023
+      mmTop = 5027
+      mmWidth = 14552
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Nome Fantasia:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1323
+      mmTop = 265
+      mmWidth = 23707
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Nome_Fantasia'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 25929
+      mmTop = 529
+      mmWidth = 132292
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Data Cadastro:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 142875
+      mmTop = 9525
+      mmWidth = 22606
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Data_Cadastro'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 166952
+      mmTop = 9525
+      mmWidth = 22754
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Raz'#227'o Social:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 72962
+      mmTop = 5027
+      mmWidth = 20701
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Raz'#227'o_Social'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 94986
+      mmTop = 5027
+      mmWidth = 107156
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Endere'#231'o:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1323
+      mmTop = 14023
+      mmWidth = 15536
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Endere'#231'o'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 17992
+      mmTop = 14023
+      mmWidth = 121973
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Telefone:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 151342
+      mmTop = 23283
+      mmWidth = 13758
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Telefone'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 166423
+      mmTop = 23283
+      mmWidth = 30163
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      Caption = 'Fax:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 158582
+      mmTop = 27781
+      mmWidth = 6519
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'FAX'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 166952
+      mmTop = 27781
+      mmWidth = 35983
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      Caption = 'Email:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1323
+      mmTop = 27781
+      mmWidth = 9525
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'E_Mail'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 11642
+      mmTop = 27781
+      mmWidth = 68263
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      Caption = 'Home Page:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 75289
+      mmTop = 27781
+      mmWidth = 18373
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      DataField = 'Home_Page'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 94986
+      mmTop = 27781
+      mmWidth = 44979
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      Caption = 'Bairro:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1323
+      mmTop = 18785
+      mmWidth = 10372
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      DataField = 'Bairro'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3260
+      mmLeft = 12965
+      mmTop = 18785
+      mmWidth = 56092
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label11'
+      Caption = 'Cidade:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1323
+      mmTop = 23283
+      mmWidth = 11642
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      DataField = 'Cidade'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3260
+      mmLeft = 14552
+      mmTop = 23283
+      mmWidth = 65352
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      Caption = 'UF:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 88371
+      mmTop = 23283
+      mmWidth = 5249
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      DataField = 'UF'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3260
+      mmLeft = 94986
+      mmTop = 23283
+      mmWidth = 7408
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label13'
+      Caption = 'CEP:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 86254
+      mmTop = 18785
+      mmWidth = 7408
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      DataField = 'CEP'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 94986
+      mmTop = 18785
+      mmWidth = 32808
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label14'
+      Caption = 'CNPJ:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 1323
+      mmTop = 9525
+      mmWidth = 9483
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText14: TppDBText
+      UserName = 'DBText14'
+      DataField = 'CGC'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3260
+      mmLeft = 12171
+      mmTop = 9525
+      mmWidth = 39688
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label15'
+      Caption = 'I.E.:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 87842
+      mmTop = 9525
+      mmWidth = 5821
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText15: TppDBText
+      UserName = 'DBText15'
+      DataField = 'Inscri'#231#227'o_Estadual'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 95250
+      mmTop = 9525
+      mmWidth = 33338
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLabel17: TppLabel
+      UserName = 'Label16'
+      Caption = 'N'#250'mero:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 152136
+      mmTop = 14023
+      mmWidth = 12965
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText16: TppDBText
+      UserName = 'DBText16'
+      DataField = 'nro'
+      DataPipeline = daADOQueryDataView1.Fornecedor
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Fornecedor'
+      mmHeight = 3175
+      mmLeft = 166952
+      mmTop = 14023
+      mmWidth = 13758
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 1058
+      mmLeft = 0
+      mmTop = 32544
+      mmWidth = 203300
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 8467
+    mmPrintPosition = 0
+    object ppLine2: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 203300
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppLabel13: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95684
+      mmTop = 1852
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 2646
+    mmPrintPosition = 0
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Fornecedor'
+      Height = 709
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Fornecedor: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Fornecedor'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Fornecedor'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Fornecedor'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Nome_Fantasia'
+          FieldName = 'Nome_Fantasia'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 2
+          TableName = 'Fornecedor'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Data_Cadastro'
+          FieldName = 'Data_Cadastro'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'Fornecedor'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Data_Funda'#231#227'o'
+          FieldName = 'Data_Funda'#231#227'o'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 4
+          TableName = 'Fornecedor'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Raz'#227'o_Social'
+          FieldName = 'Raz'#227'o_Social'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 5
+          TableName = 'Fornecedor'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Endere'#231'o'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 6
+          TableName = 'Fornecedor'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Refer'#234'ncia'
+          FieldName = 'Refer'#234'ncia'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 7
+          TableName = 'Fornecedor'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Telefone'
+          FieldName = 'Telefone'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 8
+          TableName = 'Fornecedor'
+        end
+        object ppField10: TppField
+          FieldAlias = 'FAX'
+          FieldName = 'FAX'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 9
+          TableName = 'Fornecedor'
+        end
+        object ppField11: TppField
+          FieldAlias = 'E_Mail'
+          FieldName = 'E_Mail'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 10
+          TableName = 'Fornecedor'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Home_Page'
+          FieldName = 'Home_Page'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 11
+          TableName = 'Fornecedor'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Caixa_Postal'
+          FieldName = 'Caixa_Postal'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Fornecedor'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Bairro'
+          FieldName = 'Bairro'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 13
+          TableName = 'Fornecedor'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Cidade'
+          FieldName = 'Cidade'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 14
+          TableName = 'Fornecedor'
+        end
+        object ppField16: TppField
+          FieldAlias = 'UF'
+          FieldName = 'UF'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 15
+          TableName = 'Fornecedor'
+        end
+        object ppField17: TppField
+          FieldAlias = 'CEP'
+          FieldName = 'CEP'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'Fornecedor'
+        end
+        object ppField18: TppField
+          FieldAlias = 'CGC'
+          FieldName = 'CGC'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 17
+          TableName = 'Fornecedor'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Inscri'#231#227'o_Estadual'
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 18
+          TableName = 'Fornecedor'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Ramo_Atividade'
+          FieldName = 'Ramo_Atividade'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 19
+          TableName = 'Fornecedor'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Classe'
+          FieldName = 'Classe'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'Fornecedor'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Observa'#231#227'o'
+          FieldName = 'Observa'#231#227'o'
+          FieldLength = 150
+          DisplayWidth = 150
+          Position = 21
+          TableName = 'Fornecedor'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Anota'#231#227'o'
+          FieldName = 'Anota'#231#227'o'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'Fornecedor'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Conta_Ag'#234'ncia'
+          FieldName = 'Conta_Ag'#234'ncia'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'Fornecedor'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Conta_N'#250'mero'
+          FieldName = 'Conta_N'#250'mero'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 24
+          TableName = 'Fornecedor'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Representante_1'
+          FieldName = 'Representante_1'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 25
+          TableName = 'Fornecedor'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Contato_1'
+          FieldName = 'Contato_1'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 26
+          TableName = 'Fornecedor'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Telefone_1'
+          FieldName = 'Telefone_1'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 27
+          TableName = 'Fornecedor'
+        end
+        object ppField29: TppField
+          FieldAlias = 'FAX_1'
+          FieldName = 'FAX_1'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 28
+          TableName = 'Fornecedor'
+        end
+        object ppField30: TppField
+          FieldAlias = 'E_Mail_1'
+          FieldName = 'E_Mail_1'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 29
+          TableName = 'Fornecedor'
+        end
+        object ppField31: TppField
+          FieldAlias = 'Representante_2'
+          FieldName = 'Representante_2'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 30
+          TableName = 'Fornecedor'
+        end
+        object ppField32: TppField
+          FieldAlias = 'Contato_2'
+          FieldName = 'Contato_2'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 31
+          TableName = 'Fornecedor'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Telefone_2'
+          FieldName = 'Telefone_2'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 32
+          TableName = 'Fornecedor'
+        end
+        object ppField34: TppField
+          FieldAlias = 'FAX_2'
+          FieldName = 'FAX_2'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 33
+          TableName = 'Fornecedor'
+        end
+        object ppField35: TppField
+          FieldAlias = 'E_Mail_2'
+          FieldName = 'E_Mail_2'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 34
+          TableName = 'Fornecedor'
+        end
+        object ppField36: TppField
+          FieldAlias = 'Representante_3'
+          FieldName = 'Representante_3'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 35
+          TableName = 'Fornecedor'
+        end
+        object ppField37: TppField
+          FieldAlias = 'Contato_3'
+          FieldName = 'Contato_3'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 36
+          TableName = 'Fornecedor'
+        end
+        object ppField38: TppField
+          FieldAlias = 'Telefone_3'
+          FieldName = 'Telefone_3'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 37
+          TableName = 'Fornecedor'
+        end
+        object ppField39: TppField
+          FieldAlias = 'FAX_3'
+          FieldName = 'FAX_3'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 38
+          TableName = 'Fornecedor'
+        end
+        object ppField40: TppField
+          FieldAlias = 'E_Mail_3'
+          FieldName = 'E_Mail_3'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 39
+          TableName = 'Fornecedor'
+        end
+        object ppField41: TppField
+          FieldAlias = 'Acr'#233'scimo_Financeiro_M'#233'dio'
+          FieldName = 'Acr'#233'scimo_Financeiro_M'#233'di'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'Fornecedor'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Usuario'
+          FieldName = 'Usuario'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'Fornecedor'
+        end
+        object ppField43: TppField
+          FieldAlias = 'Pessoa_F'#237'sica'
+          FieldName = 'Pessoa_F'#237'sica'
+          FieldLength = 0
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 42
+          TableName = 'Fornecedor'
+        end
+        object ppField44: TppField
+          FieldAlias = 'Anexos'
+          FieldName = 'Anexos'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'Fornecedor'
+        end
+        object ppField45: TppField
+          FieldAlias = 'nro'
+          FieldName = 'nro'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 44
+          TableName = 'Fornecedor'
+        end
+        object ppField46: TppField
+          FieldAlias = 'Conta_Banco'
+          FieldName = 'Conta_Banco'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'Fornecedor'
+        end
+        object ppField47: TppField
+          FieldAlias = 'Optante_Simples_Nacional'
+          FieldName = 'Optante_Simples_Nacional'
+          FieldLength = 0
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 46
+          TableName = 'Fornecedor'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Fornecedor'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Fornecedor.Codigo, Fornecedor.Empresa, '
+          '       Fornecedor.Nome_Fantasia, '
+          '       Fornecedor.Data_Cadastro, '
+          '       Fornecedor.Data_Funda'#231#227'o, '
+          '       Fornecedor.Raz'#227'o_Social, '
+          '       Fornecedor.Endere'#231'o, '
+          '       Fornecedor.Refer'#234'ncia, '
+          '       Fornecedor.Telefone, Fornecedor.FAX, '
+          '       Fornecedor.E_Mail, Fornecedor.Home_Page, '
+          '       Fornecedor.Caixa_Postal, '
+          '       Fornecedor.Bairro, Fornecedor.Cidade, '
+          '       Fornecedor.UF, Fornecedor.CEP, '
+          '       Fornecedor.CGC, '
+          '       Fornecedor.Inscri'#231#227'o_Estadual, '
+          '       Fornecedor.Ramo_Atividade, '
+          '       Fornecedor.Classe, Fornecedor.Observa'#231#227'o, '
+          '       Fornecedor.Anota'#231#227'o, '
+          '       Fornecedor.Conta_Ag'#234'ncia, '
+          '       Fornecedor.Conta_N'#250'mero, '
+          '       Fornecedor.Representante_1, '
+          '       Fornecedor.Contato_1, '
+          '       Fornecedor.Telefone_1, Fornecedor.FAX_1, '
+          '       Fornecedor.E_Mail_1, '
+          '       Fornecedor.Representante_2, '
+          '       Fornecedor.Contato_2, '
+          '       Fornecedor.Telefone_2, Fornecedor.FAX_2, '
+          '       Fornecedor.E_Mail_2, '
+          '       Fornecedor.Representante_3, '
+          '       Fornecedor.Contato_3, '
+          '       Fornecedor.Telefone_3, Fornecedor.FAX_3, '
+          '       Fornecedor.E_Mail_3, '
+          
+            '       Fornecedor.Acr'#233'scimo_Financeiro_M'#233'dio AS Acr'#233'scimo_Financ' +
+            'eiro_M'#233'di, '
+          '       Fornecedor.Usuario, '
+          '       Fornecedor.Pessoa_F'#237'sica, '
+          '       Fornecedor.Anexos, Fornecedor.nro, '
+          '       Fornecedor.Conta_Banco, '
+          '       Fornecedor.Optante_Simples_Nacional'
+          'FROM Fornecedor Fornecedor'
+          'WHERE ( Fornecedor.Codigo BETWEEN 1 AND 999999 )'
+          '       AND ( Fornecedor.Inativo <> TRUE )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Fornecedor'
+            TableName = 'Fornecedor'
+            TableSQLAlias = 'Fornecedor'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Inativo'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Inativo'
+            FieldLength = 0
+            FieldName = 'Inativo'
+            SQLFieldName = 'Inativo'
+            TableAlias = 'Fornecedor'
+            TableName = 'Fornecedor'
+            TableSQLAlias = 'Fornecedor'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField3: TdaField
+          Alias = 'Nome_Fantasia'
+          DisplayWidth = 50
+          FieldAlias = 'Nome_Fantasia'
+          FieldLength = 50
+          FieldName = 'Nome_Fantasia'
+          SQLFieldName = 'Nome_Fantasia'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField4: TdaField
+          Alias = 'Data_Cadastro'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Cadastro'
+          FieldLength = 0
+          FieldName = 'Data_Cadastro'
+          SQLFieldName = 'Data_Cadastro'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField5: TdaField
+          Alias = 'Data_Funda'#231#227'o'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Funda'#231#227'o'
+          FieldLength = 0
+          FieldName = 'Data_Funda'#231#227'o'
+          SQLFieldName = 'Data_Funda'#231#227'o'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField6: TdaField
+          Alias = 'Raz'#227'o_Social'
+          DisplayWidth = 50
+          FieldAlias = 'Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Raz'#227'o_Social'
+          SQLFieldName = 'Raz'#227'o_Social'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField7: TdaField
+          Alias = 'Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Endere'#231'o'
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField8: TdaField
+          Alias = 'Refer'#234'ncia'
+          DisplayWidth = 50
+          FieldAlias = 'Refer'#234'ncia'
+          FieldLength = 50
+          FieldName = 'Refer'#234'ncia'
+          SQLFieldName = 'Refer'#234'ncia'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField9: TdaField
+          Alias = 'Telefone'
+          DisplayWidth = 30
+          FieldAlias = 'Telefone'
+          FieldLength = 30
+          FieldName = 'Telefone'
+          SQLFieldName = 'Telefone'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField10: TdaField
+          Alias = 'FAX'
+          DisplayWidth = 30
+          FieldAlias = 'FAX'
+          FieldLength = 30
+          FieldName = 'FAX'
+          SQLFieldName = 'FAX'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField11: TdaField
+          Alias = 'E_Mail'
+          DisplayWidth = 50
+          FieldAlias = 'E_Mail'
+          FieldLength = 50
+          FieldName = 'E_Mail'
+          SQLFieldName = 'E_Mail'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField12: TdaField
+          Alias = 'Home_Page'
+          DisplayWidth = 50
+          FieldAlias = 'Home_Page'
+          FieldLength = 50
+          FieldName = 'Home_Page'
+          SQLFieldName = 'Home_Page'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField13: TdaField
+          Alias = 'Caixa_Postal'
+          DisplayWidth = 10
+          FieldAlias = 'Caixa_Postal'
+          FieldLength = 10
+          FieldName = 'Caixa_Postal'
+          SQLFieldName = 'Caixa_Postal'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField14: TdaField
+          Alias = 'Bairro'
+          DisplayWidth = 30
+          FieldAlias = 'Bairro'
+          FieldLength = 30
+          FieldName = 'Bairro'
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField15: TdaField
+          Alias = 'Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Cidade'
+          FieldLength = 50
+          FieldName = 'Cidade'
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField16: TdaField
+          Alias = 'UF'
+          DisplayWidth = 2
+          FieldAlias = 'UF'
+          FieldLength = 2
+          FieldName = 'UF'
+          SQLFieldName = 'UF'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField17: TdaField
+          Alias = 'CEP'
+          DisplayWidth = 10
+          FieldAlias = 'CEP'
+          FieldLength = 10
+          FieldName = 'CEP'
+          SQLFieldName = 'CEP'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField18: TdaField
+          Alias = 'CGC'
+          DisplayWidth = 20
+          FieldAlias = 'CGC'
+          FieldLength = 20
+          FieldName = 'CGC'
+          SQLFieldName = 'CGC'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField19: TdaField
+          Alias = 'Inscri'#231#227'o_Estadual'
+          DisplayWidth = 20
+          FieldAlias = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          SQLFieldName = 'Inscri'#231#227'o_Estadual'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField20: TdaField
+          Alias = 'Ramo_Atividade'
+          DisplayWidth = 50
+          FieldAlias = 'Ramo_Atividade'
+          FieldLength = 50
+          FieldName = 'Ramo_Atividade'
+          SQLFieldName = 'Ramo_Atividade'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField21: TdaField
+          Alias = 'Classe'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Classe'
+          FieldLength = 0
+          FieldName = 'Classe'
+          SQLFieldName = 'Classe'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField22: TdaField
+          Alias = 'Observa'#231#227'o'
+          DisplayWidth = 150
+          FieldAlias = 'Observa'#231#227'o'
+          FieldLength = 150
+          FieldName = 'Observa'#231#227'o'
+          SQLFieldName = 'Observa'#231#227'o'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField23: TdaField
+          Alias = 'Anota'#231#227'o'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Anota'#231#227'o'
+          FieldLength = 0
+          FieldName = 'Anota'#231#227'o'
+          Linkable = False
+          SQLFieldName = 'Anota'#231#227'o'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField24: TdaField
+          Alias = 'Conta_Ag'#234'ncia'
+          DisplayWidth = 10
+          FieldAlias = 'Conta_Ag'#234'ncia'
+          FieldLength = 10
+          FieldName = 'Conta_Ag'#234'ncia'
+          SQLFieldName = 'Conta_Ag'#234'ncia'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField25: TdaField
+          Alias = 'Conta_N'#250'mero'
+          DisplayWidth = 20
+          FieldAlias = 'Conta_N'#250'mero'
+          FieldLength = 20
+          FieldName = 'Conta_N'#250'mero'
+          SQLFieldName = 'Conta_N'#250'mero'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField26: TdaField
+          Alias = 'Representante_1'
+          DisplayWidth = 50
+          FieldAlias = 'Representante_1'
+          FieldLength = 50
+          FieldName = 'Representante_1'
+          SQLFieldName = 'Representante_1'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField27: TdaField
+          Alias = 'Contato_1'
+          DisplayWidth = 50
+          FieldAlias = 'Contato_1'
+          FieldLength = 50
+          FieldName = 'Contato_1'
+          SQLFieldName = 'Contato_1'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField28: TdaField
+          Alias = 'Telefone_1'
+          DisplayWidth = 30
+          FieldAlias = 'Telefone_1'
+          FieldLength = 30
+          FieldName = 'Telefone_1'
+          SQLFieldName = 'Telefone_1'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField29: TdaField
+          Alias = 'FAX_1'
+          DisplayWidth = 30
+          FieldAlias = 'FAX_1'
+          FieldLength = 30
+          FieldName = 'FAX_1'
+          SQLFieldName = 'FAX_1'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField30: TdaField
+          Alias = 'E_Mail_1'
+          DisplayWidth = 50
+          FieldAlias = 'E_Mail_1'
+          FieldLength = 50
+          FieldName = 'E_Mail_1'
+          SQLFieldName = 'E_Mail_1'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField31: TdaField
+          Alias = 'Representante_2'
+          DisplayWidth = 50
+          FieldAlias = 'Representante_2'
+          FieldLength = 50
+          FieldName = 'Representante_2'
+          SQLFieldName = 'Representante_2'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField32: TdaField
+          Alias = 'Contato_2'
+          DisplayWidth = 50
+          FieldAlias = 'Contato_2'
+          FieldLength = 50
+          FieldName = 'Contato_2'
+          SQLFieldName = 'Contato_2'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField33: TdaField
+          Alias = 'Telefone_2'
+          DisplayWidth = 30
+          FieldAlias = 'Telefone_2'
+          FieldLength = 30
+          FieldName = 'Telefone_2'
+          SQLFieldName = 'Telefone_2'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField34: TdaField
+          Alias = 'FAX_2'
+          DisplayWidth = 30
+          FieldAlias = 'FAX_2'
+          FieldLength = 30
+          FieldName = 'FAX_2'
+          SQLFieldName = 'FAX_2'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField35: TdaField
+          Alias = 'E_Mail_2'
+          DisplayWidth = 50
+          FieldAlias = 'E_Mail_2'
+          FieldLength = 50
+          FieldName = 'E_Mail_2'
+          SQLFieldName = 'E_Mail_2'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField36: TdaField
+          Alias = 'Representante_3'
+          DisplayWidth = 50
+          FieldAlias = 'Representante_3'
+          FieldLength = 50
+          FieldName = 'Representante_3'
+          SQLFieldName = 'Representante_3'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField37: TdaField
+          Alias = 'Contato_3'
+          DisplayWidth = 50
+          FieldAlias = 'Contato_3'
+          FieldLength = 50
+          FieldName = 'Contato_3'
+          SQLFieldName = 'Contato_3'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField38: TdaField
+          Alias = 'Telefone_3'
+          DisplayWidth = 30
+          FieldAlias = 'Telefone_3'
+          FieldLength = 30
+          FieldName = 'Telefone_3'
+          SQLFieldName = 'Telefone_3'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField39: TdaField
+          Alias = 'FAX_3'
+          DisplayWidth = 30
+          FieldAlias = 'FAX_3'
+          FieldLength = 30
+          FieldName = 'FAX_3'
+          SQLFieldName = 'FAX_3'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField40: TdaField
+          Alias = 'E_Mail_3'
+          DisplayWidth = 50
+          FieldAlias = 'E_Mail_3'
+          FieldLength = 50
+          FieldName = 'E_Mail_3'
+          SQLFieldName = 'E_Mail_3'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField41: TdaField
+          Alias = 'Acr'#233'scimo_Financeiro_M'#233'dio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Acr'#233'scimo_Financeiro_M'#233'dio'
+          FieldLength = 0
+          FieldName = 'Acr'#233'scimo_Financeiro_M'#233'dio'
+          SQLFieldName = 'Acr'#233'scimo_Financeiro_M'#233'di'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField42: TdaField
+          Alias = 'Usuario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Usuario'
+          FieldLength = 0
+          FieldName = 'Usuario'
+          SQLFieldName = 'Usuario'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField43: TdaField
+          Alias = 'Pessoa_F'#237'sica'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Pessoa_F'#237'sica'
+          FieldLength = 0
+          FieldName = 'Pessoa_F'#237'sica'
+          SQLFieldName = 'Pessoa_F'#237'sica'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField44: TdaField
+          Alias = 'Anexos'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Anexos'
+          FieldLength = 0
+          FieldName = 'Anexos'
+          Linkable = False
+          SQLFieldName = 'Anexos'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField45: TdaField
+          Alias = 'nro'
+          DisplayWidth = 20
+          FieldAlias = 'nro'
+          FieldLength = 20
+          FieldName = 'nro'
+          SQLFieldName = 'nro'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField46: TdaField
+          Alias = 'Conta_Banco'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Conta_Banco'
+          FieldLength = 0
+          FieldName = 'Conta_Banco'
+          SQLFieldName = 'Conta_Banco'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daField47: TdaField
+          Alias = 'Optante_Simples_Nacional'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Optante_Simples_Nacional'
+          FieldLength = 0
+          FieldName = 'Optante_Simples_Nacional'
+          SQLFieldName = 'Optante_Simples_Nacional'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+          TableSQLAlias = 'Fornecedor'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Fornecedor'
+          JoinType = dajtNone
+          SQLAlias = 'Fornecedor'
+          TableAlias = 'Fornecedor'
+          TableName = 'Fornecedor'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 10
+    end
+  end
+  object ppParameterList: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Fornecedor@Fornecedores@ID@Nome@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Fornecedores@Documentos
+NOME=Ficha Cadastral
+DESCRICAO=Imprime algumas informações do Fornecedor
+ALTERADO_EM=18/12/2014 09:07
+SQL=<0>

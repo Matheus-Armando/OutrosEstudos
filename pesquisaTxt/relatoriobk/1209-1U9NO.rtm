@@ -1,0 +1,4290 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1209-1U9NO.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Servicos_Cabecalho'
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 79904
+    mmPrintPosition = 0
+    object ppShape3: TppShape
+      UserName = 'Shape3'
+      Pen.Color = clActiveBorder
+      mmHeight = 20902
+      mmLeft = 0
+      mmTop = 33338
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppShape2: TppShape
+      UserName = 'Shape2'
+      Pen.Color = clActiveBorder
+      mmHeight = 10583
+      mmLeft = 0
+      mmTop = 67469
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppShape1: TppShape
+      UserName = 'Shape1'
+      Pen.Color = clActiveBorder
+      mmHeight = 10583
+      mmLeft = 0
+      mmTop = 55563
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'Ordem de Servi'#231'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 15
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 6350
+      mmLeft = 34396
+      mmTop = 24871
+      mmWidth = 131498
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine1: TppLine
+      UserName = 'Line2'
+      Pen.Color = clSilver
+      Pen.Width = 2
+      Weight = 1.500000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 23019
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppRichText2: TppRichText
+      UserName = 'RichText2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText2'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcha' +
+        'rset0 Arial;}{\f1\fnil Tahoma;}}'#13#10'\viewkind4\uc1\pard\b\fs18 N\'#39 +
+        'ba O.S.: \b0 <dbtext>Codigo</dbtext> \par'#13#10'\b Cliente: \b0 <dbte' +
+        'xt>C\'#39'f3digo_Cliente</dbtext> - <dbtext>Nome_Cliente</dbtext>\pa' +
+        'r'#13#10'\b Endere\'#39'e7o: \b0 <dbtext>Endere\'#39'e7o</dbtext>             ' +
+        '          \tab       \b Bairro: \b0 <dbtext>Bairro</dbtext> \par' +
+        #13#10'\b Cidade: \b0 <dbtext>Munic\'#39'edpio</dbtext>                  ' +
+        '                    \b UF: \b0 <dbtext>UF</dbtext>\tab\b CEP:\b0' +
+        '  <dbtext>Cep</dbtext>\par'#13#10'\b Fone: \b0 <dbtext>Fone</dbtext>\f' +
+        '1\fs16\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      mmHeight = 19844
+      mmLeft = 1058
+      mmTop = 34131
+      mmWidth = 197909
+      BandType = 0
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppRichText3: TppRichText
+      UserName = 'RichText3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText3'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcha' +
+        'rset0 Arial;}{\f1\fnil Tahoma;}}'#13#10'\viewkind4\uc1\pard\b\fs18 Ate' +
+        'ndente: \b0 <dbtext>Atendente</dbtext>\par'#13#10'\b Solicitado Por: \' +
+        'b0 <dbtext>Solicitado_Por</dbtext>          \b Data Entrada: \b0' +
+        ' <dbtext>Data_Entrada</dbtext>            \b Hora Entrada:\b0  <' +
+        'dbtext>Hora_Entrada</dbtext>\f1\fs16\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      mmHeight = 8731
+      mmLeft = 1058
+      mmTop = 56621
+      mmWidth = 197909
+      BandType = 0
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppRichText4: TppRichText
+      UserName = 'RichText4'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText4'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcha' +
+        'rset0 Arial;}{\f1\fnil Tahoma;}}'#13#10'\viewkind4\uc1\pard\b\fs18 Pri' +
+        'oridade: \b0 <dbtext>PRIORIDADE</dbtext>            \b Tipo Aten' +
+        'dimento: \b0 <dbtext>DESCRICAO_TIPO</dbtext>             \b Stat' +
+        'us:\b0  <dbtext>DESCRICAO_ST</dbtext>\par'#13#10'\b Modalidade: \b0 <d' +
+        'btext>DESCRICAO_MOD</dbtext>\f1\fs16\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      mmHeight = 8467
+      mmLeft = 794
+      mmTop = 68527
+      mmWidth = 198702
+      BandType = 0
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Draft 17cpi'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      Caption = 'RichText1'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil Aria' +
+        'l;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil Draft 17cpi;}}'#13#10'{\colort' +
+        'bl ;\red0\green0\blue0;}'#13#10'\viewkind4\uc1\pard\cf1\b\f0\fs26 <dbt' +
+        'ext>NomeFantasia_Empresa</dbtext>\par'#13#10'\b0\f1\fs22 <dbtext>Ender' +
+        'eco_Empresa</dbtext>, <dbtext>N\'#39'famero_Empresa</dbtext> - <dbte' +
+        'xt>Bairro_Empresa</dbtext>\f0\par'#13#10'<dbtext>Cidade_Empresa</dbtex' +
+        't> - <dbtext>UF_Empresa</dbtext> - <dbtext>CEP_Empresa</dbtext>\' +
+        'par'#13#10'\b\f2\fs28\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Transparent = True
+      mmHeight = 17198
+      mmLeft = 52652
+      mmTop = 2646
+      mmWidth = 132821
+      BandType = 0
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppImage1: TppImage
+      UserName = 'Image1'
+      AlignHorizontal = ahCenter
+      AlignVertical = avCenter
+      MaintainAspectRatio = False
+      mmHeight = 17198
+      mmLeft = 1058
+      mmTop = 2646
+      mmWidth = 50271
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 16140
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      DataPipelineName = 'Equipamentos'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView2.Equipamentos
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Equipamentos'
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 12965
+          mmPrintPosition = 0
+          object ppLabel10: TppLabel
+            UserName = 'Label10'
+            AutoSize = False
+            Caption = 'Equipamentos'
+            Color = cl3DLight
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold, fsItalic]
+            TextAlignment = taCentered
+            mmHeight = 4106
+            mmLeft = 0
+            mmTop = 2646
+            mmWidth = 200025
+            BandType = 1
+            LayerName = Foreground3
+          end
+          object ppLine7: TppLine
+            UserName = 'Line7'
+            ParentWidth = True
+            Weight = 1.000000000000000000
+            mmHeight = 265
+            mmLeft = 0
+            mmTop = 12700
+            mmWidth = 200080
+            BandType = 1
+            LayerName = Foreground3
+          end
+          object ppLabel14: TppLabel
+            UserName = 'Label14'
+            AutoSize = False
+            Caption = 'C'#243'digo'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 265
+            mmTop = 8731
+            mmWidth = 14817
+            BandType = 1
+            LayerName = Foreground3
+          end
+          object ppLabel24: TppLabel
+            UserName = 'Label24'
+            AutoSize = False
+            Caption = 'Descri'#231#227'o'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 16140
+            mmTop = 8731
+            mmWidth = 107421
+            BandType = 1
+            LayerName = Foreground3
+          end
+          object ppLabel25: TppLabel
+            UserName = 'Label25'
+            AutoSize = False
+            Caption = 'Qtde'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 126736
+            mmTop = 8731
+            mmWidth = 12700
+            BandType = 1
+            LayerName = Foreground3
+          end
+          object ppLabel27: TppLabel
+            UserName = 'Label27'
+            AutoSize = False
+            Caption = 'Nro. S'#233'rie'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 141817
+            mmTop = 8731
+            mmWidth = 26723
+            BandType = 1
+            LayerName = Foreground3
+          end
+          object ppLabel31: TppLabel
+            UserName = 'Label31'
+            AutoSize = False
+            Caption = 'Nota'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 170392
+            mmTop = 8731
+            mmWidth = 29633
+            BandType = 1
+            LayerName = Foreground3
+          end
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 3704
+          mmPrintPosition = 0
+          object ppDBText1: TppDBText
+            UserName = 'DBText101'
+            DataField = 'C'#243'digo_Equipamento'
+            DataPipeline = daADOQueryDataView2.Equipamentos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'Equipamentos'
+            mmHeight = 3260
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 14817
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText16: TppDBText
+            UserName = 'DBText16'
+            DataField = 'Quantidade'
+            DataPipeline = daADOQueryDataView2.Equipamentos
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'Equipamentos'
+            mmHeight = 3704
+            mmLeft = 126736
+            mmTop = 0
+            mmWidth = 12700
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText21: TppDBText
+            UserName = 'DBText21'
+            DataField = 'Descri'#231#227'o'
+            DataPipeline = daADOQueryDataView2.Equipamentos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Equipamentos'
+            mmHeight = 3704
+            mmLeft = 18256
+            mmTop = 0
+            mmWidth = 105304
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText40: TppDBText
+            UserName = 'DBText40'
+            DataField = 'Nro_Nota'
+            DataPipeline = daADOQueryDataView2.Equipamentos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Equipamentos'
+            mmHeight = 3260
+            mmLeft = 170392
+            mmTop = 0
+            mmWidth = 29633
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText2: TppDBText
+            UserName = 'DBText401'
+            DataField = 'Nro_S'#233'rie'
+            DataPipeline = daADOQueryDataView2.Equipamentos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Equipamentos'
+            mmHeight = 3704
+            mmLeft = 141817
+            mmTop = 0
+            mmWidth = 26723
+            BandType = 4
+            LayerName = Foreground3
+          end
+        end
+        object ppSummaryBand2: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule3: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers4: TppDesignLayers
+          object ppDesignLayer4: TppDesignLayer
+            UserName = 'Foreground3'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppSubReport2: TppSubReport
+      UserName = 'SubReport2'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ShiftRelativeTo = ppSubReport1
+      TraverseAllData = False
+      DataPipelineName = 'Produtos'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 5556
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport2: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView3.Produtos
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Produtos'
+        object ppTitleBand3: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 12965
+          mmPrintPosition = 0
+          object ppLabel8: TppLabel
+            UserName = 'Label101'
+            AutoSize = False
+            Caption = 'Produtos'
+            Color = cl3DLight
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold, fsItalic]
+            TextAlignment = taCentered
+            mmHeight = 4106
+            mmLeft = 0
+            mmTop = 2910
+            mmWidth = 200025
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLine4: TppLine
+            UserName = 'Line1'
+            ParentWidth = True
+            Weight = 1.000000000000000000
+            mmHeight = 265
+            mmLeft = 0
+            mmTop = 12700
+            mmWidth = 200080
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel32: TppLabel
+            UserName = 'Label32'
+            AutoSize = False
+            Caption = 'Vend.'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 0
+            mmTop = 8731
+            mmWidth = 8996
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel33: TppLabel
+            UserName = 'Label33'
+            AutoSize = False
+            Caption = 'C'#243'digo'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 11113
+            mmTop = 8731
+            mmWidth = 16933
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel34: TppLabel
+            UserName = 'Label34'
+            AutoSize = False
+            Caption = 'Qtde.'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 121973
+            mmTop = 8731
+            mmWidth = 10054
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel35: TppLabel
+            UserName = 'Label35'
+            AutoSize = False
+            Caption = 'Valor Unit'#225'rio'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 134144
+            mmTop = 8731
+            mmWidth = 20373
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel36: TppLabel
+            UserName = 'Label36'
+            AutoSize = False
+            Caption = 'Valor Total'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 181505
+            mmTop = 8731
+            mmWidth = 18785
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel37: TppLabel
+            UserName = 'Label37'
+            AutoSize = False
+            Caption = 'Descri'#231#227'o'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 30692
+            mmTop = 8731
+            mmWidth = 87048
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel9: TppLabel
+            UserName = 'Label9'
+            AutoSize = False
+            Caption = 'Desconto R$'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 157957
+            mmTop = 8731
+            mmWidth = 19315
+            BandType = 1
+            LayerName = Foreground
+          end
+        end
+        object ppDetailBand2: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          PrintHeight = phDynamic
+          mmBottomOffset = 0
+          mmHeight = 5027
+          mmPrintPosition = 0
+          object ppSubReport4: TppSubReport
+            UserName = 'SubReport4'
+            ExpandAll = False
+            NewPrintJob = False
+            OutlineSettings.CreateNode = True
+            TraverseAllData = False
+            DataPipelineName = 'GradeSequencial'
+            mmHeight = 5027
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 200080
+            BandType = 4
+            LayerName = Foreground
+            mmBottomOffset = 0
+            mmOverFlowOffset = 0
+            mmStopPosition = 0
+            mmMinHeight = 0
+            object ppChildReport4: TppChildReport
+              AutoStop = False
+              DataPipeline = daADOQueryDataView5.GradeSequencial
+              PrinterSetup.BinName = 'Default'
+              PrinterSetup.DocumentName = 'Report'
+              PrinterSetup.PaperName = 'A4'
+              PrinterSetup.PrinterName = 'Default'
+              PrinterSetup.SaveDeviceSettings = False
+              PrinterSetup.mmMarginBottom = 5000
+              PrinterSetup.mmMarginLeft = 5000
+              PrinterSetup.mmMarginRight = 5000
+              PrinterSetup.mmMarginTop = 5000
+              PrinterSetup.mmPaperHeight = 297128
+              PrinterSetup.mmPaperWidth = 210080
+              PrinterSetup.PaperSize = 9
+              Template.Format = ftASCII
+              Units = utScreenPixels
+              Version = '15.04'
+              mmColumnWidth = 0
+              DataPipelineName = 'GradeSequencial'
+              object ppDetailBand4: TppDetailBand
+                Background1.Brush.Style = bsClear
+                Background2.Brush.Style = bsClear
+                mmBottomOffset = 0
+                mmHeight = 3969
+                mmPrintPosition = 0
+                object ppDBText7: TppDBText
+                  UserName = 'DBText7'
+                  Color = clWindow
+                  DataField = 'Sequencial'
+                  DataPipeline = daADOQueryDataView5.GradeSequencial
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clGray
+                  Font.Name = 'ARIAL'
+                  Font.Size = 8
+                  Font.Style = [fsItalic]
+                  ParentDataPipeline = False
+                  TextAlignment = taCentered
+                  Transparent = True
+                  DataPipelineName = 'GradeSequencial'
+                  mmHeight = 3302
+                  mmLeft = 11113
+                  mmTop = 0
+                  mmWidth = 16933
+                  BandType = 4
+                  LayerName = Foreground4
+                end
+                object ppDBText9: TppDBText
+                  UserName = 'DBText9'
+                  Color = clWindow
+                  DataField = 'Pre'#231'o'
+                  DataPipeline = daADOQueryDataView5.GradeSequencial
+                  DisplayFormat = '#,0.00;-#,0.00'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clGray
+                  Font.Name = 'ARIAL'
+                  Font.Size = 8
+                  Font.Style = [fsItalic]
+                  ParentDataPipeline = False
+                  TextAlignment = taRightJustified
+                  Transparent = True
+                  DataPipelineName = 'GradeSequencial'
+                  mmHeight = 3302
+                  mmLeft = 170392
+                  mmTop = 0
+                  mmWidth = 29633
+                  BandType = 4
+                  LayerName = Foreground4
+                end
+                object ppDBText10: TppDBText
+                  UserName = 'DBText10'
+                  Color = clWindow
+                  DataField = 'Descri'#231#227'o'
+                  DataPipeline = daADOQueryDataView5.GradeSequencial
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clGray
+                  Font.Name = 'ARIAL'
+                  Font.Size = 8
+                  Font.Style = [fsItalic]
+                  ParentDataPipeline = False
+                  Transparent = True
+                  DataPipelineName = 'GradeSequencial'
+                  mmHeight = 3302
+                  mmLeft = 30692
+                  mmTop = 0
+                  mmWidth = 103717
+                  BandType = 4
+                  LayerName = Foreground4
+                end
+                object ppDBText12: TppDBText
+                  UserName = 'DBText12'
+                  Color = clWindow
+                  DataField = 'Quantidade'
+                  DataPipeline = daADOQueryDataView5.GradeSequencial
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clGray
+                  Font.Name = 'ARIAL'
+                  Font.Size = 8
+                  Font.Style = [fsItalic]
+                  ParentDataPipeline = False
+                  TextAlignment = taCentered
+                  Transparent = True
+                  DataPipelineName = 'GradeSequencial'
+                  mmHeight = 3302
+                  mmLeft = 136261
+                  mmTop = 0
+                  mmWidth = 10054
+                  BandType = 4
+                  LayerName = Foreground4
+                end
+              end
+              object ppDesignLayers5: TppDesignLayers
+                object ppDesignLayer5: TppDesignLayer
+                  UserName = 'Foreground4'
+                  LayerType = ltBanded
+                  Index = 0
+                end
+              end
+            end
+          end
+        end
+        object ppSummaryBand1: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 6350
+          mmPrintPosition = 0
+          object ppDBText8: TppDBText
+            UserName = 'DBText1'
+            DataField = 'Total_Produtos'
+            DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 9
+            Font.Style = [fsItalic]
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Servicos_Cabecalho'
+            mmHeight = 3641
+            mmLeft = 170657
+            mmTop = 1323
+            mmWidth = 29369
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLabel2: TppLabel
+            UserName = 'Label2'
+            Caption = 'Total de Produtos:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 141023
+            mmTop = 1323
+            mmWidth = 27781
+            BandType = 7
+            LayerName = Foreground
+          end
+        end
+        object ppGroup1: TppGroup
+          BreakName = 'C'#243'digo_Produto'
+          DataPipeline = daADOQueryDataView3.Produtos
+          GroupFileSettings.NewFile = False
+          GroupFileSettings.EmailFile = False
+          KeepTogether = True
+          OutlineSettings.CreateNode = True
+          StartOnOddPage = False
+          UserName = 'Group1'
+          mmNewColumnThreshold = 0
+          mmNewPageThreshold = 0
+          DataPipelineName = 'Produtos'
+          NewFile = False
+          object ppGroupHeaderBand1: TppGroupHeaderBand
+            Background.Brush.Style = bsClear
+            mmBottomOffset = 0
+            mmHeight = 3969
+            mmPrintPosition = 0
+            object ppDBText3: TppDBText
+              UserName = 'DBText3'
+              DataField = 'C'#243'digo_Produto'
+              DataPipeline = daADOQueryDataView3.Produtos
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'ARIAL'
+              Font.Size = 8
+              Font.Style = []
+              ParentDataPipeline = False
+              TextAlignment = taCentered
+              Transparent = True
+              DataPipelineName = 'Produtos'
+              mmHeight = 3260
+              mmLeft = 11113
+              mmTop = 265
+              mmWidth = 16933
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground
+            end
+            object ppDBText4: TppDBText
+              UserName = 'DBText4'
+              DataField = 'Custo_Unit'#225'rio'
+              DataPipeline = daADOQueryDataView3.Produtos
+              DisplayFormat = '#,0.00;-#,0.00'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'ARIAL'
+              Font.Size = 8
+              Font.Style = []
+              ParentDataPipeline = False
+              TextAlignment = taCentered
+              Transparent = True
+              DataPipelineName = 'Produtos'
+              mmHeight = 3260
+              mmLeft = 134144
+              mmTop = 265
+              mmWidth = 20373
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground
+            end
+            object ppDBText5: TppDBText
+              UserName = 'DBText5'
+              DataField = 'Custo_Total'
+              DataPipeline = daADOQueryDataView3.Produtos
+              DisplayFormat = '#,0.00;-#,0.00'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'ARIAL'
+              Font.Size = 8
+              Font.Style = []
+              ParentDataPipeline = False
+              TextAlignment = taRightJustified
+              Transparent = True
+              DataPipelineName = 'Produtos'
+              mmHeight = 3704
+              mmLeft = 181505
+              mmTop = 265
+              mmWidth = 18785
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground
+            end
+            object ppDBText6: TppDBText
+              UserName = 'DBText6'
+              DataField = 'Nome_Produto'
+              DataPipeline = daADOQueryDataView3.Produtos
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'ARIAL'
+              Font.Size = 8
+              Font.Style = []
+              ParentDataPipeline = False
+              Transparent = True
+              DataPipelineName = 'Produtos'
+              mmHeight = 3704
+              mmLeft = 30692
+              mmTop = 265
+              mmWidth = 87048
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground
+            end
+            object ppDBText36: TppDBText
+              UserName = 'DBText36'
+              DataField = 'Vendedor'
+              DataPipeline = daADOQueryDataView3.Produtos
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'ARIAL'
+              Font.Size = 8
+              Font.Style = []
+              ParentDataPipeline = False
+              TextAlignment = taCentered
+              Transparent = True
+              DataPipelineName = 'Produtos'
+              mmHeight = 3175
+              mmLeft = 0
+              mmTop = 265
+              mmWidth = 8996
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground
+            end
+            object ppDBText37: TppDBText
+              UserName = 'DBText37'
+              DataField = 'Quantidade'
+              DataPipeline = daADOQueryDataView3.Produtos
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'ARIAL'
+              Font.Size = 8
+              Font.Style = []
+              ParentDataPipeline = False
+              TextAlignment = taCentered
+              Transparent = True
+              DataPipelineName = 'Produtos'
+              mmHeight = 3175
+              mmLeft = 121973
+              mmTop = 265
+              mmWidth = 10054
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground
+            end
+            object ppDBText18: TppDBText
+              UserName = 'DBText18'
+              DataField = 'Desconto_2'
+              DataPipeline = daADOQueryDataView3.Produtos
+              DisplayFormat = '#,0.00;-#,0.00'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'ARIAL'
+              Font.Size = 8
+              Font.Style = []
+              ParentDataPipeline = False
+              TextAlignment = taCentered
+              Transparent = True
+              DataPipelineName = 'Produtos'
+              mmHeight = 3260
+              mmLeft = 157957
+              mmTop = 265
+              mmWidth = 19315
+              BandType = 3
+              GroupNo = 0
+              LayerName = Foreground
+            end
+          end
+          object ppGroupFooterBand1: TppGroupFooterBand
+            Background.Brush.Style = bsClear
+            HideWhenOneDetail = False
+            mmBottomOffset = 0
+            mmHeight = 0
+            mmPrintPosition = 0
+          end
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer1: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppSubReport3: TppSubReport
+      UserName = 'SubReport3'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ShiftRelativeTo = ppSubReport2
+      TraverseAllData = False
+      DataPipelineName = 'Servicos'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 11113
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport3: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView4.Servicos
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Servicos'
+        object ppTitleBand4: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 13494
+          mmPrintPosition = 0
+          object ppLabel38: TppLabel
+            UserName = 'Label13'
+            AutoSize = False
+            Caption = 'Servi'#231'os'
+            Color = cl3DLight
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold, fsItalic]
+            TextAlignment = taCentered
+            mmHeight = 4106
+            mmLeft = 0
+            mmTop = 2646
+            mmWidth = 199761
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLine5: TppLine
+            UserName = 'Line4'
+            ParentWidth = True
+            Weight = 1.000000000000000000
+            mmHeight = 265
+            mmLeft = 0
+            mmTop = 13229
+            mmWidth = 200080
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel39: TppLabel
+            UserName = 'Label38'
+            AutoSize = False
+            Caption = 'Vend.'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 0
+            mmTop = 9260
+            mmWidth = 8996
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel40: TppLabel
+            UserName = 'Label39'
+            AutoSize = False
+            Caption = 'C'#243'digo'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 11377
+            mmTop = 9260
+            mmWidth = 14552
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel41: TppLabel
+            UserName = 'Label40'
+            AutoSize = False
+            Caption = 'Un.'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 119856
+            mmTop = 9260
+            mmWidth = 6879
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel42: TppLabel
+            UserName = 'Label41'
+            AutoSize = False
+            Caption = 'Valor Unit'#225'rio'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 130969
+            mmTop = 9260
+            mmWidth = 21431
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel43: TppLabel
+            UserName = 'Label42'
+            AutoSize = False
+            Caption = 'Valor Total'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 180182
+            mmTop = 9260
+            mmWidth = 19579
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel45: TppLabel
+            UserName = 'Label43'
+            AutoSize = False
+            Caption = 'Descri'#231#227'o'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 28310
+            mmTop = 9260
+            mmWidth = 87313
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel11: TppLabel
+            UserName = 'Label11'
+            AutoSize = False
+            Caption = 'Desconto R$'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 156634
+            mmTop = 9260
+            mmWidth = 19315
+            BandType = 1
+            LayerName = Foreground2
+          end
+        end
+        object ppDetailBand3: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 3704
+          mmPrintPosition = 0
+          object ppDBText22: TppDBText
+            UserName = 'DBText22'
+            DataField = 'C'#243'digo_Produto'
+            DataPipeline = daADOQueryDataView4.Servicos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'Servicos'
+            mmHeight = 3260
+            mmLeft = 11377
+            mmTop = 0
+            mmWidth = 14552
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText23: TppDBText
+            UserName = 'DBText23'
+            DataField = 'Custo_Unit'#225'rio'
+            DataPipeline = daADOQueryDataView4.Servicos
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'Servicos'
+            mmHeight = 3260
+            mmLeft = 130969
+            mmTop = 0
+            mmWidth = 21696
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText34: TppDBText
+            UserName = 'DBText34'
+            DataField = 'Custo_Total'
+            DataPipeline = daADOQueryDataView4.Servicos
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Servicos'
+            mmHeight = 3704
+            mmLeft = 180182
+            mmTop = 0
+            mmWidth = 19579
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText35: TppDBText
+            UserName = 'DBText35'
+            DataField = 'Nome_Produto'
+            DataPipeline = daADOQueryDataView4.Servicos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'Servicos'
+            mmHeight = 3704
+            mmLeft = 27781
+            mmTop = 0
+            mmWidth = 87842
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText38: TppDBText
+            UserName = 'DBText38'
+            DataField = 'Vendedor'
+            DataPipeline = daADOQueryDataView4.Servicos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'Servicos'
+            mmHeight = 3260
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 8996
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText39: TppDBText
+            UserName = 'DBText39'
+            DataField = 'Unidade'
+            DataPipeline = daADOQueryDataView4.Servicos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'Servicos'
+            mmHeight = 3704
+            mmLeft = 119856
+            mmTop = 0
+            mmWidth = 6879
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText19: TppDBText
+            UserName = 'DBText19'
+            DataField = 'Desconto_2'
+            DataPipeline = daADOQueryDataView4.Servicos
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'Servicos'
+            mmHeight = 3260
+            mmLeft = 156634
+            mmTop = 0
+            mmWidth = 19315
+            BandType = 4
+            LayerName = Foreground2
+          end
+        end
+        object ppSummaryBand3: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 6085
+          mmPrintPosition = 0
+          object ppDBText11: TppDBText
+            UserName = 'DBText11'
+            DataField = 'Total_Servi'#231'os'
+            DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 9
+            Font.Style = [fsItalic]
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Servicos_Cabecalho'
+            mmHeight = 3641
+            mmLeft = 170657
+            mmTop = 1058
+            mmWidth = 29369
+            BandType = 7
+            LayerName = Foreground2
+          end
+          object ppLabel3: TppLabel
+            UserName = 'Label3'
+            Caption = 'Total de Servi'#231'os:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'ARIAL'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3810
+            mmLeft = 141668
+            mmTop = 1058
+            mmWidth = 27136
+            BandType = 7
+            LayerName = Foreground2
+          end
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers3: TppDesignLayers
+          object ppDesignLayer3: TppDesignLayer
+            UserName = 'Foreground2'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 9790
+    mmPrintPosition = 0
+    object ppLine2: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 173832
+      mmTop = 0
+      mmWidth = 25950
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel13: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95684
+      mmTop = 0
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand4: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 57150
+    mmPrintPosition = 0
+    object ppLine6: TppLine
+      UserName = 'Line6'
+      Pen.Color = clSilver
+      Pen.Width = 2
+      ParentWidth = True
+      Weight = 1.500000000000000000
+      mmHeight = 794
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      DataField = 'Total_Produtos'
+      DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 11
+      Font.Style = [fsItalic]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Servicos_Cabecalho'
+      mmHeight = 4487
+      mmLeft = 168011
+      mmTop = 7938
+      mmWidth = 29369
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Total de Produtos:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4657
+      mmLeft = 132027
+      mmTop = 7673
+      mmWidth = 34078
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBText14: TppDBText
+      UserName = 'DBText14'
+      DataField = 'Total_Servi'#231'os'
+      DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 11
+      Font.Style = [fsItalic]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Servicos_Cabecalho'
+      mmHeight = 4487
+      mmLeft = 168011
+      mmTop = 13229
+      mmWidth = 29369
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Total de Servi'#231'os:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4657
+      mmLeft = 133086
+      mmTop = 12965
+      mmWidth = 33189
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBText15: TppDBText
+      UserName = 'DBText15'
+      DataField = 'Descontos'
+      DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 11
+      Font.Style = [fsItalic]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Servicos_Cabecalho'
+      mmHeight = 4498
+      mmLeft = 168011
+      mmTop = 18521
+      mmWidth = 29369
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Descontos:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4657
+      mmLeft = 144992
+      mmTop = 18256
+      mmWidth = 21167
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBText17: TppDBText
+      UserName = 'DBText17'
+      DataField = 'Total'
+      DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 12
+      Font.Style = [fsItalic]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Servicos_Cabecalho'
+      mmHeight = 4911
+      mmLeft = 168011
+      mmTop = 23548
+      mmWidth = 29369
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      Caption = 'Total:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4995
+      mmLeft = 154782
+      mmTop = 23548
+      mmWidth = 11261
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppShape4: TppShape
+      UserName = 'Shape4'
+      Pen.Color = clSilver
+      mmHeight = 20902
+      mmLeft = 0
+      mmTop = 7938
+      mmWidth = 110331
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBRichText1: TppDBRichText
+      UserName = 'DBRichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 11
+      Font.Style = [fsItalic]
+      DataField = 'Observa'#231#227'o'
+      DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+      RemoveEmptyLines = False
+      Transparent = True
+      DataPipelineName = 'Servicos_Cabecalho'
+      mmHeight = 17463
+      mmLeft = 1323
+      mmTop = 9525
+      mmWidth = 107421
+      BandType = 7
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      Caption = 'Observa'#231#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'ARIAL'
+      Font.Size = 10
+      Font.Style = [fsBold, fsItalic]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 0
+      mmTop = 3440
+      mmWidth = 20108
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppRichText5: TppRichText
+      UserName = 'RichText5'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = []
+      Caption = 'RichText5'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil Aria' +
+        'l;}{\f1\fnil\fcharset0 Arial;}}'#13#10'{\colortbl ;\red0\green0\blue0;' +
+        '}'#13#10'\viewkind4\uc1\pard\cf1\f0\fs18 Eu \b <dbtext>Nome_Cliente</d' +
+        'btext>\b0\f1  autorizo a execu\'#39'e7\'#39'e3o dos servi\'#39'e7os acima de' +
+        'scritos.     \f0\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Transparent = True
+      mmHeight = 8731
+      mmLeft = 0
+      mmTop = 33073
+      mmWidth = 200290
+      BandType = 7
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppLine8: TppLine
+      UserName = 'Line8'
+      Weight = 0.750000000000000000
+      mmHeight = 1323
+      mmLeft = 71173
+      mmTop = 52652
+      mmWidth = 66146
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBText20: TppDBText
+      UserName = 'DBText20'
+      AutoSize = True
+      DataField = 'Nome_Cliente'
+      DataPipeline = daADOQueryDataView1.Servicos_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Servicos_Cabecalho'
+      mmHeight = 3260
+      mmLeft = 66146
+      mmTop = 53975
+      mmWidth = 75946
+      BandType = 7
+      LayerName = Foreground1
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060D
+      496D616765314F6E5072696E740B50726F6772616D54797065070B747450726F
+      63656475726506536F75726365069870726F63656475726520496D616765314F
+      6E5072696E743B0D0A207661720D0A202073417578203A20737472696E673B0D
+      0A626567696E0D0A202073417578203A3D2050656761506174684C6F676F3B0D
+      0A202069662073417578203C3E202727207468656E0D0A20202020496D616765
+      312E506963747572652E4C6F616446726F6D46696C6528207341757820293B0D
+      0A656E643B0D0A0D436F6D706F6E656E744E616D650606496D61676531094576
+      656E744E616D6506074F6E5072696E74074576656E7449440220084361726574
+      506F730102000200000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Servicos_Cabecalho'
+      Height = 271
+      Left = 38
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 212
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Servicos_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Servicos_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField3: TppField
+          FieldAlias = 'C'#243'digo_Cliente'
+          FieldName = 'C'#243'digo_Cliente'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Nome_Cliente'
+          FieldName = 'Nome_Cliente'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 3
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField5: TppField
+          FieldAlias = 'CPF'
+          FieldName = 'CPF'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 4
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Endere'#231'o'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 5
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Munic'#237'pio'
+          FieldName = 'Munic'#237'pio'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 6
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Bairro'
+          FieldName = 'Bairro'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 7
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Cep'
+          FieldName = 'Cep'
+          FieldLength = 9
+          DisplayWidth = 9
+          Position = 8
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField10: TppField
+          FieldAlias = 'UF'
+          FieldName = 'UF'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 9
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField11: TppField
+          FieldAlias = 'IE'
+          FieldName = 'IE'
+          FieldLength = 25
+          DisplayWidth = 25
+          Position = 10
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Data_Entrada'
+          FieldName = 'Data_Entrada'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 11
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Data_Entrega'
+          FieldName = 'Data_Entrega'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 12
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Total_Servi'#231'os'
+          FieldName = 'Total_Servi'#231'os'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Total_Produtos'
+          FieldName = 'Total_Produtos'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Descontos'
+          FieldName = 'Descontos'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Total'
+          FieldName = 'Total'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Observa'#231#227'o'
+          FieldName = 'Observa'#231#227'o'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Hora_Entrada'
+          FieldName = 'Hora_Entrada'
+          FieldLength = 5
+          DisplayWidth = 5
+          Position = 18
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Hora_Entrega'
+          FieldName = 'Hora_Entrega'
+          FieldLength = 5
+          DisplayWidth = 5
+          Position = 19
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Solicitado_Por'
+          FieldName = 'Solicitado_Por'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 20
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Forma_Pgto'
+          FieldName = 'Forma_Pgto'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 21
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField23: TppField
+          FieldAlias = 'NomeFantasia_Empresa'
+          FieldName = 'Nome_Fantasia'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 22
+          TableName = 'Empresa'
+        end
+        object ppField24: TppField
+          FieldAlias = 'RazaoSocial_Empresa'
+          FieldName = 'Raz'#227'o_Social'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 23
+          TableName = 'Empresa'
+        end
+        object ppField25: TppField
+          FieldAlias = 'CNPJ_Empresa'
+          FieldName = 'CGC'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 24
+          TableName = 'Empresa'
+        end
+        object ppField26: TppField
+          FieldAlias = 'IE_Empresa'
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 25
+          TableName = 'Empresa'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Endereco_Empresa'
+          FieldName = 'Endere'#231'o_2'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 26
+          TableName = 'Empresa'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Bairro_Empresa'
+          FieldName = 'Bairro_2'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 27
+          TableName = 'Empresa'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Cidade_Empresa'
+          FieldName = 'Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 28
+          TableName = 'Empresa'
+        end
+        object ppField30: TppField
+          FieldAlias = 'UF_Empresa'
+          FieldName = 'UF_2'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 29
+          TableName = 'Empresa'
+        end
+        object ppField31: TppField
+          FieldAlias = 'CEP_Empresa'
+          FieldName = 'CEP_2'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'Empresa'
+        end
+        object ppField32: TppField
+          FieldAlias = 'N'#250'mero_Empresa'
+          FieldName = 'N'#250'mero'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'Empresa'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Atendente'
+          FieldName = 'select_codigo_nome_from'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField34: TppField
+          FieldAlias = 'Prioridade'
+          FieldName = 'iif_Prioridade_0_Urgente'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField35: TppField
+          FieldAlias = 'StatusD'
+          FieldName = 'Select_descri'#231#227'o_from_os'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'Servicos_Cabecalho'
+        end
+        object ppField36: TppField
+          FieldAlias = 'Fone'
+          FieldName = 'select_Top_1_ddd_fone_fr'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'Servicos_Cabecalho'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Servicos_Cabecalho'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Servicos_Cabecalho.Codigo, '
+          '       Servicos_Cabecalho.Empresa, '
+          '       Servicos_Cabecalho.C'#243'digo_Cliente, '
+          '       Servicos_Cabecalho.Nome_Cliente, '
+          '       Servicos_Cabecalho.CPF, '
+          '       Servicos_Cabecalho.Endere'#231'o, '
+          '       Servicos_Cabecalho.Munic'#237'pio, '
+          '       Servicos_Cabecalho.Bairro, '
+          '       Servicos_Cabecalho.Cep, '
+          '       Servicos_Cabecalho.UF, '
+          '       Servicos_Cabecalho.IE, '
+          '       Servicos_Cabecalho.Data_Entrada, '
+          '       Servicos_Cabecalho.Data_Entrega, '
+          '       Servicos_Cabecalho.Total_Servi'#231'os, '
+          '       Servicos_Cabecalho.Total_Produtos, '
+          '       Servicos_Cabecalho.Descontos, '
+          '       Servicos_Cabecalho.Total, '
+          '       Servicos_Cabecalho.Observa'#231#227'o, '
+          '       Servicos_Cabecalho.Hora_Entrada, '
+          '       Servicos_Cabecalho.Hora_Entrega, '
+          '       Servicos_Cabecalho.Solicitado_Por, '
+          '       Servicos_Cabecalho.Forma_Pgto, '
+          '       Empresa.Nome_Fantasia, '
+          '       Empresa.Raz'#227'o_Social, Empresa.CGC, '
+          '       Empresa.Inscri'#231#227'o_Estadual, '
+          '       Empresa.Endere'#231'o AS Endere'#231'o_2, '
+          '       Empresa.Bairro AS Bairro_2, '
+          '       Empresa.Cidade, Empresa.UF AS UF_2, '
+          '       Empresa.CEP AS CEP_2, Empresa.N'#250'mero, '
+          
+            '       ( select codigo & " - " & nome from funcionario where cod' +
+            'igo  = servicos_cabecalho.atendente and empresa = servicos_cabec' +
+            'alho.empresa ) AS select_codigo_nome_from, '
+          
+            '       iif( Prioridade = 0, "Urgente", iif(Prioridade=1,"Alta", ' +
+            'iif(Prioridade=2,"M'#233'dia",iif(Prioridade=3,"Baixa","Outra"))) ) A' +
+            'S iif_Prioridade_0_Urgente, '
+          
+            '       (Select descri'#231#227'o from os_status where codigo = Servicos_' +
+            'cabecalho.status and empresa = Servicos_cabecalho.empresa) AS Se' +
+            'lect_descri'#231#227'o_from_os, '
+          
+            '       ( select Top 1 ddd & " " & fone from clientes_Fones where' +
+            ' empresa = servicos_cabecalho.empresa and codigo_cliente = servi' +
+            'cos_cabecalho.c'#243'digo_Cliente ) AS select_Top_1_ddd_fone_fr'
+          'FROM (Servicos_Cabecalho Servicos_Cabecalho'
+          '      LEFT OUTER JOIN Empresa Empresa ON '
+          '     (Empresa.Codigo = Servicos_Cabecalho.Empresa) )'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Servicos_Cabecalho.Codigo = 794 )'
+          '       AND ( Servicos_Cabecalho.Cancelado <> TRUE )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Atendente'
+          DisplayWidth = 10
+          FieldAlias = 'Atendente'
+          FieldLength = 0
+          FieldName = 'Atendente'
+          SQLFieldName = 'select_codigo_nome_from'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select codigo & " - " & nome from funcionario where codigo  = ' +
+            'servicos_cabecalho.atendente and empresa = servicos_cabecalho.em' +
+            'presa )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Prioridade'
+          DisplayWidth = 10
+          FieldAlias = 'Prioridade'
+          FieldLength = 0
+          FieldName = 'Prioridade'
+          SQLFieldName = 'iif_Prioridade_0_Urgente'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Prioridade = 0, "Urgente", iif(Prioridade=1,"Alta", iif(Pri' +
+            'oridade=2,"M'#233'dia",iif(Prioridade=3,"Baixa","Outra"))) )'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'StatusD'
+          DisplayWidth = 10
+          FieldAlias = 'Status'
+          FieldLength = 0
+          FieldName = 'Status'
+          SQLFieldName = 'Select_descri'#231#227'o_from_os'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '(Select descri'#231#227'o from os_status where codigo = Servicos_cabecal' +
+            'ho.status and empresa = Servicos_cabecalho.empresa)'
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 8
+          Alias = 'Fone'
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Cliente'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Cliente'
+          SQLFieldName = 'select_Top_1_ddd_fone_fr'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select Top 1 ddd & " " & fone from clientes_Fones where empres' +
+            'a = servicos_cabecalho.empresa and codigo_cliente = servicos_cab' +
+            'ecalho.c'#243'digo_Cliente )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          ParamName = 'ID'
+          Value = '797'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+          object TdaNumericValue
+            Value = 794.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField3: TdaField
+          Alias = 'C'#243'digo_Cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Cliente'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Cliente'
+          SQLFieldName = 'C'#243'digo_Cliente'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField4: TdaField
+          Alias = 'Nome_Cliente'
+          DisplayWidth = 255
+          FieldAlias = 'Nome_Cliente'
+          FieldLength = 255
+          FieldName = 'Nome_Cliente'
+          SQLFieldName = 'Nome_Cliente'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField5: TdaField
+          Alias = 'CPF'
+          DisplayWidth = 20
+          FieldAlias = 'CPF'
+          FieldLength = 20
+          FieldName = 'CPF'
+          SQLFieldName = 'CPF'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField6: TdaField
+          Alias = 'Endere'#231'o'
+          DisplayWidth = 255
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 255
+          FieldName = 'Endere'#231'o'
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField7: TdaField
+          Alias = 'Munic'#237'pio'
+          DisplayWidth = 255
+          FieldAlias = 'Munic'#237'pio'
+          FieldLength = 255
+          FieldName = 'Munic'#237'pio'
+          SQLFieldName = 'Munic'#237'pio'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField8: TdaField
+          Alias = 'Bairro'
+          DisplayWidth = 255
+          FieldAlias = 'Bairro'
+          FieldLength = 255
+          FieldName = 'Bairro'
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField9: TdaField
+          Alias = 'Cep'
+          DisplayWidth = 9
+          FieldAlias = 'Cep'
+          FieldLength = 9
+          FieldName = 'Cep'
+          SQLFieldName = 'Cep'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField10: TdaField
+          Alias = 'UF'
+          DisplayWidth = 20
+          FieldAlias = 'UF'
+          FieldLength = 20
+          FieldName = 'UF'
+          SQLFieldName = 'UF'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField11: TdaField
+          Alias = 'IE'
+          DisplayWidth = 25
+          FieldAlias = 'IE'
+          FieldLength = 25
+          FieldName = 'IE'
+          SQLFieldName = 'IE'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField12: TdaField
+          Alias = 'Data_Entrada'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Entrada'
+          FieldLength = 0
+          FieldName = 'Data_Entrada'
+          SQLFieldName = 'Data_Entrada'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField13: TdaField
+          Alias = 'Data_Entrega'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Entrega'
+          FieldLength = 0
+          FieldName = 'Data_Entrega'
+          SQLFieldName = 'Data_Entrega'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField14: TdaField
+          Alias = 'Total_Servi'#231'os'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_Servi'#231'os'
+          FieldLength = 0
+          FieldName = 'Total_Servi'#231'os'
+          SQLFieldName = 'Total_Servi'#231'os'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField15: TdaField
+          Alias = 'Total_Produtos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_Produtos'
+          FieldLength = 0
+          FieldName = 'Total_Produtos'
+          SQLFieldName = 'Total_Produtos'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField16: TdaField
+          Alias = 'Descontos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Descontos'
+          FieldLength = 0
+          FieldName = 'Descontos'
+          SQLFieldName = 'Descontos'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField17: TdaField
+          Alias = 'Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total'
+          FieldLength = 0
+          FieldName = 'Total'
+          SQLFieldName = 'Total'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField18: TdaField
+          Alias = 'Observa'#231#227'o'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Observa'#231#227'o'
+          FieldLength = 0
+          FieldName = 'Observa'#231#227'o'
+          Linkable = False
+          SQLFieldName = 'Observa'#231#227'o'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField19: TdaField
+          Alias = 'Hora_Entrada'
+          DisplayWidth = 5
+          FieldAlias = 'Hora_Entrada'
+          FieldLength = 5
+          FieldName = 'Hora_Entrada'
+          SQLFieldName = 'Hora_Entrada'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField20: TdaField
+          Alias = 'Hora_Entrega'
+          DisplayWidth = 5
+          FieldAlias = 'Hora_Entrega'
+          FieldLength = 5
+          FieldName = 'Hora_Entrega'
+          SQLFieldName = 'Hora_Entrega'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField21: TdaField
+          Alias = 'Solicitado_Por'
+          DisplayWidth = 255
+          FieldAlias = 'Solicitado_Por'
+          FieldLength = 255
+          FieldName = 'Solicitado_Por'
+          SQLFieldName = 'Solicitado_Por'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField22: TdaField
+          Alias = 'Forma_Pgto'
+          DisplayWidth = 1
+          FieldAlias = 'Forma_Pgto'
+          FieldLength = 1
+          FieldName = 'Forma_Pgto'
+          SQLFieldName = 'Forma_Pgto'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+          TableSQLAlias = 'Servicos_Cabecalho'
+        end
+        object daField23: TdaField
+          Alias = 'NomeFantasia_Empresa'
+          DisplayWidth = 50
+          FieldAlias = 'Nome_Fantasia'
+          FieldLength = 50
+          FieldName = 'Nome_Fantasia'
+          IsDetail = True
+          SQLFieldName = 'Nome_Fantasia'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField24: TdaField
+          Alias = 'RazaoSocial_Empresa'
+          DisplayWidth = 50
+          FieldAlias = 'Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Raz'#227'o_Social'
+          IsDetail = True
+          SQLFieldName = 'Raz'#227'o_Social'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField25: TdaField
+          Alias = 'CNPJ_Empresa'
+          DisplayWidth = 20
+          FieldAlias = 'CGC'
+          FieldLength = 20
+          FieldName = 'CGC'
+          IsDetail = True
+          SQLFieldName = 'CGC'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField26: TdaField
+          Alias = 'IE_Empresa'
+          DisplayWidth = 20
+          FieldAlias = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          IsDetail = True
+          SQLFieldName = 'Inscri'#231#227'o_Estadual'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField27: TdaField
+          Alias = 'Endereco_Empresa'
+          DisplayWidth = 50
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Endere'#231'o_2'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField28: TdaField
+          Alias = 'Bairro_Empresa'
+          DisplayWidth = 20
+          FieldAlias = 'Bairro'
+          FieldLength = 20
+          FieldName = 'Bairro'
+          IsDetail = True
+          SQLFieldName = 'Bairro_2'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField29: TdaField
+          Alias = 'Cidade_Empresa'
+          DisplayWidth = 50
+          FieldAlias = 'Cidade'
+          FieldLength = 50
+          FieldName = 'Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField30: TdaField
+          Alias = 'UF_Empresa'
+          DisplayWidth = 2
+          FieldAlias = 'UF'
+          FieldLength = 2
+          FieldName = 'UF'
+          IsDetail = True
+          SQLFieldName = 'UF_2'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField31: TdaField
+          Alias = 'CEP_Empresa'
+          DisplayWidth = 10
+          FieldAlias = 'CEP'
+          FieldLength = 10
+          FieldName = 'CEP'
+          IsDetail = True
+          SQLFieldName = 'CEP_2'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField32: TdaField
+          Alias = 'N'#250'mero_Empresa'
+          DisplayWidth = 10
+          FieldAlias = 'N'#250'mero'
+          FieldLength = 10
+          FieldName = 'N'#250'mero'
+          IsDetail = True
+          SQLFieldName = 'N'#250'mero'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Servicos_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Servicos_Cabecalho'
+          TableAlias = 'Servicos_Cabecalho'
+          TableName = 'Servicos_Cabecalho'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Empresa'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Empresa'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField34: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtLongint
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Empresa'
+              TableName = 'Empresa'
+              TableSQLAlias = 'Empresa'
+            end
+            object daField33: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Servicos_Cabecalho'
+              TableName = 'Servicos_Cabecalho'
+              TableSQLAlias = 'Servicos_Cabecalho'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Equipamentos'
+      Height = 206
+      Left = 689
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 3
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Servicos_Cabecalho'
+      object Equipamentos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Equipamentos'
+        MasterDataPipelineName = 'Servicos_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Servicos_Equipamentos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Servicos_Equipamentos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'C'#243'digo_Equipamento'
+          FieldName = 'C'#243'digo_Equipamento'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Servicos_Equipamentos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Descri'#231#227'o'
+          FieldName = 'Descri'#231#227'o'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 3
+          TableName = 'Servicos_Equipamentos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Quantidade'
+          FieldName = 'Quantidade'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Servicos_Equipamentos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Nro_S'#233'rie'
+          FieldName = 'Nro_S'#233'rie'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 5
+          TableName = 'Servicos_Equipamentos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Nro_Nota'
+          FieldName = 'Nro_Nota'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 6
+          TableName = 'Servicos_Equipamentos'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'C'#243'digo_Servi'#231'o'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Equipamentos'
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Servicos_Equipamentos.C'#243'digo_Servi'#231'o, '
+          '       Servicos_Equipamentos.Empresa, '
+          '       Servicos_Equipamentos.C'#243'digo_Equipamento, '
+          '       Servicos_Equipamentos.Descri'#231#227'o, '
+          '       Servicos_Equipamentos.Quantidade, '
+          '       Servicos_Equipamentos.Nro_S'#233'rie, '
+          '       Servicos_Equipamentos.Nro_Nota'
+          'FROM Servicos_Equipamentos Servicos_Equipamentos'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'C'#243'digo_Servi'#231'o'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          SQLFieldName = 'C'#243'digo_Servi'#231'o'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+          TableSQLAlias = 'Servicos_Equipamentos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+          TableSQLAlias = 'Servicos_Equipamentos'
+        end
+        object daField3: TdaField
+          Alias = 'C'#243'digo_Equipamento'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Equipamento'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Equipamento'
+          SQLFieldName = 'C'#243'digo_Equipamento'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+          TableSQLAlias = 'Servicos_Equipamentos'
+        end
+        object daField4: TdaField
+          Alias = 'Descri'#231#227'o'
+          DisplayWidth = 255
+          FieldAlias = 'Descri'#231#227'o'
+          FieldLength = 255
+          FieldName = 'Descri'#231#227'o'
+          SQLFieldName = 'Descri'#231#227'o'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+          TableSQLAlias = 'Servicos_Equipamentos'
+        end
+        object daField5: TdaField
+          Alias = 'Quantidade'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          SQLFieldName = 'Quantidade'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+          TableSQLAlias = 'Servicos_Equipamentos'
+        end
+        object daField6: TdaField
+          Alias = 'Nro_S'#233'rie'
+          DisplayWidth = 50
+          FieldAlias = 'Nro_S'#233'rie'
+          FieldLength = 50
+          FieldName = 'Nro_S'#233'rie'
+          SQLFieldName = 'Nro_S'#233'rie'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+          TableSQLAlias = 'Servicos_Equipamentos'
+        end
+        object daField7: TdaField
+          Alias = 'Nro_Nota'
+          DisplayWidth = 50
+          FieldAlias = 'Nro_Nota'
+          FieldLength = 50
+          FieldName = 'Nro_Nota'
+          SQLFieldName = 'Nro_Nota'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+          TableSQLAlias = 'Servicos_Equipamentos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Servicos_Equipamentos'
+          JoinType = dajtNone
+          SQLAlias = 'Servicos_Equipamentos'
+          TableAlias = 'Servicos_Equipamentos'
+          TableName = 'Servicos_Equipamentos'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField8: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+          object daField9: TdaField
+            ChildType = 11
+            Alias = 'C'#243'digo_Servi'#231'o'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Servi'#231'o'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Servi'#231'o'
+            SQLFieldName = 'C'#243'digo_Servi'#231'o'
+            TableAlias = 'Servicos_Equipamentos'
+            TableName = 'Servicos_Equipamentos'
+            TableSQLAlias = 'Servicos_Equipamentos'
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField10: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+          object daField11: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Equipamentos'
+            TableName = 'Servicos_Equipamentos'
+            TableSQLAlias = 'Servicos_Equipamentos'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView3: TdaADOQueryDataView
+      UserName = 'Query_Produtos'
+      Height = 255
+      Left = 689
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 212
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Servicos_Cabecalho'
+      object Produtos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Produtos'
+        MasterDataPipelineName = 'Servicos_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField3: TppField
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldName = 'C'#243'digo_Produto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Quantidade'
+          FieldName = 'Quantidade'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldName = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Custo_Total'
+          FieldName = 'Custo_Total'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Desconto%'
+          FieldName = 'Desconto'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Nome_Produto'
+          FieldName = 'Nome_Produto'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 7
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Unidade'
+          FieldName = 'Unidade'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 8
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Vendedor'
+          FieldName = 'Vendedor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Desconto_Autom'#225'tico%'
+          FieldName = 'Desconto_Autom'#225'tico'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Desconto_Autom'#225'tico$'
+          FieldName = 'Desconto_Autom'#225'tico_2'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Desconto_Adicional%'
+          FieldName = 'Desconto_Adicional'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Desconto_Adicional$'
+          FieldName = 'Desconto_Adicional_2'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Desconto$'
+          FieldName = 'Desconto_2'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'Servicos_Detalhe'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'C'#243'digo_Servi'#231'o'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL3: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Produtos'
+        IsCaseSensitive = True
+        LinkColor = clGreen
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Servicos_Detalhe.C'#243'digo_Servi'#231'o, '
+          '       Servicos_Detalhe.Empresa, '
+          '       Servicos_Detalhe.C'#243'digo_Produto, '
+          '       Servicos_Detalhe.Quantidade, '
+          '       Servicos_Detalhe.Custo_Unit'#225'rio, '
+          '       Servicos_Detalhe.Custo_Total, '
+          '       Servicos_Detalhe.[Desconto%] AS Desconto, '
+          '       Servicos_Detalhe.Nome_Produto, '
+          '       Servicos_Detalhe.Unidade, '
+          '       Servicos_Detalhe.Vendedor, '
+          
+            '       Servicos_Detalhe.[Desconto_Autom'#225'tico%] AS Desconto_Autom' +
+            #225'tico, '
+          
+            '       Servicos_Detalhe.[Desconto_Autom'#225'tico$] AS Desconto_Autom' +
+            #225'tico_2, '
+          
+            '       Servicos_Detalhe.[Desconto_Adicional%] AS Desconto_Adicio' +
+            'nal, '
+          
+            '       Servicos_Detalhe.[Desconto_Adicional$] AS Desconto_Adicio' +
+            'nal_2, '
+          '       Servicos_Detalhe.[Desconto$] AS Desconto_2'
+          'FROM Servicos_Detalhe Servicos_Detalhe'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Servicos_Detalhe.Tipo = '#39'1'#39' )'
+          '       AND ( Servicos_Detalhe.Cancelado <> TRUE ))')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = '1'
+          object TdaField
+            Alias = 'Tipo'
+            DisplayWidth = 1
+            FieldAlias = 'Tipo'
+            FieldLength = 1
+            FieldName = 'Tipo'
+            SQLFieldName = 'Tipo'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'C'#243'digo_Servi'#231'o'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          SQLFieldName = 'C'#243'digo_Servi'#231'o'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField3: TdaField
+          Alias = 'C'#243'digo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Produto'
+          SQLFieldName = 'C'#243'digo_Produto'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField4: TdaField
+          Alias = 'Quantidade'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          SQLFieldName = 'Quantidade'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField5: TdaField
+          Alias = 'Custo_Unit'#225'rio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          FieldName = 'Custo_Unit'#225'rio'
+          SQLFieldName = 'Custo_Unit'#225'rio'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField6: TdaField
+          Alias = 'Custo_Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Total'
+          FieldLength = 0
+          FieldName = 'Custo_Total'
+          SQLFieldName = 'Custo_Total'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField7: TdaField
+          Alias = 'Desconto%'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto%'
+          FieldLength = 0
+          FieldName = 'Desconto%'
+          SQLFieldName = 'Desconto'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField8: TdaField
+          Alias = 'Nome_Produto'
+          DisplayWidth = 255
+          FieldAlias = 'Nome_Produto'
+          FieldLength = 255
+          FieldName = 'Nome_Produto'
+          SQLFieldName = 'Nome_Produto'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField9: TdaField
+          Alias = 'Unidade'
+          DisplayWidth = 20
+          FieldAlias = 'Unidade'
+          FieldLength = 20
+          FieldName = 'Unidade'
+          SQLFieldName = 'Unidade'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField10: TdaField
+          Alias = 'Vendedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Vendedor'
+          FieldLength = 0
+          FieldName = 'Vendedor'
+          SQLFieldName = 'Vendedor'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField11: TdaField
+          Alias = 'Desconto_Autom'#225'tico%'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto_Autom'#225'tico%'
+          FieldLength = 0
+          FieldName = 'Desconto_Autom'#225'tico%'
+          SQLFieldName = 'Desconto_Autom'#225'tico'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField12: TdaField
+          Alias = 'Desconto_Autom'#225'tico$'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto_Autom'#225'tico$'
+          FieldLength = 0
+          FieldName = 'Desconto_Autom'#225'tico$'
+          SQLFieldName = 'Desconto_Autom'#225'tico_2'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField13: TdaField
+          Alias = 'Desconto_Adicional%'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto_Adicional%'
+          FieldLength = 0
+          FieldName = 'Desconto_Adicional%'
+          SQLFieldName = 'Desconto_Adicional'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField14: TdaField
+          Alias = 'Desconto_Adicional$'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto_Adicional$'
+          FieldLength = 0
+          FieldName = 'Desconto_Adicional$'
+          SQLFieldName = 'Desconto_Adicional_2'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField15: TdaField
+          Alias = 'Desconto$'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto$'
+          FieldLength = 0
+          FieldName = 'Desconto$'
+          SQLFieldName = 'Desconto_2'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Servicos_Detalhe'
+          JoinType = dajtNone
+          SQLAlias = 'Servicos_Detalhe'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField16: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+          object daField17: TdaField
+            ChildType = 11
+            Alias = 'C'#243'digo_Servi'#231'o'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Servi'#231'o'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Servi'#231'o'
+            SQLFieldName = 'C'#243'digo_Servi'#231'o'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField18: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+          object daField19: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView4: TdaADOQueryDataView
+      UserName = 'Query_Servicos'
+      Height = 255
+      Left = 689
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 470
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Servicos_Cabecalho'
+      object Servicos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Servicos'
+        MasterDataPipelineName = 'Servicos_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField3: TppField
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldName = 'C'#243'digo_Produto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Quantidade'
+          FieldName = 'Quantidade'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldName = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Custo_Total'
+          FieldName = 'Custo_Total'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Desconto%'
+          FieldName = 'Desconto'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Nome_Produto'
+          FieldName = 'Nome_Produto'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 7
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Unidade'
+          FieldName = 'Unidade'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 8
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Vendedor'
+          FieldName = 'Vendedor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Servicos_Detalhe'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Desconto$'
+          FieldName = 'Desconto_2'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Servicos_Detalhe'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'C'#243'digo_Servi'#231'o'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL4: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Servicos'
+        IsCaseSensitive = True
+        LinkColor = clPurple
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Servicos_Detalhe.C'#243'digo_Servi'#231'o, '
+          '       Servicos_Detalhe.Empresa, '
+          '       Servicos_Detalhe.C'#243'digo_Produto, '
+          '       Servicos_Detalhe.Quantidade, '
+          '       Servicos_Detalhe.Custo_Unit'#225'rio, '
+          '       Servicos_Detalhe.Custo_Total, '
+          '       Servicos_Detalhe.[Desconto%] AS Desconto, '
+          '       Servicos_Detalhe.Nome_Produto, '
+          '       Servicos_Detalhe.Unidade, '
+          '       Servicos_Detalhe.Vendedor, '
+          '       Servicos_Detalhe.[Desconto$] AS Desconto_2'
+          'FROM Servicos_Detalhe Servicos_Detalhe'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( Servicos_Detalhe.Tipo = '#39'2'#39' )'
+          '       AND ( Servicos_Detalhe.Cancelado <> TRUE ))')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = '2'
+          object TdaField
+            Alias = 'Tipo'
+            DisplayWidth = 1
+            FieldAlias = 'Tipo'
+            FieldLength = 1
+            FieldName = 'Tipo'
+            SQLFieldName = 'Tipo'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = 'True'
+          object TdaField
+            Alias = 'Cancelado'
+            DataType = dtBoolean
+            DisplayWidth = 5
+            FieldAlias = 'Cancelado'
+            FieldLength = 0
+            FieldName = 'Cancelado'
+            SQLFieldName = 'Cancelado'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'C'#243'digo_Servi'#231'o'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          SQLFieldName = 'C'#243'digo_Servi'#231'o'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField3: TdaField
+          Alias = 'C'#243'digo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Produto'
+          SQLFieldName = 'C'#243'digo_Produto'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField4: TdaField
+          Alias = 'Quantidade'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          SQLFieldName = 'Quantidade'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField5: TdaField
+          Alias = 'Custo_Unit'#225'rio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Unit'#225'rio'
+          FieldLength = 0
+          FieldName = 'Custo_Unit'#225'rio'
+          SQLFieldName = 'Custo_Unit'#225'rio'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField6: TdaField
+          Alias = 'Custo_Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Custo_Total'
+          FieldLength = 0
+          FieldName = 'Custo_Total'
+          SQLFieldName = 'Custo_Total'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField7: TdaField
+          Alias = 'Desconto%'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto%'
+          FieldLength = 0
+          FieldName = 'Desconto%'
+          SQLFieldName = 'Desconto'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField8: TdaField
+          Alias = 'Nome_Produto'
+          DisplayWidth = 255
+          FieldAlias = 'Nome_Produto'
+          FieldLength = 255
+          FieldName = 'Nome_Produto'
+          SQLFieldName = 'Nome_Produto'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField9: TdaField
+          Alias = 'Unidade'
+          DisplayWidth = 20
+          FieldAlias = 'Unidade'
+          FieldLength = 20
+          FieldName = 'Unidade'
+          SQLFieldName = 'Unidade'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField10: TdaField
+          Alias = 'Vendedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Vendedor'
+          FieldLength = 0
+          FieldName = 'Vendedor'
+          SQLFieldName = 'Vendedor'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daField11: TdaField
+          Alias = 'Desconto$'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Desconto$'
+          FieldLength = 0
+          FieldName = 'Desconto$'
+          SQLFieldName = 'Desconto_2'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+          TableSQLAlias = 'Servicos_Detalhe'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Servicos_Detalhe'
+          JoinType = dajtNone
+          SQLAlias = 'Servicos_Detalhe'
+          TableAlias = 'Servicos_Detalhe'
+          TableName = 'Servicos_Detalhe'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField12: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+          object daField13: TdaField
+            ChildType = 11
+            Alias = 'C'#243'digo_Servi'#231'o'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Servi'#231'o'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Servi'#231'o'
+            SQLFieldName = 'C'#243'digo_Servi'#231'o'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField14: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Cabecalho'
+            TableName = 'Servicos_Cabecalho'
+            TableSQLAlias = 'Servicos_Cabecalho'
+          end
+          object daField15: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView5: TdaADOQueryDataView
+      UserName = 'Query_GradeSequencial'
+      Height = 206
+      Left = 1142
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 212
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Produtos'
+      object GradeSequencial: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'GradeSequencial'
+        MasterDataPipelineName = 'Produtos'
+        object ppField1: TppField
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Servicos_Grade'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Servicos_Grade'
+        end
+        object ppField3: TppField
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldName = 'C'#243'digo_Produto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Servicos_Grade'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Descri'#231#227'o'
+          FieldName = 'Descri'#231#227'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 3
+          TableName = 'Servicos_Grade'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Quantidade'
+          FieldName = 'Quantidade'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Servicos_Grade'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Pre'#231'o'
+          FieldName = 'Pre'#231'o'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Servicos_Grade'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Sequencial'
+          FieldName = 'Sequencial'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Servicos_Grade'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'C'#243'digo_Servi'#231'o_2'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa_2'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa_2'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'C'#243'digo_Produto'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'C'#243'digo_Produto'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL5: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'GradeSequencial'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Servicos_Grade.C'#243'digo_Servi'#231'o, '
+          '       Servicos_Grade.Empresa, '
+          '       Servicos_Grade.C'#243'digo_Produto, '
+          '       Servicos_Grade.Descri'#231#227'o, '
+          '       Servicos_Grade.Quantidade, '
+          '       Servicos_Grade.Pre'#231'o, '
+          '       Servicos_Grade.Sequencial'
+          'FROM Servicos_Grade Servicos_Grade'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'C'#243'digo_Servi'#231'o'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Servi'#231'o'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Servi'#231'o'
+          SQLFieldName = 'C'#243'digo_Servi'#231'o'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+          TableSQLAlias = 'Servicos_Grade'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+          TableSQLAlias = 'Servicos_Grade'
+        end
+        object daField3: TdaField
+          Alias = 'C'#243'digo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'C'#243'digo_Produto'
+          FieldLength = 0
+          FieldName = 'C'#243'digo_Produto'
+          SQLFieldName = 'C'#243'digo_Produto'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+          TableSQLAlias = 'Servicos_Grade'
+        end
+        object daField4: TdaField
+          Alias = 'Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Descri'#231#227'o'
+          SQLFieldName = 'Descri'#231#227'o'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+          TableSQLAlias = 'Servicos_Grade'
+        end
+        object daField5: TdaField
+          Alias = 'Quantidade'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Quantidade'
+          FieldLength = 0
+          FieldName = 'Quantidade'
+          SQLFieldName = 'Quantidade'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+          TableSQLAlias = 'Servicos_Grade'
+        end
+        object daField6: TdaField
+          Alias = 'Pre'#231'o'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Pre'#231'o'
+          FieldLength = 0
+          FieldName = 'Pre'#231'o'
+          SQLFieldName = 'Pre'#231'o'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+          TableSQLAlias = 'Servicos_Grade'
+        end
+        object daField7: TdaField
+          Alias = 'Sequencial'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Sequencial'
+          FieldLength = 0
+          FieldName = 'Sequencial'
+          SQLFieldName = 'Sequencial'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+          TableSQLAlias = 'Servicos_Grade'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Servicos_Grade'
+          JoinType = dajtNone
+          SQLAlias = 'Servicos_Grade'
+          TableAlias = 'Servicos_Grade'
+          TableName = 'Servicos_Grade'
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField8: TdaField
+            ChildType = 10
+            Alias = 'C'#243'digo_Servi'#231'o'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Servi'#231'o'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Servi'#231'o'
+            SQLFieldName = 'C'#243'digo_Servi'#231'o'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+          object daField9: TdaField
+            ChildType = 11
+            Alias = 'C'#243'digo_Servi'#231'o'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Servi'#231'o'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Servi'#231'o'
+            SQLFieldName = 'C'#243'digo_Servi'#231'o'
+            TableAlias = 'Servicos_Grade'
+            TableName = 'Servicos_Grade'
+            TableSQLAlias = 'Servicos_Grade'
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField10: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+          object daField11: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Servicos_Grade'
+            TableName = 'Servicos_Grade'
+            TableSQLAlias = 'Servicos_Grade'
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField12: TdaField
+            ChildType = 10
+            Alias = 'C'#243'digo_Produto'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Produto'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Produto'
+            SQLFieldName = 'C'#243'digo_Produto'
+            TableAlias = 'Servicos_Detalhe'
+            TableName = 'Servicos_Detalhe'
+            TableSQLAlias = 'Servicos_Detalhe'
+          end
+          object daField13: TdaField
+            ChildType = 11
+            Alias = 'C'#243'digo_Produto'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'C'#243'digo_Produto'
+            FieldLength = 0
+            FieldName = 'C'#243'digo_Produto'
+            SQLFieldName = 'C'#243'digo_Produto'
+            TableAlias = 'Servicos_Grade'
+            TableName = 'Servicos_Grade'
+            TableSQLAlias = 'Servicos_Grade'
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 5
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '797'
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo da Ordem de Servi'#231'o@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '797'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Ordens de Serviço@Documentos
+NOME=O.S. - Modelo III
+DESCRICAO=Imprime a ordem de serviço informada
+ALTERADO_EM=05/12/2014 09:42
+SQL=<0><1><2><3>

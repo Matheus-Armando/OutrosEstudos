@@ -1,0 +1,677 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Cliente
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1207-IIV10.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Cliente'
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 221721
+    mmPrintPosition = 0
+    object ppRichText1: TppRichText
+      UserName = 'RichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      Caption = 'RichText1'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\froman\fc' +
+        'harset0 Times New Roman;}{\f1\froman Times New Roman;}{\f2\fswis' +
+        's MS Sans Serif;}}'#13#10'\viewkind4\uc1\pard\qc\b\f0\fs24 CONTRATO DE' +
+        ' CREDENCIAMENTO PARA COMPRA \'#39'c0 PRAZO\f1\fs16\par'#13#10'\pard\par'#13#10'\' +
+        'fs20 <dbtext>Nome_Fantasia_E</dbtext> \b0 de\b\f0  <dbtext>Raz\'#39 +
+        'e3o_Social_E</dbtext>\b0 , pessoa jur\'#39'eddica de direito privado' +
+        ', com sede na \b <dbtext>Endere\'#39'e7o_E</dbtext> <dbtext>N\'#39'famer' +
+        'o_E</dbtext>\b0\i\f1 , \b\i0 <dbtext>Cidade_E</dbtext> - <dbtext' +
+        '>UF_E</dbtext>\b0\f0 , inscrita  no CNPJ sob n\'#39'ba \b\f1 <dbtext' +
+        '>CNPJ_E</dbtext>\b0 , por seu representante legal  o fim assinad' +
+        'o.\par'#13#10'\par'#13#10'CREDENCIADO NOME :\b\f0  <dbtext>Cliente</dbtext>\' +
+        'f1\par'#13#10'\b0                                    CPF : \b <dbtext>' +
+        'Cliente_CPF</dbtext>\par'#13#10'\b0  \par'#13#10'       01 - A \b <dbtext>No' +
+        'me_Fantasia_E</dbtext>\b0\f0 , habilita o credenciado e pessoa(s' +
+        ') por este autorizada(s) a adquirir mercadorias em qualquer de s' +
+        'uas lojas, at\'#39'e9 o valor limite  por esta estabelecido. O Valor' +
+        ' Limite ser\'#39'e1 reajustado periodicamente de forma a atualizar o' +
+        ' poder aquisitivo do Credenciado.\f1\par'#13#10'\f0        A Credencia' +
+        'l \'#39'e9 por prazo determinado de cinco anos, a contar da data de ' +
+        'concess\'#39'e3o e cadastramento.\f1\par'#13#10'\f0        02 - O Credenci' +
+        'ado e pessoa(s) por ele autorizada(s) dever\'#39'e3o apresentar um d' +
+        'ocumento de identidade no ato de cada compra.\f1\par'#13#10'\f0       ' +
+        ' 03 - As autoriza\'#39'e7\'#39'f5es de d\'#39'e9bito referente de mercadoria' +
+        's ser\'#39'e3o assinadas pelo credenciado ou por pessoa(s) por ele a' +
+        'utorizada(s) reconhecendo o d\'#39'e9bito como l\'#39'edquido e certo.\f' +
+        '1\par'#13#10'\f0        04 - O Credenciado \'#39'e9 respons\'#39'e1vel pela au' +
+        'tenticidade de sua assinatura bem como da(s) pessoa(s) por ele a' +
+        'utorizada(s).\f1\par'#13#10'\f0        05 - S\'#39'e3o tamb\'#39'e9m de respon' +
+        'sabilidade do Credenciado perdas e danos, decorrentes do uso ind' +
+        'evido e abusivo do cr\'#39'e9dito concedido.\f1\par'#13#10'\f0        06 -' +
+        ' Em caso de perda, extravio ou furtos de documentos, o Credencia' +
+        'do dever\'#39'e1 comunicar imediatamente o fato ao Departamento de C' +
+        'r\'#39'e9dito da \b\f1 <dbtext>Nome_Fantasia_E</dbtext>\b0  por escr' +
+        'ito.\par'#13#10'\f0        07 - O Credenciado Receber\'#39'e1 no ato da co' +
+        'mpra um carn\'#39'ea constando o valor de cada presta\'#39'e7\'#39'e3o bem c' +
+        'omo seu respectivo vencimento.\f1\par'#13#10'\f0        08 - Os pagame' +
+        'ntos dever\'#39'e3o ser efetuados na \b\f1 <dbtext>Nome_Fantasia_E</' +
+        'dbtext>\b0  em que foram efetuadas as compras.\par'#13#10'\f0        0' +
+        '9 - O Recibo do pagamento ser\'#39'e1 representado pela quita\'#39'e7\'#39'e' +
+        '3o do carn\'#39'ea, onde constar\'#39'e3o o carimbo padronizado da \b\f1' +
+        ' <dbtext>Nome_Fantasia_E</dbtext>\b0 , data e assinatura do caix' +
+        'a em que foi efetuado o pagamento.\par'#13#10'\f0        10 - O prazo ' +
+        'para amortiza\'#39'e7\'#39'e3o das presta\'#39'e7\'#39'f5es ser\'#39'e1 os venciment' +
+        'os originais constantes no carn\'#39'ea de pagamento de acordo com a' +
+        ' promo\'#39'e7\'#39'e3o escolhida pelo Credenciado.\f1\par'#13#10'\f0        1' +
+        '1 - Havendo d\'#39'e9bito superior ao limite, n\'#39'e3o ser\'#39'e1 permiti' +
+        'do o parcelamento do excesso, que ser\'#39'e1 pago integralmente no ' +
+        'vencimento original do carn\'#39'ea conjuntamente com a op\'#39'e7\'#39'e3o ' +
+        'de pagamento.\f1\par'#13#10'       12 - O Credenciado autoriza a \b <d' +
+        'btext>Nome_Fantasia_E</dbtext> \b0\f0 a debitar-lhe os custos de' +
+        ' financiamento correspondente ao saldo devedor. Os custos de fin' +
+        'anciamento ser\'#39'e3o os de mercado, usados pelas institui\'#39'e7\'#39'f5' +
+        'es financeiras(Bancos).\f1\par'#13#10'\f0        13 - A mora do Creden' +
+        'ciado implicar\'#39'e1 no pagamento de corre\'#39'e7\'#39'e3o, mais juros de' +
+        ' 1%, multa de 10% de cobran\'#39'e7a judicial, inclusive honor\'#39'e1ri' +
+        'os de advogado a  raz\'#39'e3o de 20% sobre o valor do d\'#39'e9bito.\f1' +
+        '\par'#13#10'\f0        O Credenciado desde j\'#39'e1 concorda em que o n\'#39 +
+        'e3o pagamento no vencimento do d\'#39'e9bito, fica automaticamente c' +
+        'onstitu\'#39'eddo em mora.\f1\par'#13#10'\f0        14 - A mora do Credenc' +
+        'iado tamb\'#39'e9m facultar\'#39'e1 a  \b\f1 <dbtext>Nome_Fantasia_E</db' +
+        'text>\b0\f0  a sacar letra de c\'#39'e2mbio, ou duplicata relativame' +
+        'nte ao saldo devedor, com encargos.\f1\par'#13#10'\f0        15 - Em c' +
+        'aso de atraso superior a trinta dias a partir do vencimento da p' +
+        'resta\'#39'e7\'#39'e3o o Credenciado se declara ciente que seu nome pode' +
+        'r\'#39'e1 ser registrado (NEGATIVADO), junto ao SPC - Servi\'#39'e7o de ' +
+        'Prote\'#39'e7\'#39'e3o ao Cr\'#39'e9dito e a este somente ser\'#39'e1 reabilitad' +
+        'o o cr\'#39'e9dito ap\'#39'f3s completo pagamento do d\'#39'e9bito.\f1\par'#13#10 +
+        '\f0        16 - Qualquer das partes poder\'#39'e1 denunciar, imotiva' +
+        'damente a Credencial continuando o Credenciado respons\'#39'e1vel pe' +
+        'lo d\'#39'e9bito contra\'#39'eddo, at\'#39'e9 seu completo pagamento.\f1\par' +
+        #13#10'       17 - O presente contrato obriga as partes, seus herdeir' +
+        'os e sucessores.\par'#13#10'\f0        18 - As partes elegem o foro da' +
+        ' Comarca da Loja de Cadastro, como compentente para dirimir qual' +
+        'quer lit\'#39'edgio ou d\'#39'favidas, advindo do presente contrato.\f1\' +
+        'par'#13#10'\par'#13#10'\pard\qc <dbtext>Cidade_E</dbtext>,  _____ de _______' +
+        '__________________  de ________.\par'#13#10'\par'#13#10'\par'#13#10'______________' +
+        '______________________________________\par'#13#10' Assinatura Credenci' +
+        'ado\par'#13#10'\pard\par'#13#10'\par'#13#10'\pard\qc _____________________________' +
+        '____________               _____________________________________' +
+        '_____\par'#13#10'Testemunha                                           ' +
+        '                                          Testemunha\fs16\par'#13#10'\' +
+        'pard\f2\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Stretch = True
+      mmHeight = 221721
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200025
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Cliente_CPF'
+    DataPipeline = daADOQueryDataView1.Cliente
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Cliente'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 19315
+      mmPrintPosition = 0
+      object ppImage1: TppImage
+        UserName = 'Image1'
+        AlignHorizontal = ahCenter
+        AlignVertical = avCenter
+        MaintainAspectRatio = True
+        Transparent = True
+        mmHeight = 17198
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 50271
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060D
+      496D616765314F6E5072696E740B50726F6772616D54797065070B747450726F
+      63656475726506536F75726365069870726F63656475726520496D616765314F
+      6E5072696E743B0D0A207661720D0A202073417578203A20737472696E673B0D
+      0A626567696E0D0A202073417578203A3D2050656761506174684C6F676F3B0D
+      0A202069662073417578203C3E202727207468656E0D0A20202020496D616765
+      312E506963747572652E4C6F616446726F6D46696C6528207341757820293B0D
+      0A656E643B0D0A0D436F6D706F6E656E744E616D650606496D61676531094576
+      656E744E616D6506074F6E5072696E74074576656E7449440220084361726574
+      506F730102000200000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Cliente'
+      Height = 267
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Cliente: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Cliente'
+        object ppField1: TppField
+          FieldAlias = 'Nome_Fantasia_E'
+          FieldName = 'Nome_Fantasia'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 0
+          TableName = 'Empresa'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Raz'#227'o_Social_E'
+          FieldName = 'Raz'#227'o_Social'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 1
+          TableName = 'Empresa'
+        end
+        object ppField3: TppField
+          FieldAlias = 'CNPJ_E'
+          FieldName = 'CGC'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 2
+          TableName = 'Empresa'
+        end
+        object ppField4: TppField
+          FieldAlias = 'IE_E'
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 3
+          TableName = 'Empresa'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Endere'#231'o_E'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 4
+          TableName = 'Empresa'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Bairro_E'
+          FieldName = 'Bairro'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 5
+          TableName = 'Empresa'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cidade_E'
+          FieldName = 'Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 6
+          TableName = 'Empresa'
+        end
+        object ppField8: TppField
+          FieldAlias = 'UF_E'
+          FieldName = 'UF'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 7
+          TableName = 'Empresa'
+        end
+        object ppField9: TppField
+          FieldAlias = 'CEP'#31'_E'
+          FieldName = 'CEP'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Empresa'
+        end
+        object ppField10: TppField
+          FieldAlias = 'N'#250'mero_E'
+          FieldName = 'N'#250'mero'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Empresa'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Cliente_CPF'
+          FieldName = 'Cliente_CPF'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 10
+          TableName = 'Cliente'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Cliente'
+          FieldName = 'iif_Cliente_Outros_Pessoa'
+          FieldLength = 0
+          DisplayWidth = 5
+          Position = 11
+          TableName = 'Cliente'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Cliente'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Empresa.Nome_Fantasia, '
+          '       Empresa.Raz'#227'o_Social, Empresa.CGC, '
+          '       Empresa.Inscri'#231#227'o_Estadual, '
+          '       Empresa.Endere'#231'o, Empresa.Bairro, '
+          '       Empresa.Cidade, Empresa.UF, Empresa.CEP, '
+          '       Empresa.N'#250'mero, Cliente.Cliente_CPF, '
+          
+            '       iif( Cliente.Outros_Pessoa_Juridica = True, Cliente.Clien' +
+            'te_Raz'#227'o_Social, Cliente.Cliente_Nome )  AS iif_Cliente_Outros_P' +
+            'essoa'
+          'FROM (Cliente Cliente'
+          '      LEFT OUTER JOIN Empresa Empresa ON '
+          '     (Empresa.Codigo = Cliente.Empresa) )'
+          'WHERE ( Cliente.Codigo BETWEEN 1 AND 999999 )'
+          'ORDER BY Cliente.Codigo, '
+          '         Cliente.Cliente_Raz'#227'o_Social, '
+          '         Cliente.Cliente_Data_Nascimento')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Cliente'
+          DisplayWidth = 5
+          FieldAlias = 'Outros_Pessoa_Juridica'
+          FieldLength = 0
+          FieldName = 'Outros_Pessoa_Juridica'
+          SQLFieldName = 'iif_Cliente_Outros_Pessoa'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Cliente.Outros_Pessoa_Juridica = True, Cliente.Cliente_Raz'#227 +
+            'o_Social, Cliente.Cliente_Nome ) '
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'ID'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            Mandatory = True
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Cliente'
+            TableName = 'Cliente'
+            TableSQLAlias = 'Cliente'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Nome_Fantasia_E'
+          DisplayWidth = 50
+          FieldAlias = 'Nome_Fantasia'
+          FieldLength = 50
+          FieldName = 'Nome_Fantasia'
+          IsDetail = True
+          SQLFieldName = 'Nome_Fantasia'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField2: TdaField
+          Alias = 'Raz'#227'o_Social_E'
+          DisplayWidth = 50
+          FieldAlias = 'Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Raz'#227'o_Social'
+          IsDetail = True
+          SQLFieldName = 'Raz'#227'o_Social'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField3: TdaField
+          Alias = 'CNPJ_E'
+          DisplayWidth = 20
+          FieldAlias = 'CGC'
+          FieldLength = 20
+          FieldName = 'CGC'
+          IsDetail = True
+          SQLFieldName = 'CGC'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField4: TdaField
+          Alias = 'IE_E'
+          DisplayWidth = 20
+          FieldAlias = 'Inscri'#231#227'o_Estadual'
+          FieldLength = 20
+          FieldName = 'Inscri'#231#227'o_Estadual'
+          IsDetail = True
+          SQLFieldName = 'Inscri'#231#227'o_Estadual'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField5: TdaField
+          Alias = 'Endere'#231'o_E'
+          DisplayWidth = 50
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField6: TdaField
+          Alias = 'Bairro_E'
+          DisplayWidth = 20
+          FieldAlias = 'Bairro'
+          FieldLength = 20
+          FieldName = 'Bairro'
+          IsDetail = True
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField7: TdaField
+          Alias = 'Cidade_E'
+          DisplayWidth = 50
+          FieldAlias = 'Cidade'
+          FieldLength = 50
+          FieldName = 'Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField8: TdaField
+          Alias = 'UF_E'
+          DisplayWidth = 2
+          FieldAlias = 'UF'
+          FieldLength = 2
+          FieldName = 'UF'
+          IsDetail = True
+          SQLFieldName = 'UF'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField9: TdaField
+          Alias = 'CEP'#31'_E'
+          DisplayWidth = 10
+          FieldAlias = 'CEP'
+          FieldLength = 10
+          FieldName = 'CEP'
+          IsDetail = True
+          SQLFieldName = 'CEP'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField10: TdaField
+          Alias = 'N'#250'mero_E'
+          DisplayWidth = 10
+          FieldAlias = 'N'#250'mero'
+          FieldLength = 10
+          FieldName = 'N'#250'mero'
+          IsDetail = True
+          SQLFieldName = 'N'#250'mero'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          TableSQLAlias = 'Empresa'
+        end
+        object daField11: TdaField
+          Alias = 'Cliente_CPF'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_CPF'
+          FieldLength = 20
+          FieldName = 'Cliente_CPF'
+          SQLFieldName = 'Cliente_CPF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField12: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField13: TdaField
+          ChildType = 2
+          Alias = 'Cliente_Raz'#227'o_Social'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Raz'#227'o_Social'
+          FieldLength = 50
+          FieldName = 'Cliente_Raz'#227'o_Social'
+          SQLFieldName = 'Cliente_Raz'#227'o_Social'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField14: TdaField
+          ChildType = 2
+          Alias = 'Cliente_Data_Nascimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Cliente_Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Cliente_Data_Nascimento'
+          SQLFieldName = 'Cliente_Data_Nascimento'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Cliente'
+          JoinType = dajtNone
+          SQLAlias = 'Cliente'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Empresa'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Empresa'
+          TableAlias = 'Empresa'
+          TableName = 'Empresa'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField16: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtLongint
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Empresa'
+              TableName = 'Empresa'
+              TableSQLAlias = 'Empresa'
+            end
+            object daField15: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 1
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Cliente@Clientes@ID@Nome@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Clientes@Documentos
+NOME=Cliente - Contrato de Venda a Prazo
+DESCRICAO=Imprime um contrato para vendas a prazo
+ALTERADO_EM=03/12/2014 17:59
+SQL=<0>
+ORDEM=Cliente.Codigo<Codigo>Cliente.Cliente_Razão_Social<Cliente_Razão_Social>Cliente.Cliente_Data_Nascimento<Cliente_Data_Nascimento>

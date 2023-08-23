@@ -1,0 +1,2849 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.ReajusteFaturas
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1412-8ZZGS.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'ReajusteFaturas'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 14552
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 6615
+      mmLeft = 0
+      mmTop = 7408
+      mmWidth = 200025
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 794
+      mmTop = 8731
+      mmWidth = 10319
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Descri'#231#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 19573
+      mmTop = 8731
+      mmWidth = 15346
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Percentual de Reajuste'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 86272
+      mmTop = 8731
+      mmWidth = 34925
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Valor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 133350
+      mmTop = 8731
+      mmWidth = 7938
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Valor do Reajuste'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 143669
+      mmTop = 8731
+      mmWidth = 26459
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Valor Reajustado'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 173567
+      mmTop = 8731
+      mmWidth = 25665
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 794
+      mmLeft = 0
+      mmTop = 7408
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine3: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 265
+      mmLeft = 0
+      mmTop = 13758
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label7'
+      Caption = 'Data'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 70116
+      mmTop = 8731
+      mmWidth = 6880
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 10848
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.ReajusteFaturas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'ReajusteFaturas'
+      mmHeight = 3387
+      mmLeft = 794
+      mmTop = 244
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Descricao'
+      DataPipeline = daADOQueryDataView1.ReajusteFaturas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'ReajusteFaturas'
+      mmHeight = 3440
+      mmLeft = 19573
+      mmTop = 265
+      mmWidth = 47625
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'iif_alugueis_tipo_cobranc'
+      DataPipeline = daADOQueryDataView1.ReajusteFaturas
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'ReajusteFaturas'
+      mmHeight = 3440
+      mmLeft = 124092
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'iif_alugueis_tipo_cobra_2'
+      DataPipeline = daADOQueryDataView1.ReajusteFaturas
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'ReajusteFaturas'
+      mmHeight = 3440
+      mmLeft = 152930
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'iif_alugueis_tipo_cobran'
+      DataPipeline = daADOQueryDataView1.ReajusteFaturas
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'ReajusteFaturas'
+      mmHeight = 3440
+      mmLeft = 182034
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Valor_2'
+      DataPipeline = daADOQueryDataView1.ReajusteFaturas
+      DisplayFormat = '0.00 %'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Font.Quality = fqClearTypeNatural
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'ReajusteFaturas'
+      mmHeight = 3440
+      mmLeft = 103999
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Data'
+      DataPipeline = daADOQueryDataView1.ReajusteFaturas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'ReajusteFaturas'
+      mmHeight = 3440
+      mmLeft = 70115
+      mmTop = 265
+      mmWidth = 28840
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppSubReport2: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      DataPipelineName = 'Alugueis_Produtos'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport2: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Alugueis_Produtos'
+        object ppTitleBand3: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5556
+          mmPrintPosition = 0
+          object ppLabel13: TppLabel
+            UserName = 'Label13'
+            Border.Color = 9868950
+            Caption = 'Produto'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 794
+            mmTop = 794
+            mmWidth = 11906
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel14: TppLabel
+            UserName = 'Label14'
+            Border.Color = 9868950
+            Caption = 'Percentual Reajuste'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 90752
+            mmTop = 794
+            mmWidth = 30427
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel15: TppLabel
+            UserName = 'Label15'
+            Border.Color = 9868950
+            Caption = 'Valor'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 133350
+            mmTop = 794
+            mmWidth = 7938
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel16: TppLabel
+            UserName = 'Label16'
+            Border.Color = 9868950
+            Caption = 'Valor do Reajuste'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 143669
+            mmTop = 794
+            mmWidth = 26458
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLabel17: TppLabel
+            UserName = 'Label17'
+            Border.Color = 9868950
+            Caption = 'Valor Reajustado'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3969
+            mmLeft = 173567
+            mmTop = 794
+            mmWidth = 25665
+            BandType = 1
+            LayerName = Foreground2
+          end
+          object ppLine5: TppLine
+            UserName = 'Line5'
+            Pen.Color = 9868950
+            ParentWidth = True
+            Weight = 0.500000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 5027
+            mmWidth = 200080
+            BandType = 1
+            LayerName = Foreground2
+          end
+        end
+        object ppDetailBand2: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 4763
+          mmPrintPosition = 0
+          object ppDBText8: TppDBText
+            UserName = 'DBText8'
+            AutoSize = True
+            DataField = 'Codigo_Produto'
+            DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'Alugueis_Produtos'
+            mmHeight = 3704
+            mmLeft = 794
+            mmTop = 0
+            mmWidth = 20108
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText10: TppDBText
+            UserName = 'DBText10'
+            DataField = 'Alugueis_Produtos_Valor'
+            DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Alugueis_Produtos'
+            mmHeight = 3438
+            mmLeft = 124090
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText11: TppDBText
+            UserName = 'DBText11'
+            DataField = 'Valor_Unitario'
+            DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Alugueis_Produtos'
+            mmHeight = 3440
+            mmLeft = 182034
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText12: TppDBText
+            UserName = 'DBText12'
+            DataField = 'Valor'
+            DataPipeline = daADOQueryDataView2.Alugueis_Produtos
+            DisplayFormat = '0.00 %'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Alugueis_Produtos'
+            mmHeight = 3440
+            mmLeft = 103981
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppLabel12: TppLabel
+            UserName = 'lbValReajuste'
+            AutoSize = False
+            Caption = '0,00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clGray
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 152929
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppLine7: TppLine
+            UserName = 'Line7'
+            Pen.Color = 9868950
+            Pen.Style = psDot
+            Pen.Width = 0
+            ParentWidth = True
+            Weight = 0.125000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 4233
+            mmWidth = 200080
+            BandType = 4
+            LayerName = Foreground2
+          end
+        end
+        object ppSummaryBand2: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 3704
+          mmPrintPosition = 0
+          object ppLine4: TppLine
+            UserName = 'Line1'
+            Pen.Color = 9868950
+            Pen.Style = psDot
+            Pen.Width = 0
+            ParentWidth = True
+            Weight = 0.125000000000000000
+            mmHeight = 529
+            mmLeft = 0
+            mmTop = 788
+            mmWidth = 200080
+            BandType = 7
+            LayerName = Foreground2
+          end
+        end
+        object raCodeModule3: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+            444254657874384F6E476574546578740B50726F6772616D54797065070B7474
+            50726F63656475726506536F75726365144C01000070726F6365647572652044
+            4254657874384F6E476574546578742876617220546578743A20537472696E67
+            293B0D0A626567696E0D0A20207B2D2D2D2D2D2D2D2D2D2D2D2D205665726966
+            696361207365206F2070726F6475746F206578697374652C207365206EC3A36F
+            20657869737469722C206573637265766520717565206F206D65736D6F20666F
+            69206578636C7569646F202D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A20
+            2069662820416C7567756569735F50726F6475746F735B274E6F6D6550726F64
+            75746F275D203D2027272029207468656E0D0A2020202054657874203A3D2027
+            50726F6475746F204578636C7569646F270D0A2020656C73650D0A2020202054
+            657874203A3D2074657874202B2027202D2027202B20416C7567756569735F50
+            726F6475746F735B274E6F6D6550726F6475746F275D3B0D0A0D0A656E643B0D
+            0A0D436F6D706F6E656E744E616D65060744425465787438094576656E744E61
+            6D6506094F6E47657454657874074576656E7449440235084361726574506F73
+            0102710203000001060F5472614576656E7448616E646C65720B50726F677261
+            6D4E616D6506166C6256616C5265616A757374654F6E476574546578740B5072
+            6F6772616D54797065070B747450726F63656475726506536F757263650C4901
+            000070726F636564757265206C6256616C5265616A757374654F6E4765745465
+            78742876617220546578743A20537472696E67293B0D0A7661720D0A2020765F
+            7265616A75737465203A20646F75626C653B0D0A626567696E0D0A20207B2D2D
+            2D2D2D2D2D2D2D2D2D2D2043616C63756C61206F2076616C6F7220646F207265
+            616A7573746520646520636164612070726F6475746F202D2D2D2D2D2D2D2D2D
+            2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A2020765F7265616A75737465203A3D20
+            416C7567756569735F50726F6475746F735B2756616C6F725F556E6974617269
+            6F275D202D20416C7567756569735F50726F6475746F735B2756616C6F72496E
+            696369616C275D3B0D0A2020202054657874203A3D20466F726D6174466C6F61
+            742827232C302E30303B2D232C302E3030272C20765F7265616A75737465293B
+            200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060D6C6256616C
+            5265616A75737465094576656E744E616D6506094F6E47657454657874074576
+            656E7449440235084361726574506F730102280206000000}
+        end
+        object ppDesignLayers3: TppDesignLayers
+          object ppDesignLayer15: TppDesignLayer
+            UserName = 'Foreground2'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 21675
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'lbHabil1'
+      AutoSize = False
+      Caption = 'Koinonia Software LTDA - www.habil.com.br'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3440
+      mmLeft = 0
+      mmTop = 5027
+      mmWidth = 59267
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3895
+      mmLeft = 89959
+      mmTop = 529
+      mmWidth = 19812
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 16933
+    mmPrintPosition = 0
+  end
+  object ppGroup2: TppGroup
+    BreakName = 'Tipo'
+    DataPipeline = daADOQueryDataView1.ReajusteFaturas
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group2'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'ReajusteFaturas'
+    NewFile = False
+    object ppGroupHeaderBand2: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 5027
+      mmPrintPosition = 0
+      object ppLabel18: TppLabel
+        UserName = 'lblTipo'
+        Caption = 'lblTipo'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 9790
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand2: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 1058
+      mmPrintPosition = 0
+      object ppLine6: TppLine
+        UserName = 'Line6'
+        Pen.Color = 9868950
+        Pen.Style = psDot
+        Pen.Width = 0
+        ParentHeight = True
+        ParentWidth = True
+        Style = lsDouble
+        Weight = 0.125000000000000000
+        mmHeight = 1058
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 200080
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Prestacao_Servico'
+    DataPipeline = daADOQueryDataView1.ReajusteFaturas
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'ReajusteFaturas'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 3969
+      mmPrintPosition = 0
+      object ppLabel10: TppLabel
+        UserName = 'lbTrueFalse'
+        Caption = 'lbTrueFalse'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 17463
+        BandType = 3
+        GroupNo = 1
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 3175
+      mmPrintPosition = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_ReajusteFaturas'
+      Height = 590
+      Left = 10
+      NameColumnWidth = 190
+      SizeColumnWidth = 187
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 137
+      Width = 680
+      AutoSearchTabOrder = 0
+      object ReajusteFaturas: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'ReajusteFaturas'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Alugueis'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Alugueis'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Descricao'
+          FieldName = 'Descricao'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 2
+          TableName = 'Alugueis'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo_Tipo'
+          FieldName = 'Codigo_Tipo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Alugueis'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Codigo_Modelo'
+          FieldName = 'Codigo_Modelo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Alugueis'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Codigo_Pessoa'
+          FieldName = 'Codigo_Pessoa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Alugueis'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Numero'
+          FieldName = 'Numero'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 6
+          TableName = 'Alugueis'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Inativo'
+          FieldName = 'Inativo'
+          FieldLength = 0
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 7
+          TableName = 'Alugueis'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Data_Inicio'
+          FieldName = 'Data_Inicio'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 8
+          TableName = 'Alugueis'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Valido_Ate'
+          FieldName = 'Valido_Ate'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 9
+          TableName = 'Alugueis'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Tipo_Cobranca'
+          FieldName = 'Tipo_Cobranca'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Alugueis'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Alugueis'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Tem_Entrada'
+          FieldName = 'Tem_Entrada'
+          FieldLength = 0
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 12
+          TableName = 'Alugueis'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Valor_Entrada'
+          FieldName = 'Valor_Entrada'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Alugueis'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Parcelas'
+          FieldName = 'Parcelas'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'Alugueis'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Texto_Contrato'
+          FieldName = 'Texto_Contrato'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'Alugueis'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Dia_Vcto'
+          FieldName = 'Dia_Vcto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'Alugueis'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Indice_Reajuste'
+          FieldName = 'Indice_Reajuste'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 17
+          TableName = 'Alugueis'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Tempo_Reajuste'
+          FieldName = 'Tempo_Reajuste'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'Alugueis'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Reajuste_Em'
+          FieldName = 'Reajuste_Em'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'Alugueis'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Referencia'
+          FieldName = 'Referencia'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'Alugueis'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Proximo_Reajuste'
+          FieldName = 'Proximo_Reajuste'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 21
+          TableName = 'Alugueis'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Ultimo_Reajuste'
+          FieldName = 'Ultimo_Reajuste'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 22
+          TableName = 'Alugueis'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Codigo (2)'
+          FieldName = 'Codigo_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Empresa (2)'
+          FieldName = 'Empresa_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Codigo_Contrato'
+          FieldName = 'Codigo_Contrato'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 26
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField28: TppField
+          FieldAlias = 'PercentualReajuste'
+          FieldName = 'Valor_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Descricao (2)'
+          FieldName = 'Descricao_2'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 28
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 1
+          IsDetail = True
+          DisplayWidth = 1
+          Position = 29
+          TableName = 'Alugueis_Tipos'
+        end
+        object ppField31: TppField
+          FieldAlias = 'Prestacao_Servico'
+          FieldName = 'Prestacao_Servico'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 30
+          TableName = 'Alugueis_Tipos'
+        end
+        object ppField32: TppField
+          FieldAlias = 'ValorReajusteFatura'
+          FieldName = 'iif_alugueis_tipo_cobra_2'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'Alugueis'
+        end
+        object ppField33: TppField
+          FieldAlias = 'ValorTotal'
+          FieldName = 'iif_alugueis_tipo_cobranc'
+          FieldLength = 100
+          DataType = dtDouble
+          DisplayWidth = 100
+          Position = 32
+          TableName = 'Alugueis'
+        end
+        object ppField34: TppField
+          FieldAlias = 'ValorReajustadoFatura'
+          FieldName = 'iif_alugueis_tipo_cobran'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'Alugueis'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'ReajusteFaturas'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Alugueis.Codigo, Alugueis.Empresa, '
+          '       Alugueis.Descricao, Alugueis.Codigo_Tipo, '
+          '       Alugueis.Codigo_Modelo, '
+          '       Alugueis.Codigo_Pessoa, Alugueis.Numero, '
+          '       Alugueis.Inativo, Alugueis.Data_Inicio, '
+          '       Alugueis.Valido_Ate, '
+          '       Alugueis.Tipo_Cobranca, Alugueis.Valor, '
+          '       Alugueis.Tem_Entrada, '
+          '       Alugueis.Valor_Entrada, Alugueis.Parcelas, '
+          '       Alugueis.Texto_Contrato, '
+          '       Alugueis.Dia_Vcto, '
+          '       Alugueis.Indice_Reajuste, '
+          '       Alugueis.Tempo_Reajuste, '
+          '       Alugueis.Reajuste_Em, Alugueis.Referencia, '
+          '       Alugueis.Proximo_Reajuste, '
+          '       Alugueis.Ultimo_Reajuste, '
+          '       Alugueis_HistoricoReajuste.Codigo AS Codigo_2, '
+          '       Alugueis_HistoricoReajuste.Empresa AS Empresa_2, '
+          '       Alugueis_HistoricoReajuste.Codigo_Contrato, '
+          '       Alugueis_HistoricoReajuste.Data, '
+          '       Alugueis_HistoricoReajuste.Valor AS Valor_2, '
+          '       Alugueis_HistoricoReajuste.Descricao AS Descricao_2, '
+          '       Alugueis_Tipos.Tipo, '
+          '       Alugueis_Tipos.Prestacao_Servico, '
+          
+            '       iif( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_entr' +
+            'ada = True, ( alugueis.valor - alugueis.valor_entrada ), aluguei' +
+            's.valor ) ) * ( iif( ( alugueis.parcelas is null ) or ( alugueis' +
+            '.parcelas = 0 ), 1, alugueis.parcelas ) ), alugueis.valor )  * (' +
+            ' Alugueis_HistoricoReajuste.Valor / 100 ) AS iif_alugueis_tipo_c' +
+            'obra_2, '
+          
+            '       iif( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_entr' +
+            'ada = True, ( alugueis.valor - alugueis.valor_entrada ), aluguei' +
+            's.valor ) ) * ( iif( ( alugueis.parcelas is null ) or ( alugueis' +
+            '.parcelas = 0 ), 1, alugueis.parcelas ) ), alugueis.valor )  AS ' +
+            'iif_alugueis_tipo_cobranc, '
+          
+            '       ( iif( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_en' +
+            'trada = True, ( alugueis.valor - alugueis.valor_entrada ), alugu' +
+            'eis.valor ) ) * ( iif( ( alugueis.parcelas is null ) or ( alugue' +
+            'is.parcelas = 0 ), 1, alugueis.parcelas ) ), alugueis.valor )  )' +
+            ' + ( iif( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_entrad' +
+            'a = True, ( alugueis.valor - alugueis.valor_entrada ), alugueis.' +
+            'valor ) ) * ( iif( ( alugueis.parcelas is null ) or ( alugueis.p' +
+            'arcelas = 0 ), 1, alugueis.parcelas ) ), alugueis.valor ) * ( Al' +
+            'ugueis_HistoricoReajuste.Valor / 100 ) ) AS iif_alugueis_tipo_co' +
+            'bran'
+          'FROM ((Alugueis Alugueis'
+          
+            '      INNER JOIN Alugueis_HistoricoReajuste Alugueis_HistoricoRe' +
+            'ajuste ON '
+          '     (Alugueis_HistoricoReajuste.Empresa = Alugueis.Empresa)'
+          
+            '      AND (Alugueis_HistoricoReajuste.Codigo_Contrato = Alugueis' +
+            '.Codigo) )'
+          '      LEFT OUTER JOIN Alugueis_Tipos Alugueis_Tipos ON '
+          '     (Alugueis_Tipos.Empresa = Alugueis.Empresa)'
+          '      AND (Alugueis_Tipos.Codigo = Alugueis.Codigo_Tipo) )'
+          'WHERE ( Alugueis.Codigo BETWEEN 1 AND 999999 )'
+          
+            '       AND ( Alugueis_HistoricoReajuste.Data BETWEEN #2014-01-01' +
+            ' 00.00.00# AND #2014-12-31 00.00.00# )'
+          'ORDER BY Alugueis_Tipos.Tipo, '
+          '         Alugueis_Tipos.Prestacao_Servico, '
+          '         Alugueis.Tipo_Cobranca')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'ValorReajusteFatura'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Dia_Vcto'
+          FieldLength = 0
+          FieldName = 'Dia_Vcto'
+          SQLFieldName = 'iif_alugueis_tipo_cobra_2'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_entrada = T' +
+            'rue, ( alugueis.valor - alugueis.valor_entrada ), alugueis.valor' +
+            ' ) ) * ( iif( ( alugueis.parcelas is null ) or ( alugueis.parcel' +
+            'as = 0 ), 1, alugueis.parcelas ) ), alugueis.valor )  * ( Alugue' +
+            'is_HistoricoReajuste.Valor / 100 )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'ValorTotal'
+          DataType = dtDouble
+          DisplayWidth = 100
+          FieldAlias = 'Descricao'
+          FieldLength = 100
+          FieldName = 'Descricao'
+          SQLFieldName = 'iif_alugueis_tipo_cobranc'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_entrada = T' +
+            'rue, ( alugueis.valor - alugueis.valor_entrada ), alugueis.valor' +
+            ' ) ) * ( iif( ( alugueis.parcelas is null ) or ( alugueis.parcel' +
+            'as = 0 ), 1, alugueis.parcelas ) ), alugueis.valor ) '
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'ValorReajustadoFatura'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Tempo_Reajuste'
+          FieldLength = 0
+          FieldName = 'Tempo_Reajuste'
+          SQLFieldName = 'iif_alugueis_tipo_cobran'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+          CalcType = dacaExpression
+          Expression = 
+            '( iif( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_entrada =' +
+            ' True, ( alugueis.valor - alugueis.valor_entrada ), alugueis.val' +
+            'or ) ) * ( iif( ( alugueis.parcelas is null ) or ( alugueis.parc' +
+            'elas = 0 ), 1, alugueis.parcelas ) ), alugueis.valor )  ) + ( ii' +
+            'f( alugueis.tipo_cobranca = 0, ( iif( alugueis.tem_entrada = Tru' +
+            'e, ( alugueis.valor - alugueis.valor_entrada ), alugueis.valor )' +
+            ' ) * ( iif( ( alugueis.parcelas is null ) or ( alugueis.parcelas' +
+            ' = 0 ), 1, alugueis.parcelas ) ), alugueis.valor ) * ( Alugueis_' +
+            'HistoricoReajuste.Valor / 100 ) )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data'
+          Value = '01/01/2014,31/12/2014'
+          object TdaField
+            Alias = 'Data'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data'
+            FieldLength = 0
+            FieldName = 'Data'
+            SQLFieldName = 'Data'
+            TableAlias = 'Alugueis_HistoricoReajuste'
+            TableName = 'Alugueis_HistoricoReajuste'
+            TableSQLAlias = 'Alugueis_HistoricoReajuste'
+          end
+          object TdaNumericValue
+            Value = 41640.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 42004.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField3: TdaField
+          Alias = 'Descricao'
+          DisplayWidth = 100
+          FieldAlias = 'Descricao'
+          FieldLength = 100
+          FieldName = 'Descricao'
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo_Tipo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Tipo'
+          FieldLength = 0
+          FieldName = 'Codigo_Tipo'
+          SQLFieldName = 'Codigo_Tipo'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField5: TdaField
+          Alias = 'Codigo_Modelo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Modelo'
+          FieldLength = 0
+          FieldName = 'Codigo_Modelo'
+          SQLFieldName = 'Codigo_Modelo'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField6: TdaField
+          Alias = 'Codigo_Pessoa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Pessoa'
+          FieldLength = 0
+          FieldName = 'Codigo_Pessoa'
+          SQLFieldName = 'Codigo_Pessoa'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField7: TdaField
+          Alias = 'Numero'
+          DisplayWidth = 30
+          FieldAlias = 'Numero'
+          FieldLength = 30
+          FieldName = 'Numero'
+          SQLFieldName = 'Numero'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField8: TdaField
+          Alias = 'Inativo'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Inativo'
+          FieldLength = 0
+          FieldName = 'Inativo'
+          SQLFieldName = 'Inativo'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField9: TdaField
+          Alias = 'Data_Inicio'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Inicio'
+          FieldLength = 0
+          FieldName = 'Data_Inicio'
+          SQLFieldName = 'Data_Inicio'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField10: TdaField
+          Alias = 'Valido_Ate'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Valido_Ate'
+          FieldLength = 0
+          FieldName = 'Valido_Ate'
+          SQLFieldName = 'Valido_Ate'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField11: TdaField
+          Alias = 'Tipo_Cobranca'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Cobranca'
+          FieldLength = 0
+          FieldName = 'Tipo_Cobranca'
+          SQLFieldName = 'Tipo_Cobranca'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField12: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField13: TdaField
+          Alias = 'Tem_Entrada'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Tem_Entrada'
+          FieldLength = 0
+          FieldName = 'Tem_Entrada'
+          SQLFieldName = 'Tem_Entrada'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField14: TdaField
+          Alias = 'Valor_Entrada'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor_Entrada'
+          FieldLength = 0
+          FieldName = 'Valor_Entrada'
+          SQLFieldName = 'Valor_Entrada'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField15: TdaField
+          Alias = 'Parcelas'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Parcelas'
+          FieldLength = 0
+          FieldName = 'Parcelas'
+          SQLFieldName = 'Parcelas'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField16: TdaField
+          Alias = 'Texto_Contrato'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Texto_Contrato'
+          FieldLength = 0
+          FieldName = 'Texto_Contrato'
+          Linkable = False
+          SQLFieldName = 'Texto_Contrato'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField17: TdaField
+          Alias = 'Dia_Vcto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Dia_Vcto'
+          FieldLength = 0
+          FieldName = 'Dia_Vcto'
+          SQLFieldName = 'Dia_Vcto'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField18: TdaField
+          Alias = 'Indice_Reajuste'
+          DisplayWidth = 30
+          FieldAlias = 'Indice_Reajuste'
+          FieldLength = 30
+          FieldName = 'Indice_Reajuste'
+          SQLFieldName = 'Indice_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField19: TdaField
+          Alias = 'Tempo_Reajuste'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tempo_Reajuste'
+          FieldLength = 0
+          FieldName = 'Tempo_Reajuste'
+          SQLFieldName = 'Tempo_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField20: TdaField
+          Alias = 'Reajuste_Em'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Reajuste_Em'
+          FieldLength = 0
+          FieldName = 'Reajuste_Em'
+          SQLFieldName = 'Reajuste_Em'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField21: TdaField
+          Alias = 'Referencia'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Referencia'
+          FieldLength = 0
+          FieldName = 'Referencia'
+          SQLFieldName = 'Referencia'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField22: TdaField
+          Alias = 'Proximo_Reajuste'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Proximo_Reajuste'
+          FieldLength = 0
+          FieldName = 'Proximo_Reajuste'
+          SQLFieldName = 'Proximo_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField23: TdaField
+          Alias = 'Ultimo_Reajuste'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Ultimo_Reajuste'
+          FieldLength = 0
+          FieldName = 'Ultimo_Reajuste'
+          SQLFieldName = 'Ultimo_Reajuste'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daField24: TdaField
+          Alias = 'Codigo (2)'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          IsDetail = True
+          SQLFieldName = 'Codigo_2'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField25: TdaField
+          Alias = 'Empresa (2)'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          IsDetail = True
+          SQLFieldName = 'Empresa_2'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField26: TdaField
+          Alias = 'Codigo_Contrato'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Contrato'
+          FieldLength = 0
+          FieldName = 'Codigo_Contrato'
+          IsDetail = True
+          SQLFieldName = 'Codigo_Contrato'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField27: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          IsDetail = True
+          SQLFieldName = 'Data'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField28: TdaField
+          Alias = 'PercentualReajuste'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          IsDetail = True
+          SQLFieldName = 'Valor_2'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField29: TdaField
+          Alias = 'Descricao (2)'
+          DisplayWidth = 50
+          FieldAlias = 'Descricao'
+          FieldLength = 50
+          FieldName = 'Descricao'
+          IsDetail = True
+          SQLFieldName = 'Descricao_2'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField30: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 1
+          FieldAlias = 'Tipo'
+          FieldLength = 1
+          FieldName = 'Tipo'
+          IsDetail = True
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Alugueis_Tipos'
+          TableName = 'Alugueis_Tipos'
+          TableSQLAlias = 'Alugueis_Tipos'
+        end
+        object daField31: TdaField
+          Alias = 'Prestacao_Servico'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Prestacao_Servico'
+          FieldLength = 0
+          FieldName = 'Prestacao_Servico'
+          IsDetail = True
+          SQLFieldName = 'Prestacao_Servico'
+          TableAlias = 'Alugueis_Tipos'
+          TableName = 'Alugueis_Tipos'
+          TableSQLAlias = 'Alugueis_Tipos'
+        end
+        object daField32: TdaField
+          ChildType = 2
+          Alias = 'Tipo'
+          DisplayWidth = 1
+          FieldAlias = 'Tipo'
+          FieldLength = 1
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Alugueis_Tipos'
+          TableName = 'Alugueis_Tipos'
+          TableSQLAlias = 'Alugueis_Tipos'
+        end
+        object daField33: TdaField
+          ChildType = 2
+          Alias = 'Prestacao_Servico'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Prestacao_Servico'
+          FieldLength = 0
+          FieldName = 'Prestacao_Servico'
+          SQLFieldName = 'Prestacao_Servico'
+          TableAlias = 'Alugueis_Tipos'
+          TableName = 'Alugueis_Tipos'
+          TableSQLAlias = 'Alugueis_Tipos'
+        end
+        object daField34: TdaField
+          ChildType = 2
+          Alias = 'Tipo_Cobranca'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Cobranca'
+          FieldLength = 0
+          FieldName = 'Tipo_Cobranca'
+          SQLFieldName = 'Tipo_Cobranca'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+          TableSQLAlias = 'Alugueis'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis'
+          JoinType = dajtNone
+          SQLAlias = 'Alugueis'
+          TableAlias = 'Alugueis'
+          TableName = 'Alugueis'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis_HistoricoReajuste'
+          SQLAlias = 'Alugueis_HistoricoReajuste'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField36: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis_HistoricoReajuste'
+              TableName = 'Alugueis_HistoricoReajuste'
+              TableSQLAlias = 'Alugueis_HistoricoReajuste'
+            end
+            object daField35: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis'
+              TableName = 'Alugueis'
+              TableSQLAlias = 'Alugueis'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField38: TdaField
+              ChildType = 3
+              Alias = 'Codigo_Contrato'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Contrato'
+              FieldLength = 0
+              FieldName = 'Codigo_Contrato'
+              SQLFieldName = 'Codigo_Contrato'
+              TableAlias = 'Alugueis_HistoricoReajuste'
+              TableName = 'Alugueis_HistoricoReajuste'
+              TableSQLAlias = 'Alugueis_HistoricoReajuste'
+            end
+            object daField37: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Alugueis'
+              TableName = 'Alugueis'
+              TableSQLAlias = 'Alugueis'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis_Tipos'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Alugueis_Tipos'
+          TableAlias = 'Alugueis_Tipos'
+          TableName = 'Alugueis_Tipos'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField40: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis_Tipos'
+              TableName = 'Alugueis_Tipos'
+              TableSQLAlias = 'Alugueis_Tipos'
+            end
+            object daField39: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis'
+              TableName = 'Alugueis'
+              TableSQLAlias = 'Alugueis'
+            end
+          end
+          object daTableJoin4: TdaTableJoin
+            ChildType = 6
+            object daField42: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Alugueis_Tipos'
+              TableName = 'Alugueis_Tipos'
+              TableSQLAlias = 'Alugueis_Tipos'
+            end
+            object daField41: TdaField
+              ChildType = 4
+              Alias = 'Codigo_Tipo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Tipo'
+              FieldLength = 0
+              FieldName = 'Codigo_Tipo'
+              SQLFieldName = 'Codigo_Tipo'
+              TableAlias = 'Alugueis'
+              TableName = 'Alugueis'
+              TableSQLAlias = 'Alugueis'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Alugueis_Produtos'
+      Height = 322
+      Left = 948
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 1
+      Top = 0
+      TypeColumnWidth = 52
+      Width = 553
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_ReajusteFaturas'
+      object Alugueis_Produtos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Alugueis_Produtos'
+        MasterDataPipelineName = 'ReajusteFaturas'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Codigo_Cabecalho'
+          FieldName = 'Codigo_Cabecalho'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Codigo_Produto'
+          FieldName = 'Codigo_Produto'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Qtde'
+          FieldName = 'Qtde'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Valor_Unitario'
+          FieldName = 'Valor_Unitario'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Codigo (2)'
+          FieldName = 'Codigo_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Empresa (2)'
+          FieldName = 'Empresa_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Codigo_Contrato'
+          FieldName = 'Codigo_Contrato'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Data'
+          FieldName = 'Data'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 9
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Descricao'
+          FieldName = 'Descricao'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 11
+          TableName = 'Alugueis_HistoricoReajuste'
+        end
+        object ppField13: TppField
+          FieldAlias = 'ValorInicial'
+          FieldName = 'Alugueis_Produtos_Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Alugueis_Produtos'
+        end
+        object ppField14: TppField
+          FieldAlias = 'NomeProduto'
+          FieldName = 'select_p_descri'#231#227'o_from'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Alugueis_Produtos'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Tipo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Tipo'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Prestacao_Servico'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Prestacao_Servico'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Tipo_Cobranca'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Tipo_Cobranca'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Codigo_Cabecalho'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Alugueis_Produtos'
+        Distinct = True
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT DISTINCT Alugueis_Produtos.Codigo, '
+          '                Alugueis_Produtos.Empresa, '
+          '                Alugueis_Produtos.Codigo_Cabecalho, '
+          '                Alugueis_Produtos.Codigo_Produto, '
+          '                Alugueis_Produtos.Qtde, '
+          '                Alugueis_Produtos.Valor_Unitario, '
+          '                Alugueis_HistoricoReajuste.Codigo AS Codigo_2, '
+          
+            '                Alugueis_HistoricoReajuste.Empresa AS Empresa_2,' +
+            ' '
+          '                Alugueis_HistoricoReajuste.Codigo_Contrato, '
+          '                Alugueis_HistoricoReajuste.Data, '
+          '                Alugueis_HistoricoReajuste.Valor, '
+          '                Alugueis_HistoricoReajuste.Descricao, '
+          
+            '                ( Alugueis_Produtos.Valor_Unitario * 100 ) / (10' +
+            '0 + Alugueis_HistoricoReajuste.Valor) AS Alugueis_Produtos_Valor' +
+            ', '
+          
+            '                ( select p.[descri'#231#227'o] from produto p where p.di' +
+            'gito_verificador = Alugueis_Produtos.Codigo_Produto and p.Empres' +
+            'a = Alugueis_Produtos.Empresa ) AS select_p_descri'#231#227'o_from'
+          'FROM (Alugueis_Produtos Alugueis_Produtos'
+          
+            '      LEFT OUTER JOIN Alugueis_HistoricoReajuste Alugueis_Histor' +
+            'icoReajuste ON '
+          
+            '     (Alugueis_HistoricoReajuste.Empresa = Alugueis_Produtos.Emp' +
+            'resa)'
+          
+            '      AND (Alugueis_HistoricoReajuste.Codigo_Contrato = Alugueis' +
+            '_Produtos.Codigo_Cabecalho) )'
+          'ORDER BY Alugueis_Produtos.Codigo_Produto')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'ValorInicial'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor_Unitario'
+          FieldLength = 0
+          FieldName = 'Valor_Unitario'
+          SQLFieldName = 'Alugueis_Produtos_Valor'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+          CalcType = dacaExpression
+          Expression = 
+            '( Alugueis_Produtos.Valor_Unitario * 100 ) / (100 + Alugueis_His' +
+            'toricoReajuste.Valor)'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'NomeProduto'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Produto'
+          FieldLength = 0
+          FieldName = 'Codigo_Produto'
+          SQLFieldName = 'select_p_descri'#231#227'o_from'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+          CalcType = dacaExpression
+          Expression = 
+            '( select p.[descri'#231#227'o] from produto p where p.digito_verificador' +
+            ' = Alugueis_Produtos.Codigo_Produto and p.Empresa = Alugueis_Pro' +
+            'dutos.Empresa )'
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField3: TdaField
+          Alias = 'Codigo_Cabecalho'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Cabecalho'
+          FieldLength = 0
+          FieldName = 'Codigo_Cabecalho'
+          SQLFieldName = 'Codigo_Cabecalho'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField4: TdaField
+          Alias = 'Codigo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Produto'
+          FieldLength = 0
+          FieldName = 'Codigo_Produto'
+          SQLFieldName = 'Codigo_Produto'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField5: TdaField
+          Alias = 'Qtde'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Qtde'
+          FieldLength = 0
+          FieldName = 'Qtde'
+          SQLFieldName = 'Qtde'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField6: TdaField
+          Alias = 'Valor_Unitario'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor_Unitario'
+          FieldLength = 0
+          FieldName = 'Valor_Unitario'
+          SQLFieldName = 'Valor_Unitario'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daField7: TdaField
+          Alias = 'Codigo (2)'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          IsDetail = True
+          SQLFieldName = 'Codigo_2'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField8: TdaField
+          Alias = 'Empresa (2)'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          IsDetail = True
+          SQLFieldName = 'Empresa_2'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField9: TdaField
+          Alias = 'Codigo_Contrato'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Contrato'
+          FieldLength = 0
+          FieldName = 'Codigo_Contrato'
+          IsDetail = True
+          SQLFieldName = 'Codigo_Contrato'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField10: TdaField
+          Alias = 'Data'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data'
+          FieldLength = 0
+          FieldName = 'Data'
+          IsDetail = True
+          SQLFieldName = 'Data'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField11: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          IsDetail = True
+          SQLFieldName = 'Valor'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField12: TdaField
+          Alias = 'Descricao'
+          DisplayWidth = 50
+          FieldAlias = 'Descricao'
+          FieldLength = 50
+          FieldName = 'Descricao'
+          IsDetail = True
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          TableSQLAlias = 'Alugueis_HistoricoReajuste'
+        end
+        object daField13: TdaField
+          ChildType = 2
+          Alias = 'Codigo_Produto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Produto'
+          FieldLength = 0
+          FieldName = 'Codigo_Produto'
+          SQLFieldName = 'Codigo_Produto'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+          TableSQLAlias = 'Alugueis_Produtos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis_Produtos'
+          JoinType = dajtNone
+          SQLAlias = 'Alugueis_Produtos'
+          TableAlias = 'Alugueis_Produtos'
+          TableName = 'Alugueis_Produtos'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Alugueis_HistoricoReajuste'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Alugueis_HistoricoReajuste'
+          TableAlias = 'Alugueis_HistoricoReajuste'
+          TableName = 'Alugueis_HistoricoReajuste'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField15: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis_HistoricoReajuste'
+              TableName = 'Alugueis_HistoricoReajuste'
+              TableSQLAlias = 'Alugueis_HistoricoReajuste'
+            end
+            object daField14: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Alugueis_Produtos'
+              TableName = 'Alugueis_Produtos'
+              TableSQLAlias = 'Alugueis_Produtos'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField17: TdaField
+              ChildType = 3
+              Alias = 'Codigo_Contrato'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Contrato'
+              FieldLength = 0
+              FieldName = 'Codigo_Contrato'
+              SQLFieldName = 'Codigo_Contrato'
+              TableAlias = 'Alugueis_HistoricoReajuste'
+              TableName = 'Alugueis_HistoricoReajuste'
+              TableSQLAlias = 'Alugueis_HistoricoReajuste'
+            end
+            object daField16: TdaField
+              ChildType = 4
+              Alias = 'Codigo_Cabecalho'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo_Cabecalho'
+              FieldLength = 0
+              FieldName = 'Codigo_Cabecalho'
+              SQLFieldName = 'Codigo_Cabecalho'
+              TableAlias = 'Alugueis_Produtos'
+              TableName = 'Alugueis_Produtos'
+              TableSQLAlias = 'Alugueis_Produtos'
+            end
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField18: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object daField19: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Alugueis_Produtos'
+            TableName = 'Alugueis_Produtos'
+            TableSQLAlias = 'Alugueis_Produtos'
+          end
+        end
+        object TdaSQLLink
+          ChildType = 9
+          object daField20: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Alugueis'
+            TableName = 'Alugueis'
+            TableSQLAlias = 'Alugueis'
+          end
+          object daField21: TdaField
+            ChildType = 11
+            Alias = 'Codigo_Cabecalho'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo_Cabecalho'
+            FieldLength = 0
+            FieldName = 'Codigo_Cabecalho'
+            SQLFieldName = 'Codigo_Cabecalho'
+            TableAlias = 'Alugueis_Produtos'
+            TableName = 'Alugueis_Produtos'
+            TableSQLAlias = 'Alugueis_Produtos'
+          end
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650614
+      6C625472756546616C73654F6E476574546578740B50726F6772616D54797065
+      070B747450726F63656475726506536F75726365143B01000070726F63656475
+      7265206C625472756546616C73654F6E47657454657874287661722054657874
+      3A20537472696E67293B0D0A626567696E0D0A20207B2D2D2D2D2D2D2D2D2D2D
+      2D2056657269666963612073652068C3A120505245535441C387C3834F204445
+      205345525649C3874F20652065736372657665202D2D2D2D2D2D2D2D2D2D2D2D
+      2D2D2D2D2D2D2D2D2D7D0D0A20206966285265616A7573746546617475726173
+      5B2750726573746163616F5F5365727669636F275D203D205472756529207468
+      656E0D0A2020202054657874203A3D20275265616A757374657320646F732056
+      616C6F7265732064652050726F6475746F732F5365727669C3A76F73270D0A20
+      20656C73650D0A2020202054657874203A3D20275265616A7573746573206465
+      2046617475726173273B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E61
+      6D65060B6C625472756546616C7365094576656E744E616D6506094F6E476574
+      54657874074576656E7449440235084361726574506F73010253020300000106
+      0F5472614576656E7448616E646C65720B50726F6772616D4E616D6506106C62
+      6C5469706F4F6E476574546578740B50726F6772616D54797065070B74745072
+      6F63656475726506536F757263650C3601000070726F636564757265206C626C
+      5469706F4F6E476574546578742876617220546578743A20537472696E67293B
+      0D0A7661720D0A20205469706F203A20537472696E673B0D0A626567696E0D0A
+      20207B2D2D2D2D2D2D2D2D2D2D20566572696669636120652065736372657665
+      206F205449504F20646F20434F4E545241544F20706F7220457874656E736F20
+      2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D7D0D0A20206966285265616A757374
+      65466174757261735B275469706F275D203D2027522729207468656E0D0A2020
+      20205469706F203A3D20275265636562696D656E746F270D0A2020656C73650D
+      0A202020205469706F203A3D2027506167616D656E746F273B0D0A0D0A0D0A20
+      2054657874203A3D2027436F6E747261746F2064652027202B205469706F3B0D
+      0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506076C626C5469706F
+      094576656E744E616D6506094F6E47657454657874074576656E744944023508
+      4361726574506F730102520205000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer30: TppDesignLayer
+      UserName = 'BandLayer30'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer29: TppDesignLayer
+      UserName = 'BandLayer29'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer28: TppDesignLayer
+      UserName = 'BandLayer28'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer27: TppDesignLayer
+      UserName = 'BandLayer27'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer26: TppDesignLayer
+      UserName = 'BandLayer26'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer25: TppDesignLayer
+      UserName = 'BandLayer25'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer24: TppDesignLayer
+      UserName = 'BandLayer24'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer23: TppDesignLayer
+      UserName = 'BandLayer23'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer22: TppDesignLayer
+      UserName = 'BandLayer22'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer21: TppDesignLayer
+      UserName = 'BandLayer21'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 18
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 19
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 20
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 21
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 22
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 23
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 24
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 25
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 26
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 27
+    end
+  end
+  object ppParameterList3: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Contrato@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo'
+    end
+    object Data: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/01/2014,31/12/2014'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data do Reajuste@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/01/2014'
+      UserName = 'Data'
+    end
+  end
+end
+$
+GRUPO=Aluguéis e Contratos
+NOME=Lista de Reajustes
+DESCRICAO=Mostra uma lista dos reajustes feitos.
+ALTERADO_EM=18/12/2014 15:11
+SQL=<0>

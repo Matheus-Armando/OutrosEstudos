@@ -1,0 +1,4597 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Contas_Receber
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1205-CLUDC.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Contas_Receber'
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 170127
+    mmPrintPosition = 0
+    object ppDBBarCode1: TppDBBarCode
+      UserName = 'DBBarCode1'
+      AlignBarCode = ahLeft
+      AutoSizeFont = False
+      BarCodeType = bcInt2of5
+      BarColor = clWindowText
+      CalcCheckDigit = False
+      DataField = 'Boleto_C'#243'digo_Barra'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      PrintHumanReadable = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Courier New'
+      Font.Size = 8
+      Font.Style = []
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 12965
+      mmLeft = 529
+      mmTop = 154517
+      mmWidth = 124619
+      BandType = 4
+      LayerName = Foreground1
+      mmBarWidth = 320
+      mmWideBarRatio = 50800
+    end
+    object ppShape4: TppShape
+      UserName = 'Shape4'
+      Brush.Color = clSilver
+      Pen.Style = psClear
+      mmHeight = 7408
+      mmLeft = 150284
+      mmTop = 126471
+      mmWidth = 46567
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape3: TppShape
+      UserName = 'Shape3'
+      Brush.Color = clSilver
+      Pen.Style = psClear
+      mmHeight = 8731
+      mmLeft = 150284
+      mmTop = 90752
+      mmWidth = 46831
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape1: TppShape
+      UserName = 'Shape1'
+      Brush.Color = clSilver
+      Pen.Style = psClear
+      mmHeight = 7938
+      mmLeft = 150284
+      mmTop = 66146
+      mmWidth = 46567
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Pen.Style = psDot
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 55827
+      mmWidth = 193940
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = '"'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Wingdings'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 2910
+      mmTop = 53711
+      mmWidth = 5027
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Recibo do Sacado'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 169598
+      mmTop = 6879
+      mmWidth = 26988
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      Pen.Width = 3
+      Weight = 2.250000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 150548
+      mmWidth = 193940
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 19844
+      mmWidth = 193675
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'Line4'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 28575
+      mmWidth = 193675
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine5: TppLine
+      UserName = 'Line5'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 37306
+      mmWidth = 193675
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Cedente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 11642
+      mmWidth = 8996
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Nome_Cedente'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 3704
+      mmTop = 15081
+      mmWidth = 90488
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine6: TppLine
+      UserName = 'Line6'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 17463
+      mmLeft = 94986
+      mmTop = 11113
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine7: TppLine
+      UserName = 'Line7'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8731
+      mmLeft = 133086
+      mmTop = 11113
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine8: TppLine
+      UserName = 'Line8'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8996
+      mmLeft = 159544
+      mmTop = 11113
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      Caption = 'Ag'#234'ncia/C'#243'digo Cedente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 96309
+      mmTop = 11642
+      mmWidth = 26723
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      Caption = 'Data do Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 133879
+      mmTop = 11642
+      mmWidth = 21167
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      Caption = 'Vencimento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 160338
+      mmTop = 11642
+      mmWidth = 12435
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Data_Conta'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 133879
+      mmTop = 15081
+      mmWidth = 24871
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Data_Vencimento'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 160338
+      mmTop = 15081
+      mmWidth = 35719
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine9: TppLine
+      UserName = 'Line9'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8731
+      mmLeft = 145257
+      mmTop = 19844
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine10: TppLine
+      UserName = 'Line10'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8996
+      mmLeft = 41804
+      mmTop = 28575
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine11: TppLine
+      UserName = 'Line101'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8731
+      mmLeft = 80698
+      mmTop = 28575
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine12: TppLine
+      UserName = 'Line12'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8731
+      mmLeft = 119327
+      mmTop = 28575
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine13: TppLine
+      UserName = 'Line13'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8996
+      mmLeft = 158221
+      mmTop = 28575
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      Caption = 'Sacado'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 20373
+      mmWidth = 8202
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label101'
+      Caption = 'N'#250'mero Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 96309
+      mmTop = 20373
+      mmWidth = 20638
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      Caption = 'Nosso N'#250'mero'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 146315
+      mmTop = 20373
+      mmWidth = 15610
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'iif_Cliente_Outros_pessoa'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 3704
+      mmTop = 23813
+      mmWidth = 90488
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Documento'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 96309
+      mmTop = 23813
+      mmWidth = 47361
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Boleto_Nosso_N'#250'mero'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 146315
+      mmTop = 23813
+      mmWidth = 45244
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label102'
+      Caption = 'Esp'#233'cie'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 29104
+      mmWidth = 8731
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label14'
+      Caption = 'Quantidade'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 42598
+      mmTop = 29104
+      mmWidth = 12435
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label15'
+      Caption = 'Valor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 81492
+      mmTop = 29104
+      mmWidth = 5556
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label16'
+      Caption = 'Descontos / Abatimentos'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 159015
+      mmTop = 29104
+      mmWidth = 27252
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel17: TppLabel
+      UserName = 'Label17'
+      Caption = 'Valor do Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 120121
+      mmTop = 29104
+      mmWidth = 21696
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      DataField = 'Valor'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      DisplayFormat = '#,0.00;(#,0.00)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 120121
+      mmTop = 32544
+      mmWidth = 37306
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine14: TppLine
+      UserName = 'Line14'
+      Pen.Width = 3
+      Weight = 2.250000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 65352
+      mmWidth = 193940
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine15: TppLine
+      UserName = 'Line15'
+      Pen.Width = 3
+      Weight = 2.250000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 133086
+      mmWidth = 193940
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine16: TppLine
+      UserName = 'Line16'
+      Pen.Width = 2
+      Position = lpLeft
+      Weight = 1.500000000000000000
+      mmHeight = 7938
+      mmLeft = 48683
+      mmTop = 57679
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine17: TppLine
+      UserName = 'Line17'
+      Pen.Width = 2
+      Position = lpLeft
+      Weight = 1.500000000000000000
+      mmHeight = 7938
+      mmLeft = 67469
+      mmTop = 57679
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText14: TppDBText
+      UserName = 'DBText14'
+      AutoSize = True
+      DataField = 'Boleto_Linha_Digit'#225'vel'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 13
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 5249
+      mmLeft = 69586
+      mmTop = 59002
+      mmWidth = 128270
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine18: TppLine
+      UserName = 'Line18'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 73819
+      mmWidth = 193675
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel21: TppLabel
+      UserName = 'Label103'
+      Caption = 'Sacado'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 3704
+      mmTop = 134938
+      mmWidth = 9790
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText17: TppDBText
+      UserName = 'DBText17'
+      DataField = 'iif_Cliente_Outros_pessoa'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 15346
+      mmTop = 134938
+      mmWidth = 95250
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText19: TppDBText
+      UserName = 'DBText19'
+      DataField = 'Cliente_CEP'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 15346
+      mmTop = 145521
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText20: TppDBText
+      UserName = 'DBText20'
+      DataField = 'Cliente_Bairro_Descri'#231#227'o'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 32808
+      mmTop = 145521
+      mmWidth = 64029
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText21: TppDBText
+      UserName = 'DBText201'
+      DataField = 'Cliente_Cidade'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 97102
+      mmTop = 145521
+      mmWidth = 88371
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText22: TppDBText
+      UserName = 'DBText22'
+      DataField = 'Cliente_UF'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 185738
+      mmTop = 145521
+      mmWidth = 6085
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText23: TppDBText
+      UserName = 'DBText202'
+      DataField = 'Cliente_CPF'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 130175
+      mmTop = 134938
+      mmWidth = 64029
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel22: TppLabel
+      UserName = 'Label22'
+      Caption = 'Local de Pagamento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 66411
+      mmWidth = 21960
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine19: TppLine
+      UserName = 'Line19'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 67733
+      mmLeft = 150019
+      mmTop = 65352
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel24: TppLabel
+      UserName = 'Label24'
+      Caption = 'Vencimento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 66411
+      mmWidth = 12435
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText24: TppDBText
+      UserName = 'DBText24'
+      DataField = 'Data_Vencimento'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 150813
+      mmTop = 69850
+      mmWidth = 45244
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine20: TppLine
+      UserName = 'Line20'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 82286
+      mmWidth = 193940
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine21: TppLine
+      UserName = 'Line201'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 90488
+      mmWidth = 193940
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine22: TppLine
+      UserName = 'Line22'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 98954
+      mmWidth = 194205
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine23: TppLine
+      UserName = 'Line23'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 150019
+      mmTop = 105834
+      mmWidth = 46831
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine24: TppLine
+      UserName = 'Line24'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 150019
+      mmTop = 112713
+      mmWidth = 46831
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine25: TppLine
+      UserName = 'Line25'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 150019
+      mmTop = 119592
+      mmWidth = 46831
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine26: TppLine
+      UserName = 'Line26'
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 150019
+      mmTop = 126207
+      mmWidth = 46831
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel25: TppLabel
+      UserName = 'Label25'
+      Caption = 'Ag'#234'ncia/C'#243'digo Cedente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 74348
+      mmWidth = 26723
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel26: TppLabel
+      UserName = 'Label26'
+      Caption = 'Nosso N'#250'mero'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 82815
+      mmWidth = 15610
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel27: TppLabel
+      UserName = 'Label27'
+      Caption = '(=) Valor do Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 91017
+      mmWidth = 25400
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel28: TppLabel
+      UserName = 'Label28'
+      Caption = '(+) Outros Acr'#233'scimos'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150548
+      mmTop = 99484
+      mmWidth = 24342
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel29: TppLabel
+      UserName = 'Label29'
+      Caption = '(-) Descontos/Abatimentos'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 106363
+      mmWidth = 28840
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel30: TppLabel
+      UserName = 'Label30'
+      Caption = '(-) Outras Dedu'#231#245'es'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 113242
+      mmWidth = 22225
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel31: TppLabel
+      UserName = 'Label31'
+      Caption = '(+) Mora/Multa'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 120121
+      mmWidth = 16140
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel32: TppLabel
+      UserName = 'Label32'
+      Caption = '(=) Valor Cobrado'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 150813
+      mmTop = 126736
+      mmWidth = 19050
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText27: TppDBText
+      UserName = 'DBText27'
+      DataField = 'Boleto_Nosso_N'#250'mero'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 150813
+      mmTop = 86254
+      mmWidth = 45244
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText28: TppDBText
+      UserName = 'DBText28'
+      DataField = 'Valor'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      DisplayFormat = '#,0.00;(#,0.00)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 150813
+      mmTop = 94721
+      mmWidth = 45244
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel33: TppLabel
+      UserName = 'Label33'
+      Caption = 'Instru'#231#245'es'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 99484
+      mmWidth = 11642
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel34: TppLabel
+      UserName = 'Label34'
+      Caption = 'Cedente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 74348
+      mmWidth = 8996
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText29: TppDBText
+      UserName = 'DBText29'
+      DataField = 'Nome_Cedente'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 3704
+      mmTop = 78052
+      mmWidth = 145521
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel35: TppLabel
+      UserName = 'Label35'
+      Caption = 'Data do Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 82815
+      mmWidth = 21167
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText30: TppDBText
+      UserName = 'DBText30'
+      DataField = 'Data_Conta'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 3704
+      mmTop = 86254
+      mmWidth = 24871
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel36: TppLabel
+      UserName = 'Label36'
+      Caption = 'N'#250'mero Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 29898
+      mmTop = 82815
+      mmWidth = 20638
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText31: TppDBText
+      UserName = 'DBText31'
+      DataField = 'Documento'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 29898
+      mmTop = 86254
+      mmWidth = 48683
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel37: TppLabel
+      UserName = 'Label37'
+      Caption = 'Esp'#233'cie'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 57944
+      mmTop = 91017
+      mmWidth = 8731
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel38: TppLabel
+      UserName = 'Label38'
+      Caption = 'Quantidade'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 79904
+      mmTop = 91017
+      mmWidth = 12435
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine27: TppLine
+      UserName = 'Line27'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8202
+      mmLeft = 29104
+      mmTop = 82286
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine28: TppLine
+      UserName = 'Line28'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 16933
+      mmLeft = 79111
+      mmTop = 82286
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel42: TppLabel
+      UserName = 'Label42'
+      Caption = 'Data do Processamento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 118798
+      mmTop = 82815
+      mmWidth = 25929
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel43: TppLabel
+      UserName = 'Label43'
+      Caption = 'Aceite'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 106627
+      mmTop = 82815
+      mmWidth = 6879
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel44: TppLabel
+      UserName = 'Label44'
+      Caption = 'Esp'#233'cie Documento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 79904
+      mmTop = 82815
+      mmWidth = 21431
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine30: TppLine
+      UserName = 'Line30'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8202
+      mmLeft = 105569
+      mmTop = 82286
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine31: TppLine
+      UserName = 'Line31'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8202
+      mmLeft = 57150
+      mmTop = 90752
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine32: TppLine
+      UserName = 'Line32'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 8202
+      mmLeft = 33867
+      mmTop = 90752
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel47: TppLabel
+      UserName = 'Label47'
+      Caption = 'Carteira'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 34660
+      mmTop = 91017
+      mmWidth = 8467
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel48: TppLabel
+      UserName = 'Label48'
+      Caption = 'Uso do Banco'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 3704
+      mmTop = 91017
+      mmWidth = 15610
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText35: TppDBText
+      UserName = 'DBText35'
+      DataField = 'CARTEIRA'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 34660
+      mmTop = 94721
+      mmWidth = 21960
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel19: TppLabel
+      UserName = 'Label13'
+      Caption = 'Aten'#231#227'o: N'#227'o alterar nada abaixo desta posi'#231#227'o'
+      Color = clRed
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Visible = False
+      mmHeight = 2910
+      mmLeft = 58738
+      mmTop = 51858
+      mmWidth = 56886
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine33: TppLine
+      UserName = 'Line11'
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 118269
+      mmTop = 153988
+      mmWidth = 79111
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = ' Autentica'#231#227'o Mec'#226'nica '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      TextAlignment = taCentered
+      mmHeight = 3175
+      mmLeft = 143669
+      mmTop = 152665
+      mmWidth = 27781
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel41: TppLabel
+      UserName = 'Label41'
+      Caption = 'FICHA DE COMPENSA'#199#195'O'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      mmHeight = 3969
+      mmLeft = 161132
+      mmTop = 163777
+      mmWidth = 38365
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine34: TppLine
+      UserName = 'Line21'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 118004
+      mmTop = 153988
+      mmWidth = 1588
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine35: TppLine
+      UserName = 'Line35'
+      Position = lpRight
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 184415
+      mmTop = 153988
+      mmWidth = 13229
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel18: TppLabel
+      UserName = 'Label11'
+      Caption = 'x'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      mmHeight = 3969
+      mmLeft = 79904
+      mmTop = 32544
+      mmWidth = 1852
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine29: TppLine
+      UserName = 'Line29'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 16404
+      mmLeft = 118004
+      mmTop = 82550
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel40: TppLabel
+      UserName = 'Label40'
+      Caption = 'x'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      mmHeight = 3969
+      mmLeft = 116946
+      mmTop = 92869
+      mmWidth = 2646
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel39: TppLabel
+      UserName = 'Label39'
+      Caption = 'Valor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 118798
+      mmTop = 91017
+      mmWidth = 5556
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel20: TppLabel
+      UserName = 'Label20'
+      Caption = '='
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      mmHeight = 3969
+      mmLeft = 118798
+      mmTop = 32544
+      mmWidth = 1852
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText16: TppDBText
+      UserName = 'CodigoBanco1'
+      DataField = 'Especie_Doc'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 79904
+      mmTop = 86254
+      mmWidth = 25135
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText32: TppDBText
+      UserName = 'DBText32'
+      DataField = 'ACEITE_DOCUMENTO'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3969
+      mmLeft = 106627
+      mmTop = 86254
+      mmWidth = 9790
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBMemo1: TppDBMemo
+      UserName = 'DBMemo1'
+      CharWrap = False
+      DataField = 'INSTRUCOES'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      RemoveEmptyLines = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 28046
+      mmLeft = 4763
+      mmTop = 103188
+      mmWidth = 144992
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      mmLeading = 0
+    end
+    object ppLine36: TppLine
+      UserName = 'Line36'
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 76200
+      mmTop = 41540
+      mmWidth = 120650
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel46: TppLabel
+      UserName = 'Label46'
+      Caption = ' Autentica'#231#227'o Mec'#226'nica '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 7
+      Font.Style = [fsItalic]
+      TextAlignment = taCentered
+      mmHeight = 3175
+      mmLeft = 123031
+      mmTop = 40217
+      mmWidth = 28575
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine37: TppLine
+      UserName = 'Line37'
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 76200
+      mmTop = 41540
+      mmWidth = 13229
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine38: TppLine
+      UserName = 'Line38'
+      Position = lpRight
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 183886
+      mmTop = 41540
+      mmWidth = 13229
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      AutoSize = False
+      Caption = 'Label3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 96309
+      mmTop = 15875
+      mmWidth = 35190
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'DESCRICAO'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 3704
+      mmTop = 32544
+      mmWidth = 36513
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText38: TppDBText
+      UserName = 'DBText38'
+      DataField = 'SIMBOLO'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 64029
+      mmTop = 94456
+      mmWidth = 7408
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      AutoSize = False
+      Caption = 'Label6'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 151607
+      mmTop = 78581
+      mmWidth = 43392
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine39: TppLine
+      UserName = 'Line39'
+      Pen.Width = 2
+      Position = lpLeft
+      Weight = 1.500000000000000000
+      mmHeight = 7938
+      mmLeft = 48683
+      mmTop = 3440
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText102'
+      DataField = 'iif_Contas_Bancarias_Bole'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      DisplayFormat = '000'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 15
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 6350
+      mmLeft = 49477
+      mmTop = 3969
+      mmWidth = 10319
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine40: TppLine
+      UserName = 'Line40'
+      Pen.Width = 2
+      Position = lpLeft
+      Weight = 1.500000000000000000
+      mmHeight = 7938
+      mmLeft = 67469
+      mmTop = 3440
+      mmWidth = 1058
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel50: TppLabel
+      UserName = 'Label50'
+      Caption = '-'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 15
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 6350
+      mmLeft = 60325
+      mmTop = 3969
+      mmWidth = 1852
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      DataField = 'Digito_Codigo_Cedente'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 15
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 6350
+      mmLeft = 62706
+      mmTop = 3969
+      mmWidth = 4233
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText8'
+      DataField = 'Local_Pgto'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3704
+      mmLeft = 2910
+      mmTop = 70379
+      mmWidth = 146050
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText15: TppDBText
+      UserName = 'DBText9'
+      DataField = 'Cliente_Endere'#231'o'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 4233
+      mmLeft = 15346
+      mmTop = 140229
+      mmWidth = 178859
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine41: TppLine
+      UserName = 'Line33'
+      Pen.Width = 2
+      Position = lpBottom
+      Weight = 1.500000000000000000
+      mmHeight = 1058
+      mmLeft = 2910
+      mmTop = 10319
+      mmWidth = 194469
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText25: TppDBText
+      UserName = 'DBText25'
+      DataField = 'iif_Contas_Bancarias_Bole'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      DisplayFormat = '000'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 15
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 6350
+      mmLeft = 49477
+      mmTop = 58473
+      mmWidth = 10319
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel23: TppLabel
+      UserName = 'Label501'
+      Caption = '-'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 15
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 6350
+      mmLeft = 60325
+      mmTop = 58473
+      mmWidth = 1852
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText26: TppDBText
+      UserName = 'DBText26'
+      DataField = 'Digito_Codigo_Cedente'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 15
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 6350
+      mmLeft = 62706
+      mmTop = 58473
+      mmWidth = 4233
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText10'
+      DataField = 'Boleto_Data_Processamento'
+      DataPipeline = daADOQueryDataView1.Contas_Receber
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'Contas_Receber'
+      mmHeight = 3704
+      mmLeft = 119327
+      mmTop = 86519
+      mmWidth = 29104
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppImage2: TppImage
+      UserName = 'Image2'
+      AlignHorizontal = ahLeft
+      AlignVertical = avTop
+      DirectDraw = True
+      MaintainAspectRatio = False
+      Picture.Data = {
+        0A544A504547496D61676590540000FFD8FFE10C014578696600004D4D002A00
+        000008000C0100000300000001019F0000010100030000000100790000010200
+        03000000030000009E0106000300000001000200000112000300000001000100
+        00011500030000000100030000011A000500000001000000A4011B0005000000
+        01000000AC012800030000000100020000013100020000001E000000B4013200
+        0200000014000000D28769000400000001000000E80000012000080008000800
+        0AFC8000002710000AFC800000271041646F62652050686F746F73686F702043
+        53352E312057696E646F777300323031323A30353A32312031373A34353A3131
+        0000000004900000070000000430323231A001000300000001FFFF0000A00200
+        0400000001000000ADA0030004000000010000001D0000000000000006010300
+        030000000100060000011A0005000000010000016E011B000500000001000001
+        7601280003000000010002000002010004000000010000017E02020004000000
+        0100000A7B0000000000000048000000010000004800000001FFD8FFED000C41
+        646F62655F434D0001FFEE000E41646F626500648000000001FFDB0084000C08
+        080809080C09090C110B0A0B11150F0C0C0F1518131315131318110C0C0C0C0C
+        0C110C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C010D
+        0B0B0D0E0D100E0E10140E0E0E14140E0E0E0E14110C0C0C0C0C11110C0C0C0C
+        0C0C110C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0CFF
+        C0001108001B00A003012200021101031101FFDD0004000AFFC4013F00000105
+        01010101010100000000000000030001020405060708090A0B01000105010101
+        01010100000000000000010002030405060708090A0B10000104010302040205
+        07060805030C33010002110304211231054151611322718132061491A1B14223
+        241552C16233347282D14307259253F0E1F163733516A2B283264493546445C2
+        A3743617D255E265F2B384C3D375E3F3462794A485B495C4D4E4F4A5B5C5D5E5
+        F55666768696A6B6C6D6E6F637475767778797A7B7C7D7E7F711000202010204
+        040304050607070605350100021103213112044151617122130532819114A1B1
+        4223C152D1F0332462E1728292435315637334F1250616A2B283072635C2D244
+        9354A317644555367465E2F2B384C3D375E3F34694A485B495C4D4E4F4A5B5C5
+        D5E5F55666768696A6B6C6D6E6F62737475767778797A7B7C7FFDA000C030100
+        02110311003F00F5543BED14D365CE6B9C2B69796B01738868DDB58C6FB9EFFE
+        4A22A5D63A9D7D27A75B9F6B1D6B292CDCC644C3DECAA7DDEDF6EFDE95D6A891
+        00124D002C9790CFFACF95D57A05990CB1D8197856B2F7B28B1CDDF43DDF672D
+        DED2D76EA3D767DA777F84AD5EE9DD67ABE4F5DC6C2C571B31B1F1686E60B350
+        5EE636FBF23D5F75BEA6DB68AD9FF0BEA22F4DB7A3759EB2DCDA3A7DF5DCCDDE
+        AE40DA29718DBFACEC7ECB6CF77EEFA9FF005B4FD43A764E4F51CAC4E8D9B8B8
+        33B6CCBAA996E4BAD77E91CFC97D7FA4D9B1F53ABDBFE91571C521C625C5A81E
+        9F499C6278BF4B85CE88C840CA321C9A88FEAFD272889E38FCFE98FEE4DEA167
+        755EACCC07D1406EFBF277FA6DEC1B58DD6DAFFE4B3756DFEDAB58355F4E1514
+        E43FD4BABADACB2C049DCE68DAE7CBBDDEE58FF59FA5E5E5BF173B01CCFB6611
+        7EDA2D76C65D5581A2FA3D4FF076FB18FA6CFA1EA7F389DCC7B9EC4FDBF4E431
+        3C17FBFF00A2E9425AC4906AE2651DCF0FE9B4B27AAE7348713956CEBFABD563
+        C0FEB7A0DDAC577A1750B731D6DCEB2D14500B6CF5D8EAE1F0D76D2DBDAC7FD0
+        76EF62CAA73B368C86E3DF8B97D3EEB0123780EADC5A373C372719F6D2EDBFCB
+        F4D17AA66DB9ADE9F8569DE5B7BF26C74C4B31D8DF477B47FDDCC9C7FF00B696
+        072D3187213CC1E621CCE284B318E49FEAB370FAA23F7BD5FDE6EE4919C78B11
+        C53C3394715461C392064783E6FEAFF71EA2ACCC6B9C594DAD7BA2607828BFA8
+        6156E2D7DCD0E1C899FC8B973976D16D58B49D8FC80F7DAE1CFA556D66C6FF00
+        C6DD77BFFE2D13F66759CAADB674E7E2B1825AEFB40B1CE247F2692C6B5AAE63
+        F89F3597DBC78B0C259B240E595CB8611C77E9F9BF4BF4964F0E180C9394A661
+        090C7E91C5294FF49E95B9D88E63AC6DCC2C641719E27412A3FB4707FD3B3EF5
+        C95F8D975676262E69ACE4E3D5664E41A0BBD1DF6938988D67ABFA4F6D0CCB77
+        BFFD226CA6E535D56455955D7456EFD6A8B6BD3D31B9D6DADCADDED7B5BF99B3
+        FEB89B9BE2BCCE2C8314A18A39230E3C9C5297089FCD184387E6E2C7EDAB1E0C
+        7381C83DC30E2E18D70F170FE94A57FB93E37B2AF268B1AE7D7635CD67D220F1
+        FD643FDA581CFAECFBD72792F65D8988C63B755D42F63C16EA1D4E2CE53DE1DF
+        E8DF90DC7AFF0097EA2167E58A9CC60CEC6C37C1739B901A5CE07E839A1D763E
+        C6E8E4327C5F988FB51F6A31C9922724E33193D038A518691F5FAB8143062FD6
+        1E22618C88820C3D44C78E5F37F79ECEBCDC5B4915DAD76D05CE83C01CB947F6
+        9E0C7F3ECFBD7217D77FD97A7D191736F767647DAB7D4CF4D9F67C66FAB4CB3D
+        4B77B6CC9B2A7EFDFF00A453CFFDA34E3D5998C29751EBD745B5D81DEA38D8EA
+        EB6FD9F610CF6FA9BECDE9F93E23CD4658F1C71E39659E39679FCF184318E2E1
+        F9BFA905B1C7878724E46621094718F965294A5C3FBBFDF7B0A72A8BA7D2B1AF
+        8E434CA88CEC47582B16B4BCBB68683ACF10B91EA0F733A7E4D75BB6BF2D830E
+        B7779C97B6873B4FDCA3D7BBFEB4B57A2D0D766021BB59437DA3B0FCC604B17C
+        5B2E4FBB4463889E79CA32F9BD38E063FAC8FF00CFFF00C2D7CB96846594711E
+        1C518CAF4F9A77E8FF00A2F4292492D96A3FFFD0F55557A9D1764605D4D0CA6D
+        B5ED86D7940BA927FE198DF7398AC3A7B4FCA3F8A7425B11A8D371FB106A8DBC
+        4DB6E5F55FAC7574B75628C6E924D8286835B4B98D9FB51668EF47D47B6AC4DB
+        FF000962A9D1BA5E6F5EC1C3CEA324579F8A5B564643DEFF0059F539A2EAED75
+        9EF77AF4BAC7B2977F84ABF4762EEECFE71DFCDFF3679FA5CF7FF81595F54F6F
+        D84EDFD9D10C8FD993B3E8FF0084DFEFFF008AFF008354CC21A5E4C9C342EC4E
+        F87F43F47F7BFF0051B47243189C8E4C80C6E466386BD32F6FD98E3E1FDCFD0F
+        FAA3B140BC322E2D2EF16F82E5BA8E0FD613D5F3322AC019745CE60A1FF686B0
+        0AD8C6B63D1B47B1DEAFABBBF7D75A923CD0E5BEEB5CC999C3E9E232F738F7F4
+        F1F07EB3E67462267247DB3C392CF070F07EECAEB8F8A3F23C963F4FEBD6D9E9
+        D980CC561E6D7DEC7803FE2E86EF7A1F51E99D72AEAB65B83D3465E3B28AE9A2
+        CF5EBA8982FBF21CE659B9DFA4BACDBFF595D8A4A8621F06F6F2F01F4F08F77F
+        9FE3E0E38ED7FACF9F838BDB66C91E72F189CE57C7FAB3FAAF9F865FD5E0FF00
+        19E67AC7D5DCEB71F0B2BA73DA3A960078F4EC9155CCB7DD7E33DC3E87B837D0
+        B7F7D53A6AFAC2E86FEC8B69B0901C5D7D22B1FCADF5BCBECDBFF14BB2493F99
+        1F0A3ECFBB2A2211F6B83DDE3387F438FDBF57F8EAC4399E2C9ED93F37EB3E4E
+        1F77F4BE6FD2FEEBC63FA5F5FAFAA649ABA70B68B9F556CC937B1A0535B1B56F
+        F40EEB3E9FAD7EC4FD4F07F62F52AEC049C0EA85AC793C57981BB5AEFE4D5D42
+        B66CFF00C335FF00C32EC962FD70D9FF0036B3F7FA5B7D313EBEEDBF499F47D2
+        FD27DA3FEE26DFFB55E8A1963F0B30CE38B824610E2956432847D1F7796312FF
+        00A9FF0035FA0B203981C0624CFD7338E27807EB3D5EF47D1FBDEBE2E371F34F
+        5BCEEA15E462E18CD18F8DE8FF003ECA76BDEFF52F76C7877F38CA71906CC0FA
+        C3619B7A0D561E25F934B8C787BEB5A7F57FD4FB4B37FABBBD2D77ECDD30DDDE
+        BFA3ECFF008CFF0085FE6D7481431FB992073E2439B022098FDE3D78F83F573F
+        D57F53E6FEBAE943211238666380C8930230704327E947F5B193C8F52E99D76B
+        EA6CB31307EDB4D38ADC7AAD37B2AF739E6EC9FD1D9B9DB7DB4D75FF00C5A10C
+        7FAD27D9FB1C35BDA732BDA0FC037FEFABB4494BCC0F84FB9FAE32E3E087FE28
+        FE6B823EDFC9FD4562873644BDAC9211E395F0FB3FCE717AFE787EF3C9756E93
+        D66B1D3FEC788DCD353ACBB2C36D6D405BB3D0C715BAFF0073EBAD97642D9E83
+        8B934E2FAB994FD9F26DFA746E166C0D25AD1EB33DAFDFFCE2D44958C3FE8FF7
+        F07B55EEFB7FA8AF7387DAF5F170FF0093E2FE778BFCA2D2398ACA652918F10F
+        7632E1F9EA1C3FD7F97DBFEA2924925A4C4FFFD9FFED130E50686F746F73686F
+        7020332E30003842494D040400000000000F1C015A00031B25471C0200000208
+        0C003842494D04250000000000107F92BB69EF57E6302B712D05A7A084BF3842
+        494D043A000000000093000000100000000100000000000B7072696E744F7574
+        7075740000000500000000436C7253656E756D00000000436C72530000000052
+        47424300000000496E7465656E756D00000000496E746500000000496D672000
+        0000004D70426C626F6F6C010000000F7072696E745369787465656E42697462
+        6F6F6C000000000B7072696E7465724E616D6554455854000000010000003842
+        494D043B0000000001B200000010000000010000000000127072696E744F7574
+        7075744F7074696F6E7300000012000000004370746E626F6F6C000000000043
+        6C6272626F6F6C00000000005267734D626F6F6C000000000043726E43626F6F
+        6C0000000000436E7443626F6F6C00000000004C626C73626F6F6C0000000000
+        4E677476626F6F6C0000000000456D6C44626F6F6C0000000000496E7472626F
+        6F6C000000000042636B674F626A630000000100000000000052474243000000
+        030000000052642020646F7562406FE000000000000000000047726E20646F75
+        62406FE0000000000000000000426C2020646F7562406FE00000000000000000
+        0042726454556E744623526C74000000000000000000000000426C6420556E74
+        4623526C7400000000000000000000000052736C74556E74462350786C405200
+        00000000000000000A766563746F7244617461626F6F6C010000000050675073
+        656E756D00000000506750730000000050675043000000004C656674556E7446
+        23526C74000000000000000000000000546F7020556E744623526C7400000000
+        000000000000000053636C20556E74462350726340590000000000003842494D
+        03ED000000000010004800000001000200480000000100023842494D04260000
+        0000000E000000000000000000003F8000003842494D040D0000000000040000
+        001E3842494D04190000000000040000001E3842494D03F30000000000090000
+        00000000000001003842494D271000000000000A000100000000000000023842
+        494D03F5000000000048002F66660001006C66660006000000000001002F6666
+        000100A1999A0006000000000001003200000001005A00000006000000000001
+        003500000001002D000000060000000000013842494D03F80000000000700000
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF03E800000000FFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF03E800000000FFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFF03E800000000FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF03E800003842494D040000000000000200073842494D
+        0402000000000010000000000000000000000000000000003842494D04300000
+        0000000801010101010101013842494D042D00000000000600010000000F3842
+        494D0408000000000010000000010000024000000240000000003842494D041E
+        000000000004000000003842494D041A00000000034700000006000000000000
+        00000000001D000000AD0000000900730061006E00740061006E006400650072
+        0000000100000000000000000000000000000000000000010000000000000000
+        000000AD0000001D000000000000000000000000000000000100000000000000
+        00000000000000000000000010000000010000000000006E756C6C0000000200
+        000006626F756E64734F626A6300000001000000000000526374310000000400
+        000000546F70206C6F6E6700000000000000004C6566746C6F6E670000000000
+        00000042746F6D6C6F6E670000001D00000000526768746C6F6E67000000AD00
+        000006736C69636573566C4C73000000014F626A630000000100000000000573
+        6C6963650000001200000007736C69636549446C6F6E67000000000000000767
+        726F757049446C6F6E6700000000000000066F726967696E656E756D0000000C
+        45536C6963654F726967696E0000000D6175746F47656E657261746564000000
+        0054797065656E756D0000000A45536C6963655479706500000000496D672000
+        000006626F756E64734F626A6300000001000000000000526374310000000400
+        000000546F70206C6F6E6700000000000000004C6566746C6F6E670000000000
+        00000042746F6D6C6F6E670000001D00000000526768746C6F6E67000000AD00
+        00000375726C54455854000000010000000000006E756C6C5445585400000001
+        0000000000004D7367655445585400000001000000000006616C745461675445
+        58540000000100000000000E63656C6C54657874497348544D4C626F6F6C0100
+        00000863656C6C546578745445585400000001000000000009686F727A416C69
+        676E656E756D0000000F45536C696365486F727A416C69676E00000007646566
+        61756C740000000976657274416C69676E656E756D0000000F45536C69636556
+        657274416C69676E0000000764656661756C740000000B6267436F6C6F725479
+        7065656E756D0000001145536C6963654247436F6C6F7254797065000000004E
+        6F6E6500000009746F704F75747365746C6F6E67000000000000000A6C656674
+        4F75747365746C6F6E67000000000000000C626F74746F6D4F75747365746C6F
+        6E67000000000000000B72696768744F75747365746C6F6E6700000000003842
+        494D042800000000000C000000023FF00000000000003842494D041400000000
+        00040000000F3842494D040C000000000A9700000001000000A00000001B0000
+        01E0000032A000000A7B00180001FFD8FFED000C41646F62655F434D0001FFEE
+        000E41646F626500648000000001FFDB0084000C08080809080C09090C110B0A
+        0B11150F0C0C0F1518131315131318110C0C0C0C0C0C110C0C0C0C0C0C0C0C0C
+        0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C010D0B0B0D0E0D100E0E10140E
+        0E0E14140E0E0E0E14110C0C0C0C0C11110C0C0C0C0C0C110C0C0C0C0C0C0C0C
+        0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0CFFC0001108001B00A0030122
+        00021101031101FFDD0004000AFFC4013F000001050101010101010000000000
+        0000030001020405060708090A0B010001050101010101010000000000000001
+        0002030405060708090A0B1000010401030204020507060805030C3301000211
+        0304211231054151611322718132061491A1B14223241552C16233347282D143
+        07259253F0E1F163733516A2B283264493546445C2A3743617D255E265F2B384
+        C3D375E3F3462794A485B495C4D4E4F4A5B5C5D5E5F55666768696A6B6C6D6E6
+        F637475767778797A7B7C7D7E7F7110002020102040403040506070706053501
+        00021103213112044151617122130532819114A1B14223C152D1F0332462E172
+        8292435315637334F1250616A2B283072635C2D2449354A317644555367465E2
+        F2B384C3D375E3F34694A485B495C4D4E4F4A5B5C5D5E5F55666768696A6B6C6
+        D6E6F62737475767778797A7B7C7FFDA000C03010002110311003F00F5543BED
+        14D365CE6B9C2B69796B01738868DDB58C6FB9EFFE4A22A5D63A9D7D27A75B9F
+        6B1D6B292CDCC644C3DECAA7DDEDF6EFDE95D6A89100124D002C9790CFFACF95
+        D57A05990CB1D8197856B2F7B28B1CDDF43DDF672DDED2D76EA3D767DA777F84
+        AD5EE9DD67ABE4F5DC6C2C571B31B1F1686E60B3505EE636FBF23D5F75BEA6DB
+        68AD9FF0BEA22F4DB7A3759EB2DCDA3A7DF5DCCDDEAE40DA29718DBFACEC7ECB
+        6CF77EEFA9FF005B4FD43A764E4F51CAC4E8D9B8B833B6CCBAA996E4BAD77E91
+        CFC97D7FA4D9B1F53ABDBFE91571C521C625C5A81E9F499C6278BF4B85CE88C8
+        40CA321C9A88FEAFD272889E38FCFE98FEE4DEA167755EACCC07D1406EFBF277
+        FA6DEC1B58DD6DAFFE4B3756DFEDAB58355F4E1514E43FD4BABADACB2C049DCE
+        68DAE7CBBDDEE58FF59FA5E5E5BF173B01CCFB66117EDA2D76C65D5581A2FA3D
+        4FF076FB18FA6CFA1EA7F389DCC7B9EC4FDBF4E4313C17FBFF00A2E9425AC490
+        6AE2651DCF0FE9B4B27AAE7348713956CEBFABD563C0FEB7A0DDAC577A1750B7
+        31D6DCEB2D14500B6CF5D8EAE1F0D76D2DBDAC7FD076EF62CAA73B368C86E3DF
+        8B97D3EEB0123780EADC5A373C372719F6D2EDBFCBF4D17AA66DB9ADE9F8569D
+        E5B7BF26C74C4B31D8DF477B47FDDCC9C7FF00B696072D3187213CC1E621CCE2
+        84B318E49FEAB370FAA23F7BD5FDE6EE4919C78B11C53C3394715461C3920647
+        83E6FEAFF71EA2ACCC6B9C594DAD7BA2607828BFA86156E2D7DCD0E1C899FC8B
+        973976D16D58B49D8FC80F7DAE1CFA556D66C6FF00C6DD77BFFE2D13F66759CA
+        ADB674E7E2B1825AEFB40B1CE247F2692C6B5AAE63F89F3597DBC78B0C259B24
+        0E595CB8611C77E9F9BF4BF4964F0E180C9394A661090C7E91C5294FF49E95B9
+        D88E63AC6DCC2C641719E27412A3FB4707FD3B3EF5C95F8D975676262E69ACE4
+        E3D5664E41A0BBD1DF6938988D67ABFA4F6D0CCB77BFFD226CA6E535D5645595
+        5D7456EFD6A8B6BD3D31B9D6DADCADDED7B5BF99B3FEB89B9BE2BCCE2C8314A1
+        8A39230E3C9C5297089FCD184387E6E2C7EDAB1E0C7381C83DC30E2E18D70F17
+        0FE94A57FB93E37B2AF268B1AE7D7635CD67D220F1FD643FDA581CFAECFBD727
+        92F65D8988C63B755D42F63C16EA1D4E2CE53DE1DFE8DF90DC7AFF0097EA2167
+        E58A9CC60CEC6C37C1739B901A5CE07E839A1D763EC6E8E4327C5F988FB51F6A
+        31C9922724E33193D038A518691F5FAB8143062FD61E22618C88820C3D44C78E
+        5F37F79ECEBCDC5B4915DAD76D05CE83C01CB947F69E0C7F3ECFBD7217D77FD9
+        7A7D191736F767647DAB7D4CF4D9F67C66FAB4CB3D4B77B6CC9B2A7EFDFF00A4
+        53CFFDA34E3D5998C29751EBD745B5D81DEA38D8EAEB6FD9F610CF6FA9BECDE9
+        F93E23CD4658F1C71E39659E39679FCF184318E2E1F9BFA905B1C7878724E466
+        21094718F965294A5C3FBBFDF7B0A72A8BA7D2B1AF8E434CA88CEC47582B16B4
+        BCBB68683ACF10B91EA0F733A7E4D75BB6BF2D830EB7779C97B6873B4FDCA3D7
+        BBFEB4B57A2D0D766021BB59437DA3B0FCC604B17C5B2E4FBB4463889E79CA32
+        F9BD38E063FAC8FF00CFFF00C2D7CB96846594711E1C518CAF4F9A77E8FF00A2
+        F4292492D96A3FFFD0F55557A9D1764605D4D0CA6DB5ED86D7940BA927FE198D
+        F7398AC3A7B4FCA3F8A7425B11A8D371FB106A8DBC4DB6E5F55FAC7574B75628
+        C6E924D8286835B4B98D9FB51668EF47D47B6AC4DBFF000962A9D1BA5E6F5EC1
+        C3CEA324579F8A5B564643DEFF0059F539A2EAED759EF77AF4BAC7B2977F84AB
+        F4762EEECFE71DFCDFF3679FA5CF7FF81595F54F6FD84EDFD9D10C8FD993B3E8
+        FF0084DFEFFF008AFF008354CC21A5E4C9C342EC4EF87F43F47F7BFF0051B472
+        43189C8E4C80C6E466386BD32F6FD98E3E1FDCFD0FFAA3B140BC322E2D2EF16F
+        82E5BA8E0FD613D5F3322AC019745CE60A1FF686B00AD8C6B63D1B47B1DEAFAB
+        BBF7D75A923CD0E5BEEB5CC999C3E9E232F738F7F4F1F07EB3E67462267247DB
+        3C392CF070F07EECAEB8F8A3F23C963F4FEBD6D9E9D980CC561E6D7DEC7803FE
+        2E86EF7A1F51E99D72AEAB65B83D3465E3B28AE9A2CF5EBA8982FBF21CE659B9
+        DFA4BACDBFF595D8A4A8621F06F6F2F01F4F08F77F9FE3E0E38ED7FACF9F838B
+        DB66C91E72F189CE57C7FAB3FAAF9F865FD5E0FF0019E67AC7D5DCEB71F0B2BA
+        73DA3A960078F4EC9155CCB7DD7E33DC3E87B837D0B7F7D53A6AFAC2E86FEC8B
+        69B0901C5D7D22B1FCADF5BCBECDBFF14BB2493F991F0A3ECFBB2A2211F6B83D
+        DE3387F438FDBF57F8EAC4399E2C9ED93F37EB3E4E1F77F4BE6FD2FEEBC63FA5
+        F5FAFAA649ABA70B68B9F556CC937B1A0535B1B56FF40EEB3E9FAD7EC4FD4F07
+        F62F52AEC049C0EA85AC793C57981BB5AEFE4D5D42B66CFF00C335FF00C32EC9
+        62FD70D9FF0036B3F7FA5B7D313EBEEDBF499F47D2FD27DA3FEE26DFFB55E8A1
+        963F0B30CE38B824610E2956432847D1F7796312FF00A9FF0035FA0B203981C0
+        624CFD7338E27807EB3D5EF47D1FBDEBE2E371F34F5BCEEA15E462E18CD18F8D
+        E8FF003ECA76BDEFF52F76C7877F38CA71906CC0FAC3619B7A0D561E25F934B8
+        C787BEB5A7F57FD4FB4B37FABBBD2D77ECDD30DDDEBFA3ECFF008CFF0085FE6D
+        7481431FB992073E2439B022098FDE3D78F83F573FD57F53E6FEBAE943211238
+        666380C8930230704327E947F5B193C8F52E99D76BEA6CB31307EDB4D38ADC7A
+        AD37B2AF739E6EC9FD1D9B9DB7DB4D75FF00C5A10C7FAD27D9FB1C35BDA732BD
+        A0FC037FEFABB4494BCC0F84FB9FAE32E3E087FE28FE6B823EDFC9FD45628736
+        44BDAC9211E395F0FB3FCE717AFE787EF3C9756E93D66B1D3FEC788DCD353ACB
+        B2C36D6D405BB3D0C715BAFF0073EBAD97642D9E838B934E2FAB994FD9F26DFA
+        746E166C0D25AD1EB33DAFDFFCE2D44958C3FE8FF7F07B55EEFB7FA8AF7387DA
+        F5F170FF0093E2FE778BFCA2D2398ACA652918F10F7632E1F9EA1C3FD7F97DBF
+        EA2924925A4C4FFFD9003842494D042100000000005900000001010000000F00
+        410064006F00620065002000500068006F0074006F00730068006F0070000000
+        1500410064006F00620065002000500068006F0074006F00730068006F007000
+        20004300530035002E003100000001003842494D040600000000000700080000
+        00010100FFE111E4687474703A2F2F6E732E61646F62652E636F6D2F7861702F
+        312E302F003C3F787061636B657420626567696E3D22EFBBBF222069643D2257
+        354D304D7043656869487A7265537A4E54637A6B633964223F3E203C783A786D
+        706D65746120786D6C6E733A783D2261646F62653A6E733A6D6574612F222078
+        3A786D70746B3D2241646F626520584D5020436F726520352E302D6330363120
+        36342E3134303934392C20323031302F31322F30372D31303A35373A30312020
+        202020202020223E203C7264663A52444620786D6C6E733A7264663D22687474
+        703A2F2F7777772E77332E6F72672F313939392F30322F32322D7264662D7379
+        6E7461782D6E7323223E203C7264663A4465736372697074696F6E207264663A
+        61626F75743D222220786D6C6E733A6372733D22687474703A2F2F6E732E6164
+        6F62652E636F6D2F63616D6572612D7261772D73657474696E67732F312E302F
+        2220786D6C6E733A70686F746F73686F703D22687474703A2F2F6E732E61646F
+        62652E636F6D2F70686F746F73686F702F312E302F2220786D6C6E733A786D70
+        3D22687474703A2F2F6E732E61646F62652E636F6D2F7861702F312E302F2220
+        786D6C6E733A64633D22687474703A2F2F7075726C2E6F72672F64632F656C65
+        6D656E74732F312E312F2220786D6C6E733A786D704D4D3D22687474703A2F2F
+        6E732E61646F62652E636F6D2F7861702F312E302F6D6D2F2220786D6C6E733A
+        73744576743D22687474703A2F2F6E732E61646F62652E636F6D2F7861702F31
+        2E302F73547970652F5265736F757263654576656E742322206372733A416C72
+        656164794170706C6965643D2254727565222070686F746F73686F703A436F6C
+        6F724D6F64653D2233222070686F746F73686F703A49434350726F66696C653D
+        2241646F626520524742202831393938292220786D703A437265617465446174
+        653D22323031322D30352D32315431373A31353A33352D30333A30302220786D
+        703A4D6F64696679446174653D22323031322D30352D32315431373A34353A31
+        312D30333A30302220786D703A4D65746164617461446174653D22323031322D
+        30352D32315431373A34353A31312D30333A30302220786D703A43726561746F
+        72546F6F6C3D2241646F62652050686F746F73686F70204353352E312057696E
+        646F7773222064633A666F726D61743D22696D6167652F6A7065672220786D70
+        4D4D3A496E7374616E636549443D22786D702E6969643A424639453136394238
+        34413345313131423138464331413134364339354142352220786D704D4D3A44
+        6F63756D656E7449443D22786D702E6469643A33393332333846353831413345
+        313131423138464331413134364339354142352220786D704D4D3A4F72696769
+        6E616C446F63756D656E7449443D22786D702E6469643A333933323338463538
+        3141334531313142313846433141313436433935414235223E203C70686F746F
+        73686F703A446F63756D656E74416E636573746F72733E203C7264663A426167
+        3E203C7264663A6C693E786D702E6469643A3339333233384635383141334531
+        3131423138464331413134364339354142353C2F7264663A6C693E203C2F7264
+        663A4261673E203C2F70686F746F73686F703A446F63756D656E74416E636573
+        746F72733E203C786D704D4D3A486973746F72793E203C7264663A5365713E20
+        3C7264663A6C692073744576743A616374696F6E3D2273617665642220737445
+        76743A696E7374616E636549443D22786D702E6969643A333933323338463538
+        3141334531313142313846433141313436433935414235222073744576743A77
+        68656E3D22323031322D30352D32315431373A31373A31352D30333A30302220
+        73744576743A736F6674776172654167656E743D2241646F62652050686F746F
+        73686F70204353352E312057696E646F7773222073744576743A6368616E6765
+        643D222F222F3E203C7264663A6C692073744576743A616374696F6E3D227361
+        766564222073744576743A696E7374616E636549443D22786D702E6969643A33
+        4133323338463538314133453131314231384643314131343643393541423522
+        2073744576743A7768656E3D22323031322D30352D32315431373A31373A3135
+        2D30333A3030222073744576743A736F6674776172654167656E743D2241646F
+        62652050686F746F73686F70204353352E312057696E646F7773222073744576
+        743A6368616E6765643D222F222F3E203C7264663A6C692073744576743A6163
+        74696F6E3D227361766564222073744576743A696E7374616E636549443D2278
+        6D702E6969643A33423332333846353831413345313131423138464331413134
+        36433935414235222073744576743A7768656E3D22323031322D30352D323154
+        31373A31383A32342D30333A3030222073744576743A736F6674776172654167
+        656E743D2241646F62652050686F746F73686F70204353352E312057696E646F
+        7773222073744576743A6368616E6765643D222F222F3E203C7264663A6C6920
+        73744576743A616374696F6E3D227361766564222073744576743A696E737461
+        6E636549443D22786D702E6969643A3343333233384635383141334531313142
+        313846433141313436433935414235222073744576743A7768656E3D22323031
+        322D30352D32315431373A32303A31392D30333A3030222073744576743A736F
+        6674776172654167656E743D2241646F62652050686F746F73686F7020435335
+        2E312057696E646F7773222073744576743A6368616E6765643D222F222F3E20
+        3C7264663A6C692073744576743A616374696F6E3D2273617665642220737445
+        76743A696E7374616E636549443D22786D702E6969643A424539453136394238
+        3441334531313142313846433141313436433935414235222073744576743A77
+        68656E3D22323031322D30352D32315431373A34353A31312D30333A30302220
+        73744576743A736F6674776172654167656E743D2241646F62652050686F746F
+        73686F70204353352E312057696E646F7773222073744576743A6368616E6765
+        643D222F222F3E203C7264663A6C692073744576743A616374696F6E3D227361
+        766564222073744576743A696E7374616E636549443D22786D702E6969643A42
+        4639453136394238344133453131314231384643314131343643393541423522
+        2073744576743A7768656E3D22323031322D30352D32315431373A34353A3131
+        2D30333A3030222073744576743A736F6674776172654167656E743D2241646F
+        62652050686F746F73686F70204353352E312057696E646F7773222073744576
+        743A6368616E6765643D222F222F3E203C2F7264663A5365713E203C2F786D70
+        4D4D3A486973746F72793E203C2F7264663A4465736372697074696F6E3E203C
+        2F7264663A5244463E203C2F783A786D706D6574613E20202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        20202020202020202020202020202020202020202020203C3F787061636B6574
+        20656E643D2277223F3EFFE202404943435F50524F46494C4500010100000230
+        41444245021000006D6E74725247422058595A2007CF00060003000000000000
+        616373704150504C000000006E6F6E6500000000000000000000000000000000
+        0000F6D6000100000000D32D4144424500000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000000A
+        63707274000000FC0000003264657363000001300000006B777470740000019C
+        00000014626B7074000001B00000001472545243000001C40000000E67545243
+        000001D40000000E62545243000001E40000000E7258595A000001F400000014
+        6758595A00000208000000146258595A0000021C000000147465787400000000
+        436F7079726967687420313939392041646F62652053797374656D7320496E63
+        6F72706F726174656400000064657363000000000000001141646F6265205247
+        4220283139393829000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000000058595A2000000000
+        0000F35100010000000116CC58595A2000000000000000000000000000000000
+        6375727600000000000000010233000063757276000000000000000102330000
+        6375727600000000000000010233000058595A200000000000009C1800004FA5
+        000004FC58595A20000000000000348D0000A02C00000F9558595A2000000000
+        000026310000102F0000BE9CFFEE000E41646F626500644000000001FFDB0084
+        0001010101010101010101010101010101010101010101010101010101010101
+        0101010101010101010101010202020202020202020202030303030303030303
+        0301010101010101010101010202010202030303030303030303030303030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        0303FFC0001108001D00AD03011100021101031101FFDD00040016FFC401A200
+        00000602030100000000000000000000070806050409030A0201000B01000006
+        03010101000000000000000000060504030702080109000A0B10000201030401
+        0303020303030206097501020304110512062107132200083114413223150951
+        4216612433175271811862912543A1B1F02634720A19C1D13527E1533682F192
+        A24454734546374763285556571AB2C2D2E2F2648374938465A3B3C3D3E32938
+        66F3752A393A48494A58595A6768696A767778797A85868788898A9495969798
+        999AA4A5A6A7A8A9AAB4B5B6B7B8B9BAC4C5C6C7C8C9CAD4D5D6D7D8D9DAE4E5
+        E6E7E8E9EAF4F5F6F7F8F9FA110002010302040403050404040606056D010203
+        110421120531060022134151073261147108428123911552A162163309B124C1
+        D14372F017E18234259253186344F1A2B226351954364564270A7383934674C2
+        D2E2F255657556378485A3B3C3D3E3F3291A94A4B4C4D4E4F495A5B5C5D5E5F5
+        2847576638768696A6B6C6D6E6F667778797A7B7C7D7E7F7485868788898A8B8
+        C8D8E8F839495969798999A9B9C9D9E9F92A3A4A5A6A7A8A9AAABACADAEAFAFF
+        DA000C03010002110311003F00DFE3DFBAF75E26DEFDD7BAA545F9FF00FECDBD
+        7FCACF8C7B21F2FD439CCD60BB5BAEFE31F6BE13746776AEEECE6FDDAD88AEC4
+        5156D5B46B83CCEC7CE64377D14B5187863916A67C7C2864092CEB118E97DC1D
+        AA7E76BDE44983433784024A4E9D72904B225686A14828E0D19AAA0D4758F1FE
+        BB16BCE9BC739FB7D6665B1BC304F1595CA48F148F3A29182343C4FAFBA3A1AB
+        283C2B9225B53E7EF7EE27E1AFC778765F65EF2CBF7A775FC82DD1939B2DB8EA
+        A7EC1DC14FD63B03686D397736D8846E57CBCE0E4B7FEEBC46260850021AA6A3
+        C5A181611C58F34EFF00CB5EDE6FFE3EE13DCF32AEF32D9C0D2334CFAB52014F
+        11999805A90B5396EA22DB3DD4E6CDAFDAFD9D6CF7AB99F9BAF7799111A52D73
+        208618E12F1FEA9666064916314F366D39EB663EB8C8EF1CBEC1D9D93EC3C350
+        6DDDF590DB788ACDDB82C6553D6D06273F3D143264E829AA2450CE94D54CCB6B
+        B8420A877003B4F9B4CD7F71B6584FBA5BAC3B8BC2A644535557206A507E47FC
+        D53C7ACD2D9E6DC67DAB6E9B78B6487757850CB1A9D4A921035A83E601A8F3F4
+        A9E3D2B2B2AA1A2A69EB2A258A0A6A68A5A8A99E79162860A782369669E695C8
+        58E28A342CCC78005FDAFC96445F8D8D07DBFF0015FCFA5F2C890C52CD21A222
+        924F9000573D53EEFAF9D59DED3C5D166FA9EAEB368F5EE469AA72584CF68419
+        DDD18059EA0506E33278E693138BCD63E05ACA5816D53F6F3466460E4C6BC60F
+        BD37DF6FDD09FDC8DDFDAFF662F8D96D96575F44F34512BDDDC5D9ED31AEBD45
+        429C2189471EF271D65EFB33ED4728DEF26D8FB83CDD0F8F6B73019943328892
+        202AADA6A198B0CF9D3029EA4CAB3F98563F6CD449FC6FBE7B1B6DDA5D1F7FB9
+        76E76B6230B3693A498B2F9ADA31E20C47E82459747E6F6E7DC609CBDFDE29B2
+        C6DBD46DCE492D0369F144DACB674F8790AF4209565E0463A6E5F74FEE81F572
+        6D32DF6D897F5A69920B84A1AD281F405A547957EDEAF17A6778D760BAA769E6
+        7B8F78C18FCFEE5FBFC8C526EDABC761EB1A8E4999F1F4914527DA6B31E34452
+        B5F5480CBEA3C81EFA97EC9F38EFDC8DED0F2ADEFDE3F9D12DB9EAF5A62E6FDA
+        3824D3E237871B200A35226906833C4E4F507F396DDB76F9CE1BB1F6EF6D171C
+        BC8B1E936C1E441545AB034268589E34F9743763375EDFCE634E63099CC46531
+        31B4F1CD91A0AEA6ABA18E4A703CC92554339862680B0D619BD3F9B7BC80D939
+        B3963987683BF6C1BFDA5DEC49AB54F13AB423C3F8C78A0E8057CEA71D016EF6
+        BDD6C2F46DF7B64F16E1C7C26522460781553439F2C749497BABA9A9E634D3F6
+        46CA8EA16C1E33B8F16749248E4AD532FD47D2FC7B8FEE3EF0DEC65A5C1B7B8F
+        75F6359AB4D3F551935E14C1E35C7DBD08A3E42E77963599394372F088AD7E9E
+        4E1FB3F9F4F27B0F648C53E71F77ED7183158B8F39619AC77F0EFBC963F2C349
+        F7C6A8D37DD49182C23D5ACA8B816F62A9BDCDE40B6D88F34C9CE3B69E5A1378
+        4D742E2230C72D2A23760D40F4F2AD7D401D14A72DF30497436E6D92E1AFDD75
+        AC4237D663AD3569D3539C5462B8AD7A6B3DBFD58BC7FA44D963E9C0DCB893FE
+        B702A8F17F61A1EFFF00B2723041EEBEC3A8F0FF001B897F997E8C7FA85CE88A
+        5BFAA9B8A281C4C12003F974A2C2EEDDB7B8629AAB6FE7F099C820F4544988C9
+        526423A77D3AB4CF2534D2F8BD2A5BD56E01F631D879D793F992DAE770E5EE64
+        DB6F2D2056696486E52508AA2A4B69AD0002A49A74477FB5EEBB5F871DFED53C
+        570C0503A95A9240A0A8CF1F2E98076FF57117FF00487B2FF3F5DC9895FA1B7E
+        6AFD83E4F7FBD9346556F753635245686E63AD2A47F10F3047478BC8FCE4C484
+        E56BF62295D30B9A122B9C631C3A9345DA3D7B94AEA4C662F7C6D1AFC8D74C94
+        F49454B9FC654D4D4CD26AD114104352D2CB2BE836502E6DED66D9EF4FB53BEE
+        E167B46C5EE46CB75BB5C48162892E519E46AD595143125B4D4802BEA453A4D7
+        9CA5CD7610C9737BCB37B15AC6BA9D9E2640ABC2B5229C7D7AEAABB4FAEB1F55
+        534190DF7B3E92BE8A79696B2927DC38A86A296AA0731CF4F5104957E4866864
+        52AC8D66522C7DD771F7BFDA2DA370BDDB374F73365B7DC2090A3C4F73187461
+        82AE0B02181E229D3B6DC9DCDB7D0457767CADB8496B20D48CB0BB2B29E04102
+        841F9759B19D97B0333591E3F15BDF68E46B677F1D3D1D16E0C5D555CF25AFE3
+        8E086ADE577FF002E7DAFD97DDCF6C798AE61B3D8F9FB68BBB991B4A2C57513B
+        337A6906B5F954F49EF795F99B6E8659EFF976F608538B4913AAFE648C7EDEA7
+        6777C6D3DACD4ABB9B7260F026B84C68865B27498F356B4C6215069BEEA68FCD
+        E06990369BE92C2FF5F665CCDEE1724725184F37F366DDB72CA8CC9E3CCB1965
+        4346601A955071515A74936DD9779DE5656DAF6A9E711B057D08CD42C3B4601E
+        3E55F43D3A60F3F85DCB40994C065B1B9AC73C9242B5D8AAC86BA91A588812C6
+        B514EEF1978C9B30BDC7B39D8398B63E69DB63DDF97778B5BFDADC90B35BC8B2
+        C6D400D03A9209A11E7E63A4F77637BB74C6DB70B5786E40CAB020FEC39E9E3D
+        9D7497AF7BF75EEBFFD0DFE3DFBAF7490EC1DEB83EB5D87BD7B1773FDEFF0076
+        F60ED2DC7BD3701C6D1CB91C80C1ED6C3D66732CD438F83F7ABAAD68286431C2
+        9EB95ECA393EFDC335E91EE17D06D9617BB95D16FA6B789E57A024E98D4BB500
+        C9340680649C75475DB9D8DFCB83E5CEFBD85BDF6D6E8ED7EB0EEBCC66F6A546
+        237F758F5EE7319B977517A8A39B114DB9B1FF00C17298ECCD6D30789A9F28D0
+        FF0015C70897C752B02344D017307367B5DCE77B69617525D26FA93058668A09
+        1678E456A0D2EAA490AD9C82ABF16295EB17B98B983D96F71774DB2E20BBBEB6
+        E673347E1DC5BDBC89393A869D43410D42477B2EA41C180E8DDFC85F8B34BB07
+        2BD47D89F12FE3F749E43BD76CD565B696DEC8EEECEFF72F6CEC6DB797A6CC6E
+        4DC1BEB07D798AADC16D7DE3BEEA7772D192EF1C72A3540A876714F1C624ADFF
+        00658E3B58EFF68D9ADAE7982DE632C2256F0D5A775D0F2B9140D29415A915A8
+        A8229D495CDFC94BB736CDBCF23F296DD3F34DBC8CB1199FC18E3F12A649FC25
+        2892CE5A86A686A6B5ED5A0A3F0AF6E7CC2DBB1765FF00B36DB863DCD90CAE4B
+        0390D9B5D165B6B5743491FDBE4A3DC3454D41B571B8BA0C45219BED5E388441
+        3EBA790C4A3E478F9F564DE65E77784991E33008CAE9450A43AD17E74C9249E8
+        C7DB4B4F726D46F8DEE25D24B34B22343A5A32106921D42C6AA14569419FB4F1
+        E8DE6FAC0526ECD9FB9769D7CF514B41BAB039ADB55B5348DA2AA9E933D89ADC
+        5544F4CC410B510C3545909040603DC80AC564888603B866B435F2D3506A49A0
+        A7A127CA8647BFB56BFB2BCDBD036BB889E3041008D6A416EEC768A9A7CBAD56
+        36EC1DC5F0A7138EE87F941D61DA58CA2EA8861DB3D7DF22B60EC2DD9D83D41D
+        93B136F05A7DA3B86AB3DB27179CAFD85B8A1C3C30A5750E4E0A6786A2132092
+        CC3DF1A7EF2BF71DF76E7F72B7DF70BD9CDB63DD769DC6F24BA6B512986EE3BB
+        7D25A452745517051D1BB49C71EA61F647EF3FCBDEDF7256DBED87BCDB6CD68B
+        B65B8B6837016ED7363716E0698A8D12965B8D0B4904802822AC7AB0AE91F9B5
+        BB33B80C1EF1DBBD8147DC1D6D96D4A8F56F16629B2F454756F4391A6A4CA54C
+        432D4B91A4969E486459F5324CA5644B823DC2BC9FF7BEFBCBFB0BCE969CB5EE
+        46E17F7D616724515CD95F0492E9230DFAAA261DCAD1C74647A92CA4038EB242
+        4F6BBD9FF75F955F98FDBD7B77B4BB898DB5C5BBFE80751F8C0AAB82F8618D26
+        AA294E814DDDD8755DC1F21BE4C7641CB652BB6651F66D275375F63A6AD9EA31
+        18FC0F4DED9A1DB7B8F278AA0795B1F4B2677B2EBF386A2589034DF6B1891888
+        D1504BFDE37EE3BF377B97CA7CB1617727D1D96DD04C114D28F76BE38D7E7ABC
+        365AA9E07A08FDD0F629A3DA7DC9E66B8C4579BAB5AC00E53459AAC0E501C774
+        CB21A8E3F974A1FF004DD9BDC38FDCFD3FB7AA5B13D7DD539E8B66E6E1A48D63
+        9B74766C78DC7EEFDFF5B94A88C96931DB7723B9E0C452D27119971D3CD20767
+        411003DF3E6EE64F6B7DA3F67FD85D9B70B8B1B7FDCEBBA6E5E03B466EAE7710
+        6458E56535223427527038AF01D0A7DA61B573DF3EFB9BEE2CD6E93DAD9EF0FB
+        65A8600B29B7A452C80FA193B41FC3A4FAF4DFB93A43E77D3B1C975FFC57D9BB
+        DB6B494A957899F23F23B676D5DCD9BA4A9896586AE0C1CFB6B218CC77DCC6C1
+        A38EA3225C2B0F2686BAACCFC8DFDD95CCFCD1CA1B2732EEDEE55A5B6E1796E9
+        20805B492A88E540C84CA26400E9604D2A41F2F2EA3BE72FBD9733F2F7316E7B
+        6EC7ED00DC366B690A7D41BF8A17668D8A9A44D0B9C918C83C3A0E32749BB28B
+        BDF3FB2F3ED538AFF43FD4DD7983DE1B3F1F9A391C2633B8BB5E03D9DBBE8653
+        4928C2EE0CC6C9D9D0EDCC626434B055967F0958E720C7FF007A4E40B7FBBEFB
+        5FEDF7B06775B7B9DD26DD6EF76BC9632D144E34470D93B2B1D60280E1B483AC
+        E738E8EBD94E68DC3DD5F77B9BFDC59F6FFA1D9F6FD9ED36E8E166322ADC4CED
+        3CEA5A3A2EA8F5C4188E1A8D3153D346EB7EF3C36F9EBFAADB14DD35B93A7B70
+        E546337A41FC77755076EEC2A6831193ABABDC590A0A9A0A5D995788A9CAD243
+        4D4B153545555BFDC2B3A2AB178E0BDAF91BD92B8F62E5E75DCFDC999BDDB2CF
+        F4FB4244648E674355570D08655602BABC404711538EA43DF39C3DEAB3F77B6F
+        D8F6DE47DB0FB444A8B8BE924956EA30572E518F87A0B7683C471E840DF799DC
+        589EA8831181C9E4B130F7DF6B75DF58D3E4F15909286AEA301B23275DDB9DA5
+        350E43192A4CD4D4BB6F61C988AA74B846CB1858EA674F734FDDCE4E70F67FD9
+        CFBC37BAF796B71B7ECD71B32DA58A4C8556E2F2F5D4335BAB8EE8EDD480DEB5
+        AFAF405F7B6EF66E79E75F693DBDD96E526DCA7DEBC4B86848005A5B86B86A3A
+        F0AAC7A091C49CF97495EC497B369F134AFD4983EBDCDE79B23A2BE1EC0CDEE0
+        C061E1C508242F250CBB6305B82B2A324D566308AF147078CB1D77014E2BFB7B
+        B47266EBB930E7FBEDDE1DB62B7C49670ACEDACB33B2C9A9D34D010C29527553
+        80EA73F70B74E7BDB2C234F6E36ED9AEF981CEA786FEE5ED54A800065644727B
+        7B4D40A15AF127A6EC7E47E40ED3F8E9F23FB63B0287AC767EE5C6EDEC1F5074
+        84BD63BA376E632355DB5DEF5B27575064EAEA33FB6B6FBE2EA36847BA60C852
+        B520965D6AEEC6311296E88FDD5FDAAF652C6E37EFBC1F2AF33EFD7761CA16F7
+        5232DDD945122CFF004CC6880B3D4846075020834FCF0FFDE0F703DEBBCE5697
+        90F9A76AD82DB74DFA5821B71B5DDCB72CA5E658CA33C8884396351A41141F6F
+        4BCA7D97DA191DB95580E95D9949DA3BF36F6D95A8C5EDEDCBBC136CFF001EA2
+        C0A51D1D756E4F79E620C928C93D1A34C649D5DAA6AD955D8790C8B859EC9FB6
+        7BC7DE87DDFBCD9FF7B3DAEE5BA4D757B71238D5A03979751A7004D1028C0F2E
+        B277DC4E6F6F653DAB4DC368D925DCAE76FB6820B6B692548E498A0A38666350
+        7402431E24D7A43747EFFACEE0EB0EBDEC8876E55ED3CA6F7C551E4A9F6F7DD9
+        ADACC4564F5D351C1E3AF8A9E87EED9E6855E094451B32BA90A09F60AE7DE48B
+        AF6CBDDFBEE44DB37517FB86D9BB24115C45DA249B5C42A741CD0B9422BC4747
+        7EDB73AAFBA1ED572E739EF5B18B08772B192E65B594F886255D402EA2054514
+        35682A0F01D2A2977DE5BB63B23BEFB4B2596CAE5711B97B8372ED8D854F3646
+        AEB71B41B1FA868F1DD474536168E59A4A3A15DCBB8B66E4F292B53AA0A992B0
+        3BEA600FBC91FBF973B5D7357BA9CAFC9E6E4B0E5EE5D82D1E2141FE332A033E
+        BF3625D969AB2BC0750FFDD4F6965E51E6FE719AA20DCB7B9E5894E54DBDBB18
+        E1280FC2BA51B871E278757F7D23B486C8EABD97B75A311D5D2E128EA3242C01
+        394AF896BB205ADC6AFB99D81B71C7BED27DDEB9197DB9F65FDBBE5436E91DD4
+        1B64065D2280CAF1AB39FB45429F9AF58C9CFDBE7F58F9BF7DDDD7FB196E1F47
+        C901217F90E856F733F40FEBDEFDD7BAFFD1DFE3DFBAF7491EC0C6D3667626F4
+        C3D6E0EA3735165B69EE2C6566DCA49A3A7ABCFD257E1EB292A30B4D513110C1
+        51948653023B908AD2024D81F64DCC5B95EECFB0EF3BAEDBB4C97FB85B5B4B2C
+        76D19D2F70E88596146A36969180453A4D090687AA496B05F23D95D53E9A6528
+        FC3E16055B8903813C481F3EB5C2EDBED5DB9F167AD3667C6DF8C5F1FB37F1DF
+        E47F656D7C2AEE9DC3B8372D06FAEE1EA4EB99F2351B67134D0EECA4A8CAC94B
+        BFB7F9A0928307F6D3F8E0856A6B8C6658222F88DB07B9BCC7B2EEBCEF6575EC
+        0DC72DC8580B1BE9EE92E24DCA79989768203024C90C2090C646406531C71AB6
+        A2CB8CFEE32F26FB45CA9B36C1EDB2A47EE16EEB474D21EEACA16731AB3CFE24
+        83C49588481509032F4ED1546EF33F22BE4EF63F74F4365327B9B747C80F88D9
+        5C3673E36E7E5AAC660F74D1CB8CEB9EB5A9ED7D97BA370E269A8EBB3341DA33
+        EE08E786BA695AB31D90A5A19965F1452A4855BDFBB5EE65FF002F7226D5BBFB
+        25CC13EEFB94701BAB58A7B6FDE5B3949A78CEE5280156E11956391A18DD5824
+        8AA0B352A9B70E5BDC39DF9B79DBDB3BCE7E88F30F2F59C375B5DE10D199E748
+        603736E24550DAA6321D2EE3B5A30C7B4106EDBE136EBF9375DD5DB671BF2436
+        86E48775D40AFAA19BDC94D8FC667B17828E38970F8ADD94F40F3C192DCA6557
+        F2CC85098D975EB75691E41F6DBDD1F796EFDC59FDB6E6BF66B751CB16D148DF
+        D629648A1B690A20291A5B1532CAD23911ABEA427B9CA695A9C85F6DF68E608F
+        DB3DB776E7AE6085B9B5E665FA4D1FE309107D28D3BA9F0CB951AC900554A820
+        3D406FFE633DA5D99D57D0B81AFEADC5F62D5E5F73F6F75DED6DC798EAFD959E
+        DFBB9B6AEC23575FB9F7A660E0B6DE173F935A0C960F6CC9867A85A66F0C9958
+        ECC8E5584BBEF02F37C9ED9F3943C890F89CDB2593A5B28608CCEF4521198AD1
+        B4924106A2848E1D2EBADDF6ED9B75E50BBDE649D363FDF36BF54F144F314B75
+        7324A5923566F0D950C6C69C1E9C48EAA831BF30B3B8D8D29E8AB3E59E2E397C
+        51881BA37E4FD2B82036902193AFC10A00FAA926E7DF1836CF61BFBC176DB64B
+        5DB5B98042CE642577889A8CC49D23C598B205E145343F8AB414CC197EF03F75
+        6BD9BC6BF82369835115B66BB4ED2011810687E34A91E5D0D1D67B0F3359B0F7
+        E772D7758F61ED8EB9EB3DA3BA3B1A3C566BAEF35B3771762E5F0F4191DCA36E
+        6D6D8791C6D06F0AC9F72E4620B2D4BE36215124E4446692425479ED17DC37DD
+        CE6AE798F9BBDFDB8363B3C5791CB3A4B225E5DDE9535657689982C4E08524BA
+        9E38E154BCE3F79BE45D87DBFDE2DBDA7D9DD5E1B595A2D364F6D6CBDAC68913
+        2C72170E43764454961DD5AD0AA7C1863D947AABA571FB5FB6A0DECD876DD1D8
+        594DE1D33DA5B036E7F14C8E486ECECEC8CBB9B7AED6C2E02496AF3FB86ADA08
+        56A1A5AA671E256E6C59CEFF00740F7F7DC2F7F370E6EDCF9312DF93AE77CD7E
+        21BC81DFE822611C5588C9A954C0A02A710303A22F677DFF00F69F61F6AB68E4
+        7D9777BD979A62DBDA492B67731A0BE96B34E7C578516A277615D54A81D75F21
+        F6A7687C1BF927DEF98DFBB077AEF1F8A1DF7DA397EE5D8BDC5B0B6D65F78527
+        576EBDE5052B6F4EBDECCC2EDBA7C8667058D8F2F4E92E3EBC42D13C0DA86B26
+        548723FEF93F73ADFF00DD21B373CFB4F3C73F316DF6C90BD93D2389EDE28C46
+        AE1CE1E6D208C1029E43A85BD93F7E93D86DFF00997973DC3B3B99790F79DC67
+        BCB6DC2DE179BE8E79DB54D1DDA2824A96A321A12483EA74985E8BF96DB97B9F
+        35B57ACBA4FB33B2F73479364C7453E1F65F6347B676CE2E929A6A9AAA8CE6EF
+        C9ECDA6C26DEA1A1A3A67D02A6B622F26886305D957DE347237B75FDE2062B0E
+        4EDBF7CDEF6DE5B8CA474967B72B14150A7433BEB0A8952A2BE4315EB22A6F77
+        3EE9FBD5C5D6F16371697DBB38672C96574C5DE84F72811A2966F8AA3049AD7A
+        2B7D15D9359D9BD9BB9B0BFDC7EEE1DA5DEDDEFD8FB95BFBD3D2BDB987C2D2D3
+        D5E6EB311B1E1CAEF9CFECFA5DAB4D4541D6BB4F1624A99EB1210CA543172148
+        97EF2DF75CFBC2FBBDEEE36F1B272D8BCE55DBB6FB4B08AE27B980B4D14712AC
+        9294672CE7C5D5290325ABD46FF771F7FF00DAAE4BE55DC365DF2E6EECF9BB77
+        DD2EEF5E05DBEEC26A9E52888D288F422AC6918D4C542061D085D83D6F9AE89E
+        F8EC1F8ADDC53B6FAD8DD9B8BDC3DA7D0BB9374411D653EF7EBECC56467B2FA8
+        F2EA91C54F599BEA7CF64982476579B6E56534C00F1BE90CFDEF3EED9BA7B0B2
+        F217BB5EDCE94DA2D6D2DE1BAD2B55B7DCE22BA65993E1FA69C712453571E869
+        EC57BA4DCDFBEF3A7B37EE04CF7925EC92DDEDC6790833DA3D7C5B732541D56A
+        E691AD6AD1F70C0E9C3E4877A6C91D9DF1F36F60BAA37F6DFEBAE94F8FD9CA7C
+        46DEE9EE8BEC4DE5B2B03D81D8BBAA931396C7502F5CED2CD62F15FC23686C14
+        789246493C39A606EC5C99B3DD3DF79F7EF99F777E48DABD9DD92DE7DE20BF1F
+        BDE28DA1892DE6B78B42C689232810CCCC658C0A600A0C57A8EB6EBDE4FF00BB
+        9FBEF713F3F4B79172F5A6D122EDD2A5BCF70AE679F4B90D12B9D49146109229
+        46E391D162ECACEFC74EDEA8C6E43B23A37E43EEBABC1D2D4D162A6A9F8CDF2A
+        31C28E8EAE48E7A948E3C16CEC644EF3CB1A925D5DBD22C47BC7FE43FBB4FDF6
+        FDB55DDADB94F976D6DFEA40926690D849A9D174A76C8ED9651A4E9A5401D0B3
+        9FBDF5FBA1FBA579B55C738CBBB5C3C28C91BA5A6E9169562095668E35C13915
+        E8C17775443D2FD15F073ABE2D81DA389E9EADEC1DD9F20A8B6C6D3E9EECCDDF
+        91DAB81DADB4AAD7AE711BBB1586DB79BDDD8BCEEE6DF7D9B2662587347EEE99
+        F14A8E2329A0655DC7B73F79EBDFBACF3CF2A733AC371EE66FB324715BDB0B4B
+        48ED2DBB44A58C45559A4A1D4CC09D341D447BD73A7B2DCB1EEBFB4B7DB2D95C
+        DB7B69B62CF78CEF15F4ECD711214B6A2E8675EF9C3AAB675206CF4CFB7FE64E
+        DFD9E6BE4C261FE47E09B70514DB7F24F17C5FEFA8FEFB1F5EA16A283EE6A7AD
+        5D96298282C22D325C5C73EF10391BEEB1F7D7F69B77BDDDF903663B66E13C5E
+        0F8F6F7364EEF0D4300646734AB0D4400083E7D645F307DEABEEB9CE16CF61CC
+        373797D6492134936DDC40660BA7553C1526AA48F420F0E8C275CE272D86E82E
+        CDF90B89EAAECBDB7B43A3FADF7066FAC368677ACB71ED8DC7BEB77ED9C1D52E
+        C6C1ED6EBEADA4A5DE8FB7A873D1D021924C640B51E98E05745919661FBBFF00
+        DC47DCB3EE02FB8BEF8AC71DBD94E6F12D352CB3DEDEEBF16B23A12A91B48013
+        426A4E282B40DFB87F798E4EB9F6C778DAFDA8DA6F041F46D6B0CC627B748508
+        0A4243228908A60540F3393D055F03A9317D8D5FD59D27B7B6D76BC126C6DADB
+        7329BDB2DBE7A83B2FAEB0F3E3F0F3E21377E4DB3BBEF6B6DFC5E432F99CF57B
+        B8A586692AEA0CEF22A954918056F3EE7FEFF7B89F7896F703DC0E53B58B96F7
+        0E656BABC78EE612C964B26A8E371AEA4694404501C70E94FB7FF783F6BF6DF6
+        AB69E45E589EF9B996CF620A6B69710AADC68D32156740A6B2BBB0209041C120
+        F5B34AA2A0B28007D6C3FD603FDE87BEDBA2AA224680045140070007003AC6F2
+        49A54F5CBDDBAD75EF7EEBDD7FFFD2DFCA635000F047148D7E44B3342A07E486
+        5827248FE9603FC7DB13B5CAAA9B68D1DEB90CC5053CCD4239FCB4E7D4756508
+        6BAD881F215FF28EB9A6BB0D61437E4292C3FD812AB7F6E8D58A803F3AFF0090
+        755FCEBFCBFCFD103F905FEC8DFF00B32BD0FF00E993F80FFB327FC4F19FE8CF
+        F877F1BFEF07DAFF001CA1FE01FDF9FEEEFF00B8EFEEC7F79747F0AFEF07EC7D
+        D79FECFF00E52BD84B99BFA9FF0055CBFF00D66FA7FAEFAC8FE975FC7E357B34
+        D3CABC6BDB5A75167377FAD9FF005B7953FACFE07F5AFC51F49C7C4F8D74EBD1
+        FE87AE9A7C4C57569FC5D15AE914F8BCBFCCEBBE5B6FD57C819FE423EFECF9CF
+        C394A0D9F4BD434D59FE86762FF164C5D46132359B92B70476C7D898DB271539
+        1942C02D8424872E3FAB9FEBB56A5CDEFF0059BF7776050BF4FE1776AD441D45
+        BE4405069424F40AD9C7237FAF96F4607DD4F3977EA04462D00F0135D0AB1723
+        469A6B0BDFC3ABA4F72975911D746D63AADA6C6F7FA5BF37BF16B7BD8AD4538F
+        556D3A5B5D345335E14F3AF5DFBD756EB17EC6BFF75792FF00ED1AF55C7FC857
+        BFBF0AD4D3E2A7F2FF0037563AE82B5A53F963F970FE5D736D363AF4E9FCEAB5
+        BEBC5EFC7D7DEC56BDBC7AD0AD4538F5C7F6B51FF37AF49BFE9D5A38BDFF003A
+        6FFEC3DF8EAA66BA7AA8A696A7C1E7E9F9FE5D72F469FECE9FF61A7FE29F5F7A
+        34C578F5E34A1AF0A75E6B696BDAD637BFD2D6E6FF00E16F7B1C4538F557A686
+        AF0A75527FCDF63EB397E3FEC94CAD664A87BFCF6F6D56F88D53B571B8ECB6E7
+        5EEB44AC710D4D156E570B13759556D45C845BCA47A811C1B7DE69424D5294D1
+        49177BDC3924FB47EE18F711917933F764BF565806217460A8256B2F0F0C1615
+        34A11C7A0F6F83766DDB9507284970BEE0FEF0B7FDDE6058DA4F17C4150C2464
+        1F4E56A2E0D6AB112C031014C1F827376BCBBDAA1D31F8BA0C2FF04A33BFE0C6
+        6632D96DB632324315A3C6D5D660B0B2364696BF5FD9BBC224A8A5F2799611EF
+        927FDDE516FF001FBB5CC2DEDA5EDC4BEDE7D3FF008FADCC0228C47AD7E94AB4
+        57131375E1D7B5D076EAEEA759E1EFEC9249C9DCB3FD6FB3B18B7FD2BE1FD2CC
+        651E269FD511EB8217FA6AF163E7A3B6BC6DDE3D773AAF6D23EBABEB73FD78FA
+        7BEDC8AF8925757CB869A7CA99AFAD7AC33FB7E3FE54F2EB9AE9E74E9FAFAB4D
+        BF57E6F6FCFB70D715EB66B8AF0EB97BD75AEB17ECF93FDD5E6B7FB4792DC7FC
+        856F7B15CD3AD9D5A056BE1D7F2AFF0082BD727F1F1AF47F86BD3FEF17F7A3F0
+        B57E1A67D29F3EB4389A71A7F2F3FCBAE7EFDD7BAF7BF75EEBDEFDD7BAFFD9}
+      mmHeight = 7408
+      mmLeft = 2910
+      mmTop = 3440
+      mmWidth = 45773
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppImage1: TppImage
+      UserName = 'Image1'
+      AlignHorizontal = ahLeft
+      AlignVertical = avTop
+      DirectDraw = True
+      MaintainAspectRatio = False
+      Picture.Data = {
+        0A544A504547496D61676590540000FFD8FFE10C014578696600004D4D002A00
+        000008000C0100000300000001019F0000010100030000000100790000010200
+        03000000030000009E0106000300000001000200000112000300000001000100
+        00011500030000000100030000011A000500000001000000A4011B0005000000
+        01000000AC012800030000000100020000013100020000001E000000B4013200
+        0200000014000000D28769000400000001000000E80000012000080008000800
+        0AFC8000002710000AFC800000271041646F62652050686F746F73686F702043
+        53352E312057696E646F777300323031323A30353A32312031373A34353A3131
+        0000000004900000070000000430323231A001000300000001FFFF0000A00200
+        0400000001000000ADA0030004000000010000001D0000000000000006010300
+        030000000100060000011A0005000000010000016E011B000500000001000001
+        7601280003000000010002000002010004000000010000017E02020004000000
+        0100000A7B0000000000000048000000010000004800000001FFD8FFED000C41
+        646F62655F434D0001FFEE000E41646F626500648000000001FFDB0084000C08
+        080809080C09090C110B0A0B11150F0C0C0F1518131315131318110C0C0C0C0C
+        0C110C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C010D
+        0B0B0D0E0D100E0E10140E0E0E14140E0E0E0E14110C0C0C0C0C11110C0C0C0C
+        0C0C110C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0CFF
+        C0001108001B00A003012200021101031101FFDD0004000AFFC4013F00000105
+        01010101010100000000000000030001020405060708090A0B01000105010101
+        01010100000000000000010002030405060708090A0B10000104010302040205
+        07060805030C33010002110304211231054151611322718132061491A1B14223
+        241552C16233347282D14307259253F0E1F163733516A2B283264493546445C2
+        A3743617D255E265F2B384C3D375E3F3462794A485B495C4D4E4F4A5B5C5D5E5
+        F55666768696A6B6C6D6E6F637475767778797A7B7C7D7E7F711000202010204
+        040304050607070605350100021103213112044151617122130532819114A1B1
+        4223C152D1F0332462E1728292435315637334F1250616A2B283072635C2D244
+        9354A317644555367465E2F2B384C3D375E3F34694A485B495C4D4E4F4A5B5C5
+        D5E5F55666768696A6B6C6D6E6F62737475767778797A7B7C7FFDA000C030100
+        02110311003F00F5543BED14D365CE6B9C2B69796B01738868DDB58C6FB9EFFE
+        4A22A5D63A9D7D27A75B9F6B1D6B292CDCC644C3DECAA7DDEDF6EFDE95D6A891
+        00124D002C9790CFFACF95D57A05990CB1D8197856B2F7B28B1CDDF43DDF672D
+        DED2D76EA3D767DA777F84AD5EE9DD67ABE4F5DC6C2C571B31B1F1686E60B350
+        5EE636FBF23D5F75BEA6DB68AD9FF0BEA22F4DB7A3759EB2DCDA3A7DF5DCCDDE
+        AE40DA29718DBFACEC7ECB6CF77EEFA9FF005B4FD43A764E4F51CAC4E8D9B8B8
+        33B6CCBAA996E4BAD77E91CFC97D7FA4D9B1F53ABDBFE91571C521C625C5A81E
+        9F499C6278BF4B85CE88C840CA321C9A88FEAFD272889E38FCFE98FEE4DEA167
+        755EACCC07D1406EFBF277FA6DEC1B58DD6DAFFE4B3756DFEDAB58355F4E1514
+        E43FD4BABADACB2C049DCE68DAE7CBBDDEE58FF59FA5E5E5BF173B01CCFB6611
+        7EDA2D76C65D5581A2FA3D4FF076FB18FA6CFA1EA7F389DCC7B9EC4FDBF4E431
+        3C17FBFF00A2E9425AC4906AE2651DCF0FE9B4B27AAE7348713956CEBFABD563
+        C0FEB7A0DDAC577A1750B731D6DCEB2D14500B6CF5D8EAE1F0D76D2DBDAC7FD0
+        76EF62CAA73B368C86E3DF8B97D3EEB0123780EADC5A373C372719F6D2EDBFCB
+        F4D17AA66DB9ADE9F8569DE5B7BF26C74C4B31D8DF477B47FDDCC9C7FF00B696
+        072D3187213CC1E621CCE284B318E49FEAB370FAA23F7BD5FDE6EE4919C78B11
+        C53C3394715461C392064783E6FEAFF71EA2ACCC6B9C594DAD7BA2607828BFA8
+        6156E2D7DCD0E1C899FC8B973976D16D58B49D8FC80F7DAE1CFA556D66C6FF00
+        C6DD77BFFE2D13F66759CAADB674E7E2B1825AEFB40B1CE247F2692C6B5AAE63
+        F89F3597DBC78B0C259B240E595CB8611C77E9F9BF4BF4964F0E180C9394A661
+        090C7E91C5294FF49E95B9D88E63AC6DCC2C641719E27412A3FB4707FD3B3EF5
+        C95F8D975676262E69ACE4E3D5664E41A0BBD1DF6938988D67ABFA4F6D0CCB77
+        BFFD226CA6E535D56455955D7456EFD6A8B6BD3D31B9D6DADCADDED7B5BF99B3
+        FEB89B9BE2BCCE2C8314A18A39230E3C9C5297089FCD184387E6E2C7EDAB1E0C
+        7381C83DC30E2E18D70F170FE94A57FB93E37B2AF268B1AE7D7635CD67D220F1
+        FD643FDA581CFAECFBD72792F65D8988C63B755D42F63C16EA1D4E2CE53DE1DF
+        E8DF90DC7AFF0097EA2167E58A9CC60CEC6C37C1739B901A5CE07E839A1D763E
+        C6E8E4327C5F988FB51F6A31C9922724E33193D038A518691F5FAB8143062FD6
+        1E22618C88820C3D44C78E5F37F79ECEBCDC5B4915DAD76D05CE83C01CB947F6
+        9E0C7F3ECFBD7217D77FD97A7D191736F767647DAB7D4CF4D9F67C66FAB4CB3D
+        4B77B6CC9B2A7EFDFF00A453CFFDA34E3D5998C29751EBD745B5D81DEA38D8EA
+        EB6FD9F610CF6FA9BECDE9F93E23CD4658F1C71E39659E39679FCF184318E2E1
+        F9BFA905B1C7878724E46621094718F965294A5C3FBBFDF7B0A72A8BA7D2B1AF
+        8E434CA88CEC47582B16B4BCBB68683ACF10B91EA0F733A7E4D75BB6BF2D830E
+        B7779C97B6873B4FDCA3D7BBFEB4B57A2D0D766021BB59437DA3B0FCC604B17C
+        5B2E4FBB4463889E79CA32F9BD38E063FAC8FF00CFFF00C2D7CB96846594711E
+        1C518CAF4F9A77E8FF00A2F4292492D96A3FFFD0F55557A9D1764605D4D0CA6D
+        B5ED86D7940BA927FE198DF7398AC3A7B4FCA3F8A7425B11A8D371FB106A8DBC
+        4DB6E5F55FAC7574B75628C6E924D8286835B4B98D9FB51668EF47D47B6AC4DB
+        FF000962A9D1BA5E6F5EC1C3CEA324579F8A5B564643DEFF0059F539A2EAED75
+        9EF77AF4BAC7B2977F84ABF4762EEECFE71DFCDFF3679FA5CF7FF81595F54F6F
+        D84EDFD9D10C8FD993B3E8FF0084DFEFFF008AFF008354CC21A5E4C9C342EC4E
+        F87F43F47F7BFF0051B47243189C8E4C80C6E466386BD32F6FD98E3E1FDCFD0F
+        FAA3B140BC322E2D2EF16F82E5BA8E0FD613D5F3322AC019745CE60A1FF686B0
+        0AD8C6B63D1B47B1DEAFABBBF7D75A923CD0E5BEEB5CC999C3E9E232F738F7F4
+        F1F07EB3E67462267247DB3C392CF070F07EECAEB8F8A3F23C963F4FEBD6D9E9
+        D980CC561E6D7DEC7803FE2E86EF7A1F51E99D72AEAB65B83D3465E3B28AE9A2
+        CF5EBA8982FBF21CE659B9DFA4BACDBFF595D8A4A8621F06F6F2F01F4F08F77F
+        9FE3E0E38ED7FACF9F838BDB66C91E72F189CE57C7FAB3FAAF9F865FD5E0FF00
+        19E67AC7D5DCEB71F0B2BA73DA3A960078F4EC9155CCB7DD7E33DC3E87B837D0
+        B7F7D53A6AFAC2E86FEC8B69B0901C5D7D22B1FCADF5BCBECDBFF14BB2493F99
+        1F0A3ECFBB2A2211F6B83DDE3387F438FDBF57F8EAC4399E2C9ED93F37EB3E4E
+        1F77F4BE6FD2FEEBC63FA5F5FAFAA649ABA70B68B9F556CC937B1A0535B1B56F
+        F40EEB3E9FAD7EC4FD4F07F62F52AEC049C0EA85AC793C57981BB5AEFE4D5D42
+        B66CFF00C335FF00C32EC962FD70D9FF0036B3F7FA5B7D313EBEEDBF499F47D2
+        FD27DA3FEE26DFFB55E8A1963F0B30CE38B824610E2956432847D1F7796312FF
+        00A9FF0035FA0B203981C0624CFD7338E27807EB3D5EF47D1FBDEBE2E371F34F
+        5BCEEA15E462E18CD18F8DE8FF003ECA76BDEFF52F76C7877F38CA71906CC0FA
+        C3619B7A0D561E25F934B8C787BEB5A7F57FD4FB4B37FABBBD2D77ECDD30DDDE
+        BFA3ECFF008CFF0085FE6D7481431FB992073E2439B022098FDE3D78F83F573F
+        D57F53E6FEBAE943211238666380C8930230704327E947F5B193C8F52E99D76B
+        EA6CB31307EDB4D38ADC7AAD37B2AF739E6EC9FD1D9B9DB7DB4D75FF00C5A10C
+        7FAD27D9FB1C35BDA732BDA0FC037FEFABB4494BCC0F84FB9FAE32E3E087FE28
+        FE6B823EDFC9FD4562873644BDAC9211E395F0FB3FCE717AFE787EF3C9756E93
+        D66B1D3FEC788DCD353ACBB2C36D6D405BB3D0C715BAFF0073EBAD97642D9E83
+        8B934E2FAB994FD9F26DFA746E166C0D25AD1EB33DAFDFFCE2D44958C3FE8FF7
+        F07B55EEFB7FA8AF7387DAF5F170FF0093E2FE778BFCA2D2398ACA652918F10F
+        7632E1F9EA1C3FD7F97DBFEA2924925A4C4FFFD9FFED130E50686F746F73686F
+        7020332E30003842494D040400000000000F1C015A00031B25471C0200000208
+        0C003842494D04250000000000107F92BB69EF57E6302B712D05A7A084BF3842
+        494D043A000000000093000000100000000100000000000B7072696E744F7574
+        7075740000000500000000436C7253656E756D00000000436C72530000000052
+        47424300000000496E7465656E756D00000000496E746500000000496D672000
+        0000004D70426C626F6F6C010000000F7072696E745369787465656E42697462
+        6F6F6C000000000B7072696E7465724E616D6554455854000000010000003842
+        494D043B0000000001B200000010000000010000000000127072696E744F7574
+        7075744F7074696F6E7300000012000000004370746E626F6F6C000000000043
+        6C6272626F6F6C00000000005267734D626F6F6C000000000043726E43626F6F
+        6C0000000000436E7443626F6F6C00000000004C626C73626F6F6C0000000000
+        4E677476626F6F6C0000000000456D6C44626F6F6C0000000000496E7472626F
+        6F6C000000000042636B674F626A630000000100000000000052474243000000
+        030000000052642020646F7562406FE000000000000000000047726E20646F75
+        62406FE0000000000000000000426C2020646F7562406FE00000000000000000
+        0042726454556E744623526C74000000000000000000000000426C6420556E74
+        4623526C7400000000000000000000000052736C74556E74462350786C405200
+        00000000000000000A766563746F7244617461626F6F6C010000000050675073
+        656E756D00000000506750730000000050675043000000004C656674556E7446
+        23526C74000000000000000000000000546F7020556E744623526C7400000000
+        000000000000000053636C20556E74462350726340590000000000003842494D
+        03ED000000000010004800000001000200480000000100023842494D04260000
+        0000000E000000000000000000003F8000003842494D040D0000000000040000
+        001E3842494D04190000000000040000001E3842494D03F30000000000090000
+        00000000000001003842494D271000000000000A000100000000000000023842
+        494D03F5000000000048002F66660001006C66660006000000000001002F6666
+        000100A1999A0006000000000001003200000001005A00000006000000000001
+        003500000001002D000000060000000000013842494D03F80000000000700000
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF03E800000000FFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF03E800000000FFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFF03E800000000FFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF03E800003842494D040000000000000200073842494D
+        0402000000000010000000000000000000000000000000003842494D04300000
+        0000000801010101010101013842494D042D00000000000600010000000F3842
+        494D0408000000000010000000010000024000000240000000003842494D041E
+        000000000004000000003842494D041A00000000034700000006000000000000
+        00000000001D000000AD0000000900730061006E00740061006E006400650072
+        0000000100000000000000000000000000000000000000010000000000000000
+        000000AD0000001D000000000000000000000000000000000100000000000000
+        00000000000000000000000010000000010000000000006E756C6C0000000200
+        000006626F756E64734F626A6300000001000000000000526374310000000400
+        000000546F70206C6F6E6700000000000000004C6566746C6F6E670000000000
+        00000042746F6D6C6F6E670000001D00000000526768746C6F6E67000000AD00
+        000006736C69636573566C4C73000000014F626A630000000100000000000573
+        6C6963650000001200000007736C69636549446C6F6E67000000000000000767
+        726F757049446C6F6E6700000000000000066F726967696E656E756D0000000C
+        45536C6963654F726967696E0000000D6175746F47656E657261746564000000
+        0054797065656E756D0000000A45536C6963655479706500000000496D672000
+        000006626F756E64734F626A6300000001000000000000526374310000000400
+        000000546F70206C6F6E6700000000000000004C6566746C6F6E670000000000
+        00000042746F6D6C6F6E670000001D00000000526768746C6F6E67000000AD00
+        00000375726C54455854000000010000000000006E756C6C5445585400000001
+        0000000000004D7367655445585400000001000000000006616C745461675445
+        58540000000100000000000E63656C6C54657874497348544D4C626F6F6C0100
+        00000863656C6C546578745445585400000001000000000009686F727A416C69
+        676E656E756D0000000F45536C696365486F727A416C69676E00000007646566
+        61756C740000000976657274416C69676E656E756D0000000F45536C69636556
+        657274416C69676E0000000764656661756C740000000B6267436F6C6F725479
+        7065656E756D0000001145536C6963654247436F6C6F7254797065000000004E
+        6F6E6500000009746F704F75747365746C6F6E67000000000000000A6C656674
+        4F75747365746C6F6E67000000000000000C626F74746F6D4F75747365746C6F
+        6E67000000000000000B72696768744F75747365746C6F6E6700000000003842
+        494D042800000000000C000000023FF00000000000003842494D041400000000
+        00040000000F3842494D040C000000000A9700000001000000A00000001B0000
+        01E0000032A000000A7B00180001FFD8FFED000C41646F62655F434D0001FFEE
+        000E41646F626500648000000001FFDB0084000C08080809080C09090C110B0A
+        0B11150F0C0C0F1518131315131318110C0C0C0C0C0C110C0C0C0C0C0C0C0C0C
+        0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C010D0B0B0D0E0D100E0E10140E
+        0E0E14140E0E0E0E14110C0C0C0C0C11110C0C0C0C0C0C110C0C0C0C0C0C0C0C
+        0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0CFFC0001108001B00A0030122
+        00021101031101FFDD0004000AFFC4013F000001050101010101010000000000
+        0000030001020405060708090A0B010001050101010101010000000000000001
+        0002030405060708090A0B1000010401030204020507060805030C3301000211
+        0304211231054151611322718132061491A1B14223241552C16233347282D143
+        07259253F0E1F163733516A2B283264493546445C2A3743617D255E265F2B384
+        C3D375E3F3462794A485B495C4D4E4F4A5B5C5D5E5F55666768696A6B6C6D6E6
+        F637475767778797A7B7C7D7E7F7110002020102040403040506070706053501
+        00021103213112044151617122130532819114A1B14223C152D1F0332462E172
+        8292435315637334F1250616A2B283072635C2D2449354A317644555367465E2
+        F2B384C3D375E3F34694A485B495C4D4E4F4A5B5C5D5E5F55666768696A6B6C6
+        D6E6F62737475767778797A7B7C7FFDA000C03010002110311003F00F5543BED
+        14D365CE6B9C2B69796B01738868DDB58C6FB9EFFE4A22A5D63A9D7D27A75B9F
+        6B1D6B292CDCC644C3DECAA7DDEDF6EFDE95D6A89100124D002C9790CFFACF95
+        D57A05990CB1D8197856B2F7B28B1CDDF43DDF672DDED2D76EA3D767DA777F84
+        AD5EE9DD67ABE4F5DC6C2C571B31B1F1686E60B3505EE636FBF23D5F75BEA6DB
+        68AD9FF0BEA22F4DB7A3759EB2DCDA3A7DF5DCCDDEAE40DA29718DBFACEC7ECB
+        6CF77EEFA9FF005B4FD43A764E4F51CAC4E8D9B8B833B6CCBAA996E4BAD77E91
+        CFC97D7FA4D9B1F53ABDBFE91571C521C625C5A81E9F499C6278BF4B85CE88C8
+        40CA321C9A88FEAFD272889E38FCFE98FEE4DEA167755EACCC07D1406EFBF277
+        FA6DEC1B58DD6DAFFE4B3756DFEDAB58355F4E1514E43FD4BABADACB2C049DCE
+        68DAE7CBBDDEE58FF59FA5E5E5BF173B01CCFB66117EDA2D76C65D5581A2FA3D
+        4FF076FB18FA6CFA1EA7F389DCC7B9EC4FDBF4E4313C17FBFF00A2E9425AC490
+        6AE2651DCF0FE9B4B27AAE7348713956CEBFABD563C0FEB7A0DDAC577A1750B7
+        31D6DCEB2D14500B6CF5D8EAE1F0D76D2DBDAC7FD076EF62CAA73B368C86E3DF
+        8B97D3EEB0123780EADC5A373C372719F6D2EDBFCBF4D17AA66DB9ADE9F8569D
+        E5B7BF26C74C4B31D8DF477B47FDDCC9C7FF00B696072D3187213CC1E621CCE2
+        84B318E49FEAB370FAA23F7BD5FDE6EE4919C78B11C53C3394715461C3920647
+        83E6FEAFF71EA2ACCC6B9C594DAD7BA2607828BFA86156E2D7DCD0E1C899FC8B
+        973976D16D58B49D8FC80F7DAE1CFA556D66C6FF00C6DD77BFFE2D13F66759CA
+        ADB674E7E2B1825AEFB40B1CE247F2692C6B5AAE63F89F3597DBC78B0C259B24
+        0E595CB8611C77E9F9BF4BF4964F0E180C9394A661090C7E91C5294FF49E95B9
+        D88E63AC6DCC2C641719E27412A3FB4707FD3B3EF5C95F8D975676262E69ACE4
+        E3D5664E41A0BBD1DF6938988D67ABFA4F6D0CCB77BFFD226CA6E535D5645595
+        5D7456EFD6A8B6BD3D31B9D6DADCADDED7B5BF99B3FEB89B9BE2BCCE2C8314A1
+        8A39230E3C9C5297089FCD184387E6E2C7EDAB1E0C7381C83DC30E2E18D70F17
+        0FE94A57FB93E37B2AF268B1AE7D7635CD67D220F1FD643FDA581CFAECFBD727
+        92F65D8988C63B755D42F63C16EA1D4E2CE53DE1DFE8DF90DC7AFF0097EA2167
+        E58A9CC60CEC6C37C1739B901A5CE07E839A1D763EC6E8E4327C5F988FB51F6A
+        31C9922724E33193D038A518691F5FAB8143062FD61E22618C88820C3D44C78E
+        5F37F79ECEBCDC5B4915DAD76D05CE83C01CB947F69E0C7F3ECFBD7217D77FD9
+        7A7D191736F767647DAB7D4CF4D9F67C66FAB4CB3D4B77B6CC9B2A7EFDFF00A4
+        53CFFDA34E3D5998C29751EBD745B5D81DEA38D8EAEB6FD9F610CF6FA9BECDE9
+        F93E23CD4658F1C71E39659E39679FCF184318E2E1F9BFA905B1C7878724E466
+        21094718F965294A5C3FBBFDF7B0A72A8BA7D2B1AF8E434CA88CEC47582B16B4
+        BCBB68683ACF10B91EA0F733A7E4D75BB6BF2D830EB7779C97B6873B4FDCA3D7
+        BBFEB4B57A2D0D766021BB59437DA3B0FCC604B17C5B2E4FBB4463889E79CA32
+        F9BD38E063FAC8FF00CFFF00C2D7CB96846594711E1C518CAF4F9A77E8FF00A2
+        F4292492D96A3FFFD0F55557A9D1764605D4D0CA6DB5ED86D7940BA927FE198D
+        F7398AC3A7B4FCA3F8A7425B11A8D371FB106A8DBC4DB6E5F55FAC7574B75628
+        C6E924D8286835B4B98D9FB51668EF47D47B6AC4DBFF000962A9D1BA5E6F5EC1
+        C3CEA324579F8A5B564643DEFF0059F539A2EAED759EF77AF4BAC7B2977F84AB
+        F4762EEECFE71DFCDFF3679FA5CF7FF81595F54F6FD84EDFD9D10C8FD993B3E8
+        FF0084DFEFFF008AFF008354CC21A5E4C9C342EC4EF87F43F47F7BFF0051B472
+        43189C8E4C80C6E466386BD32F6FD98E3E1FDCFD0FFAA3B140BC322E2D2EF16F
+        82E5BA8E0FD613D5F3322AC019745CE60A1FF686B00AD8C6B63D1B47B1DEAFAB
+        BBF7D75A923CD0E5BEEB5CC999C3E9E232F738F7F4F1F07EB3E67462267247DB
+        3C392CF070F07EECAEB8F8A3F23C963F4FEBD6D9E9D980CC561E6D7DEC7803FE
+        2E86EF7A1F51E99D72AEAB65B83D3465E3B28AE9A2CF5EBA8982FBF21CE659B9
+        DFA4BACDBFF595D8A4A8621F06F6F2F01F4F08F77F9FE3E0E38ED7FACF9F838B
+        DB66C91E72F189CE57C7FAB3FAAF9F865FD5E0FF0019E67AC7D5DCEB71F0B2BA
+        73DA3A960078F4EC9155CCB7DD7E33DC3E87B837D0B7F7D53A6AFAC2E86FEC8B
+        69B0901C5D7D22B1FCADF5BCBECDBFF14BB2493F991F0A3ECFBB2A2211F6B83D
+        DE3387F438FDBF57F8EAC4399E2C9ED93F37EB3E4E1F77F4BE6FD2FEEBC63FA5
+        F5FAFAA649ABA70B68B9F556CC937B1A0535B1B56FF40EEB3E9FAD7EC4FD4F07
+        F62F52AEC049C0EA85AC793C57981BB5AEFE4D5D42B66CFF00C335FF00C32EC9
+        62FD70D9FF0036B3F7FA5B7D313EBEEDBF499F47D2FD27DA3FEE26DFFB55E8A1
+        963F0B30CE38B824610E2956432847D1F7796312FF00A9FF0035FA0B203981C0
+        624CFD7338E27807EB3D5EF47D1FBDEBE2E371F34F5BCEEA15E462E18CD18F8D
+        E8FF003ECA76BDEFF52F76C7877F38CA71906CC0FAC3619B7A0D561E25F934B8
+        C787BEB5A7F57FD4FB4B37FABBBD2D77ECDD30DDDEBFA3ECFF008CFF0085FE6D
+        7481431FB992073E2439B022098FDE3D78F83F573FD57F53E6FEBAE943211238
+        666380C8930230704327E947F5B193C8F52E99D76BEA6CB31307EDB4D38ADC7A
+        AD37B2AF739E6EC9FD1D9B9DB7DB4D75FF00C5A10C7FAD27D9FB1C35BDA732BD
+        A0FC037FEFABB4494BCC0F84FB9FAE32E3E087FE28FE6B823EDFC9FD45628736
+        44BDAC9211E395F0FB3FCE717AFE787EF3C9756E93D66B1D3FEC788DCD353ACB
+        B2C36D6D405BB3D0C715BAFF0073EBAD97642D9E838B934E2FAB994FD9F26DFA
+        746E166C0D25AD1EB33DAFDFFCE2D44958C3FE8FF7F07B55EEFB7FA8AF7387DA
+        F5F170FF0093E2FE778BFCA2D2398ACA652918F10F7632E1F9EA1C3FD7F97DBF
+        EA2924925A4C4FFFD9003842494D042100000000005900000001010000000F00
+        410064006F00620065002000500068006F0074006F00730068006F0070000000
+        1500410064006F00620065002000500068006F0074006F00730068006F007000
+        20004300530035002E003100000001003842494D040600000000000700080000
+        00010100FFE111E4687474703A2F2F6E732E61646F62652E636F6D2F7861702F
+        312E302F003C3F787061636B657420626567696E3D22EFBBBF222069643D2257
+        354D304D7043656869487A7265537A4E54637A6B633964223F3E203C783A786D
+        706D65746120786D6C6E733A783D2261646F62653A6E733A6D6574612F222078
+        3A786D70746B3D2241646F626520584D5020436F726520352E302D6330363120
+        36342E3134303934392C20323031302F31322F30372D31303A35373A30312020
+        202020202020223E203C7264663A52444620786D6C6E733A7264663D22687474
+        703A2F2F7777772E77332E6F72672F313939392F30322F32322D7264662D7379
+        6E7461782D6E7323223E203C7264663A4465736372697074696F6E207264663A
+        61626F75743D222220786D6C6E733A6372733D22687474703A2F2F6E732E6164
+        6F62652E636F6D2F63616D6572612D7261772D73657474696E67732F312E302F
+        2220786D6C6E733A70686F746F73686F703D22687474703A2F2F6E732E61646F
+        62652E636F6D2F70686F746F73686F702F312E302F2220786D6C6E733A786D70
+        3D22687474703A2F2F6E732E61646F62652E636F6D2F7861702F312E302F2220
+        786D6C6E733A64633D22687474703A2F2F7075726C2E6F72672F64632F656C65
+        6D656E74732F312E312F2220786D6C6E733A786D704D4D3D22687474703A2F2F
+        6E732E61646F62652E636F6D2F7861702F312E302F6D6D2F2220786D6C6E733A
+        73744576743D22687474703A2F2F6E732E61646F62652E636F6D2F7861702F31
+        2E302F73547970652F5265736F757263654576656E742322206372733A416C72
+        656164794170706C6965643D2254727565222070686F746F73686F703A436F6C
+        6F724D6F64653D2233222070686F746F73686F703A49434350726F66696C653D
+        2241646F626520524742202831393938292220786D703A437265617465446174
+        653D22323031322D30352D32315431373A31353A33352D30333A30302220786D
+        703A4D6F64696679446174653D22323031322D30352D32315431373A34353A31
+        312D30333A30302220786D703A4D65746164617461446174653D22323031322D
+        30352D32315431373A34353A31312D30333A30302220786D703A43726561746F
+        72546F6F6C3D2241646F62652050686F746F73686F70204353352E312057696E
+        646F7773222064633A666F726D61743D22696D6167652F6A7065672220786D70
+        4D4D3A496E7374616E636549443D22786D702E6969643A424639453136394238
+        34413345313131423138464331413134364339354142352220786D704D4D3A44
+        6F63756D656E7449443D22786D702E6469643A33393332333846353831413345
+        313131423138464331413134364339354142352220786D704D4D3A4F72696769
+        6E616C446F63756D656E7449443D22786D702E6469643A333933323338463538
+        3141334531313142313846433141313436433935414235223E203C70686F746F
+        73686F703A446F63756D656E74416E636573746F72733E203C7264663A426167
+        3E203C7264663A6C693E786D702E6469643A3339333233384635383141334531
+        3131423138464331413134364339354142353C2F7264663A6C693E203C2F7264
+        663A4261673E203C2F70686F746F73686F703A446F63756D656E74416E636573
+        746F72733E203C786D704D4D3A486973746F72793E203C7264663A5365713E20
+        3C7264663A6C692073744576743A616374696F6E3D2273617665642220737445
+        76743A696E7374616E636549443D22786D702E6969643A333933323338463538
+        3141334531313142313846433141313436433935414235222073744576743A77
+        68656E3D22323031322D30352D32315431373A31373A31352D30333A30302220
+        73744576743A736F6674776172654167656E743D2241646F62652050686F746F
+        73686F70204353352E312057696E646F7773222073744576743A6368616E6765
+        643D222F222F3E203C7264663A6C692073744576743A616374696F6E3D227361
+        766564222073744576743A696E7374616E636549443D22786D702E6969643A33
+        4133323338463538314133453131314231384643314131343643393541423522
+        2073744576743A7768656E3D22323031322D30352D32315431373A31373A3135
+        2D30333A3030222073744576743A736F6674776172654167656E743D2241646F
+        62652050686F746F73686F70204353352E312057696E646F7773222073744576
+        743A6368616E6765643D222F222F3E203C7264663A6C692073744576743A6163
+        74696F6E3D227361766564222073744576743A696E7374616E636549443D2278
+        6D702E6969643A33423332333846353831413345313131423138464331413134
+        36433935414235222073744576743A7768656E3D22323031322D30352D323154
+        31373A31383A32342D30333A3030222073744576743A736F6674776172654167
+        656E743D2241646F62652050686F746F73686F70204353352E312057696E646F
+        7773222073744576743A6368616E6765643D222F222F3E203C7264663A6C6920
+        73744576743A616374696F6E3D227361766564222073744576743A696E737461
+        6E636549443D22786D702E6969643A3343333233384635383141334531313142
+        313846433141313436433935414235222073744576743A7768656E3D22323031
+        322D30352D32315431373A32303A31392D30333A3030222073744576743A736F
+        6674776172654167656E743D2241646F62652050686F746F73686F7020435335
+        2E312057696E646F7773222073744576743A6368616E6765643D222F222F3E20
+        3C7264663A6C692073744576743A616374696F6E3D2273617665642220737445
+        76743A696E7374616E636549443D22786D702E6969643A424539453136394238
+        3441334531313142313846433141313436433935414235222073744576743A77
+        68656E3D22323031322D30352D32315431373A34353A31312D30333A30302220
+        73744576743A736F6674776172654167656E743D2241646F62652050686F746F
+        73686F70204353352E312057696E646F7773222073744576743A6368616E6765
+        643D222F222F3E203C7264663A6C692073744576743A616374696F6E3D227361
+        766564222073744576743A696E7374616E636549443D22786D702E6969643A42
+        4639453136394238344133453131314231384643314131343643393541423522
+        2073744576743A7768656E3D22323031322D30352D32315431373A34353A3131
+        2D30333A3030222073744576743A736F6674776172654167656E743D2241646F
+        62652050686F746F73686F70204353352E312057696E646F7773222073744576
+        743A6368616E6765643D222F222F3E203C2F7264663A5365713E203C2F786D70
+        4D4D3A486973746F72793E203C2F7264663A4465736372697074696F6E3E203C
+        2F7264663A5244463E203C2F783A786D706D6574613E20202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        2020202020202020202020202020202020202020202020202020202020202020
+        20202020202020202020202020202020202020202020203C3F787061636B6574
+        20656E643D2277223F3EFFE202404943435F50524F46494C4500010100000230
+        41444245021000006D6E74725247422058595A2007CF00060003000000000000
+        616373704150504C000000006E6F6E6500000000000000000000000000000000
+        0000F6D6000100000000D32D4144424500000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000000A
+        63707274000000FC0000003264657363000001300000006B777470740000019C
+        00000014626B7074000001B00000001472545243000001C40000000E67545243
+        000001D40000000E62545243000001E40000000E7258595A000001F400000014
+        6758595A00000208000000146258595A0000021C000000147465787400000000
+        436F7079726967687420313939392041646F62652053797374656D7320496E63
+        6F72706F726174656400000064657363000000000000001141646F6265205247
+        4220283139393829000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000000058595A2000000000
+        0000F35100010000000116CC58595A2000000000000000000000000000000000
+        6375727600000000000000010233000063757276000000000000000102330000
+        6375727600000000000000010233000058595A200000000000009C1800004FA5
+        000004FC58595A20000000000000348D0000A02C00000F9558595A2000000000
+        000026310000102F0000BE9CFFEE000E41646F626500644000000001FFDB0084
+        0001010101010101010101010101010101010101010101010101010101010101
+        0101010101010101010101010202020202020202020202030303030303030303
+        0301010101010101010101010202010202030303030303030303030303030303
+        0303030303030303030303030303030303030303030303030303030303030303
+        0303FFC0001108001D00AD03011100021101031101FFDD00040016FFC401A200
+        00000602030100000000000000000000070806050409030A0201000B01000006
+        03010101000000000000000000060504030702080109000A0B10000201030401
+        0303020303030206097501020304110512062107132200083114413223150951
+        4216612433175271811862912543A1B1F02634720A19C1D13527E1533682F192
+        A24454734546374763285556571AB2C2D2E2F2648374938465A3B3C3D3E32938
+        66F3752A393A48494A58595A6768696A767778797A85868788898A9495969798
+        999AA4A5A6A7A8A9AAB4B5B6B7B8B9BAC4C5C6C7C8C9CAD4D5D6D7D8D9DAE4E5
+        E6E7E8E9EAF4F5F6F7F8F9FA110002010302040403050404040606056D010203
+        110421120531060022134151073261147108428123911552A162163309B124C1
+        D14372F017E18234259253186344F1A2B226351954364564270A7383934674C2
+        D2E2F255657556378485A3B3C3D3E3F3291A94A4B4C4D4E4F495A5B5C5D5E5F5
+        2847576638768696A6B6C6D6E6F667778797A7B7C7D7E7F7485868788898A8B8
+        C8D8E8F839495969798999A9B9C9D9E9F92A3A4A5A6A7A8A9AAABACADAEAFAFF
+        DA000C03010002110311003F00DFE3DFBAF75E26DEFDD7BAA545F9FF00FECDBD
+        7FCACF8C7B21F2FD439CCD60BB5BAEFE31F6BE13746776AEEECE6FDDAD88AEC4
+        5156D5B46B83CCEC7CE64377D14B5187863916A67C7C2864092CEB118E97DC1D
+        AA7E76BDE44983433784024A4E9D72904B225686A14828E0D19AAA0D4758F1FE
+        BB16BCE9BC739FB7D6665B1BC304F1595CA48F148F3A29182343C4FAFBA3A1AB
+        283C2B9225B53E7EF7EE27E1AFC778765F65EF2CBF7A775FC82DD1939B2DB8EA
+        A7EC1DC14FD63B03686D397736D8846E57CBCE0E4B7FEEBC46260850021AA6A3
+        C5A181611C58F34EFF00CB5EDE6FFE3EE13DCF32AEF32D9C0D2334CFAB52014F
+        11999805A90B5396EA22DB3DD4E6CDAFDAFD9D6CF7AB99F9BAF7799111A52D73
+        208618E12F1FEA9666064916314F366D39EB663EB8C8EF1CBEC1D9D93EC3C350
+        6DDDF590DB788ACDDB82C6553D6D06273F3D143264E829AA2450CE94D54CCB6B
+        B8420A877003B4F9B4CD7F71B6584FBA5BAC3B8BC2A644535557206A507E47FC
+        D53C7ACD2D9E6DC67DAB6E9B78B6487757850CB1A9D4A921035A83E601A8F3F4
+        A9E3D2B2B2AA1A2A69EB2A258A0A6A68A5A8A99E79162860A782369669E695C8
+        58E28A342CCC78005FDAFC96445F8D8D07DBFF0015FCFA5F2C890C52CD21A222
+        924F9000573D53EEFAF9D59DED3C5D166FA9EAEB368F5EE469AA72584CF68419
+        DDD18059EA0506E33278E693138BCD63E05ACA5816D53F6F3466460E4C6BC60F
+        BD37DF6FDD09FDC8DDFDAFF662F8D96D96575F44F34512BDDDC5D9ED31AEBD45
+        429C2189471EF271D65EFB33ED4728DEF26D8FB83CDD0F8F6B73019943328892
+        202AADA6A198B0CF9D3029EA4CAB3F98563F6CD449FC6FBE7B1B6DDA5D1F7FB9
+        76E76B6230B3693A498B2F9ADA31E20C47E82459747E6F6E7DC609CBDFDE29B2
+        C6DBD46DCE492D0369F144DACB674F8790AF4209565E0463A6E5F74FEE81F572
+        6D32DF6D897F5A69920B84A1AD281F405A547957EDEAF17A6778D760BAA769E6
+        7B8F78C18FCFEE5FBFC8C526EDABC761EB1A8E4999F1F4914527DA6B31E34452
+        B5F5480CBEA3C81EFA97EC9F38EFDC8DED0F2ADEFDE3F9D12DB9EAF5A62E6FDA
+        3824D3E237871B200A35226906833C4E4F507F396DDB76F9CE1BB1F6EF6D171C
+        BC8B1E936C1E441545AB034268589E34F9743763375EDFCE634E63099CC46531
+        31B4F1CD91A0AEA6ABA18E4A703CC92554339862680B0D619BD3F9B7BC80D939
+        B3963987683BF6C1BFDA5DEC49AB54F13AB423C3F8C78A0E8057CEA71D016EF6
+        BDD6C2F46DF7B64F16E1C7C26522460781553439F2C749497BABA9A9E634D3F6
+        46CA8EA16C1E33B8F16749248E4AD532FD47D2FC7B8FEE3EF0DEC65A5C1B7B8F
+        75F6359AB4D3F551935E14C1E35C7DBD08A3E42E77963599394372F088AD7E9E
+        4E1FB3F9F4F27B0F648C53E71F77ED7183158B8F39619AC77F0EFBC963F2C349
+        F7C6A8D37DD49182C23D5ACA8B816F62A9BDCDE40B6D88F34C9CE3B69E5A1378
+        4D742E2230C72D2A23760D40F4F2AD7D401D14A72DF30497436E6D92E1AFDD75
+        AC4237D663AD3569D3539C5462B8AD7A6B3DBFD58BC7FA44D963E9C0DCB893FE
+        B702A8F17F61A1EFFF00B2723041EEBEC3A8F0FF001B897F997E8C7FA85CE88A
+        5BFAA9B8A281C4C12003F974A2C2EEDDB7B8629AAB6FE7F099C820F4544988C9
+        526423A77D3AB4CF2534D2F8BD2A5BD56E01F631D879D793F992DAE770E5EE64
+        DB6F2D2056696486E52508AA2A4B69AD0002A49A74477FB5EEBB5F871DFED53C
+        570C0503A95A9240A0A8CF1F2E98076FF57117FF00487B2FF3F5DC9895FA1B7E
+        6AFD83E4F7FBD9346556F753635245686E63AD2A47F10F3047478BC8FCE4C484
+        E56BF62295D30B9A122B9C631C3A9345DA3D7B94AEA4C662F7C6D1AFC8D74C94
+        F49454B9FC654D4D4CD26AD114104352D2CB2BE836502E6DED66D9EF4FB53BEE
+        E167B46C5EE46CB75BB5C48162892E519E46AD595143125B4D4802BEA453A4D7
+        9CA5CD7610C9737BCB37B15AC6BA9D9E2640ABC2B5229C7D7AEAABB4FAEB1F55
+        534190DF7B3E92BE8A79696B2927DC38A86A296AA0731CF4F5104957E4866864
+        52AC8D66522C7DD771F7BFDA2DA370BDDB374F73365B7DC2090A3C4F73187461
+        82AE0B02181E229D3B6DC9DCDB7D0457767CADB8496B20D48CB0BB2B29E04102
+        841F9759B19D97B0333591E3F15BDF68E46B677F1D3D1D16E0C5D555CF25AFE3
+        8E086ADE577FF002E7DAFD97DDCF6C798AE61B3D8F9FB68BBB991B4A2C57513B
+        337A6906B5F954F49EF795F99B6E8659EFF976F608538B4913AAFE648C7EDEA7
+        6777C6D3DACD4ABB9B7260F026B84C68865B27498F356B4C6215069BEEA68FCD
+        E06990369BE92C2FF5F665CCDEE1724725184F37F366DDB72CA8CC9E3CCB1965
+        4346601A955071515A74936DD9779DE5656DAF6A9E711B057D08CD42C3B4601E
+        3E55F43D3A60F3F85DCB40994C065B1B9AC73C9242B5D8AAC86BA91A588812C6
+        B514EEF1978C9B30BDC7B39D8398B63E69DB63DDF97778B5BFDADC90B35BC8B2
+        C6D400D03A9209A11E7E63A4F77637BB74C6DB70B5786E40CAB020FEC39E9E3D
+        9D7497AF7BF75EEBFFD0DFE3DFBAF7490EC1DEB83EB5D87BD7B1773FDEFF0076
+        F60ED2DC7BD3701C6D1CB91C80C1ED6C3D66732CD438F83F7ABAAD68286431C2
+        9EB95ECA393EFDC335E91EE17D06D9617BB95D16FA6B789E57A024E98D4BB500
+        C9340680649C75475DB9D8DFCB83E5CEFBD85BDF6D6E8ED7EB0EEBCC66F6A546
+        237F758F5EE7319B977517A8A39B114DB9B1FF00C17298ECCD6D30789A9F28D0
+        FF0015C70897C752B02344D017307367B5DCE77B69617525D26FA93058668A09
+        1678E456A0D2EAA490AD9C82ABF16295EB17B98B983D96F71774DB2E20BBBEB6
+        E673347E1DC5BDBC89393A869D43410D42477B2EA41C180E8DDFC85F8B34BB07
+        2BD47D89F12FE3F749E43BD76CD565B696DEC8EEECEFF72F6CEC6DB797A6CC6E
+        4DC1BEB07D798AADC16D7DE3BEEA7772D192EF1C72A3540A876714F1C624ADFF
+        00658E3B58EFF68D9ADAE7982DE632C2256F0D5A775D0F2B9140D29415A915A8
+        A8229D495CDFC94BB736CDBCF23F296DD3F34DBC8CB1199FC18E3F12A649FC25
+        2892CE5A86A686A6B5ED5A0A3F0AF6E7CC2DBB1765FF00B36DB863DCD90CAE4B
+        0390D9B5D165B6B5743491FDBE4A3DC3454D41B571B8BA0C45219BED5E388441
+        3EBA790C4A3E478F9F564DE65E77784991E33008CAE9450A43AD17E74C9249E8
+        C7DB4B4F726D46F8DEE25D24B34B22343A5A32106921D42C6AA14569419FB4F1
+        E8DE6FAC0526ECD9FB9769D7CF514B41BAB039ADB55B5348DA2AA9E933D89ADC
+        5544F4CC410B510C3545909040603DC80AC564888603B866B435F2D3506A49A0
+        A7A127CA8647BFB56BFB2BCDBD036BB889E3041008D6A416EEC768A9A7CBAD56
+        36EC1DC5F0A7138EE87F941D61DA58CA2EA8861DB3D7DF22B60EC2DD9D83D41D
+        93B136F05A7DA3B86AB3DB27179CAFD85B8A1C3C30A5750E4E0A6786A2132092
+        CC3DF1A7EF2BF71DF76E7F72B7DF70BD9CDB63DD769DC6F24BA6B512986EE3BB
+        7D25A452745517051D1BB49C71EA61F647EF3FCBDEDF7256DBED87BCDB6CD68B
+        B65B8B6837016ED7363716E0698A8D12965B8D0B4904802822AC7AB0AE91F9B5
+        BB33B80C1EF1DBBD8147DC1D6D96D4A8F56F16629B2F454756F4391A6A4CA54C
+        432D4B91A4969E486459F5324CA5644B823DC2BC9FF7BEFBCBFB0BCE969CB5EE
+        46E17F7D616724515CD95F0492E9230DFAAA261DCAD1C74647A92CA4038EB242
+        4F6BBD9FF75F955F98FDBD7B77B4BB898DB5C5BBFE80751F8C0AAB82F8618D26
+        AA294E814DDDD8755DC1F21BE4C7641CB652BB6651F66D275375F63A6AD9EA31
+        18FC0F4DED9A1DB7B8F278AA0795B1F4B2677B2EBF386A2589034DF6B1891888
+        D1504BFDE37EE3BF377B97CA7CB1617727D1D96DD04C114D28F76BE38D7E7ABC
+        365AA9E07A08FDD0F629A3DA7DC9E66B8C4579BAB5AC00E53459AAC0E501C774
+        CB21A8E3F974A1FF004DD9BDC38FDCFD3FB7AA5B13D7DD539E8B66E6E1A48D63
+        9B74766C78DC7EEFDFF5B94A88C96931DB7723B9E0C452D27119971D3CD20767
+        411003DF3E6EE64F6B7DA3F67FD85D9B70B8B1B7FDCEBBA6E5E03B466EAE7710
+        6458E56535223427527038AF01D0A7DA61B573DF3EFB9BEE2CD6E93DAD9EF0FB
+        65A8600B29B7A452C80FA193B41FC3A4FAF4DFB93A43E77D3B1C975FFC57D9BB
+        DB6B494A957899F23F23B676D5DCD9BA4A9896586AE0C1CFB6B218CC77DCC6C1
+        A38EA3225C2B0F2686BAACCFC8DFDD95CCFCD1CA1B2732EEDEE55A5B6E1796E9
+        20805B492A88E540C84CA26400E9604D2A41F2F2EA3BE72FBD9733F2F7316E7B
+        6EC7ED00DC366B690A7D41BF8A17668D8A9A44D0B9C918C83C3A0E32749BB28B
+        BDF3FB2F3ED538AFF43FD4DD7983DE1B3F1F9A391C2633B8BB5E03D9DBBE8653
+        4928C2EE0CC6C9D9D0EDCC626434B055967F0958E720C7FF007A4E40B7FBBEFB
+        5FEDF7B06775B7B9DD26DD6EF76BC9632D144E34470D93B2B1D60280E1B483AC
+        E738E8EBD94E68DC3DD5F77B9BFDC59F6FFA1D9F6FD9ED36E8E166322ADC4CED
+        3CEA5A3A2EA8F5C4188E1A8D3153D346EB7EF3C36F9EBFAADB14DD35B93A7B70
+        E546337A41FC77755076EEC2A6831193ABABDC590A0A9A0A5D995788A9CAD243
+        4D4B153545555BFDC2B3A2AB178E0BDAF91BD92B8F62E5E75DCFDC999BDDB2CF
+        F4FB4244648E674355570D08655602BABC404711538EA43DF39C3DEAB3F77B6F
+        D8F6DE47DB0FB444A8B8BE924956EA30572E518F87A0B7683C471E840DF799DC
+        589EA8831181C9E4B130F7DF6B75DF58D3E4F15909286AEA301B23275DDB9DA5
+        350E43192A4CD4D4BB6F61C988AA74B846CB1858EA674F734FDDCE4E70F67FD9
+        CFBC37BAF796B71B7ECD71B32DA58A4C8556E2F2F5D4335BAB8EE8EDD480DEB5
+        AFAF405F7B6EF66E79E75F693DBDD96E526DCA7DEBC4B86848005A5B86B86A3A
+        F0AAC7A091C49CF97495EC497B369F134AFD4983EBDCDE79B23A2BE1EC0CDEE0
+        C061E1C508242F250CBB6305B82B2A324D566308AF147078CB1D77014E2BFB7B
+        B47266EBB930E7FBEDDE1DB62B7C49670ACEDACB33B2C9A9D34D010C29527553
+        80EA73F70B74E7BDB2C234F6E36ED9AEF981CEA786FEE5ED54A800065644727B
+        7B4D40A15AF127A6EC7E47E40ED3F8E9F23FB63B0287AC767EE5C6EDEC1F5074
+        84BD63BA376E632355DB5DEF5B27575064EAEA33FB6B6FBE2EA36847BA60C852
+        B520965D6AEEC6311296E88FDD5FDAAF652C6E37EFBC1F2AF33EFD7761CA16F7
+        5232DDD945122CFF004CC6880B3D4846075020834FCF0FFDE0F703DEBBCE5697
+        90F9A76AD82DB74DFA5821B71B5DDCB72CA5E658CA33C8884396351A41141F6F
+        4BCA7D97DA191DB95580E95D9949DA3BF36F6D95A8C5EDEDCBBC136CFF001EA2
+        C0A51D1D756E4F79E620C928C93D1A34C649D5DAA6AD955D8790C8B859EC9FB6
+        7BC7DE87DDFBCD9FF7B3DAEE5BA4D757B71238D5A03979751A7004D1028C0F2E
+        B277DC4E6F6F653DAB4DC368D925DCAE76FB6820B6B692548E498A0A38666350
+        7402431E24D7A43747EFFACEE0EB0EBDEC8876E55ED3CA6F7C551E4A9F6F7DD9
+        ADACC4564F5D351C1E3AF8A9E87EED9E6855E094451B32BA90A09F60AE7DE48B
+        AF6CBDDFBEE44DB37517FB86D9BB24115C45DA249B5C42A741CD0B9422BC4747
+        7EDB73AAFBA1ED572E739EF5B18B08772B192E65B594F886255D402EA2054514
+        35682A0F01D2A2977DE5BB63B23BEFB4B2596CAE5711B97B8372ED8D854F3646
+        AEB71B41B1FA868F1DD474536168E59A4A3A15DCBB8B66E4F292B53AA0A992B0
+        3BEA600FBC91FBF973B5D7357BA9CAFC9E6E4B0E5EE5D82D1E2141FE332A033E
+        BF3625D969AB2BC0750FFDD4F6965E51E6FE719AA20DCB7B9E5894E54DBDBB18
+        E1280FC2BA51B871E278757F7D23B486C8EABD97B75A311D5D2E128EA3242C01
+        394AF896BB205ADC6AFB99D81B71C7BED27DDEB9197DB9F65FDBBE5436E91DD4
+        1B64065D2280CAF1AB39FB45429F9AF58C9CFDBE7F58F9BF7DDDD7FB196E1F47
+        C901217F90E856F733F40FEBDEFDD7BAFFD1DFE3DFBAF7491EC0C6D3667626F4
+        C3D6E0EA3735165B69EE2C6566DCA49A3A7ABCFD257E1EB292A30B4D513110C1
+        51948653023B908AD2024D81F64DCC5B95EECFB0EF3BAEDBB4C97FB85B5B4B2C
+        76D19D2F70E88596146A36969180453A4D090687AA496B05F23D95D53E9A6528
+        FC3E16055B8903813C481F3EB5C2EDBED5DB9F167AD3667C6DF8C5F1FB37F1DF
+        E47F656D7C2AEE9DC3B8372D06FAEE1EA4EB99F2351B67134D0EECA4A8CAC94B
+        BFB7F9A0928307F6D3F8E0856A6B8C6658222F88DB07B9BCC7B2EEBCEF6575EC
+        0DC72DC8580B1BE9EE92E24DCA79989768203024C90C2090C646406531C71AB6
+        A2CB8CFEE32F26FB45CA9B36C1EDB2A47EE16EEB474D21EEACA16731AB3CFE24
+        83C49588481509032F4ED1546EF33F22BE4EF63F74F4365327B9B747C80F88D9
+        5C3673E36E7E5AAC660F74D1CB8CEB9EB5A9ED7D97BA370E269A8EBB3341DA33
+        EE08E786BA695AB31D90A5A19965F1452A4855BDFBB5EE65FF002F7226D5BBFB
+        25CC13EEFB94701BAB58A7B6FDE5B3949A78CEE5280156E11956391A18DD5824
+        8AA0B352A9B70E5BDC39DF9B79DBDB3BCE7E88F30F2F59C375B5DE10D199E748
+        603736E24550DAA6321D2EE3B5A30C7B4106EDBE136EBF9375DD5DB671BF2436
+        86E48775D40AFAA19BDC94D8FC667B17828E38970F8ADD94F40F3C192DCA6557
+        F2CC85098D975EB75691E41F6DBDD1F796EFDC59FDB6E6BF66B751CB16D148DF
+        D629648A1B690A20291A5B1532CAD23911ABEA427B9CA695A9C85F6DF68E608F
+        DB3DB776E7AE6085B9B5E665FA4D1FE309107D28D3BA9F0CB951AC900554A820
+        3D406FFE633DA5D99D57D0B81AFEADC5F62D5E5F73F6F75DED6DC798EAFD959E
+        DFBB9B6AEC23575FB9F7A660E0B6DE173F935A0C960F6CC9867A85A66F0C9958
+        ECC8E5584BBEF02F37C9ED9F3943C890F89CDB2593A5B28608CCEF4521198AD1
+        B4924106A2848E1D2EBADDF6ED9B75E50BBDE649D363FDF36BF54F144F314B75
+        7324A5923566F0D950C6C69C1E9C48EAA831BF30B3B8D8D29E8AB3E59E2E397C
+        51881BA37E4FD2B82036902193AFC10A00FAA926E7DF1836CF61BFBC176DB64B
+        5DB5B98042CE642577889A8CC49D23C598B205E145343F8AB414CC197EF03F75
+        6BD9BC6BF82369835115B66BB4ED2011810687E34A91E5D0D1D67B0F3359B0F7
+        E772D7758F61ED8EB9EB3DA3BA3B1A3C566BAEF35B3771762E5F0F4191DCA36E
+        6D6D8791C6D06F0AC9F72E4620B2D4BE36215124E4446692425479ED17DC37DD
+        CE6AE798F9BBDFDB8363B3C5791CB3A4B225E5DDE9535657689982C4E08524BA
+        9E38E154BCE3F79BE45D87DBFDE2DBDA7D9DD5E1B595A2D364F6D6CBDAC68913
+        2C72170E43764454961DD5AD0AA7C1863D947AABA571FB5FB6A0DECD876DD1D8
+        594DE1D33DA5B036E7F14C8E486ECECEC8CBB9B7AED6C2E02496AF3FB86ADA08
+        56A1A5AA671E256E6C59CEFF00740F7F7DC2F7F370E6EDCF9312DF93AE77CD7E
+        21BC81DFE822611C5588C9A954C0A02A710303A22F677DFF00F69F61F6AB68E4
+        7D9777BD979A62DBDA492B67731A0BE96B34E7C578516A277615D54A81D75F21
+        F6A7687C1BF927DEF98DFBB077AEF1F8A1DF7DA397EE5D8BDC5B0B6D65F78527
+        576EBDE5052B6F4EBDECCC2EDBA7C8667058D8F2F4E92E3EBC42D13C0DA86B26
+        548723FEF93F73ADFF00DD21B373CFB4F3C73F316DF6C90BD93D2389EDE28C46
+        AE1CE1E6D208C1029E43A85BD93F7E93D86DFF00997973DC3B3B99790F79DC67
+        BCB6DC2DE179BE8E79DB54D1DDA2824A96A321A12483EA74985E8BF96DB97B9F
+        35B57ACBA4FB33B2F73479364C7453E1F65F6347B676CE2E929A6A9AAA8CE6EF
+        C9ECDA6C26DEA1A1A3A67D02A6B622F26886305D957DE347237B75FDE2062B0E
+        4EDBF7CDEF6DE5B8CA474967B72B14150A7433BEB0A8952A2BE4315EB22A6F77
+        3EE9FBD5C5D6F16371697DBB38672C96574C5DE84F72811A2966F8AA3049AD7A
+        2B7D15D9359D9BD9BB9B0BFDC7EEE1DA5DEDDEFD8FB95BFBD3D2BDB987C2D2D3
+        D5E6EB311B1E1CAEF9CFECFA5DAB4D4541D6BB4F1624A99EB1210CA543172148
+        97EF2DF75CFBC2FBBDEEE36F1B272D8BCE55DBB6FB4B08AE27B980B4D14712AC
+        9294672CE7C5D5290325ABD46FF771F7FF00DAAE4BE55DC365DF2E6EECF9BB77
+        DD2EEF5E05DBEEC26A9E52888D288F422AC6918D4C542061D085D83D6F9AE89E
+        F8EC1F8ADDC53B6FAD8DD9B8BDC3DA7D0BB9374411D653EF7EBECC56467B2FA8
+        F2EA91C54F599BEA7CF64982476579B6E56534C00F1BE90CFDEF3EED9BA7B0B2
+        F217BB5EDCE94DA2D6D2DE1BAD2B55B7DCE22BA65993E1FA69C712453571E869
+        EC57BA4DCDFBEF3A7B37EE04CF7925EC92DDEDC6790833DA3D7C5B732541D56A
+        E691AD6AD1F70C0E9C3E4877A6C91D9DF1F36F60BAA37F6DFEBAE94F8FD9CA7C
+        46DEE9EE8BEC4DE5B2B03D81D8BBAA931396C7502F5CED2CD62F15FC23686C14
+        789246493C39A606EC5C99B3DD3DF79F7EF99F777E48DABD9DD92DE7DE20BF1F
+        BDE28DA1892DE6B78B42C689232810CCCC658C0A600A0C57A8EB6EBDE4FF00BB
+        9FBEF713F3F4B79172F5A6D122EDD2A5BCF70AE679F4B90D12B9D49146109229
+        46E391D162ECACEFC74EDEA8C6E43B23A37E43EEBABC1D2D4D162A6A9F8CDF2A
+        31C28E8EAE48E7A948E3C16CEC644EF3CB1A925D5DBD22C47BC7FE43FBB4FDF6
+        FDB55DDADB94F976D6DFEA40926690D849A9D174A76C8ED9651A4E9A5401D0B3
+        9FBDF5FBA1FBA579B55C738CBBB5C3C28C91BA5A6E9169562095668E35C13915
+        E8C17775443D2FD15F073ABE2D81DA389E9EADEC1DD9F20A8B6C6D3E9EECCDDF
+        91DAB81DADB4AAD7AE711BBB1586DB79BDDD8BCEEE6DF7D9B2662587347EEE99
+        F14A8E2329A0655DC7B73F79EBDFBACF3CF2A733AC371EE66FB324715BDB0B4B
+        48ED2DBB44A58C45559A4A1D4CC09D341D447BD73A7B2DCB1EEBFB4B7DB2D95C
+        DB7B69B62CF78CEF15F4ECD711214B6A2E8675EF9C3AAB675206CF4CFB7FE64E
+        DFD9E6BE4C261FE47E09B70514DB7F24F17C5FEFA8FEFB1F5EA16A283EE6A7AD
+        5D96298282C22D325C5C73EF10391BEEB1F7D7F69B77BDDDF903663B66E13C5E
+        0F8F6F7364EEF0D4300646734AB0D4400083E7D645F307DEABEEB9CE16CF61CC
+        373797D6492134936DDC40660BA7553C1526AA48F420F0E8C275CE272D86E82E
+        CDF90B89EAAECBDB7B43A3FADF7066FAC368677ACB71ED8DC7BEB77ED9C1D52E
+        C6C1ED6EBEADA4A5DE8FB7A873D1D021924C640B51E98E05745919661FBBFF00
+        DC47DCB3EE02FB8BEF8AC71DBD94E6F12D352CB3DEDEEBF16B23A12A91B48013
+        426A4E282B40DFB87F798E4EB9F6C778DAFDA8DA6F041F46D6B0CC627B748508
+        0A4243228908A60540F3393D055F03A9317D8D5FD59D27B7B6D76BC126C6DADB
+        7329BDB2DBE7A83B2FAEB0F3E3F0F3E21377E4DB3BBEF6B6DFC5E432F99CF57B
+        B8A586692AEA0CEF22A954918056F3EE7FEFF7B89F7896F703DC0E53B58B96F7
+        0E656BABC78EE612C964B26A8E371AEA4694404501C70E94FB7FF783F6BF6DF6
+        AB69E45E589EF9B996CF620A6B69710AADC68D32156740A6B2BBB0209041C120
+        F5B34AA2A0B28007D6C3FD603FDE87BEDBA2AA224680045140070007003AC6F2
+        49A54F5CBDDBAD75EF7EEBDD7FFFD2DFCA635000F047148D7E44B3342A07E486
+        5827248FE9603FC7DB13B5CAAA9B68D1DEB90CC5053CCD4239FCB4E7D4756508
+        6BAD881F215FF28EB9A6BB0D61437E4292C3FD812AB7F6E8D58A803F3AFF0090
+        755FCEBFCBFCFD103F905FEC8DFF00B32BD0FF00E993F80FFB327FC4F19FE8CF
+        F877F1BFEF07DAFF001CA1FE01FDF9FEEEFF00B8EFEEC7F79747F0AFEF07EC7D
+        D79FECFF00E52BD84B99BFA9FF0055CBFF00D66FA7FAEFAC8FE975FC7E357B34
+        D3CABC6BDB5A75167377FAD9FF005B7953FACFE07F5AFC51F49C7C4F8D74EBD1
+        FE87AE9A7C4C57569FC5D15AE914F8BCBFCCEBBE5B6FD57C819FE423EFECF9CF
+        C394A0D9F4BD434D59FE86762FF164C5D46132359B92B70476C7D898DB271539
+        1942C02D8424872E3FAB9FEBB56A5CDEFF0059BF7776050BF4FE1776AD441D45
+        BE4405069424F40AD9C7237FAF96F4607DD4F3977EA04462D00F0135D0AB1723
+        469A6B0BDFC3ABA4F72975911D746D63AADA6C6F7FA5BF37BF16B7BD8AD4538F
+        556D3A5B5D345335E14F3AF5DFBD756EB17EC6BFF75792FF00ED1AF55C7FC857
+        BFBF0AD4D3E2A7F2FF0037563AE82B5A53F963F970FE5D736D363AF4E9FCEAB5
+        BEBC5EFC7D7DEC56BDBC7AD0AD4538F5C7F6B51FF37AF49BFE9D5A38BDFF003A
+        6FFEC3DF8EAA66BA7AA8A696A7C1E7E9F9FE5D72F469FECE9FF61A7FE29F5F7A
+        34C578F5E34A1AF0A75E6B696BDAD637BFD2D6E6FF00E16F7B1C4538F557A686
+        AF0A75527FCDF63EB397E3FEC94CAD664A87BFCF6F6D56F88D53B571B8ECB6E7
+        5EEB44AC710D4D156E570B13759556D45C845BCA47A811C1B7DE69424D5294D1
+        49177BDC3924FB47EE18F711917933F764BF565806217460A8256B2F0F0C1615
+        34A11C7A0F6F83766DDB9507284970BEE0FEF0B7FDDE6058DA4F17C4150C2464
+        1F4E56A2E0D6AB112C031014C1F827376BCBBDAA1D31F8BA0C2FF04A33BFE0C6
+        6632D96DB632324315A3C6D5D660B0B2364696BF5FD9BBC224A8A5F2799611EF
+        927FDDE516FF001FBB5CC2DEDA5EDC4BEDE7D3FF008FADCC0228C47AD7E94AB4
+        57131375E1D7B5D076EAEEA759E1EFEC9249C9DCB3FD6FB3B18B7FD2BE1FD2CC
+        651E269FD511EB8217FA6AF163E7A3B6BC6DDE3D773AAF6D23EBABEB73FD78FA
+        7BEDC8AF8925757CB869A7CA99AFAD7AC33FB7E3FE54F2EB9AE9E74E9FAFAB4D
+        BF57E6F6FCFB70D715EB66B8AF0EB97BD75AEB17ECF93FDD5E6B7FB4792DC7FC
+        856F7B15CD3AD9D5A056BE1D7F2AFF0082BD727F1F1AF47F86BD3FEF17F7A3F0
+        B57E1A67D29F3EB4389A71A7F2F3FCBAE7EFDD7BAF7BF75EEBDEFDD7BAFFD9}
+      mmHeight = 7673
+      mmLeft = 2910
+      mmTop = 57679
+      mmWidth = 45773
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060F
+      4C6162656C334F6E476574546578740B50726F6772616D54797065070B747450
+      726F63656475726506536F7572636506F970726F636564757265204C6162656C
+      334F6E476574546578742876617220546578743A20537472696E67293B0D0A62
+      6567696E0D0A0D0A202054657874203A3D20436F6E7461735F52656365626572
+      5B274167656E636961275D202B2027202D2027202B20436F6E7461735F526563
+      656265725B2744696769746F5F4167656E636961275D202B2027202F2027202B
+      200D0A20202020202020202020436F6E7461735F526563656265725B27436F64
+      69676F5F436564656E7465275D202B2027202D2027202B436F6E7461735F5265
+      63656265725B2744696769746F5F436F6469676F5F436564656E7465275D3B20
+      0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064C6162656C33
+      094576656E744E616D6506094F6E47657454657874074576656E744944023508
+      4361726574506F730102000200000001060F5472614576656E7448616E646C65
+      720B50726F6772616D4E616D65060F4C6162656C364F6E476574546578740B50
+      726F6772616D54797065070B747450726F63656475726506536F757263650657
+      70726F636564757265204C6162656C364F6E4765745465787428766172205465
+      78743A20537472696E67293B0D0A626567696E0D0A0D0A2054657874203A3D20
+      206C6162656C332E746578743B0D0A0D0A656E643B0D0A0D436F6D706F6E656E
+      744E616D6506064C6162656C36094576656E744E616D6506094F6E4765745465
+      7874074576656E7449440235084361726574506F730102000200000001060F54
+      72614576656E7448616E646C65720B50726F6772616D4E616D65061044425465
+      7874394F6E476574546578740B50726F6772616D54797065070B747450726F63
+      656475726506536F75726365067070726F63656475726520444254657874394F
+      6E476574546578742876617220546578743A20537472696E67293B0D0A626567
+      696E0D0A0D0A202054657874203A3D2074657874202B20272C2027202B20436F
+      6E7461735F526563656265725B276E726F275D3B0D0A0D0A656E643B0D0A0D43
+      6F6D706F6E656E744E616D65060744425465787439094576656E744E616D6506
+      094F6E47657454657874074576656E7449440235084361726574506F73010200
+      0200000001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+      6D65061144425465787433384F6E476574546578740B50726F6772616D547970
+      65070B747450726F63656475726506536F75726365069570726F636564757265
+      2044425465787433384F6E476574546578742876617220546578743A20537472
+      696E67293B0D0A626567696E0D0A20696620282054657874203D202727202920
+      6F7220282054657874206973206E756C6C2029207468656E200D0A2020546578
+      74203A3D20275224270D0A2020656C73650D0A202054657874203A3D20546578
+      743B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060844425465
+      78743338094576656E744E616D6506094F6E47657454657874074576656E7449
+      440235084361726574506F730102000200000001060F5472614576656E744861
+      6E646C65720B50726F6772616D4E616D65061144425465787433324F6E476574
+      546578740B50726F6772616D54797065070B747450726F63656475726506536F
+      75726365068170726F6365647572652044425465787433324F6E476574546578
+      742876617220546578743A20537472696E67293B0D0A626567696E0D0A0D0A20
+      2069662054657874203D20275472756527207468656E0D0A202054657874203A
+      3D202753270D0A2020656C73650D0A202054657874203A3D20274E273B0D0A0D
+      0A656E643B0D0A0D436F6D706F6E656E744E616D650608444254657874333209
+      4576656E744E616D6506094F6E47657454657874074576656E74494402350843
+      61726574506F730102000200000001060F5472614576656E7448616E646C6572
+      0B50726F6772616D4E616D650610444254657874324F6E476574546578740B50
+      726F6772616D54797065070B747450726F63656475726506536F757263650696
+      70726F63656475726520444254657874324F6E47657454657874287661722054
+      6578743A20537472696E67293B0D0A626567696E0D0A0D0A2020696620282054
+      657874203D2027272029206F72202874657874206973206E756C6C2920746865
+      6E0D0A202054657874203A3D20275265616C270D0A2020656C73650D0A202054
+      657874203A3D20546578743B0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+      4E616D65060744425465787432094576656E744E616D6506094F6E4765745465
+      7874074576656E7449440235084361726574506F730102000200000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Contas_Receber'
+      Height = 658
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 63
+      SortMode = 1
+      Top = 10
+      TypeColumnWidth = 54
+      Width = 255
+      AutoSearchTabOrder = 0
+      object Contas_Receber: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Contas_Receber'
+        object ppField1: TppField
+          FieldAlias = 'Boleto_Nosso_N'#250'mero'
+          FieldName = 'Boleto_Nosso_N'#250'mero'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 0
+          TableName = 'Contas_Receber'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Boleto_C'#243'digo_Barra'
+          FieldName = 'Boleto_C'#243'digo_Barra'
+          FieldLength = 44
+          DisplayWidth = 44
+          Position = 1
+          TableName = 'Contas_Receber'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Boleto_C'#243'digo_Cedente'
+          FieldName = 'Boleto_C'#243'digo_Cedente'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 2
+          TableName = 'Contas_Receber'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Boleto_Linha_Digit'#225'vel'
+          FieldName = 'Boleto_Linha_Digit'#225'vel'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 3
+          TableName = 'Contas_Receber'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Valor'
+          FieldName = 'Valor'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Contas_Receber'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Data_Vencimento'
+          FieldName = 'Data_Vencimento'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 5
+          TableName = 'Contas_Receber'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Data_Conta'
+          FieldName = 'Data_Conta'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 6
+          TableName = 'Contas_Receber'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Documento'
+          FieldName = 'Documento'
+          FieldLength = 25
+          DisplayWidth = 25
+          Position = 7
+          TableName = 'Contas_Receber'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Instrucoes'
+          FieldName = 'Instrucoes'
+          FieldLength = 0
+          IsDetail = True
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Local_Pgto'
+          FieldName = 'Local_Pgto'
+          FieldLength = 255
+          IsDetail = True
+          DisplayWidth = 255
+          Position = 9
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Aceite_Documento'
+          FieldName = 'Aceite_Documento'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 10
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Cliente_Nome'
+          FieldName = 'Cliente_Nome'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 11
+          TableName = 'Cliente'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Cliente_CPF'
+          FieldName = 'Cliente_CPF'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 12
+          TableName = 'Cliente'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldName = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 13
+          TableName = 'Cliente'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 14
+          TableName = 'Cliente'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Cliente_Cidade'
+          FieldName = 'Cliente_Cidade'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 15
+          TableName = 'Cliente'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Cliente_CEP'
+          FieldName = 'Cliente_CEP'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'Cliente'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Cliente_UF'
+          FieldName = 'Cliente_UF'
+          FieldLength = 2
+          IsDetail = True
+          DisplayWidth = 2
+          Position = 17
+          TableName = 'Cliente'
+        end
+        object ppField19: TppField
+          FieldAlias = 'nro'
+          FieldName = 'nro'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 20
+          Position = 18
+          TableName = 'Cliente'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Agencia'
+          FieldName = 'Agencia'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 25
+          Position = 19
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Digito_Agencia'
+          FieldName = 'Digito_Agencia'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Codigo_Cedente'
+          FieldName = 'Codigo_Cedente'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 25
+          Position = 21
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Digito_Codigo_Cedente'
+          FieldName = 'Digito_Codigo_Cedente'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Nosso_Numero'
+          FieldName = 'Nosso_Numero'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Nome_Cedente'
+          FieldName = 'Nome_Cedente'
+          FieldLength = 100
+          IsDetail = True
+          DisplayWidth = 100
+          Position = 24
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Boleto_Conta'
+          FieldName = 'Boleto_Conta'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'Contas_Receber'
+        end
+        object ppField27: TppField
+          FieldAlias = 'boleto_digito_nossonumero'
+          FieldName = 'boleto_digito_nossonumero'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'Contas_Receber'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Boleto_Data_Processamento'
+          FieldName = 'Boleto_Data_Processamento'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 27
+          TableName = 'Contas_Receber'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Carteira'
+          FieldName = 'Carteira'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 25
+          Position = 28
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField30: TppField
+          FieldAlias = 'DESCRICAO'
+          FieldName = 'DESCRICAO'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 29
+          TableName = 'INDICES'
+        end
+        object ppField31: TppField
+          FieldAlias = 'SIMBOLO'
+          FieldName = 'SIMBOLO'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'INDICES'
+        end
+        object ppField32: TppField
+          FieldAlias = 'especie_doc'
+          FieldName = 'especie_doc'
+          FieldLength = 50
+          IsDetail = True
+          DisplayWidth = 50
+          Position = 31
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Cod_Real_Banco'
+          FieldName = 'iif_Contas_Bancarias_Bole'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'Contas_Bancarias_Boletos'
+        end
+        object ppField34: TppField
+          FieldAlias = 'NOME_CLIENTE'
+          FieldName = 'iif_Cliente_Outros_pessoa'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 33
+          TableName = 'Cliente'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Contas_Receber'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Contas_Receber.Boleto_Nosso_N'#250'mero, '
+          '       Contas_Receber.Boleto_C'#243'digo_Barra, '
+          '       Contas_Receber.Boleto_C'#243'digo_Cedente, '
+          '       Contas_Receber.Boleto_Linha_Digit'#225'vel, '
+          '       Contas_Receber.Valor, '
+          '       Contas_Receber.Data_Vencimento, '
+          '       Contas_Receber.Data_Conta, '
+          '       Contas_Receber.Documento, '
+          '       Contas_Bancarias_Boletos.Instrucoes, '
+          '       Contas_Bancarias_Boletos.Local_Pgto, '
+          '       Contas_Bancarias_Boletos.Aceite_Documento, '
+          '       Cliente.Cliente_Nome, Cliente.Cliente_CPF, '
+          '       Cliente.Cliente_Endere'#231'o, '
+          '       Cliente.Cliente_Bairro_Descri'#231#227'o, '
+          '       Cliente.Cliente_Cidade, '
+          '       Cliente.Cliente_CEP, Cliente.Cliente_UF, '
+          '       Cliente.nro, '
+          '       Contas_Bancarias_Boletos.Agencia, '
+          '       Contas_Bancarias_Boletos.Digito_Agencia, '
+          '       Contas_Bancarias_Boletos.Codigo_Cedente, '
+          '       Contas_Bancarias_Boletos.Digito_Codigo_Cedente, '
+          '       Contas_Bancarias_Boletos.Nosso_Numero, '
+          '       Contas_Bancarias_Boletos.Nome_Cedente, '
+          '       Contas_Receber.Boleto_Conta, '
+          '       Contas_Receber.boleto_digito_nossonumero, '
+          '       Contas_Receber.Boleto_Data_Processamento, '
+          '       Contas_Bancarias_Boletos.Carteira, '
+          '       INDICES.DESCRICAO, INDICES.SIMBOLO, '
+          '       Contas_Bancarias_Boletos.especie_doc, '
+          
+            '       iif( Contas_Bancarias_Boletos.tipo_banco = "cobBancoDoBra' +
+            'sil", 1, iif( Contas_Bancarias_Boletos.tipo_banco = "cobSantande' +
+            'r", 502, iif( ( Contas_Bancarias_Boletos.tipo_banco = "cobCaixaE' +
+            'con'#244'mica") or (  Contas_Bancarias_Boletos.tipo_banco = "cobCaixa' +
+            'Sicob" ), 104, iif( ( Contas_Bancarias_Boletos.tipo_banco = "cod' +
+            'Bradesco") or ( Contas_Bancarias_Boletos.tipo_banco = "codBrades' +
+            'coSICOOB"), 237, iif( Contas_Bancarias_Boletos.tipo_banco = "cob' +
+            'Itau", 341, iif( Contas_Bancarias_Boletos.tipo_banco = "cobBanco' +
+            'Mercantil", 389, iif( Contas_Bancarias_Boletos.tipo_banco = "cob' +
+            'Sicred", 748,  iif( Contas_Bancarias_Boletos.tipo_banco = "cobBa' +
+            'nestes", 21, iif( Contas_Bancarias_Boletos.tipo_banco = "cobHSBC' +
+            '", 399, iif( Contas_Bancarias_Boletos.tipo_banco = "cobBancoDoNo' +
+            'rdeste", 4, iif( Contas_Bancarias_Boletos.tipo_banco = "cobBRB",' +
+            ' 70, 0) ) ) ) ) ) ) ) ) ) ) AS iif_Contas_Bancarias_Bole, '
+          
+            '       iif( Cliente.Outros_pessoa_juridica = True, Cliente.Clien' +
+            'te_Raz'#227'o_Social, Cliente.Cliente_Nome )  AS iif_Cliente_Outros_p' +
+            'essoa'
+          'FROM (((Contas_Receber Contas_Receber'
+          
+            '      INNER JOIN Contas_Bancarias_Boletos Contas_Bancarias_Bolet' +
+            'os ON '
+          '     (Contas_Bancarias_Boletos.Empresa = Contas_Receber.Empresa)'
+          
+            '      AND (Contas_Bancarias_Boletos.Codigo = Contas_Receber.Cont' +
+            'a_Banc'#225'ria) )'
+          '      INNER JOIN Cliente Cliente ON '
+          '     (Cliente.Empresa = Contas_Receber.Empresa)'
+          '      AND (Cliente.Codigo = Contas_Receber.C'#243'digo_Cliente) )'
+          '      LEFT OUTER JOIN INDICES INDICES ON '
+          '     (INDICES.EMPRESA = Contas_Receber.Empresa)'
+          '      AND (INDICES.CODIGO = Contas_Receber.codigo_indice) )'
+          'WHERE ( Contas_Receber.Codigo = 1 )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Cod_Real_Banco'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Banco'
+          FieldLength = 0
+          FieldName = 'Codigo_Banco'
+          SQLFieldName = 'iif_Contas_Bancarias_Bole'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Contas_Bancarias_Boletos.tipo_banco = "cobBancoDoBrasil", 1' +
+            ', iif( Contas_Bancarias_Boletos.tipo_banco = "cobSantander", 502' +
+            ', iif( ( Contas_Bancarias_Boletos.tipo_banco = "cobCaixaEcon'#244'mic' +
+            'a") or (  Contas_Bancarias_Boletos.tipo_banco = "cobCaixaSicob" ' +
+            '), 104, iif( ( Contas_Bancarias_Boletos.tipo_banco = "codBradesc' +
+            'o") or ( Contas_Bancarias_Boletos.tipo_banco = "codBradescoSICOO' +
+            'B"), 237, iif( Contas_Bancarias_Boletos.tipo_banco = "cobItau", ' +
+            '341, iif( Contas_Bancarias_Boletos.tipo_banco = "cobBancoMercant' +
+            'il", 389, iif( Contas_Bancarias_Boletos.tipo_banco = "cobSicred"' +
+            ', 748,  iif( Contas_Bancarias_Boletos.tipo_banco = "cobBanestes"' +
+            ', 21, iif( Contas_Bancarias_Boletos.tipo_banco = "cobHSBC", 399,' +
+            ' iif( Contas_Bancarias_Boletos.tipo_banco = "cobBancoDoNordeste"' +
+            ', 4, iif( Contas_Bancarias_Boletos.tipo_banco = "cobBRB", 70, 0)' +
+            ' ) ) ) ) ) ) ) ) ) )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'NOME_CLIENTE'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          SQLFieldName = 'iif_Cliente_Outros_pessoa'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+          CalcType = dacaExpression
+          Expression = 
+            'iif( Cliente.Outros_pessoa_juridica = True, Cliente.Cliente_Raz'#227 +
+            'o_Social, Cliente.Cliente_Nome ) '
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          ParamName = 'ID'
+          Value = '1'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Contas_Receber'
+            TableName = 'Contas_Receber'
+            TableSQLAlias = 'Contas_Receber'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Boleto_Nosso_N'#250'mero'
+          DisplayWidth = 60
+          FieldAlias = 'Boleto_Nosso_N'#250'mero'
+          FieldLength = 60
+          FieldName = 'Boleto_Nosso_N'#250'mero'
+          SQLFieldName = 'Boleto_Nosso_N'#250'mero'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField2: TdaField
+          Alias = 'Boleto_C'#243'digo_Barra'
+          DisplayWidth = 44
+          FieldAlias = 'Boleto_C'#243'digo_Barra'
+          FieldLength = 44
+          FieldName = 'Boleto_C'#243'digo_Barra'
+          SQLFieldName = 'Boleto_C'#243'digo_Barra'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField3: TdaField
+          Alias = 'Boleto_C'#243'digo_Cedente'
+          DisplayWidth = 30
+          FieldAlias = 'Boleto_C'#243'digo_Cedente'
+          FieldLength = 30
+          FieldName = 'Boleto_C'#243'digo_Cedente'
+          SQLFieldName = 'Boleto_C'#243'digo_Cedente'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField4: TdaField
+          Alias = 'Boleto_Linha_Digit'#225'vel'
+          DisplayWidth = 60
+          FieldAlias = 'Boleto_Linha_Digit'#225'vel'
+          FieldLength = 60
+          FieldName = 'Boleto_Linha_Digit'#225'vel'
+          SQLFieldName = 'Boleto_Linha_Digit'#225'vel'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField5: TdaField
+          Alias = 'Valor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Valor'
+          FieldLength = 0
+          FieldName = 'Valor'
+          SQLFieldName = 'Valor'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField6: TdaField
+          Alias = 'Data_Vencimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Vencimento'
+          FieldLength = 0
+          FieldName = 'Data_Vencimento'
+          SQLFieldName = 'Data_Vencimento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField7: TdaField
+          Alias = 'Data_Conta'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Conta'
+          FieldLength = 0
+          FieldName = 'Data_Conta'
+          SQLFieldName = 'Data_Conta'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField8: TdaField
+          Alias = 'Documento'
+          DisplayWidth = 25
+          FieldAlias = 'Documento'
+          FieldLength = 25
+          FieldName = 'Documento'
+          SQLFieldName = 'Documento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField9: TdaField
+          Alias = 'Instrucoes'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Instrucoes'
+          FieldLength = 0
+          FieldName = 'Instrucoes'
+          IsDetail = True
+          Linkable = False
+          SQLFieldName = 'Instrucoes'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField10: TdaField
+          Alias = 'Local_Pgto'
+          DisplayWidth = 255
+          FieldAlias = 'Local_Pgto'
+          FieldLength = 255
+          FieldName = 'Local_Pgto'
+          IsDetail = True
+          SQLFieldName = 'Local_Pgto'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField11: TdaField
+          Alias = 'Aceite_Documento'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Aceite_Documento'
+          FieldLength = 0
+          FieldName = 'Aceite_Documento'
+          IsDetail = True
+          SQLFieldName = 'Aceite_Documento'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField12: TdaField
+          Alias = 'Cliente_Nome'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Nome'
+          FieldLength = 50
+          FieldName = 'Cliente_Nome'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Nome'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField13: TdaField
+          Alias = 'Cliente_CPF'
+          DisplayWidth = 20
+          FieldAlias = 'Cliente_CPF'
+          FieldLength = 20
+          FieldName = 'Cliente_CPF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CPF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField14: TdaField
+          Alias = 'Cliente_Endere'#231'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Endere'#231'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Endere'#231'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Endere'#231'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField15: TdaField
+          Alias = 'Cliente_Bairro_Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Bairro_Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Bairro_Descri'#231#227'o'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField16: TdaField
+          Alias = 'Cliente_Cidade'
+          DisplayWidth = 50
+          FieldAlias = 'Cliente_Cidade'
+          FieldLength = 50
+          FieldName = 'Cliente_Cidade'
+          IsDetail = True
+          SQLFieldName = 'Cliente_Cidade'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField17: TdaField
+          Alias = 'Cliente_CEP'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente_CEP'
+          FieldLength = 10
+          FieldName = 'Cliente_CEP'
+          IsDetail = True
+          SQLFieldName = 'Cliente_CEP'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField18: TdaField
+          Alias = 'Cliente_UF'
+          DisplayWidth = 2
+          FieldAlias = 'Cliente_UF'
+          FieldLength = 2
+          FieldName = 'Cliente_UF'
+          IsDetail = True
+          SQLFieldName = 'Cliente_UF'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField19: TdaField
+          Alias = 'nro'
+          DisplayWidth = 20
+          FieldAlias = 'nro'
+          FieldLength = 20
+          FieldName = 'nro'
+          IsDetail = True
+          SQLFieldName = 'nro'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          TableSQLAlias = 'Cliente'
+        end
+        object daField20: TdaField
+          Alias = 'Agencia'
+          DisplayWidth = 25
+          FieldAlias = 'Agencia'
+          FieldLength = 25
+          FieldName = 'Agencia'
+          IsDetail = True
+          SQLFieldName = 'Agencia'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField21: TdaField
+          Alias = 'Digito_Agencia'
+          DisplayWidth = 10
+          FieldAlias = 'Digito_Agencia'
+          FieldLength = 10
+          FieldName = 'Digito_Agencia'
+          IsDetail = True
+          SQLFieldName = 'Digito_Agencia'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField22: TdaField
+          Alias = 'Codigo_Cedente'
+          DisplayWidth = 25
+          FieldAlias = 'Codigo_Cedente'
+          FieldLength = 25
+          FieldName = 'Codigo_Cedente'
+          IsDetail = True
+          SQLFieldName = 'Codigo_Cedente'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField23: TdaField
+          Alias = 'Digito_Codigo_Cedente'
+          DisplayWidth = 10
+          FieldAlias = 'Digito_Codigo_Cedente'
+          FieldLength = 10
+          FieldName = 'Digito_Codigo_Cedente'
+          IsDetail = True
+          SQLFieldName = 'Digito_Codigo_Cedente'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField24: TdaField
+          Alias = 'Nosso_Numero'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Nosso_Numero'
+          FieldLength = 0
+          FieldName = 'Nosso_Numero'
+          IsDetail = True
+          SQLFieldName = 'Nosso_Numero'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField25: TdaField
+          Alias = 'Nome_Cedente'
+          DisplayWidth = 100
+          FieldAlias = 'Nome_Cedente'
+          FieldLength = 100
+          FieldName = 'Nome_Cedente'
+          IsDetail = True
+          SQLFieldName = 'Nome_Cedente'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField26: TdaField
+          Alias = 'Boleto_Conta'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Boleto_Conta'
+          FieldLength = 0
+          FieldName = 'Boleto_Conta'
+          SQLFieldName = 'Boleto_Conta'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField27: TdaField
+          Alias = 'boleto_digito_nossonumero'
+          DisplayWidth = 10
+          FieldAlias = 'boleto_digito_nossonumero'
+          FieldLength = 10
+          FieldName = 'boleto_digito_nossonumero'
+          SQLFieldName = 'boleto_digito_nossonumero'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField28: TdaField
+          Alias = 'Boleto_Data_Processamento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Boleto_Data_Processamento'
+          FieldLength = 0
+          FieldName = 'Boleto_Data_Processamento'
+          SQLFieldName = 'Boleto_Data_Processamento'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+          TableSQLAlias = 'Contas_Receber'
+        end
+        object daField29: TdaField
+          Alias = 'Carteira'
+          DisplayWidth = 25
+          FieldAlias = 'Carteira'
+          FieldLength = 25
+          FieldName = 'Carteira'
+          IsDetail = True
+          SQLFieldName = 'Carteira'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daField30: TdaField
+          Alias = 'DESCRICAO'
+          DisplayWidth = 50
+          FieldAlias = 'DESCRICAO'
+          FieldLength = 50
+          FieldName = 'DESCRICAO'
+          IsDetail = True
+          SQLFieldName = 'DESCRICAO'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          TableSQLAlias = 'INDICES'
+        end
+        object daField31: TdaField
+          Alias = 'SIMBOLO'
+          DisplayWidth = 10
+          FieldAlias = 'SIMBOLO'
+          FieldLength = 10
+          FieldName = 'SIMBOLO'
+          IsDetail = True
+          SQLFieldName = 'SIMBOLO'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          TableSQLAlias = 'INDICES'
+        end
+        object daField32: TdaField
+          Alias = 'especie_doc'
+          DisplayWidth = 50
+          FieldAlias = 'especie_doc'
+          FieldLength = 50
+          FieldName = 'especie_doc'
+          IsDetail = True
+          SQLFieldName = 'especie_doc'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          TableSQLAlias = 'Contas_Bancarias_Boletos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Contas_Receber'
+          JoinType = dajtNone
+          SQLAlias = 'Contas_Receber'
+          TableAlias = 'Contas_Receber'
+          TableName = 'Contas_Receber'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Contas_Bancarias_Boletos'
+          SQLAlias = 'Contas_Bancarias_Boletos'
+          TableAlias = 'Contas_Bancarias_Boletos'
+          TableName = 'Contas_Bancarias_Boletos'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField34: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Contas_Bancarias_Boletos'
+              TableName = 'Contas_Bancarias_Boletos'
+              TableSQLAlias = 'Contas_Bancarias_Boletos'
+            end
+            object daField33: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Contas_Receber'
+              TableName = 'Contas_Receber'
+              TableSQLAlias = 'Contas_Receber'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField36: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Contas_Bancarias_Boletos'
+              TableName = 'Contas_Bancarias_Boletos'
+              TableSQLAlias = 'Contas_Bancarias_Boletos'
+            end
+            object daField35: TdaField
+              ChildType = 4
+              Alias = 'Conta_Banc'#225'ria'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Conta_Banc'#225'ria'
+              FieldLength = 0
+              FieldName = 'Conta_Banc'#225'ria'
+              SQLFieldName = 'Conta_Banc'#225'ria'
+              TableAlias = 'Contas_Receber'
+              TableName = 'Contas_Receber'
+              TableSQLAlias = 'Contas_Receber'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Cliente'
+          SQLAlias = 'Cliente'
+          TableAlias = 'Cliente'
+          TableName = 'Cliente'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField38: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField37: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Contas_Receber'
+              TableName = 'Contas_Receber'
+              TableSQLAlias = 'Contas_Receber'
+            end
+          end
+          object daTableJoin4: TdaTableJoin
+            ChildType = 6
+            object daField40: TdaField
+              ChildType = 3
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Cliente'
+              TableName = 'Cliente'
+              TableSQLAlias = 'Cliente'
+            end
+            object daField39: TdaField
+              ChildType = 4
+              Alias = 'C'#243'digo_Cliente'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'C'#243'digo_Cliente'
+              FieldLength = 0
+              FieldName = 'C'#243'digo_Cliente'
+              SQLFieldName = 'C'#243'digo_Cliente'
+              TableAlias = 'Contas_Receber'
+              TableName = 'Contas_Receber'
+              TableSQLAlias = 'Contas_Receber'
+            end
+          end
+        end
+        object daTable4: TdaTable
+          ChildType = 5
+          Alias = 'INDICES'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'INDICES'
+          TableAlias = 'INDICES'
+          TableName = 'INDICES'
+          object daTableJoin5: TdaTableJoin
+            ChildType = 6
+            object daField42: TdaField
+              ChildType = 3
+              Alias = 'EMPRESA'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'EMPRESA'
+              FieldLength = 0
+              FieldName = 'EMPRESA'
+              SQLFieldName = 'EMPRESA'
+              TableAlias = 'INDICES'
+              TableName = 'INDICES'
+              TableSQLAlias = 'INDICES'
+            end
+            object daField41: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Contas_Receber'
+              TableName = 'Contas_Receber'
+              TableSQLAlias = 'Contas_Receber'
+            end
+          end
+          object daTableJoin6: TdaTableJoin
+            ChildType = 6
+            object daField44: TdaField
+              ChildType = 3
+              Alias = 'CODIGO'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'CODIGO'
+              FieldLength = 0
+              FieldName = 'CODIGO'
+              SQLFieldName = 'CODIGO'
+              TableAlias = 'INDICES'
+              TableName = 'INDICES'
+              TableSQLAlias = 'INDICES'
+            end
+            object daField43: TdaField
+              ChildType = 4
+              Alias = 'codigo_indice'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'codigo_indice'
+              FieldLength = 0
+              FieldName = 'codigo_indice'
+              SQLFieldName = 'codigo_indice'
+              TableAlias = 'Contas_Receber'
+              TableName = 'Contas_Receber'
+              TableSQLAlias = 'Contas_Receber'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 18
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 19
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1'
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo da Conta@@@@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'ID'
+    end
+  end
+end
+$
+GRUPO=Banco@Boletos
+NOME=Sicredi
+DESCRICAO=Imprime o boleto bancário da conta a receber selecionada
+ALTERADO_EM=14/08/2015 17:03
+SQL=<0><1><2>

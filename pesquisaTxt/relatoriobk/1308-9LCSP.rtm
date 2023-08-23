@@ -1,0 +1,344 @@
+object Relatorio: TppReport
+  AutoStop = False
+  Columns = 6
+  ColumnPositions.Strings = (
+    '7000'
+    '40000'
+    '73000'
+    '106000'
+    '139000'
+    '172000')
+  DataPipeline = daADOQueryDataView1.EtiquetasEstoque
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 12500
+  PrinterSetup.mmMarginLeft = 7000
+  PrinterSetup.mmMarginRight = 7000
+  PrinterSetup.mmMarginTop = 12500
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files (x86)\Koinonia Software\Habil Empresarial\Relat' +
+    'orios\1308-9LCSP.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 32666
+  DataPipelineName = 'EtiquetasEstoque'
+  object ppColumnHeaderBand1: TppColumnHeaderBand
+    Visible = False
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 17000
+    mmPrintPosition = 0
+    object ppDBBarCode1: TppDBBarCode
+      UserName = 'DBBarCode1'
+      AlignBarCode = ahCenter
+      AutoSizeFont = False
+      BarCodeType = bcCode39
+      BarColor = clBlack
+      DataField = 'Digito_Verificador'
+      DataPipeline = daADOQueryDataView1.EtiquetasEstoque
+      PrintHumanReadable = False
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'EtiquetasEstoque'
+      mmHeight = 4498
+      mmLeft = 0
+      mmTop = 11906
+      mmWidth = 30956
+      BandType = 4
+      LayerName = Foreground1
+      mmBarWidth = 254
+      mmWideBarRatio = 76200
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      DataField = 'Descri'#231#227'o'
+      DataPipeline = daADOQueryDataView1.EtiquetasEstoque
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      WordWrap = True
+      DataPipelineName = 'EtiquetasEstoque'
+      mmHeight = 7144
+      mmLeft = 0
+      mmTop = 265
+      mmWidth = 30956
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Pre'#231'o_Venda'
+      DataPipeline = daADOQueryDataView1.EtiquetasEstoque
+      DisplayFormat = '$#,0.00;($#,0.00)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'EtiquetasEstoque'
+      mmHeight = 3175
+      mmLeft = 15081
+      mmTop = 7938
+      mmWidth = 15875
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Visible = False
+      Weight = 0.750000000000000000
+      mmHeight = 794
+      mmLeft = 0
+      mmTop = 16206
+      mmWidth = 31000
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Digito_Verificador'
+      DataPipeline = daADOQueryDataView1.EtiquetasEstoque
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'EtiquetasEstoque'
+      mmHeight = 3175
+      mmLeft = 0
+      mmTop = 7938
+      mmWidth = 13758
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppColumnFooterBand1: TppColumnFooterBand
+    Visible = False
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_TdaADOQueryDataView'
+      Height = 165
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 1
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object EtiquetasEstoque: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'EtiquetasEstoque'
+        object ppField1: TppField
+          FieldAlias = 'Digito_Verificador'
+          FieldName = 'Digito_Verificador'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'EtiquetasEstoque'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descri'#231#227'o'
+          FieldName = 'Descri'#231#227'o'
+          FieldLength = 60
+          DisplayWidth = 60
+          Position = 1
+          TableName = 'EtiquetasEstoque'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Pre'#231'o_Venda'
+          FieldName = 'Pre'#231'o_Venda'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'EtiquetasEstoque'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'select_Nome_Fantasia_fro'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'EtiquetasEstoque'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'EtiquetasEstoque'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT EtiquetasEstoque.Digito_Verificador, '
+          '       EtiquetasEstoque.Descri'#231#227'o, '
+          '       EtiquetasEstoque.Pre'#231'o_Venda, '
+          
+            '       ( select Nome_Fantasia from Empresa where codigo = Etique' +
+            'tasEstoque.empresa ) AS select_Nome_Fantasia_fro'
+          'FROM EtiquetasEstoque EtiquetasEstoque'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Empresa'
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'select_Nome_Fantasia_fro'
+          TableAlias = 'EtiquetasEstoque'
+          TableName = 'EtiquetasEstoque'
+          TableSQLAlias = 'EtiquetasEstoque'
+          CalcType = dacaExpression
+          Expression = 
+            '( select Nome_Fantasia from Empresa where codigo = EtiquetasEsto' +
+            'que.empresa )'
+        end
+        object daField1: TdaField
+          Alias = 'Digito_Verificador'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Digito_Verificador'
+          FieldLength = 0
+          FieldName = 'Digito_Verificador'
+          SQLFieldName = 'Digito_Verificador'
+          TableAlias = 'EtiquetasEstoque'
+          TableName = 'EtiquetasEstoque'
+          TableSQLAlias = 'EtiquetasEstoque'
+        end
+        object daField2: TdaField
+          Alias = 'Descri'#231#227'o'
+          DisplayWidth = 60
+          FieldAlias = 'Descri'#231#227'o'
+          FieldLength = 60
+          FieldName = 'Descri'#231#227'o'
+          SQLFieldName = 'Descri'#231#227'o'
+          TableAlias = 'EtiquetasEstoque'
+          TableName = 'EtiquetasEstoque'
+          TableSQLAlias = 'EtiquetasEstoque'
+        end
+        object daField3: TdaField
+          Alias = 'Pre'#231'o_Venda'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Pre'#231'o_Venda'
+          FieldLength = 0
+          FieldName = 'Pre'#231'o_Venda'
+          SQLFieldName = 'Pre'#231'o_Venda'
+          TableAlias = 'EtiquetasEstoque'
+          TableName = 'EtiquetasEstoque'
+          TableSQLAlias = 'EtiquetasEstoque'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'EtiquetasEstoque'
+          JoinType = dajtNone
+          SQLAlias = 'EtiquetasEstoque'
+          TableAlias = 'EtiquetasEstoque'
+          TableName = 'EtiquetasEstoque'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 3
+    end
+  end
+  object ppParameterList2: TppParameterList
+  end
+end
+$
+GRUPO=Produtos@Etiquetas de Produtos em Estoque
+NOME=Etiquetas 6 col. (17,0mm x 31,0mm) A4248 - Cód.Barras
+DESCRICAO=Imprime etiquetas de produtos em estoque
+ALTERADO_EM=16/08/2013 11:41
+SQL=<0><1><2><3>

@@ -1,0 +1,3244 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Contatos
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1211-HYR9Y.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Contatos'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers3: TppDesignLayers
+          object ppDesignLayer3: TppDesignLayer
+            UserName = 'Foreground2'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 156369
+    mmPrintPosition = 0
+    object ppShape11: TppShape
+      UserName = 'Shape11'
+      Brush.Color = clSilver
+      Pen.Style = psClear
+      mmHeight = 59267
+      mmLeft = 4498
+      mmTop = 81227
+      mmWidth = 192617
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape10: TppShape
+      UserName = 'Shape10'
+      Brush.Color = clSilver
+      Pen.Style = psClear
+      mmHeight = 60854
+      mmLeft = 4498
+      mmTop = 8731
+      mmWidth = 192617
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape5: TppShape
+      UserName = 'Shape5'
+      Shape = stRoundRect
+      mmHeight = 8202
+      mmLeft = 3175
+      mmTop = 143934
+      mmWidth = 36513
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape4: TppShape
+      UserName = 'Shape4'
+      Shape = stRoundRect
+      mmHeight = 8202
+      mmLeft = 3175
+      mmTop = 73290
+      mmWidth = 36513
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape3: TppShape
+      UserName = 'Shape3'
+      Shape = stRoundRect
+      mmHeight = 8202
+      mmLeft = 3175
+      mmTop = 529
+      mmWidth = 36513
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape2: TppShape
+      UserName = 'Shape2'
+      mmHeight = 59267
+      mmLeft = 3175
+      mmTop = 79904
+      mmWidth = 192617
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape6: TppShape
+      UserName = 'Shape1'
+      mmHeight = 60854
+      mmLeft = 3175
+      mmTop = 7408
+      mmWidth = 192617
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      Caption = 'C'#243'digo :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 17463
+      mmTop = 12171
+      mmWidth = 12996
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      Caption = 'Nome :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 19050
+      mmTop = 17463
+      mmWidth = 11345
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label11'
+      AutoSize = False
+      Caption = 'N'#186' Documento :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3440
+      mmLeft = 3175
+      mmTop = 22754
+      mmWidth = 27252
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      Caption = 'CEP :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 22225
+      mmTop = 28046
+      mmWidth = 8170
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label13'
+      Caption = 'Endere'#231'o :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 13494
+      mmTop = 33338
+      mmWidth = 16806
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label14'
+      Caption = 'Complemento :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 6350
+      mmTop = 38629
+      mmWidth = 24088
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label7'
+      Caption = 'Bairro :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 124100
+      mmTop = 38629
+      mmWidth = 11896
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label8'
+      Caption = 'Cidade :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 17463
+      mmTop = 43921
+      mmWidth = 12869
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel17: TppLabel
+      UserName = 'Label17'
+      Caption = 'UF :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 101949
+      mmTop = 43921
+      mmWidth = 6265
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel18: TppLabel
+      UserName = 'Label101'
+      Caption = 'Pa'#237's :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 127233
+      mmTop = 43921
+      mmWidth = 8763
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel19: TppLabel
+      UserName = 'Label19'
+      Caption = 'E-mail :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 18256
+      mmTop = 49213
+      mmWidth = 12277
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel20: TppLabel
+      UserName = 'Label20'
+      Caption = 'Home-Page:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 88698
+      mmTop = 49213
+      mmWidth = 19516
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel21: TppLabel
+      UserName = 'Label21'
+      Caption = 'Nascimento :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 115083
+      mmTop = 12171
+      mmWidth = 20913
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel22: TppLabel
+      UserName = 'Label15'
+      Caption = 'Sexo :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 98351
+      mmTop = 12171
+      mmWidth = 9864
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel23: TppLabel
+      UserName = 'Label16'
+      Caption = 'Caixa Postal:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 87471
+      mmTop = 28046
+      mmWidth = 20743
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 12171
+      mmWidth = 15875
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Endere'#231'o'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 33338
+      mmWidth = 105569
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Complemento'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 38629
+      mmWidth = 89959
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Bairro'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 138113
+      mmTop = 38629
+      mmWidth = 55033
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Pais'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 138113
+      mmTop = 43921
+      mmWidth = 29104
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'E_mail'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 49213
+      mmWidth = 55033
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'Home_page'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 110067
+      mmTop = 49213
+      mmWidth = 82815
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'Estado'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 110067
+      mmTop = 43921
+      mmWidth = 5821
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      DataField = 'Cidade'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 43921
+      mmWidth = 42598
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      DataField = 'Caixa_Postal'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 110067
+      mmTop = 28046
+      mmWidth = 79375
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      DataField = 'Sexo'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 110067
+      mmTop = 12171
+      mmWidth = 3175
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      AutoSize = True
+      DataField = 'Data_Nascimento'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 138113
+      mmTop = 12171
+      mmWidth = 17463
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      AutoSize = True
+      DataField = 'Documento'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 22754
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText14: TppDBText
+      UserName = 'DBText14'
+      DataField = 'Nome'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 17463
+      mmWidth = 158750
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText15: TppDBText
+      UserName = 'DBText15'
+      AutoSize = True
+      DataField = 'CEP'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 28046
+      mmWidth = 6085
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel24: TppLabel
+      UserName = 'Label18'
+      Caption = 'Empresa :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 14552
+      mmTop = 81756
+      mmWidth = 15917
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel25: TppLabel
+      UserName = 'Label25'
+      Caption = 'Departamento :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 5292
+      mmTop = 87048
+      mmWidth = 25019
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel26: TppLabel
+      UserName = 'Label201'
+      Caption = 'Se'#231#227'o :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 18785
+      mmTop = 92340
+      mmWidth = 11515
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel27: TppLabel
+      UserName = 'Label27'
+      Caption = 'CEP :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 22225
+      mmTop = 97631
+      mmWidth = 8170
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel28: TppLabel
+      UserName = 'Label22'
+      Caption = 'Endere'#231'o :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 13494
+      mmTop = 102923
+      mmWidth = 16806
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel29: TppLabel
+      UserName = 'Label23'
+      Caption = 'Complemento :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 6350
+      mmTop = 108215
+      mmWidth = 24088
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel30: TppLabel
+      UserName = 'Label24'
+      Caption = 'Cidade :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 17463
+      mmTop = 113506
+      mmWidth = 12869
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel31: TppLabel
+      UserName = 'Label31'
+      Caption = 'E-mail :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 18256
+      mmTop = 118798
+      mmWidth = 12277
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel32: TppLabel
+      UserName = 'Label26'
+      Caption = 'Home-Page:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 88698
+      mmTop = 118798
+      mmWidth = 19516
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText19: TppDBText
+      UserName = 'DBText19'
+      AutoSize = True
+      DataField = 'Empresa_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 81756
+      mmWidth = 23019
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText20: TppDBText
+      UserName = 'DBText20'
+      DataField = 'Endereco_Empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 102923
+      mmWidth = 104775
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText21: TppDBText
+      UserName = 'DBText21'
+      DataField = 'complemento_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 108215
+      mmWidth = 89165
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText22: TppDBText
+      UserName = 'DBText22'
+      DataField = 'e_mail_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 118798
+      mmWidth = 55298
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText23: TppDBText
+      UserName = 'DBText23'
+      DataField = 'home_page_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 110067
+      mmTop = 118798
+      mmWidth = 77523
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText24: TppDBText
+      UserName = 'DBText24'
+      DataField = 'Cidade_Empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 113506
+      mmWidth = 41804
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText25: TppDBText
+      UserName = 'DBText25'
+      AutoSize = True
+      DataField = 'Secao_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 92340
+      mmWidth = 19050
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText26: TppDBText
+      UserName = 'DBText26'
+      DataField = 'Departamento_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 87048
+      mmWidth = 51858
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText27: TppDBText
+      UserName = 'DBText27'
+      AutoSize = True
+      DataField = 'cep_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 32544
+      mmTop = 97631
+      mmWidth = 15081
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel33: TppLabel
+      UserName = 'Label33'
+      Caption = 'UF :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 101949
+      mmTop = 113506
+      mmWidth = 6265
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel34: TppLabel
+      UserName = 'Label34'
+      Caption = 'Pa'#237's :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 127233
+      mmTop = 113506
+      mmWidth = 8763
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText28: TppDBText
+      UserName = 'DBText28'
+      DataField = 'pais_empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 138113
+      mmTop = 113506
+      mmWidth = 29104
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText29: TppDBText
+      UserName = 'DBText29'
+      DataField = 'Estado_Empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 110067
+      mmTop = 113506
+      mmWidth = 5821
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel35: TppLabel
+      UserName = 'Label29'
+      Caption = 'Bairro :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 124100
+      mmTop = 108215
+      mmWidth = 11896
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText30: TppDBText
+      UserName = 'DBText30'
+      DataField = 'Bairro_Empr'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 138113
+      mmTop = 108215
+      mmWidth = 55033
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel36: TppLabel
+      UserName = 'Label36'
+      Caption = 'Dados Principais'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold, fsItalic]
+      Transparent = True
+      mmHeight = 4106
+      mmLeft = 7408
+      mmTop = 2117
+      mmWidth = 28490
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel37: TppLabel
+      UserName = 'Label28'
+      Caption = 'Outros Dados'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold, fsItalic]
+      Transparent = True
+      mmHeight = 4106
+      mmLeft = 10319
+      mmTop = 74613
+      mmWidth = 23283
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel38: TppLabel
+      UserName = 'Label38'
+      Caption = 'Telefones'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold, fsItalic]
+      Transparent = True
+      mmHeight = 4106
+      mmLeft = 13229
+      mmTop = 145521
+      mmWidth = 16298
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel39: TppLabel
+      UserName = 'Label37'
+      Caption = 'Observa'#231#245'es:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 8996
+      mmTop = 54504
+      mmWidth = 21421
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppShape7: TppShape
+      UserName = 'Shape6'
+      Pen.Color = clWhite
+      Shape = stRoundRect
+      mmHeight = 1058
+      mmLeft = 2117
+      mmTop = 151342
+      mmWidth = 39952
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppSubReport2: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'Telefones_Contatos'
+      mmHeight = 5027
+      mmLeft = 3175
+      mmTop = 151342
+      mmWidth = 190765
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport2: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView2.Telefones_Contatos
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Lista Completa'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 4000
+        PrinterSetup.mmMarginLeft = 6350
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 4000
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.DatabaseSettings.Name = '62FichadoContato'
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '15.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'Telefones_Contatos'
+        object ppTitleBand3: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 6879
+          mmPrintPosition = 0
+          object ppShape9: TppShape
+            UserName = 'Shape9'
+            Brush.Color = clSilver
+            Pen.Color = clSilver
+            Pen.Style = psClear
+            mmHeight = 6350
+            mmLeft = 191823
+            mmTop = 794
+            mmWidth = 1323
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLine4: TppLine
+            UserName = 'Line4'
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 191559
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLine7: TppLine
+            UserName = 'Line7'
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 7144
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 4763
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLine8: TppLine
+            UserName = 'Line8'
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 7144
+            mmLeft = 191823
+            mmTop = 0
+            mmWidth = 3175
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel40: TppLabel
+            UserName = 'Label17'
+            Caption = 'Telefone'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Verdana'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3387
+            mmLeft = 11906
+            mmTop = 1852
+            mmWidth = 13674
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLabel41: TppLabel
+            UserName = 'Label31'
+            Caption = 'Observa'#231#245'es'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Verdana'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3387
+            mmLeft = 76200
+            mmTop = 1852
+            mmWidth = 20278
+            BandType = 1
+            LayerName = Foreground
+          end
+          object ppLine9: TppLine
+            UserName = 'Line9'
+            Pen.Color = clSilver
+            Pen.Style = psDot
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 11377
+            mmTop = 6085
+            mmWidth = 160073
+            BandType = 1
+            LayerName = Foreground
+          end
+        end
+        object ppHeaderBand2: TppHeaderBand
+          Visible = False
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand2: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5292
+          mmPrintPosition = 0
+          object ppDBText16: TppDBText
+            UserName = 'DBText16'
+            DataField = 'Numero'
+            DataPipeline = daADOQueryDataView2.Telefones_Contatos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Name = 'Verdana'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'Telefones_Contatos'
+            mmHeight = 3440
+            mmLeft = 45508
+            mmTop = 794
+            mmWidth = 25135
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText18: TppDBText
+            UserName = 'DBText18'
+            DataField = 'Tipo'
+            DataPipeline = daADOQueryDataView2.Telefones_Contatos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Name = 'Verdana'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'Telefones_Contatos'
+            mmHeight = 3440
+            mmLeft = 11906
+            mmTop = 794
+            mmWidth = 24077
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBText32: TppDBText
+            UserName = 'DBText32'
+            AutoSize = True
+            DataField = 'DDD'
+            DataPipeline = daADOQueryDataView2.Telefones_Contatos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Name = 'Verdana'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'Telefones_Contatos'
+            mmHeight = 3440
+            mmLeft = 36248
+            mmTop = 794
+            mmWidth = 7144
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppDBMemo1: TppDBMemo
+            UserName = 'DBMemo1'
+            CharWrap = False
+            DataField = 'Obs'
+            DataPipeline = daADOQueryDataView2.Telefones_Contatos
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Name = 'Verdana'
+            Font.Size = 8
+            Font.Style = []
+            RemoveEmptyLines = False
+            Transparent = True
+            DataPipelineName = 'Telefones_Contatos'
+            mmHeight = 4233
+            mmLeft = 76200
+            mmTop = 794
+            mmWidth = 95250
+            BandType = 4
+            LayerName = Foreground
+            mmBottomOffset = 0
+            mmOverFlowOffset = 0
+            mmStopPosition = 0
+            mmMinHeight = 0
+            mmLeading = 0
+          end
+          object ppLine6: TppLine
+            UserName = 'Line6'
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5292
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 4763
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppShape8: TppShape
+            UserName = 'Shape7'
+            Brush.Color = clSilver
+            Pen.Color = clSilver
+            Pen.Style = psClear
+            mmHeight = 5556
+            mmLeft = 191823
+            mmTop = 0
+            mmWidth = 1323
+            BandType = 4
+            LayerName = Foreground
+          end
+          object ppLine3: TppLine
+            UserName = 'Line3'
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5292
+            mmLeft = 191823
+            mmTop = 0
+            mmWidth = 529
+            BandType = 4
+            LayerName = Foreground
+          end
+        end
+        object ppSummaryBand2: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 2381
+          mmPrintPosition = 0
+          object ppShape12: TppShape
+            UserName = 'Shape8'
+            Brush.Color = clSilver
+            Pen.Style = psClear
+            mmHeight = 1588
+            mmLeft = 1058
+            mmTop = 0
+            mmWidth = 192088
+            BandType = 7
+            LayerName = Foreground
+          end
+          object ppLine5: TppLine
+            UserName = 'Line5'
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 191823
+            BandType = 7
+            LayerName = Foreground
+          end
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppLabel42: TppLabel
+      UserName = 'Label42'
+      Caption = 'Observa'#231#245'es:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 8996
+      mmTop = 124090
+      mmWidth = 21421
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText17: TppDBText
+      UserName = 'DBText17'
+      AutoSize = True
+      DataField = 'conjuge'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 111654
+      mmTop = 81756
+      mmWidth = 11906
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText31: TppDBText
+      UserName = 'DBText31'
+      DataField = 'nasc_conj'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 111654
+      mmTop = 87048
+      mmWidth = 22490
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel43: TppLabel
+      UserName = 'Label35'
+      Caption = 'Data Nasc.:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 91250
+      mmTop = 87048
+      mmWidth = 18288
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel44: TppLabel
+      UserName = 'Label44'
+      Caption = 'C'#244'njuge :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 94382
+      mmTop = 81756
+      mmWidth = 15155
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText33: TppDBText
+      UserName = 'DBText33'
+      DataField = 'nome_mae'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 111654
+      mmTop = 97631
+      mmWidth = 82021
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText34: TppDBText
+      UserName = 'DBText34'
+      DataField = 'nome_pai'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 111654
+      mmTop = 92340
+      mmWidth = 82021
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel45: TppLabel
+      UserName = 'Label45'
+      Caption = 'Nome Pai :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 92266
+      mmTop = 92340
+      mmWidth = 17272
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel46: TppLabel
+      UserName = 'Label39'
+      Caption = 'Nome M'#227'e :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 90783
+      mmTop = 97631
+      mmWidth = 18754
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText35: TppDBText
+      UserName = 'DBText35'
+      DataField = 'cas_conj'
+      DataPipeline = daADOQueryDataView1.Contatos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Contatos'
+      mmHeight = 3440
+      mmLeft = 171186
+      mmTop = 87577
+      mmWidth = 22490
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLabel47: TppLabel
+      UserName = 'Label40'
+      Caption = 'Casamento :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Verdana'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 149257
+      mmTop = 87577
+      mmWidth = 19812
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBRichText1: TppDBRichText
+      UserName = 'DBRichText1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      DataField = 'Obs'
+      DataPipeline = daADOQueryDataView1.Contatos
+      RemoveEmptyLines = False
+      DataPipelineName = 'Contatos'
+      mmHeight = 11642
+      mmLeft = 32544
+      mmTop = 54769
+      mmWidth = 160602
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+    object ppDBRichText2: TppDBRichText
+      UserName = 'DBRichText2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 8
+      Font.Style = []
+      DataField = 'obs_filhos'
+      DataPipeline = daADOQueryDataView1.Contatos
+      RemoveEmptyLines = False
+      DataPipelineName = 'Contatos'
+      mmHeight = 11642
+      mmLeft = 32544
+      mmTop = 124090
+      mmWidth = 160602
+      BandType = 4
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Contatos'
+      Height = 709
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Contatos: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Contatos'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Contatos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Contatos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Nome'
+          FieldName = 'Nome'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 2
+          TableName = 'Contatos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Data_Nascimento'
+          FieldName = 'Data_Nascimento'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'Contatos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Sexo'
+          FieldName = 'Sexo'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 4
+          TableName = 'Contatos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Endere'#231'o'
+          FieldName = 'Endere'#231'o'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 5
+          TableName = 'Contatos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Complemento'
+          FieldName = 'Complemento'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 6
+          TableName = 'Contatos'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Bairro'
+          FieldName = 'Bairro'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 7
+          TableName = 'Contatos'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Cidade'
+          FieldName = 'Cidade'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 8
+          TableName = 'Contatos'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Estado'
+          FieldName = 'Estado'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 9
+          TableName = 'Contatos'
+        end
+        object ppField11: TppField
+          FieldAlias = 'CEP'
+          FieldName = 'CEP'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'Contatos'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Pais'
+          FieldName = 'Pais'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 11
+          TableName = 'Contatos'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Caixa_Postal'
+          FieldName = 'Caixa_Postal'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 12
+          TableName = 'Contatos'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Obs'
+          FieldName = 'Obs'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'Contatos'
+        end
+        object ppField15: TppField
+          FieldAlias = 'E_mail'
+          FieldName = 'E_mail'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 14
+          TableName = 'Contatos'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Home_page'
+          FieldName = 'Home_page'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 15
+          TableName = 'Contatos'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Documento'
+          FieldName = 'Documento'
+          FieldLength = 40
+          DisplayWidth = 40
+          Position = 16
+          TableName = 'Contatos'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Usuario'
+          FieldName = 'Usuario'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'Contatos'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Confidencial'
+          FieldName = 'Confidencial'
+          FieldLength = 0
+          DataType = dtBoolean
+          DisplayWidth = 5
+          Position = 18
+          TableName = 'Contatos'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Anexos'
+          FieldName = 'Anexos'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'Contatos'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Empresa_empr'
+          FieldName = 'Empresa_empr'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 20
+          TableName = 'Contatos'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Departamento_empr'
+          FieldName = 'Departamento_empr'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 21
+          TableName = 'Contatos'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Secao_empr'
+          FieldName = 'Secao_empr'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 22
+          TableName = 'Contatos'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Endereco_Empr'
+          FieldName = 'Endereco_Empr'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 23
+          TableName = 'Contatos'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Bairro_Empr'
+          FieldName = 'Bairro_Empr'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 24
+          TableName = 'Contatos'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Cidade_Empr'
+          FieldName = 'Cidade_Empr'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 25
+          TableName = 'Contatos'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Estado_Empr'
+          FieldName = 'Estado_Empr'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 26
+          TableName = 'Contatos'
+        end
+        object ppField28: TppField
+          FieldAlias = 'cep_empr'
+          FieldName = 'cep_empr'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'Contatos'
+        end
+        object ppField29: TppField
+          FieldAlias = 'pais_empr'
+          FieldName = 'pais_empr'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 28
+          TableName = 'Contatos'
+        end
+        object ppField30: TppField
+          FieldAlias = 'caixa_postal_empr'
+          FieldName = 'caixa_postal_empr'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 29
+          TableName = 'Contatos'
+        end
+        object ppField31: TppField
+          FieldAlias = 'e_mail_empr'
+          FieldName = 'e_mail_empr'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 30
+          TableName = 'Contatos'
+        end
+        object ppField32: TppField
+          FieldAlias = 'home_page_empr'
+          FieldName = 'home_page_empr'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 31
+          TableName = 'Contatos'
+        end
+        object ppField33: TppField
+          FieldAlias = 'complemento_empr'
+          FieldName = 'complemento_empr'
+          FieldLength = 255
+          DisplayWidth = 255
+          Position = 32
+          TableName = 'Contatos'
+        end
+        object ppField34: TppField
+          FieldAlias = 'conjuge'
+          FieldName = 'conjuge'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 33
+          TableName = 'Contatos'
+        end
+        object ppField35: TppField
+          FieldAlias = 'nasc_conj'
+          FieldName = 'nasc_conj'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 34
+          TableName = 'Contatos'
+        end
+        object ppField36: TppField
+          FieldAlias = 'cas_conj'
+          FieldName = 'cas_conj'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 35
+          TableName = 'Contatos'
+        end
+        object ppField37: TppField
+          FieldAlias = 'nome_pai'
+          FieldName = 'nome_pai'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 36
+          TableName = 'Contatos'
+        end
+        object ppField38: TppField
+          FieldAlias = 'nome_mae'
+          FieldName = 'nome_mae'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 37
+          TableName = 'Contatos'
+        end
+        object ppField39: TppField
+          FieldAlias = 'obs_filhos'
+          FieldName = 'obs_filhos'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'Contatos'
+        end
+        object ppField40: TppField
+          FieldAlias = 'E_Observacoes'
+          FieldName = 'E_Observacoes'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'Contatos'
+        end
+        object ppField41: TppField
+          FieldAlias = 'Imagens'
+          FieldName = 'Imagens'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'Contatos'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Numero'
+          FieldName = 'Numero'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'Contatos'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Contatos'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Contatos.Codigo, Contatos.Empresa, '
+          '       Contatos.Nome, Contatos.Data_Nascimento, '
+          '       Contatos.Sexo, Contatos.Endere'#231'o, '
+          '       Contatos.Complemento, Contatos.Bairro, '
+          '       Contatos.Cidade, Contatos.Estado, '
+          '       Contatos.CEP, Contatos.Pais, '
+          '       Contatos.Caixa_Postal, Contatos.Obs, '
+          '       Contatos.E_mail, Contatos.Home_page, '
+          '       Contatos.Documento, Contatos.Usuario, '
+          '       Contatos.Confidencial, Contatos.Anexos, '
+          '       Contatos.Empresa_empr, '
+          '       Contatos.Departamento_empr, '
+          '       Contatos.Secao_empr, '
+          '       Contatos.Endereco_Empr, '
+          '       Contatos.Bairro_Empr, '
+          '       Contatos.Cidade_Empr, '
+          '       Contatos.Estado_Empr, Contatos.cep_empr, '
+          '       Contatos.pais_empr, '
+          '       Contatos.caixa_postal_empr, '
+          '       Contatos.e_mail_empr, '
+          '       Contatos.home_page_empr, '
+          '       Contatos.complemento_empr, '
+          '       Contatos.conjuge, Contatos.nasc_conj, '
+          '       Contatos.cas_conj, Contatos.nome_pai, '
+          '       Contatos.nome_mae, Contatos.obs_filhos, '
+          '       Contatos.E_Observacoes, Contatos.Imagens, '
+          '       Contatos.Numero'
+          'FROM Contatos Contatos'
+          'WHERE ( Contatos.Codigo = 1 )'
+          'ORDER BY Contatos.Codigo, Contatos.Nome, '
+          '         Contatos.Data_Nascimento, Contatos.Sexo, '
+          '         Contatos.Estado')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          ParamName = 'Codigo'
+          Value = '1'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Contatos'
+            TableName = 'Contatos'
+            TableSQLAlias = 'Contatos'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField3: TdaField
+          Alias = 'Nome'
+          DisplayWidth = 100
+          FieldAlias = 'Nome'
+          FieldLength = 100
+          FieldName = 'Nome'
+          SQLFieldName = 'Nome'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField4: TdaField
+          Alias = 'Data_Nascimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Data_Nascimento'
+          SQLFieldName = 'Data_Nascimento'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField5: TdaField
+          Alias = 'Sexo'
+          DisplayWidth = 1
+          FieldAlias = 'Sexo'
+          FieldLength = 1
+          FieldName = 'Sexo'
+          SQLFieldName = 'Sexo'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField6: TdaField
+          Alias = 'Endere'#231'o'
+          DisplayWidth = 255
+          FieldAlias = 'Endere'#231'o'
+          FieldLength = 255
+          FieldName = 'Endere'#231'o'
+          SQLFieldName = 'Endere'#231'o'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField7: TdaField
+          Alias = 'Complemento'
+          DisplayWidth = 255
+          FieldAlias = 'Complemento'
+          FieldLength = 255
+          FieldName = 'Complemento'
+          SQLFieldName = 'Complemento'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField8: TdaField
+          Alias = 'Bairro'
+          DisplayWidth = 100
+          FieldAlias = 'Bairro'
+          FieldLength = 100
+          FieldName = 'Bairro'
+          SQLFieldName = 'Bairro'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField9: TdaField
+          Alias = 'Cidade'
+          DisplayWidth = 100
+          FieldAlias = 'Cidade'
+          FieldLength = 100
+          FieldName = 'Cidade'
+          SQLFieldName = 'Cidade'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField10: TdaField
+          Alias = 'Estado'
+          DisplayWidth = 2
+          FieldAlias = 'Estado'
+          FieldLength = 2
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField11: TdaField
+          Alias = 'CEP'
+          DisplayWidth = 10
+          FieldAlias = 'CEP'
+          FieldLength = 10
+          FieldName = 'CEP'
+          SQLFieldName = 'CEP'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField12: TdaField
+          Alias = 'Pais'
+          DisplayWidth = 50
+          FieldAlias = 'Pais'
+          FieldLength = 50
+          FieldName = 'Pais'
+          SQLFieldName = 'Pais'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField13: TdaField
+          Alias = 'Caixa_Postal'
+          DisplayWidth = 50
+          FieldAlias = 'Caixa_Postal'
+          FieldLength = 50
+          FieldName = 'Caixa_Postal'
+          SQLFieldName = 'Caixa_Postal'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField14: TdaField
+          Alias = 'Obs'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Obs'
+          FieldLength = 0
+          FieldName = 'Obs'
+          Linkable = False
+          SQLFieldName = 'Obs'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField15: TdaField
+          Alias = 'E_mail'
+          DisplayWidth = 100
+          FieldAlias = 'E_mail'
+          FieldLength = 100
+          FieldName = 'E_mail'
+          SQLFieldName = 'E_mail'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField16: TdaField
+          Alias = 'Home_page'
+          DisplayWidth = 255
+          FieldAlias = 'Home_page'
+          FieldLength = 255
+          FieldName = 'Home_page'
+          SQLFieldName = 'Home_page'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField17: TdaField
+          Alias = 'Documento'
+          DisplayWidth = 40
+          FieldAlias = 'Documento'
+          FieldLength = 40
+          FieldName = 'Documento'
+          SQLFieldName = 'Documento'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField18: TdaField
+          Alias = 'Usuario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Usuario'
+          FieldLength = 0
+          FieldName = 'Usuario'
+          SQLFieldName = 'Usuario'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField19: TdaField
+          Alias = 'Confidencial'
+          DataType = dtBoolean
+          DisplayWidth = 5
+          FieldAlias = 'Confidencial'
+          FieldLength = 0
+          FieldName = 'Confidencial'
+          SQLFieldName = 'Confidencial'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField20: TdaField
+          Alias = 'Anexos'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Anexos'
+          FieldLength = 0
+          FieldName = 'Anexos'
+          Linkable = False
+          SQLFieldName = 'Anexos'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField21: TdaField
+          Alias = 'Empresa_empr'
+          DisplayWidth = 100
+          FieldAlias = 'Empresa_empr'
+          FieldLength = 100
+          FieldName = 'Empresa_empr'
+          SQLFieldName = 'Empresa_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField22: TdaField
+          Alias = 'Departamento_empr'
+          DisplayWidth = 100
+          FieldAlias = 'Departamento_empr'
+          FieldLength = 100
+          FieldName = 'Departamento_empr'
+          SQLFieldName = 'Departamento_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField23: TdaField
+          Alias = 'Secao_empr'
+          DisplayWidth = 100
+          FieldAlias = 'Secao_empr'
+          FieldLength = 100
+          FieldName = 'Secao_empr'
+          SQLFieldName = 'Secao_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField24: TdaField
+          Alias = 'Endereco_Empr'
+          DisplayWidth = 255
+          FieldAlias = 'Endereco_Empr'
+          FieldLength = 255
+          FieldName = 'Endereco_Empr'
+          SQLFieldName = 'Endereco_Empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField25: TdaField
+          Alias = 'Bairro_Empr'
+          DisplayWidth = 100
+          FieldAlias = 'Bairro_Empr'
+          FieldLength = 100
+          FieldName = 'Bairro_Empr'
+          SQLFieldName = 'Bairro_Empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField26: TdaField
+          Alias = 'Cidade_Empr'
+          DisplayWidth = 100
+          FieldAlias = 'Cidade_Empr'
+          FieldLength = 100
+          FieldName = 'Cidade_Empr'
+          SQLFieldName = 'Cidade_Empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField27: TdaField
+          Alias = 'Estado_Empr'
+          DisplayWidth = 2
+          FieldAlias = 'Estado_Empr'
+          FieldLength = 2
+          FieldName = 'Estado_Empr'
+          SQLFieldName = 'Estado_Empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField28: TdaField
+          Alias = 'cep_empr'
+          DisplayWidth = 10
+          FieldAlias = 'cep_empr'
+          FieldLength = 10
+          FieldName = 'cep_empr'
+          SQLFieldName = 'cep_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField29: TdaField
+          Alias = 'pais_empr'
+          DisplayWidth = 50
+          FieldAlias = 'pais_empr'
+          FieldLength = 50
+          FieldName = 'pais_empr'
+          SQLFieldName = 'pais_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField30: TdaField
+          Alias = 'caixa_postal_empr'
+          DisplayWidth = 50
+          FieldAlias = 'caixa_postal_empr'
+          FieldLength = 50
+          FieldName = 'caixa_postal_empr'
+          SQLFieldName = 'caixa_postal_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField31: TdaField
+          Alias = 'e_mail_empr'
+          DisplayWidth = 100
+          FieldAlias = 'e_mail_empr'
+          FieldLength = 100
+          FieldName = 'e_mail_empr'
+          SQLFieldName = 'e_mail_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField32: TdaField
+          Alias = 'home_page_empr'
+          DisplayWidth = 255
+          FieldAlias = 'home_page_empr'
+          FieldLength = 255
+          FieldName = 'home_page_empr'
+          SQLFieldName = 'home_page_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField33: TdaField
+          Alias = 'complemento_empr'
+          DisplayWidth = 255
+          FieldAlias = 'complemento_empr'
+          FieldLength = 255
+          FieldName = 'complemento_empr'
+          SQLFieldName = 'complemento_empr'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField34: TdaField
+          Alias = 'conjuge'
+          DisplayWidth = 100
+          FieldAlias = 'conjuge'
+          FieldLength = 100
+          FieldName = 'conjuge'
+          SQLFieldName = 'conjuge'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField35: TdaField
+          Alias = 'nasc_conj'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'nasc_conj'
+          FieldLength = 0
+          FieldName = 'nasc_conj'
+          SQLFieldName = 'nasc_conj'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField36: TdaField
+          Alias = 'cas_conj'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'cas_conj'
+          FieldLength = 0
+          FieldName = 'cas_conj'
+          SQLFieldName = 'cas_conj'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField37: TdaField
+          Alias = 'nome_pai'
+          DisplayWidth = 100
+          FieldAlias = 'nome_pai'
+          FieldLength = 100
+          FieldName = 'nome_pai'
+          SQLFieldName = 'nome_pai'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField38: TdaField
+          Alias = 'nome_mae'
+          DisplayWidth = 100
+          FieldAlias = 'nome_mae'
+          FieldLength = 100
+          FieldName = 'nome_mae'
+          SQLFieldName = 'nome_mae'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField39: TdaField
+          Alias = 'obs_filhos'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'obs_filhos'
+          FieldLength = 0
+          FieldName = 'obs_filhos'
+          Linkable = False
+          SQLFieldName = 'obs_filhos'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField40: TdaField
+          Alias = 'E_Observacoes'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'E_Observacoes'
+          FieldLength = 0
+          FieldName = 'E_Observacoes'
+          Linkable = False
+          SQLFieldName = 'E_Observacoes'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField41: TdaField
+          Alias = 'Imagens'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Imagens'
+          FieldLength = 0
+          FieldName = 'Imagens'
+          Linkable = False
+          SQLFieldName = 'Imagens'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField42: TdaField
+          Alias = 'Numero'
+          DisplayWidth = 10
+          FieldAlias = 'Numero'
+          FieldLength = 10
+          FieldName = 'Numero'
+          SQLFieldName = 'Numero'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField43: TdaField
+          ChildType = 2
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField44: TdaField
+          ChildType = 2
+          Alias = 'Nome'
+          DisplayWidth = 100
+          FieldAlias = 'Nome'
+          FieldLength = 100
+          FieldName = 'Nome'
+          SQLFieldName = 'Nome'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField45: TdaField
+          ChildType = 2
+          Alias = 'Data_Nascimento'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Nascimento'
+          FieldLength = 0
+          FieldName = 'Data_Nascimento'
+          SQLFieldName = 'Data_Nascimento'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField46: TdaField
+          ChildType = 2
+          Alias = 'Sexo'
+          DisplayWidth = 1
+          FieldAlias = 'Sexo'
+          FieldLength = 1
+          FieldName = 'Sexo'
+          SQLFieldName = 'Sexo'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daField47: TdaField
+          ChildType = 2
+          Alias = 'Estado'
+          DisplayWidth = 2
+          FieldAlias = 'Estado'
+          FieldLength = 2
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+          TableSQLAlias = 'Contatos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Contatos'
+          JoinType = dajtNone
+          SQLAlias = 'Contatos'
+          TableAlias = 'Contatos'
+          TableName = 'Contatos'
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Telefones_Contatos'
+      Height = 233
+      Left = 360
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 21
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_Contatos'
+      object Telefones_Contatos: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'Telefones_Contatos'
+        MasterDataPipelineName = 'Contatos'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Telefones_Contatos'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Telefones_Contatos'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Contato'
+          FieldName = 'Contato'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Telefones_Contatos'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 3
+          TableName = 'Telefones_Contatos'
+        end
+        object ppField5: TppField
+          FieldAlias = 'DDD'
+          FieldName = 'DDD'
+          FieldLength = 5
+          DisplayWidth = 5
+          Position = 4
+          TableName = 'Telefones_Contatos'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Numero'
+          FieldName = 'Numero'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 5
+          TableName = 'Telefones_Contatos'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Obs'
+          FieldName = 'Obs'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 6
+          TableName = 'Telefones_Contatos'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Nome'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Nome'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Data_Nascimento'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Data_Nascimento'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Sexo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Sexo'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Estado'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Estado'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Empresa'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Empresa'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'Codigo'
+          GuidCollationType = gcMSAccess
+          DetailFieldName = 'Contato'
+          DetailSortOrder = soAscending
+          IsCaseSensitive = True
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Telefones_Contatos'
+        IsCaseSensitive = True
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT Telefones_Contatos.Codigo, '
+          '       Telefones_Contatos.Empresa, '
+          '       Telefones_Contatos.Contato, '
+          '       Telefones_Contatos.Tipo, '
+          '       Telefones_Contatos.DDD, '
+          '       Telefones_Contatos.Numero, '
+          '       Telefones_Contatos.Obs'
+          'FROM Telefones_Contatos Telefones_Contatos'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+          TableSQLAlias = 'Telefones_Contatos'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+          TableSQLAlias = 'Telefones_Contatos'
+        end
+        object daField3: TdaField
+          Alias = 'Contato'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Contato'
+          FieldLength = 0
+          FieldName = 'Contato'
+          SQLFieldName = 'Contato'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+          TableSQLAlias = 'Telefones_Contatos'
+        end
+        object daField4: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 20
+          FieldAlias = 'Tipo'
+          FieldLength = 20
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+          TableSQLAlias = 'Telefones_Contatos'
+        end
+        object daField5: TdaField
+          Alias = 'DDD'
+          DisplayWidth = 5
+          FieldAlias = 'DDD'
+          FieldLength = 5
+          FieldName = 'DDD'
+          SQLFieldName = 'DDD'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+          TableSQLAlias = 'Telefones_Contatos'
+        end
+        object daField6: TdaField
+          Alias = 'Numero'
+          DisplayWidth = 20
+          FieldAlias = 'Numero'
+          FieldLength = 20
+          FieldName = 'Numero'
+          SQLFieldName = 'Numero'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+          TableSQLAlias = 'Telefones_Contatos'
+        end
+        object daField7: TdaField
+          Alias = 'Obs'
+          DisplayWidth = 50
+          FieldAlias = 'Obs'
+          FieldLength = 50
+          FieldName = 'Obs'
+          SQLFieldName = 'Obs'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+          TableSQLAlias = 'Telefones_Contatos'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Telefones_Contatos'
+          JoinType = dajtNone
+          SQLAlias = 'Telefones_Contatos'
+          TableAlias = 'Telefones_Contatos'
+          TableName = 'Telefones_Contatos'
+        end
+        object daSQLLink1: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Contatos'
+            TableName = 'Contatos'
+            TableSQLAlias = 'Contatos'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Empresa'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Empresa'
+            FieldLength = 0
+            FieldName = 'Empresa'
+            SQLFieldName = 'Empresa'
+            TableAlias = 'Telefones_Contatos'
+            TableName = 'Telefones_Contatos'
+            TableSQLAlias = 'Telefones_Contatos'
+          end
+        end
+        object daSQLLink2: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'Codigo'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Contatos'
+            TableName = 'Contatos'
+            TableSQLAlias = 'Contatos'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Contato'
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Contato'
+            FieldLength = 0
+            FieldName = 'Contato'
+            SQLFieldName = 'Contato'
+            TableAlias = 'Telefones_Contatos'
+            TableName = 'Telefones_Contatos'
+            TableSQLAlias = 'Telefones_Contatos'
+          end
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 8
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1'
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo do Contato@Contatos@ID@Nome@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo'
+    end
+  end
+end
+$
+GRUPO=Agenda de Contatos
+NOME=Ficha Cadastral Contato
+DESCRICAO=Imprime a ficha cadastral do contato selecionado
+ALTERADO_EM=03/12/2014 15:16
+SQL=<0>
+ORDEM=Contatos.Codigo<Codigo>Contatos.Nome<Nome>Contatos.Data_Nascimento<Data_Nascimento>Contatos.Sexo<Sexo>Contatos.Estado<Estado>

@@ -1,0 +1,1233 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1511-EY3G8.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Clientes_FollowUp'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 16669
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 10856
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 22259
+      mmTop = 6615
+      mmWidth = 10319
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Motivo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 110861
+      mmTop = 6615
+      mmWidth = 9790
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Situa'#231#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 82550
+      mmTop = 11113
+      mmWidth = 13229
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Assunto'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 2646
+      mmTop = 11113
+      mmWidth = 12435
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Data Pr'#243'ximo Contato'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 147902
+      mmTop = 11113
+      mmWidth = 32809
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine2: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 1584
+      mmLeft = 0
+      mmTop = 5815
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine3: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 1849
+      mmLeft = 0
+      mmTop = 14817
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label7'
+      Caption = 'Data'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 2646
+      mmTop = 6615
+      mmWidth = 6879
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 9525
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Cliente'
+      DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Clientes_FollowUp'
+      mmHeight = 3725
+      mmLeft = 22259
+      mmTop = 244
+      mmWidth = 79640
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Motivo'
+      DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Clientes_FollowUp'
+      mmHeight = 3704
+      mmLeft = 110861
+      mmTop = 265
+      mmWidth = 82286
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Situacao'
+      DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Clientes_FollowUp'
+      mmHeight = 3704
+      mmLeft = 82550
+      mmTop = 4763
+      mmWidth = 28046
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Assunto'
+      DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Clientes_FollowUp'
+      mmHeight = 3704
+      mmLeft = 2646
+      mmTop = 4763
+      mmWidth = 73290
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'ProximoContato'
+      DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Clientes_FollowUp'
+      mmHeight = 3704
+      mmLeft = 147931
+      mmTop = 4763
+      mmWidth = 32808
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      DataField = 'DataHora'
+      DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Clientes_FollowUp'
+      mmHeight = 3703
+      mmLeft = 2646
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'Line1'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      ParentWidth = True
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 1319
+      mmLeft = 0
+      mmTop = 8200
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 3969
+    mmPrintPosition = 0
+    object ppLabel10: TppLabel
+      UserName = 'Label8'
+      Caption = 'Totais por Per'#237'odo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 135996
+      mmTop = 0
+      mmWidth = 28311
+      BandType = 7
+      LayerName = Foreground1
+    end
+    object ppDBCalc2: TppDBCalc
+      UserName = 'DBCalc2'
+      DataField = 'Cliente'
+      DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'Clientes_FollowUp'
+      mmHeight = 3968
+      mmLeft = 166688
+      mmTop = 0
+      mmWidth = 13494
+      BandType = 7
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Tipo'
+    DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Clientes_FollowUp'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 3969
+      mmPrintPosition = 0
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        DataField = 'Tipo'
+        DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Clientes_FollowUp'
+        mmHeight = 3968
+        mmLeft = 2646
+        mmTop = 0
+        mmWidth = 93927
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 3969
+      mmPrintPosition = 0
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        Caption = 'Totais por Tipo:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 141288
+        mmTop = 0
+        mmWidth = 23019
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        DataField = 'Cliente'
+        DataPipeline = daADOQueryDataView1.Clientes_FollowUp
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DBCalcType = dcCount
+        DataPipelineName = 'Clientes_FollowUp'
+        mmHeight = 3969
+        mmLeft = 166688
+        mmTop = 0
+        mmWidth = 13494
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874314F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F75726365069F70726F6365647572652044425465
+      7874314F6E476574546578742876617220546578743A20537472696E67293B0D
+      0A626567696E0D0A0D0A202054657874203A3D20496E74546F53747228436C69
+      656E7465735F466F6C6C6F7755705B27436C69656E7465275D29202B2027202D
+      2027202B20436C69656E7465735F466F6C6C6F7755705B274E6F6D655F436C69
+      656E7465275D3B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+      0744425465787431094576656E744E616D6506094F6E47657454657874074576
+      656E7449440235084361726574506F7301025E0204000001060F547261457665
+      6E7448616E646C65720B50726F6772616D4E616D650610444254657874374F6E
+      476574546578740B50726F6772616D54797065070B747450726F636564757265
+      06536F7572636506EF70726F63656475726520444254657874374F6E47657454
+      6578742876617220546578743A20537472696E67293B0D0A626567696E0D0A0D
+      0A202069662028436C69656E7465735F466F6C6C6F7755705B275469706F275D
+      203D20272729207468656E200D0A20202020626567696E0D0A20202020202054
+      657874203A3D202753656D205469706F204361646173747261646F273B0D0A20
+      202020656E6420656C73650D0A202020202020626567696E0D0A202020202020
+      202054657874203A3D20436C69656E7465735F466F6C6C6F7755705B27546970
+      6F275D3B0D0A202020202020656E643B0D0A656E643B0D0A0D436F6D706F6E65
+      6E744E616D65060744425465787437094576656E744E616D6506094F6E476574
+      54657874074576656E7449440235084361726574506F7301022B0209000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Clientes_FollowUp'
+      Height = 352
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Clientes_FollowUp: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Clientes_FollowUp'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cliente'
+          FieldName = 'Cliente'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Funcionario'
+          FieldName = 'Funcionario'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Motivo'
+          FieldName = 'Motivo'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 4
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Assunto'
+          FieldName = 'Assunto'
+          FieldLength = 100
+          DisplayWidth = 100
+          Position = 5
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField7: TppField
+          FieldAlias = 'DataHora'
+          FieldName = 'DataHora'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 6
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Resumo'
+          FieldName = 'Resumo'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField9: TppField
+          FieldAlias = 'ProximoContato'
+          FieldName = 'ProximoContato'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 8
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Prioridade'
+          FieldName = 'Prioridade'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Situacao'
+          FieldName = 'Situacao'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 10
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField12: TppField
+          FieldAlias = 'ProximoContato_Hora'
+          FieldName = 'ProximoContato_Hora'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Id_Agenda'
+          FieldName = 'Id_Agenda'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 13
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Texto_Email'
+          FieldName = 'Texto_Email'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtMemo
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'Clientes_FollowUp'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Nome_Cliente'
+          FieldName = 'select_c_Cliente_Nome_fr'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'Clientes_FollowUp'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Clientes_FollowUp'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Clientes_FollowUp.Codigo, '
+          '       Clientes_FollowUp.Empresa, '
+          '       Clientes_FollowUp.Cliente, '
+          '       Clientes_FollowUp.Funcionario, '
+          '       Clientes_FollowUp.Motivo, '
+          '       Clientes_FollowUp.Assunto, '
+          '       Clientes_FollowUp.DataHora, '
+          '       Clientes_FollowUp.Resumo, '
+          '       Clientes_FollowUp.ProximoContato, '
+          '       Clientes_FollowUp.Prioridade, '
+          '       Clientes_FollowUp.Situacao, '
+          '       Clientes_FollowUp.ProximoContato_Hora, '
+          '       Clientes_FollowUp.Id_Agenda, '
+          '       Clientes_FollowUp.Tipo, '
+          '       Clientes_FollowUp.Texto_Email, '
+          
+            '       ( select c.Cliente_Nome from Cliente c where c.Codigo = C' +
+            'lientes_FollowUp.Cliente and c.Empresa = Clientes_FollowUp.Empre' +
+            'sa ) AS select_c_Cliente_Nome_fr'
+          'FROM Clientes_FollowUp Clientes_FollowUp'
+          'WHERE '
+          
+            '      ( Clientes_FollowUp.DataHora BETWEEN #2015-01-01 00.00.00#' +
+            ' AND #2015-12-31 00.00.00# )'
+          'ORDER BY Clientes_FollowUp.Tipo, '
+          '         Clientes_FollowUp.Cliente')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Nome_Cliente'
+          DisplayWidth = 10
+          FieldAlias = 'Cliente'
+          FieldLength = 0
+          FieldName = 'Cliente'
+          SQLFieldName = 'select_c_Cliente_Nome_fr'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+          CalcType = dacaExpression
+          Expression = 
+            '( select c.Cliente_Nome from Cliente c where c.Codigo = Clientes' +
+            '_FollowUp.Cliente and c.Empresa = Clientes_FollowUp.Empresa )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'DataHora'
+          Value = '01/01/2015,31/12/2015'
+          object TdaField
+            Alias = 'DataHora'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'DataHora'
+            FieldLength = 0
+            FieldName = 'DataHora'
+            SQLFieldName = 'DataHora'
+            TableAlias = 'Clientes_FollowUp'
+            TableName = 'Clientes_FollowUp'
+            TableSQLAlias = 'Clientes_FollowUp'
+          end
+          object TdaNumericValue
+            Value = 42005.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 42369.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField2: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField3: TdaField
+          Alias = 'Cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Cliente'
+          FieldLength = 0
+          FieldName = 'Cliente'
+          SQLFieldName = 'Cliente'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField4: TdaField
+          Alias = 'Funcionario'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Funcionario'
+          FieldLength = 0
+          FieldName = 'Funcionario'
+          SQLFieldName = 'Funcionario'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField5: TdaField
+          Alias = 'Motivo'
+          DisplayWidth = 50
+          FieldAlias = 'Motivo'
+          FieldLength = 50
+          FieldName = 'Motivo'
+          SQLFieldName = 'Motivo'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField6: TdaField
+          Alias = 'Assunto'
+          DisplayWidth = 100
+          FieldAlias = 'Assunto'
+          FieldLength = 100
+          FieldName = 'Assunto'
+          SQLFieldName = 'Assunto'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField7: TdaField
+          Alias = 'DataHora'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'DataHora'
+          FieldLength = 0
+          FieldName = 'DataHora'
+          SQLFieldName = 'DataHora'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField8: TdaField
+          Alias = 'Resumo'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Resumo'
+          FieldLength = 0
+          FieldName = 'Resumo'
+          Linkable = False
+          SQLFieldName = 'Resumo'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField9: TdaField
+          Alias = 'ProximoContato'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'ProximoContato'
+          FieldLength = 0
+          FieldName = 'ProximoContato'
+          SQLFieldName = 'ProximoContato'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField10: TdaField
+          Alias = 'Prioridade'
+          DisplayWidth = 10
+          FieldAlias = 'Prioridade'
+          FieldLength = 10
+          FieldName = 'Prioridade'
+          SQLFieldName = 'Prioridade'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField11: TdaField
+          Alias = 'Situacao'
+          DisplayWidth = 20
+          FieldAlias = 'Situacao'
+          FieldLength = 20
+          FieldName = 'Situacao'
+          SQLFieldName = 'Situacao'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField12: TdaField
+          Alias = 'ProximoContato_Hora'
+          DisplayWidth = 10
+          FieldAlias = 'ProximoContato_Hora'
+          FieldLength = 10
+          FieldName = 'ProximoContato_Hora'
+          SQLFieldName = 'ProximoContato_Hora'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField13: TdaField
+          Alias = 'Id_Agenda'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Id_Agenda'
+          FieldLength = 0
+          FieldName = 'Id_Agenda'
+          SQLFieldName = 'Id_Agenda'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField14: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 20
+          FieldAlias = 'Tipo'
+          FieldLength = 20
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField15: TdaField
+          Alias = 'Texto_Email'
+          DataType = dtMemo
+          DisplayWidth = 10
+          FieldAlias = 'Texto_Email'
+          FieldLength = 0
+          FieldName = 'Texto_Email'
+          Linkable = False
+          SQLFieldName = 'Texto_Email'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField16: TdaField
+          ChildType = 2
+          Alias = 'Tipo'
+          DisplayWidth = 20
+          FieldAlias = 'Tipo'
+          FieldLength = 20
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daField17: TdaField
+          ChildType = 2
+          Alias = 'Cliente'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Cliente'
+          FieldLength = 0
+          FieldName = 'Cliente'
+          SQLFieldName = 'Cliente'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+          TableSQLAlias = 'Clientes_FollowUp'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Clientes_FollowUp'
+          JoinType = dajtNone
+          SQLAlias = 'Clientes_FollowUp'
+          TableAlias = 'Clientes_FollowUp'
+          TableName = 'Clientes_FollowUp'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 17
+    end
+  end
+  object ppParameterList3: TppParameterList
+    object DataHora: TppParameter
+      AutoSearchSettings.FieldAlias = 'DataHora'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/01/2015,31/12/2015'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/01/2015'
+      UserName = 'DataHora'
+    end
+  end
+end
+$
+GRUPO=Follow-Up
+NOME=Follow Up - Tipo
+ALTERADO_EM=25/11/2015 11:35
+SQL=<0><1><2>
+ORDEM=Clientes_FollowUp.Tipo<Tipo>Clientes_FollowUp.Cliente<Cliente>

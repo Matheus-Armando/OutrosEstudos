@@ -1,0 +1,963 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1205-1A4OL.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Pedido_Cabecalho'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer10: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 11377
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      ParentWidth = True
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 5556
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 19050
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Data do Pedido'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 22754
+      mmTop = 6615
+      mmWidth = 23199
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Forma de Pagamento'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 140229
+      mmTop = 6615
+      mmWidth = 32427
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Total do Pedido'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 175515
+      mmTop = 6615
+      mmWidth = 23664
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Fornecedor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 48948
+      mmTop = 6615
+      mmWidth = 17526
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine5: TppLine
+      UserName = 'lnCabecalho'
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine6: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 0
+      mmTop = 11113
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4763
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'Codigo'
+      DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Pedido_Cabecalho'
+      mmHeight = 3260
+      mmLeft = 794
+      mmTop = 244
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'Data_Pedido'
+      DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Pedido_Cabecalho'
+      mmHeight = 3175
+      mmLeft = 22754
+      mmTop = 265
+      mmWidth = 20373
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'select_Nome_Fantasia_fro'
+      DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Pedido_Cabecalho'
+      mmHeight = 3260
+      mmLeft = 48948
+      mmTop = 265
+      mmWidth = 59796
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'Condi'#231#227'o_Pagamento'
+      DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Pedido_Cabecalho'
+      mmHeight = 3260
+      mmLeft = 109802
+      mmTop = 265
+      mmWidth = 62971
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'Total_Pedido'
+      DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Pedido_Cabecalho'
+      mmHeight = 3175
+      mmLeft = 179652
+      mmTop = 265
+      mmWidth = 19315
+      BandType = 4
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'Line2'
+      Pen.Color = 9868950
+      Pen.Style = psDot
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.125000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 4233
+      mmWidth = 200080
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 1852
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Situa'#231#227'o'
+    DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Pedido_Cabecalho'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 4498
+      mmPrintPosition = 0
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        AutoSize = True
+        DataField = 'Situa'#231#227'o'
+        DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Pedido_Cabecalho'
+        mmHeight = 3969
+        mmLeft = 1325
+        mmTop = 529
+        mmWidth = 176477
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 5556
+      mmPrintPosition = 0
+      object ppDBText5: TppDBText
+        UserName = 'DBText5'
+        DataField = 'Situa'#231#227'o'
+        DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'Pedido_Cabecalho'
+        mmHeight = 3810
+        mmLeft = 160073
+        mmTop = 530
+        mmWidth = 13758
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        DataField = 'Codigo'
+        DataPipeline = daADOQueryDataView1.Pedido_Cabecalho
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DBCalcType = dcCount
+        DataPipelineName = 'Pedido_Cabecalho'
+        mmHeight = 3704
+        mmLeft = 178859
+        mmTop = 530
+        mmWidth = 20108
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+      444254657874374F6E476574546578740B50726F6772616D54797065070B7474
+      50726F63656475726506536F75726365149E00000070726F6365647572652044
+      4254657874374F6E476574546578742876617220546578743A20537472696E67
+      293B0D0A626567696E0D0A202069662050656469646F5F4361626563616C686F
+      5B275369747561C3A7C3A36F275D203D202727207468656E0D0A202020546578
+      74203A3D202750454E44454E5445270D0A2020656C73650D0A20202054657874
+      203A3D20546578743B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
+      65060744425465787437094576656E744E616D6506094F6E4765745465787407
+      4576656E7449440235084361726574506F730102000200000001060F54726145
+      76656E7448616E646C65720B50726F6772616D4E616D65061044425465787433
+      4F6E476574546578740B50726F6772616D54797065070B747450726F63656475
+      726506536F75726365068470726F63656475726520444254657874334F6E4765
+      74546578742876617220546578743A20537472696E67293B0D0A626567696E0D
+      0A0D0A202054657874203A3D20496E74546F5374722850656469646F5F436162
+      6563616C686F5B27466F726E656365646F72275D29202B2027202D2027202B20
+      546578743B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060744
+      425465787433094576656E744E616D6506094F6E47657454657874074576656E
+      7449440235084361726574506F730102000200000001060F5472614576656E74
+      48616E646C65720B50726F6772616D4E616D650610444254657874354F6E4765
+      74546578740B50726F6772616D54797065070B747450726F6365647572650653
+      6F75726365140B01000070726F63656475726520444254657874354F6E476574
+      546578742876617220546578743A20537472696E67293B0D0A626567696E0D0A
+      202069662054657874203D20274154454E4449444F27207468656E0D0A202020
+      2054657874203A3D20274EC3BA6D65726F2064652050656469646F7320417465
+      6E6469646F733A270D0A2020656C73652069662054657874203D202750415243
+      49414C27207468656E0D0A2020202054657874203A3D20274EC3BA6D65726F20
+      64652050656469646F732050617263696169733A270D0A2020656C73650D0A20
+      20202054657874203A3D20274EC3BA6D65726F2064652050656469646F732050
+      656E64656E7465733A273B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E
+      616D65060744425465787435094576656E744E616D6506094F6E476574546578
+      74074576656E7449440235084361726574506F730102000200000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Pedido_Cabecalho'
+      Height = 216
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Pedido_Cabecalho: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Pedido_Cabecalho'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Pedido_Cabecalho'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Pedido_Numero_Fornecedor'
+          FieldName = 'Pedido_Numero_Fornecedor'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 1
+          TableName = 'Pedido_Cabecalho'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Fornecedor'
+          FieldName = 'Fornecedor'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Pedido_Cabecalho'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Data_Pedido'
+          FieldName = 'Data_Pedido'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 3
+          TableName = 'Pedido_Cabecalho'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Total_Pedido'
+          FieldName = 'Total_Pedido'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Pedido_Cabecalho'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Condi'#231#227'o_Pagamento'
+          FieldName = 'Condi'#231#227'o_Pagamento'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 5
+          TableName = 'Pedido_Cabecalho'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Situa'#231#227'o'
+          FieldName = 'Situa'#231#227'o'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 6
+          TableName = 'Pedido_Cabecalho'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Forencedor_Nome'
+          FieldName = 'select_Nome_Fantasia_fro'
+          FieldLength = 0
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'Pedido_Cabecalho'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Pedido_Cabecalho'
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT Pedido_Cabecalho.Codigo, '
+          '       Pedido_Cabecalho.Pedido_Numero_Fornecedor, '
+          '       Pedido_Cabecalho.Fornecedor, '
+          '       Pedido_Cabecalho.Data_Pedido, '
+          '       Pedido_Cabecalho.Total_Pedido, '
+          '       Pedido_Cabecalho.Condi'#231#227'o_Pagamento, '
+          '       Pedido_Cabecalho.Situa'#231#227'o, '
+          
+            '       ( select Nome_Fantasia from Fornecedor where codigo = Ped' +
+            'ido_cabecalho.fornecedor and empresa = Pedido_cabecalho.empresa ' +
+            ') AS select_Nome_Fantasia_fro'
+          'FROM Pedido_Cabecalho Pedido_Cabecalho'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          
+            '      ( Pedido_Cabecalho.Data_Pedido BETWEEN #2012-07-01 00.00.0' +
+            '0# AND #2012-07-31 00.00.00# )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Forencedor_Nome'
+          DisplayWidth = 10
+          FieldAlias = 'Fornecedor'
+          FieldLength = 0
+          FieldName = 'Fornecedor'
+          SQLFieldName = 'select_Nome_Fantasia_fro'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+          CalcType = dacaExpression
+          Expression = 
+            '( select Nome_Fantasia from Fornecedor where codigo = Pedido_cab' +
+            'ecalho.fornecedor and empresa = Pedido_cabecalho.empresa )'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Data_Pedido'
+          Value = '01/07/2012,31/07/2012'
+          object TdaField
+            Alias = 'Data_Pedido'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 18
+            FieldAlias = 'Data_Pedido'
+            FieldLength = 0
+            FieldName = 'Data_Pedido'
+            Mandatory = True
+            SQLFieldName = 'Data_Pedido'
+            TableAlias = 'Pedido_Cabecalho'
+            TableName = 'Pedido_Cabecalho'
+            TableSQLAlias = 'Pedido_Cabecalho'
+          end
+          object TdaNumericValue
+            Value = 41091.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 41121.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daField2: TdaField
+          Alias = 'Pedido_Numero_Fornecedor'
+          DisplayWidth = 20
+          FieldAlias = 'Pedido_Numero_Fornecedor'
+          FieldLength = 20
+          FieldName = 'Pedido_Numero_Fornecedor'
+          SQLFieldName = 'Pedido_Numero_Fornecedor'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daField3: TdaField
+          Alias = 'Fornecedor'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Fornecedor'
+          FieldLength = 0
+          FieldName = 'Fornecedor'
+          SQLFieldName = 'Fornecedor'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daField4: TdaField
+          Alias = 'Data_Pedido'
+          DataType = dtDateTime
+          DisplayWidth = 18
+          FieldAlias = 'Data_Pedido'
+          FieldLength = 0
+          FieldName = 'Data_Pedido'
+          SQLFieldName = 'Data_Pedido'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daField5: TdaField
+          Alias = 'Total_Pedido'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_Pedido'
+          FieldLength = 0
+          FieldName = 'Total_Pedido'
+          SQLFieldName = 'Total_Pedido'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daField6: TdaField
+          Alias = 'Condi'#231#227'o_Pagamento'
+          DisplayWidth = 50
+          FieldAlias = 'Condi'#231#227'o_Pagamento'
+          FieldLength = 50
+          FieldName = 'Condi'#231#227'o_Pagamento'
+          SQLFieldName = 'Condi'#231#227'o_Pagamento'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daField7: TdaField
+          Alias = 'Situa'#231#227'o'
+          DisplayWidth = 20
+          FieldAlias = 'Situa'#231#227'o'
+          FieldLength = 20
+          FieldName = 'Situa'#231#227'o'
+          SQLFieldName = 'Situa'#231#227'o'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daField8: TdaField
+          ChildType = 2
+          Alias = 'Situa'#231#227'o'
+          DisplayWidth = 20
+          FieldAlias = 'Situa'#231#227'o'
+          FieldLength = 20
+          FieldName = 'Situa'#231#227'o'
+          SQLFieldName = 'Situa'#231#227'o'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+          TableSQLAlias = 'Pedido_Cabecalho'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Pedido_Cabecalho'
+          JoinType = dajtNone
+          SQLAlias = 'Pedido_Cabecalho'
+          TableAlias = 'Pedido_Cabecalho'
+          TableName = 'Pedido_Cabecalho'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 11
+    end
+  end
+  object ppParameterList: TppParameterList
+    object Data_Pedido: TppParameter
+      AutoSearchSettings.FieldAlias = 'Data_Pedido'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '01/07/2012,31/07/2012'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'Data do Pedido@@@@dtDateTime')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '01/07/2012'
+      UserName = 'Data_Pedido'
+    end
+  end
+end
+$
+GRUPO=Pedidos ao Fornecedor
+NOME=Lista de Pedidos - Por Situação
+DESCRICAO=Mostra uma lista de Pedidos agrupando por Situação entre as datas escolhidas
+ALTERADO_EM=05/01/2015 10:11
+SQL=<0><1><2><3>
+ORDEM=Pedido_Cabecalho.Situação<Situação>

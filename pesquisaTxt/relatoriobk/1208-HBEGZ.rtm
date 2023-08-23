@@ -1,0 +1,1009 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Produto_Grades
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 297128
+  PrinterSetup.mmPaperWidth = 210080
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1208-HBEGZ.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = RelatorioBeforePrint
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '15.04'
+  mmColumnWidth = 0
+  DataPipelineName = 'Produto_Grades'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 297128
+        PrinterSetup.mmPaperWidth = 210080
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '15.04'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer3: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 11377
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'shpCabecalho'
+      Brush.Color = cl3DLight
+      Brush.Style = bsFDiagonal
+      Shape = stRoundRect
+      Visible = False
+      mmHeight = 5556
+      mmLeft = 0
+      mmTop = 5821
+      mmWidth = 200290
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'C'#243'digo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 794
+      mmTop = 6615
+      mmWidth = 10964
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Descri'#231#227'o'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 15610
+      mmTop = 6615
+      mmWidth = 15240
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Caption = 'Descri'#231#227'o Coluna'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 74877
+      mmTop = 6615
+      mmWidth = 26924
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Caption = 'Descri'#231#227'o Linha'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 117475
+      mmTop = 6615
+      mmWidth = 24606
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Caption = 'Nro Colunas'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 160073
+      mmTop = 6615
+      mmWidth = 18257
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'Nro Linhas'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3968
+      mmLeft = 182034
+      mmTop = 6615
+      mmWidth = 16139
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 189442
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 191559
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine3: TppLine
+      UserName = 'lnCabecalho1'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 265
+      mmLeft = 0
+      mmTop = 5820
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppLine4: TppLine
+      UserName = 'lnCabecalho2'
+      ParentWidth = True
+      Weight = 0.500000000000000000
+      mmHeight = 265
+      mmLeft = 0
+      mmTop = 11112
+      mmWidth = 200080
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Visible = False
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Linha_ou_Coluna'
+      DataPipeline = daADOQueryDataView1.Produto_Grades
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Produto_Grades'
+      mmHeight = 4498
+      mmLeft = 529
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground1
+    end
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      Pen.Width = 0
+      ParentWidth = True
+      Weight = 0.250000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 200080
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 174625
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 529
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3598
+      mmLeft = 95700
+      mmTop = 529
+      mmWidth = 8890
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Codigo'
+    DataPipeline = daADOQueryDataView1.Produto_Grades
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Produto_Grades'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 4498
+      mmPrintPosition = 0
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'Codigo'
+        DataPipeline = daADOQueryDataView1.Produto_Grades
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'Produto_Grades'
+        mmHeight = 3704
+        mmLeft = 794
+        mmTop = 0
+        mmWidth = 10848
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'Descri'#231#227'o'
+        DataPipeline = daADOQueryDataView1.Produto_Grades
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Produto_Grades'
+        mmHeight = 3704
+        mmLeft = 15610
+        mmTop = 0
+        mmWidth = 55033
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        DataField = 'Descri'#231#227'o_Colunas'
+        DataPipeline = daADOQueryDataView1.Produto_Grades
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Produto_Grades'
+        mmHeight = 3704
+        mmLeft = 74877
+        mmTop = 0
+        mmWidth = 38365
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'Descri'#231#227'o_Linhas'
+        DataPipeline = daADOQueryDataView1.Produto_Grades
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'Produto_Grades'
+        mmHeight = 3704
+        mmLeft = 117475
+        mmTop = 0
+        mmWidth = 38365
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppLine2: TppLine
+        UserName = 'Line1'
+        Pen.Color = 9868950
+        Pen.Style = psDot
+        Pen.Width = 0
+        ParentWidth = True
+        Weight = 0.125000000000000000
+        mmHeight = 529
+        mmLeft = 0
+        mmTop = 3969
+        mmWidth = 200080
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        DataField = 'Codigo_2'
+        DataPipeline = daADOQueryDataView1.Produto_Grades
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DBCalcType = dcCount
+        DataPipelineName = 'Produto_Grades'
+        mmHeight = 4498
+        mmLeft = 160073
+        mmTop = 0
+        mmWidth = 18256
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+      object ppDBCalc2: TppDBCalc
+        UserName = 'DBCalc2'
+        DataField = 'Codigo_2'
+        DataPipeline = daADOQueryDataView1.Produto_Grades
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DBCalcType = dcCount
+        DataPipelineName = 'Produto_Grades'
+        mmHeight = 4498
+        mmLeft = 182034
+        mmTop = 0
+        mmWidth = 16140
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground1
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Produto_Grades'
+      Height = 433
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 499
+      AutoSearchTabOrder = 0
+      object Produto_Grades: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Produto_Grades'
+        object ppField1: TppField
+          FieldAlias = 'Codigo'
+          FieldName = 'Codigo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'Produto_Grades'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descri'#231#227'o'
+          FieldName = 'Descri'#231#227'o'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 1
+          TableName = 'Produto_Grades'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Descri'#231#227'o_Linhas'
+          FieldName = 'Descri'#231#227'o_Linhas'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 2
+          TableName = 'Produto_Grades'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Descri'#231#227'o_Colunas'
+          FieldName = 'Descri'#231#227'o_Colunas'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 3
+          TableName = 'Produto_Grades'
+        end
+        object ppField5: TppField
+          FieldAlias = 'N'#250'mero_Linhas'
+          FieldName = 'N'#250'mero_Linhas'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'Produto_Grades'
+        end
+        object ppField6: TppField
+          FieldAlias = 'N'#250'mero_Colunas'
+          FieldName = 'N'#250'mero_Colunas'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 5
+          TableName = 'Produto_Grades'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Empresa'
+          FieldName = 'Empresa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'Produto_Grades'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Linha_ou_Coluna'
+          FieldName = 'Linha_ou_Coluna'
+          FieldLength = 1
+          IsDetail = True
+          DisplayWidth = 1
+          Position = 7
+          TableName = 'Produto_Grades_LinCol'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Codigo (2)'
+          FieldName = 'Codigo_2'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'Produto_Grades_LinCol'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Produto_Grades'
+        Distinct = True
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT DISTINCT Produto_Grades.Codigo, '
+          '                Produto_Grades.Descri'#231#227'o, '
+          '                Produto_Grades.Descri'#231#227'o_Linhas, '
+          '                Produto_Grades.Descri'#231#227'o_Colunas, '
+          '                Produto_Grades.N'#250'mero_Linhas, '
+          '                Produto_Grades.N'#250'mero_Colunas, '
+          '                Produto_Grades.Empresa, '
+          '                Produto_Grades_LinCol.Linha_ou_Coluna, '
+          '                Produto_Grades_LinCol.Codigo AS Codigo_2'
+          'FROM (Produto_Grades Produto_Grades'
+          
+            '      LEFT OUTER JOIN Produto_Grades_LinCol Produto_Grades_LinCo' +
+            'l ON '
+          '     (Produto_Grades_LinCol.Empresa = Produto_Grades.Empresa)'
+          
+            '      AND (Produto_Grades_LinCol.C'#243'digo_Grade = Produto_Grades.C' +
+            'odigo) )'
+          'WHERE '
+          '      ( Produto_Grades.Codigo BETWEEN 1 AND 999999 )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          ParamName = 'Codigo'
+          Value = '1,999999'
+          object TdaField
+            Alias = 'Codigo'
+            AutoSearch = True
+            DataType = dtInteger
+            DisplayWidth = 10
+            FieldAlias = 'Codigo'
+            FieldLength = 0
+            FieldName = 'Codigo'
+            SQLFieldName = 'Codigo'
+            TableAlias = 'Produto_Grades'
+            TableName = 'Produto_Grades'
+            TableSQLAlias = 'Produto_Grades'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Codigo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          SQLFieldName = 'Codigo'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+          TableSQLAlias = 'Produto_Grades'
+        end
+        object daField2: TdaField
+          Alias = 'Descri'#231#227'o'
+          DisplayWidth = 50
+          FieldAlias = 'Descri'#231#227'o'
+          FieldLength = 50
+          FieldName = 'Descri'#231#227'o'
+          SQLFieldName = 'Descri'#231#227'o'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+          TableSQLAlias = 'Produto_Grades'
+        end
+        object daField3: TdaField
+          Alias = 'Descri'#231#227'o_Linhas'
+          DisplayWidth = 50
+          FieldAlias = 'Descri'#231#227'o_Linhas'
+          FieldLength = 50
+          FieldName = 'Descri'#231#227'o_Linhas'
+          SQLFieldName = 'Descri'#231#227'o_Linhas'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+          TableSQLAlias = 'Produto_Grades'
+        end
+        object daField4: TdaField
+          Alias = 'Descri'#231#227'o_Colunas'
+          DisplayWidth = 50
+          FieldAlias = 'Descri'#231#227'o_Colunas'
+          FieldLength = 50
+          FieldName = 'Descri'#231#227'o_Colunas'
+          SQLFieldName = 'Descri'#231#227'o_Colunas'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+          TableSQLAlias = 'Produto_Grades'
+        end
+        object daField5: TdaField
+          Alias = 'N'#250'mero_Linhas'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'N'#250'mero_Linhas'
+          FieldLength = 0
+          FieldName = 'N'#250'mero_Linhas'
+          SQLFieldName = 'N'#250'mero_Linhas'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+          TableSQLAlias = 'Produto_Grades'
+        end
+        object daField6: TdaField
+          Alias = 'N'#250'mero_Colunas'
+          DisplayWidth = 50
+          FieldAlias = 'N'#250'mero_Colunas'
+          FieldLength = 50
+          FieldName = 'N'#250'mero_Colunas'
+          SQLFieldName = 'N'#250'mero_Colunas'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+          TableSQLAlias = 'Produto_Grades'
+        end
+        object daField7: TdaField
+          Alias = 'Empresa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Empresa'
+          FieldLength = 0
+          FieldName = 'Empresa'
+          SQLFieldName = 'Empresa'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+          TableSQLAlias = 'Produto_Grades'
+        end
+        object daField8: TdaField
+          Alias = 'Linha_ou_Coluna'
+          DisplayWidth = 1
+          FieldAlias = 'Linha_ou_Coluna'
+          FieldLength = 1
+          FieldName = 'Linha_ou_Coluna'
+          IsDetail = True
+          SQLFieldName = 'Linha_ou_Coluna'
+          TableAlias = 'Produto_Grades_LinCol'
+          TableName = 'Produto_Grades_LinCol'
+          TableSQLAlias = 'Produto_Grades_LinCol'
+        end
+        object daField9: TdaField
+          Alias = 'Codigo (2)'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Codigo'
+          FieldLength = 0
+          FieldName = 'Codigo'
+          IsDetail = True
+          SQLFieldName = 'Codigo_2'
+          TableAlias = 'Produto_Grades_LinCol'
+          TableName = 'Produto_Grades_LinCol'
+          TableSQLAlias = 'Produto_Grades_LinCol'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Produto_Grades'
+          JoinType = dajtNone
+          SQLAlias = 'Produto_Grades'
+          TableAlias = 'Produto_Grades'
+          TableName = 'Produto_Grades'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Produto_Grades_LinCol'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'Produto_Grades_LinCol'
+          TableAlias = 'Produto_Grades_LinCol'
+          TableName = 'Produto_Grades_LinCol'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField11: TdaField
+              ChildType = 3
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Produto_Grades_LinCol'
+              TableName = 'Produto_Grades_LinCol'
+              TableSQLAlias = 'Produto_Grades_LinCol'
+            end
+            object daField10: TdaField
+              ChildType = 4
+              Alias = 'Empresa'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Empresa'
+              FieldLength = 0
+              FieldName = 'Empresa'
+              SQLFieldName = 'Empresa'
+              TableAlias = 'Produto_Grades'
+              TableName = 'Produto_Grades'
+              TableSQLAlias = 'Produto_Grades'
+            end
+          end
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField13: TdaField
+              ChildType = 3
+              Alias = 'C'#243'digo_Grade'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'C'#243'digo_Grade'
+              FieldLength = 0
+              FieldName = 'C'#243'digo_Grade'
+              SQLFieldName = 'C'#243'digo_Grade'
+              TableAlias = 'Produto_Grades_LinCol'
+              TableName = 'Produto_Grades_LinCol'
+              TableSQLAlias = 'Produto_Grades_LinCol'
+            end
+            object daField12: TdaField
+              ChildType = 4
+              Alias = 'Codigo'
+              DataType = dtInteger
+              DisplayWidth = 10
+              FieldAlias = 'Codigo'
+              FieldLength = 0
+              FieldName = 'Codigo'
+              SQLFieldName = 'Codigo'
+              TableAlias = 'Produto_Grades'
+              TableName = 'Produto_Grades'
+              TableSQLAlias = 'Produto_Grades'
+            end
+          end
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365065770726F6365647572652056
+      61726961626C65733B0D0A7661720D0A20206E726F636F6C203A20646F75626C
+      653B0D0A20206E726F6C696E203A20646F75626C653B2020200D0A0D0A626567
+      696E0D0A0D0A656E643B0D0A084361726574506F730102130203000001060F54
+      72614576656E7448616E646C65720B50726F6772616D4E616D65061B47726F75
+      7048656164657242616E64314265666F72655072696E740B50726F6772616D54
+      797065070B747450726F63656475726506536F75726365065970726F63656475
+      72652047726F757048656164657242616E64314265666F72655072696E743B0D
+      0A626567696E0D0A202020206E726F636F6C203A3D20303B0D0A202020206E72
+      6F6C696E203A3D20303B0D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+      061047726F757048656164657242616E6431094576656E744E616D65060B4265
+      666F72655072696E74074576656E7449440218084361726574506F7301021102
+      04000001060F5472614576656E7448616E646C65720B50726F6772616D4E616D
+      650610444243616C63314F6E476574546578740B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365066470726F6365647572652044
+      4243616C63314F6E476574546578742876617220546578743A20537472696E67
+      293B0D0A626567696E0D0A0D0A202054657874203A3D20466F726D6174466C6F
+      61742827272C206E726F636F6C293B0D0A0D0A656E643B0D0A0D436F6D706F6E
+      656E744E616D650607444243616C6331094576656E744E616D6506094F6E4765
+      7454657874074576656E7449440235084361726574506F730102230204000001
+      060F5472614576656E7448616E646C65720B50726F6772616D4E616D65061044
+      4243616C63324F6E476574546578740B50726F6772616D54797065070B747450
+      726F63656475726506536F75726365066470726F63656475726520444243616C
+      63324F6E476574546578742876617220546578743A20537472696E67293B0D0A
+      626567696E0D0A0D0A202054657874203A3D20466F726D6174466C6F61742827
+      272C206E726F6C696E293B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E
+      616D650607444243616C6332094576656E744E616D6506094F6E476574546578
+      74074576656E7449440235084361726574506F730102230204000001060F5472
+      614576656E7448616E646C65720B50726F6772616D4E616D6506114465746169
+      6C4265666F72655072696E740B50726F6772616D54797065070B747450726F63
+      656475726506536F7572636506CE70726F6365647572652044657461696C4265
+      666F72655072696E743B0D0A626567696E0D0A202069662850726F6475746F5F
+      4772616465735B274C696E68615F6F755F436F6C756E61275D203D2027432729
+      207468656E0D0A202020206E726F636F6C203A3D206E726F636F6C202B20310D
+      0A2020656C7365206966202850726F6475746F5F4772616465735B274C696E68
+      615F6F755F436F6C756E61275D203D20274C2729207468656E0D0A202020206E
+      726F6C696E203A3D206E726F6C696E202B20313B0D0A656E643B0D0A0D436F6D
+      706F6E656E744E616D65060644657461696C094576656E744E616D65060B4265
+      666F72655072696E74074576656E7449440218084361726574506F7301020502
+      07000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 4
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object Codigo: TppParameter
+      AutoSearchSettings.FieldAlias = 'Codigo'
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = '1,999999'
+      AutoSearchSettings.SearchOperator = soBetween
+      DataType = dtString
+      LookupList.Strings = (
+        'C'#243'digo@Grades@ID@Descricao@dtInteger')
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = '1'
+      UserName = 'Codigo'
+    end
+  end
+end
+$
+GRUPO=Produtos
+NOME=Grades
+DESCRICAO=Imprime uma lista das grades entre os código selecionados
+ALTERADO_EM=05/01/2015 11:16
+SQL=<0>

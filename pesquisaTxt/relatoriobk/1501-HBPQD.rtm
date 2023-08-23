@@ -1,0 +1,836 @@
+object Relatorio: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Previsao_Financeira_CS
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 5000
+  PrinterSetup.mmMarginLeft = 5000
+  PrinterSetup.mmMarginRight = 5000
+  PrinterSetup.mmMarginTop = 5000
+  PrinterSetup.mmPaperHeight = 210080
+  PrinterSetup.mmPaperWidth = 297128
+  PrinterSetup.PaperSize = 9
+  Template.FileName = 
+    'C:\Program Files\Koinonia Software\Habil Empresarial\Relatorios\' +
+    '1501-HBPQD.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OnPreviewFormCreate = RelatorioPreviewFormCreate
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 417
+  Top = 372
+  Version = '14.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'Previsao_Financeira_CS'
+  object ppTitleBand1: TppTitleBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'srTitulo'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 287128
+      BandType = 1
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.Orientation = poLandscape
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 5000
+        PrinterSetup.mmMarginLeft = 5000
+        PrinterSetup.mmMarginRight = 5000
+        PrinterSetup.mmMarginTop = 5000
+        PrinterSetup.mmPaperHeight = 210080
+        PrinterSetup.mmPaperWidth = 297128
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.05'
+        mmColumnWidth = 0
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {00}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer25: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppHeaderBand: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppLabel7: TppLabel
+      UserName = 'lbDescricao'
+      AutoSize = False
+      Caption = 'Descri'#231#227'o detalhada do relat'#243'rio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsItalic]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 180182
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'lbData'
+      Anchors = [atRight]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 276490
+      mmTop = 2646
+      mmWidth = 10668
+      BandType = 0
+      LayerName = Foreground1
+    end
+    object ppSystemVariable4: TppSystemVariable
+      UserName = 'lbPgCabecalho'
+      Anchors = [atTop, atRight]
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2455
+      mmLeft = 278607
+      mmTop = 265
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground1
+    end
+  end
+  object ppDetailBand: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+  end
+  object ppFooterBand: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppLine1: TppLine
+      UserName = 'lnRodape'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 529
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 287128
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'lbDataHora'
+      Anchors = [atRight]
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 261673
+      mmTop = 529
+      mmWidth = 25146
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lbHabil'
+      Caption = 'H'#225'bil Empresarial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 794
+      mmTop = 529
+      mmWidth = 22394
+      BandType = 8
+      LayerName = Foreground1
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'lbPagina'
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3725
+      mmLeft = 133615
+      mmTop = 1852
+      mmWidth = 19812
+      BandType = 8
+      LayerName = Foreground1
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppCrossTab1: TppCrossTab
+      UserName = 'CrossTab1'
+      DataPipeline = daADOQueryDataView1.Previsao_Financeira_CS
+      Stretch = True
+      Style = 'RepeatedCaptions'
+      DataPipelineName = 'Previsao_Financeira_CS'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 287128
+      BandType = 7
+      LayerName = Foreground1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object TppGrandTotal
+        ChildType = 6
+        object TppTotalCaptionDef
+          ChildType = 4
+          Alignment = taRightJustify
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Visible = False
+        end
+        object TppTotalDef
+          ChildType = 3
+          Color = clWhite
+          DisplayFormat = '#,0.00;-#,0.00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Visible = False
+        end
+      end
+      object TppGrandTotal
+        ChildType = 7
+        object TppTotalCaptionDef
+          ChildType = 4
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+        end
+        object TppTotalDef
+          ChildType = 3
+          Color = clWhite
+          DisplayFormat = '#,0.00;-#,0.00'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+        end
+      end
+      object TppColumnDef
+        FieldAlias = 'Data'
+        FieldName = 'iif_Periodo_Saldo_Inici_2'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        SortType = soNone
+        object TppSubTotal
+          ChildType = 5
+          object TppTotalCaptionDef
+            ChildType = 4
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = []
+          end
+          object TppTotalDef
+            ChildType = 3
+            Color = clWhite
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = []
+          end
+        end
+      end
+      object TppRowDef
+        ChildType = 1
+        FieldAlias = 'Descricao'
+        FieldName = 'Descricao'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        object TppSubTotal
+          ChildType = 5
+          object TppTotalCaptionDef
+            ChildType = 4
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = []
+          end
+          object TppTotalDef
+            ChildType = 3
+            Color = clWhite
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Arial'
+            Font.Style = []
+          end
+        end
+      end
+      object TppValueDef
+        ChildType = 2
+        FieldAlias = 'Total'
+        FieldName = 'Total'
+        Color = clWhite
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        object TppValueCaptionDef
+          ChildType = 8
+          CalcType = dcSum
+          Color = clWindow
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+        end
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Previsao_Financeira_CS'
+      Height = 340
+      Left = 154
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 46
+      TypeColumnWidth = 52
+      Width = 474
+      AutoSearchTabOrder = 0
+      object Previsao_Financeira_CS: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Previsao_Financeira_CS'
+        object ppField1: TppField
+          FieldAlias = 'Periodo'
+          FieldName = 'Periodo'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 0
+          TableName = 'Previsao_Financeira_CS'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descricao'
+          FieldName = 'Descricao'
+          FieldLength = 200
+          DisplayWidth = 200
+          Position = 1
+          TableName = 'Previsao_Financeira_CS'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Total'
+          FieldName = 'Total'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'Previsao_Financeira_CS'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Data_Ordem'
+          FieldName = 'iif_Periodo_Saldo_Inicial'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 3
+          TableName = 'Previsao_Financeira_CS'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Data'
+          FieldName = 'iif_Periodo_Saldo_Inici_2'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 4
+          TableName = 'Previsao_Financeira_CS'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'conHabil'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'Previsao_Financeira_CS'
+        Distinct = True
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT DISTINCT Previsao_Financeira_CS.Periodo, '
+          '                Previsao_Financeira_CS.Descricao, '
+          '                Previsao_Financeira_CS.Total, '
+          
+            '                iif(Periodo <> "Saldo Inicial",  Format( Trim( M' +
+            'id( Periodo, 6, 2 ) ) & "/" & Trim( Mid( Periodo, 12, 3 ) ) & "/' +
+            '" & Trim( Mid( Periodo, 19,4 ) ), "yyyy/mm/dd" ), "1900/01/01" )' +
+            ' AS iif_Periodo_Saldo_Inicial, '
+          
+            '                iif(Periodo <> "Saldo Inicial",  Format( Trim( M' +
+            'id( Periodo, 6, 2 ) ) & "/" & Trim( Mid( Periodo, 12, 3 ) ) & "/' +
+            '" & Trim( Mid( Periodo, 19,4 ) ), "dd/mmm/yyyy" ), "Saldo Inicia' +
+            'l" ) AS iif_Periodo_Saldo_Inici_2'
+          'FROM Previsao_Financeira_CS Previsao_Financeira_CS'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Data_Ordem'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'iif_Periodo_Saldo_Inicial'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+          CalcType = dacaExpression
+          Expression = 
+            'iif(Periodo <> "Saldo Inicial",  Format( Trim( Mid( Periodo, 6, ' +
+            '2 ) ) & "/" & Trim( Mid( Periodo, 12, 3 ) ) & "/" & Trim( Mid( P' +
+            'eriodo, 19,4 ) ), "yyyy/mm/dd" ), "1900/01/01" )'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Data'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'iif_Periodo_Saldo_Inici_2'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+          CalcType = dacaExpression
+          Expression = 
+            'iif(Periodo <> "Saldo Inicial",  Format( Trim( Mid( Periodo, 6, ' +
+            '2 ) ) & "/" & Trim( Mid( Periodo, 12, 3 ) ) & "/" & Trim( Mid( P' +
+            'eriodo, 19,4 ) ), "dd/mmm/yyyy" ), "Saldo Inicial" )'
+        end
+        object daField1: TdaField
+          Alias = 'Periodo'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'Periodo'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+        end
+        object daField2: TdaField
+          Alias = 'Descricao'
+          DisplayWidth = 200
+          FieldAlias = 'Descricao'
+          FieldLength = 200
+          FieldName = 'Descricao'
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+        end
+        object daField3: TdaField
+          Alias = 'Total'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total'
+          FieldLength = 0
+          FieldName = 'Total'
+          SQLFieldName = 'Total'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 2
+          Alias = 'Data_Ordem'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'iif_Periodo_Saldo_Inicial'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+          CalcType = dacaExpression
+          Expression = 
+            'iif(Periodo <> "Saldo Inicial",  Format( Trim( Mid( Periodo, 6, ' +
+            '2 ) ) & "/" & Trim( Mid( Periodo, 12, 3 ) ) & "/" & Trim( Mid( P' +
+            'eriodo, 19,4 ) ), "yyyy/mm/dd" ), "1900/01/01" )'
+        end
+        object daField4: TdaField
+          ChildType = 2
+          Alias = 'Periodo'
+          DisplayWidth = 50
+          FieldAlias = 'Periodo'
+          FieldLength = 50
+          FieldName = 'Periodo'
+          SQLFieldName = 'Periodo'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+        end
+        object daField5: TdaField
+          ChildType = 2
+          Alias = 'Descricao'
+          DisplayWidth = 200
+          FieldAlias = 'Descricao'
+          FieldLength = 200
+          FieldName = 'Descricao'
+          SQLFieldName = 'Descricao'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+          TableSQLAlias = 'Previsao_Financeira_CS'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Previsao_Financeira_CS'
+          JoinType = dajtNone
+          SQLAlias = 'Previsao_Financeira_CS'
+          TableAlias = 'Previsao_Financeira_CS'
+          TableName = 'Previsao_Financeira_CS'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F7572636506B070726F6365647572652056
+      61726961626C65733B0D0A7661720D0A202073616C646F416E7442616E636F73
+      2C2073616C646F416E744361697861732C20436F6E7461735265632C20436F6E
+      7461735061672C20436F6E76656E696F732C20436172746F6573437265642C20
+      43686571756573546572632C204372656442616E632C2044656242616E632C20
+      73616C646F203A20446F75626C653B2020200D0A0D0A626567696E0D0A0D0A65
+      6E643B0D0A0001060F5472614576656E7448616E646C65720B50726F6772616D
+      4E616D65061144657461696C4265666F72655072696E740B50726F6772616D54
+      797065070B747450726F63656475726506536F7572636514CC04000070726F63
+      65647572652044657461696C4265666F72655072696E743B0D0A626567696E0D
+      0A20202020696620507265766973616F5F46696E616E63656972615F43535B27
+      44657363726963616F275D203D2027282D29436F6E7461732061205061676172
+      27207468656E0D0A202020202020436F6E746173506167203A3D205072657669
+      73616F5F46696E616E63656972615F43535B27546F74616C275D3B2020202020
+      200D0A20202020696620507265766973616F5F46696E616E63656972615F4353
+      5B2744657363726963616F275D203D2027282D2944C3A96269746F732042616E
+      63C3A172696F7327207468656E0D0A20202020202044656242616E63203A3D20
+      507265766973616F5F46696E616E63656972615F43535B27546F74616C275D3B
+      0D0A20202020696620507265766973616F5F46696E616E63656972615F43535B
+      2744657363726963616F275D203D2027282B2943617274C3B565732064652043
+      72C3A96469746F27207468656E0D0A202020202020436172746F657343726564
+      203A3D20507265766973616F5F46696E616E63656972615F43535B27546F7461
+      6C275D3B0D0A20202020696620507265766973616F5F46696E616E6365697261
+      5F43535B2744657363726963616F275D203D2027282B29436865717565732064
+      6520546572636569726F27207468656E0D0A2020202020204368657175657354
+      657263203A3D20507265766973616F5F46696E616E63656972615F43535B2754
+      6F74616C275D3B0D0A20202020696620507265766973616F5F46696E616E6365
+      6972615F43535B2744657363726963616F275D203D2027282B29436F6E746173
+      2061205265636562657227207468656E0D0A202020202020436F6E7461735265
+      63203A3D20507265766973616F5F46696E616E63656972615F43535B27546F74
+      616C275D3B0D0A20202020696620507265766973616F5F46696E616E63656972
+      615F43535B2744657363726963616F275D203D2027282B29436F6E76C3AA6E69
+      6F7327207468656E0D0A202020202020436F6E76656E696F73203A3D20507265
+      766973616F5F46696E616E63656972615F43535B27546F74616C275D3B0D0A20
+      202020696620507265766973616F5F46696E616E63656972615F43535B274465
+      7363726963616F275D203D2027282B294372C3A96469746F732042616E63C3A1
+      72696F7327207468656E0D0A2020202020204372656442616E63203A3D205072
+      65766973616F5F46696E616E63656972615F43535B27546F74616C275D3B0D0A
+      20202020696620507265766973616F5F46696E616E63656972615F43535B2744
+      657363726963616F275D203D2027282B2953616C646F20496E696369616C2042
+      616E636F7327207468656E0D0A20202020202073616C646F416E7442616E636F
+      73203A3D20507265766973616F5F46696E616E63656972615F43535B27546F74
+      616C275D3B0D0A20202020696620507265766973616F5F46696E616E63656972
+      615F43535B2744657363726963616F275D203D2027282B2953616C646F20496E
+      696369616C2043616978617327207468656E0D0A20202020202073616C646F41
+      6E74436169786173203A3D20507265766973616F5F46696E616E63656972615F
+      43535B27546F74616C275D3B0D0A202020200D0A0D0A2020202020200D0A0D0A
+      0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060644657461696C0945
+      76656E744E616D65060B4265666F72655072696E74074576656E744944021800
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650619
+      43726F7373546162314F6E47657443617074696F6E546578740B50726F677261
+      6D54797065070B747450726F63656475726506536F7572636506EC70726F6365
+      647572652043726F7373546162314F6E47657443617074696F6E546578742861
+      456C656D656E743A20547070456C656D656E743B2061436F6C756D6E3A20496E
+      74656765723B2061526F773A20496E74656765723B20636F6E73742061446973
+      706C6179466F726D61743A20537472696E673B206156616C75653A2056617269
+      616E743B207661722061546578743A20537472696E67293B0D0A626567696E0D
+      0A2020696620282061526F77203D2030202920616E6420282061436F6C756D6E
+      203D20302029207468656E0D0A20206154657874203A3D20272720203B0D0A0D
+      0A656E643B0D0A0D436F6D706F6E656E744E616D65060943726F737354616231
+      094576656E744E616D6506104F6E47657443617074696F6E5465787407457665
+      6E74494402380000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer28: TppDesignLayer
+      UserName = 'BandLayer28'
+      LayerType = ltBanded
+      Index = 0
+    end
+    object ppDesignLayer27: TppDesignLayer
+      UserName = 'BandLayer27'
+      LayerType = ltBanded
+      Index = 1
+    end
+    object ppDesignLayer26: TppDesignLayer
+      UserName = 'BandLayer26'
+      LayerType = ltBanded
+      Index = 2
+    end
+    object ppDesignLayer24: TppDesignLayer
+      UserName = 'BandLayer24'
+      LayerType = ltBanded
+      Index = 3
+    end
+    object ppDesignLayer23: TppDesignLayer
+      UserName = 'BandLayer23'
+      LayerType = ltBanded
+      Index = 4
+    end
+    object ppDesignLayer22: TppDesignLayer
+      UserName = 'BandLayer22'
+      LayerType = ltBanded
+      Index = 5
+    end
+    object ppDesignLayer21: TppDesignLayer
+      UserName = 'BandLayer21'
+      LayerType = ltBanded
+      Index = 6
+    end
+    object ppDesignLayer20: TppDesignLayer
+      UserName = 'BandLayer20'
+      LayerType = ltBanded
+      Index = 7
+    end
+    object ppDesignLayer19: TppDesignLayer
+      UserName = 'BandLayer19'
+      LayerType = ltBanded
+      Index = 8
+    end
+    object ppDesignLayer18: TppDesignLayer
+      UserName = 'BandLayer18'
+      LayerType = ltBanded
+      Index = 9
+    end
+    object ppDesignLayer17: TppDesignLayer
+      UserName = 'BandLayer17'
+      LayerType = ltBanded
+      Index = 10
+    end
+    object ppDesignLayer16: TppDesignLayer
+      UserName = 'BandLayer16'
+      LayerType = ltBanded
+      Index = 11
+    end
+    object ppDesignLayer15: TppDesignLayer
+      UserName = 'BandLayer15'
+      LayerType = ltBanded
+      Index = 12
+    end
+    object ppDesignLayer14: TppDesignLayer
+      UserName = 'BandLayer14'
+      LayerType = ltBanded
+      Index = 13
+    end
+    object ppDesignLayer13: TppDesignLayer
+      UserName = 'BandLayer13'
+      LayerType = ltBanded
+      Index = 14
+    end
+    object ppDesignLayer12: TppDesignLayer
+      UserName = 'BandLayer12'
+      LayerType = ltBanded
+      Index = 15
+    end
+    object ppDesignLayer11: TppDesignLayer
+      UserName = 'BandLayer11'
+      LayerType = ltBanded
+      Index = 16
+    end
+    object ppDesignLayer10: TppDesignLayer
+      UserName = 'BandLayer10'
+      LayerType = ltBanded
+      Index = 17
+    end
+    object ppDesignLayer9: TppDesignLayer
+      UserName = 'BandLayer9'
+      LayerType = ltBanded
+      Index = 18
+    end
+    object ppDesignLayer8: TppDesignLayer
+      UserName = 'BandLayer8'
+      LayerType = ltBanded
+      Index = 19
+    end
+    object ppDesignLayer7: TppDesignLayer
+      UserName = 'BandLayer7'
+      LayerType = ltBanded
+      Index = 20
+    end
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'BandLayer6'
+      LayerType = ltBanded
+      Index = 21
+    end
+    object ppDesignLayer5: TppDesignLayer
+      UserName = 'BandLayer5'
+      LayerType = ltBanded
+      Index = 22
+    end
+    object ppDesignLayer4: TppDesignLayer
+      UserName = 'BandLayer4'
+      LayerType = ltBanded
+      Index = 23
+    end
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer3'
+      LayerType = ltBanded
+      Index = 24
+    end
+    object ppDesignLayer2: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 25
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground1'
+      LayerType = ltBanded
+      Index = 26
+    end
+  end
+  object ppParameterList2: TppParameterList
+  end
+end
+$
+GRUPO=Caixa@Previsao Financeira
+NOME=Previsão Financeira - Modelo Antigo II
+DESCRICAO=Mostra a previsão financeira.
+ALTERADO_EM=13/03/2015 15:48
+SQL=<0>
+ORDEM=Previsao_Financeira_CS.Periodo<Periodo>Previsao_Financeira_CS.Periodo<Periodo>Previsao_Financeira_CS.Descricao<Descricao>
