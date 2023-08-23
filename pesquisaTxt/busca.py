@@ -1,11 +1,11 @@
-"""
+
 import os
 
 # Diretório onde os documentos RTM estão localizados
 diretorio = r'D:\\Repositories\\OutrosEstudos\\pesquisaTxt\\relatoriobk'
 
 # Palavra-chave que você deseja procurar
-palavra_chave = '18/12/2014'
+palavra_chave = '27/07/2015 17:20'
 
 # Lista para armazenar os nomes dos documentos que contêm a palavra-chave no conteúdo
 documentos_com_palavra_chave = []
@@ -55,4 +55,4 @@ for nome_arquivo in os.listdir(diretorio):
 print("Documentos com a palavra-chave no conteúdo:")
 for nome_documento in documentos_com_palavra_chave:
     print(nome_documento)
-
+"""
